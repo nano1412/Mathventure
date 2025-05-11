@@ -8,6 +8,8 @@ using UnityEngine.UI;
 
 public class Card : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler, IPointerUpHandler, IPointerDownHandler
 {
+    public Vector3 deckPosition;
+
     private Canvas canvas;
     private Image imageComponent;
     [SerializeField] private bool instantiateVisual = true;
@@ -50,8 +52,10 @@ public class Card : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
             return;
 
         visualHandler = FindFirstObjectByType<VisualCardsHandler>();
-        cardVisual = Instantiate(cardVisualPrefab, visualHandler ? visualHandler.transform : canvas.transform).GetComponent<CardVisual>();
+        cardVisual = Instantiate(cardVisualPrefab, deckPosition, new Quaternion(), visualHandler ? visualHandler.transform : canvas.transform).GetComponent<CardVisual>();
         cardVisual.Initialize(this);
+
+        transform.localPosition = Vector3.zero;
     }
 
     void Update()
@@ -65,6 +69,8 @@ public class Card : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
             Vector2 velocity = direction * Mathf.Min(moveSpeedLimit, Vector2.Distance(transform.position, targetPosition) / Time.deltaTime);
             transform.Translate(velocity * Time.deltaTime);
         }
+
+        CheckSelect();
     }
 
     void ClampPosition()
@@ -105,6 +111,7 @@ public class Card : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
         {
             yield return new WaitForEndOfFrame();
             wasDragged = false;
+            transform.localPosition = Vector3.zero;
         }
     }
 
@@ -164,6 +171,41 @@ public class Card : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
             else
                 transform.localPosition = Vector3.zero;
         }
+    }
+
+    public void CheckSelect()
+    {
+        if (selected)
+        {
+            // cardSlots if first parent is "PlayedCard"
+            if (!transform.parent.parent.parent.CompareTag("PlayedCard"))
+            {
+                selected = CheckValidSpaceAndChangeParent(GameController.current.playedCardSlots.transform);  
+            }
+        } else
+        {
+            // cardSlots if first parent is "CardInHand"
+            if (!transform.parent.parent.CompareTag("CardInHand"))
+            {
+                selected = !CheckValidSpaceAndChangeParent(GameController.current.cardInHand.transform);
+            }
+        }
+    }
+    
+
+    public bool CheckValidSpaceAndChangeParent(Transform cardSlots)
+    {
+        foreach (Transform cardSlot in cardSlots)
+        {
+            if (cardSlot.childCount == 0)
+            {
+                transform.parent = cardSlot;
+                transform.localPosition = Vector3.zero;
+                return true;
+            }
+        }
+
+        return false;
     }
 
 

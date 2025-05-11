@@ -13,6 +13,8 @@ public class HorizontalCardHolder : MonoBehaviour
     [SerializeReference] private Card hoveredCard;
 
     [SerializeField] private GameObject slotPrefab;
+    [SerializeField] private GameObject card;
+    [SerializeField] private Transform deck;
     private RectTransform rect;
 
     [Header("Spawn Settings")]
@@ -30,31 +32,7 @@ public class HorizontalCardHolder : MonoBehaviour
         }
 
         rect = GetComponent<RectTransform>();
-        cards = GetComponentsInChildren<Card>().ToList();
-
-        int cardCount = 0;
-
-        foreach (Card card in cards)
-        {
-            card.PointerEnterEvent.AddListener(CardPointerEnter);
-            card.PointerExitEvent.AddListener(CardPointerExit);
-            card.BeginDragEvent.AddListener(BeginDrag);
-            card.EndDragEvent.AddListener(EndDrag);
-            card.name = cardCount.ToString();
-            cardCount++;
-        }
-
-        StartCoroutine(Frame());
-
-        IEnumerator Frame()
-        {
-            yield return new WaitForSecondsRealtime(.1f);
-            for (int i = 0; i < cards.Count; i++)
-            {
-                if (cards[i].cardVisual != null)
-                    cards[i].cardVisual.UpdateIndex(transform.childCount);
-            }
-        }
+        
     }
 
     private void BeginDrag(Card card)
@@ -89,6 +67,32 @@ public class HorizontalCardHolder : MonoBehaviour
 
     void Update()
     {
+        cards = GetComponentsInChildren<Card>().ToList();
+
+        int cardCount = 0;
+
+        foreach (Card card in cards)
+        {
+            card.PointerEnterEvent.AddListener(CardPointerEnter);
+            card.PointerExitEvent.AddListener(CardPointerExit);
+            card.BeginDragEvent.AddListener(BeginDrag);
+            card.EndDragEvent.AddListener(EndDrag);
+            card.name = cardCount.ToString();
+            cardCount++;
+        }
+
+        StartCoroutine(Frame());
+
+        IEnumerator Frame()
+        {
+            yield return new WaitForSecondsRealtime(.1f);
+            for (int i = 0; i < cards.Count; i++)
+            {
+                if (cards[i].cardVisual != null)
+                    cards[i].cardVisual.UpdateIndex(transform.childCount);
+            }
+        }
+
         if (Input.GetKeyDown(KeyCode.Delete))
         {
             if (hoveredCard != null)
@@ -159,6 +163,26 @@ public class HorizontalCardHolder : MonoBehaviour
         foreach (Card card in cards)
         {
             card.cardVisual.UpdateIndex(transform.childCount);
+        }
+    }
+
+    public void AddCard()
+    {
+        bool isHandHaveSpace = false;
+        Transform currentCardSlot = null;
+        foreach(Transform cardSlot in transform)
+        {
+            if (cardSlot.CompareTag("Slot") && cardSlot.transform.childCount == 0)
+            {
+                currentCardSlot = cardSlot;
+                isHandHaveSpace = true;
+                break;
+            }
+        }
+
+        if (isHandHaveSpace)
+        {
+            Instantiate(card, deck.position,new Quaternion(), currentCardSlot).GetComponent<Card>().deckPosition = deck.position;
         }
     }
 
