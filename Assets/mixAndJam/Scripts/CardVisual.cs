@@ -149,13 +149,13 @@ public class CardVisual : MonoBehaviour
 
     private void Select(Card card, bool state)
     {
-        DOTween.Kill(2, true);
-        float dir = state ? 1 : 0;
-        shakeParent.DOPunchPosition(shakeParent.up * selectPunchAmount * dir, scaleTransition, 10, 1);
-        shakeParent.DOPunchRotation(Vector3.forward * (hoverPunchAngle/2), hoverTransition, 20, 1).SetId(2);
+        //DOTween.Kill(2, true);
+        //float dir = state ? 1 : 0;
+        //shakeParent.DOPunchPosition(shakeParent.up * selectPunchAmount * dir, scaleTransition, 10, 1);
+        //shakeParent.DOPunchRotation(Vector3.forward * (hoverPunchAngle/2), hoverTransition, 20, 1).SetId(2);
 
-        if(scaleAnimations)
-            transform.DOScale(scaleOnHover, scaleTransition).SetEase(scaleEase);
+        //if(scaleAnimations)
+        //    transform.DOScale(scaleOnHover, scaleTransition).SetEase(scaleEase);
 
     }
 

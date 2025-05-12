@@ -69,7 +69,7 @@ public class Card : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
             Vector2 velocity = direction * Mathf.Min(moveSpeedLimit, Vector2.Distance(transform.position, targetPosition) / Time.deltaTime);
             transform.Translate(velocity * Time.deltaTime);
         }
-
+        CheckColliderWithPlayedCardSlots();
         CheckSelect();
     }
 
@@ -125,6 +125,8 @@ public class Card : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
     {
         PointerExitEvent.Invoke(this);
         isHovering = false;
+
+        
     }
 
 
@@ -155,22 +157,22 @@ public class Card : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
         selected = !selected;
         SelectEvent.Invoke(this, selected);
 
-        if (selected)
-            transform.localPosition += (cardVisual.transform.up * selectionOffset);
-        else
-            transform.localPosition = Vector3.zero;
+        //if (selected)
+        //    transform.localPosition += (cardVisual.transform.up * selectionOffset);
+        //else
+        //    transform.localPosition = Vector3.zero;
     }
 
     public void Deselect()
     {
-        if (selected)
-        {
-            selected = false;
-            if (selected)
-                transform.localPosition += (cardVisual.transform.up * 50);
-            else
-                transform.localPosition = Vector3.zero;
-        }
+        //if (selected)
+        //{
+        //    selected = false;
+        //    if (selected)
+        //        transform.localPosition += (cardVisual.transform.up * 50);
+        //    else
+        //        transform.localPosition = Vector3.zero;
+        //}
     }
 
     public void CheckSelect()
@@ -199,6 +201,7 @@ public class Card : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
         {
             if (cardSlot.childCount == 0)
             {
+                cardSlot.gameObject.SetActive(true);
                 transform.parent = cardSlot;
                 transform.localPosition = Vector3.zero;
                 return true;
@@ -228,5 +231,19 @@ public class Card : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
     {
         if(cardVisual != null)
         Destroy(cardVisual.gameObject);
+    }
+
+    private void CheckColliderWithPlayedCardSlots()
+    {
+        if(isDragging == false)
+        {
+            foreach(Transform playedCard in GameController.current.playedCardSlots.transform)
+            {
+                if (GameController.current.RectOverlaps(transform.GetComponent<RectTransform>(), playedCard.GetComponent<RectTransform>()))
+                {
+                    transform.SetParent(playedCard);
+                }
+            }
+        }
     }
 }

@@ -97,7 +97,7 @@ public class HorizontalCardHolder : MonoBehaviour
         {
             if (hoveredCard != null)
             {
-                Destroy(hoveredCard.transform.parent.gameObject);
+                Destroy(hoveredCard.transform.gameObject);
                 cards.Remove(hoveredCard);
 
             }
@@ -183,6 +183,7 @@ public class HorizontalCardHolder : MonoBehaviour
         if (isHandHaveSpace)
         {
             Instantiate(card, deck.position,new Quaternion(), currentCardSlot).GetComponent<Card>().deckPosition = deck.position;
+            currentCardSlot.gameObject.SetActive(true);
         }
     }
 
