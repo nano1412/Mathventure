@@ -1,4 +1,7 @@
+using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using static Operatorcard;
 
 public class GameController : MonoBehaviour
 {
@@ -8,6 +11,10 @@ public class GameController : MonoBehaviour
     public GameObject operatorInHand;
     public GameObject playedCardSlots;
     public GameObject playedOperatorSlots;
+    public GameObject PlayStateText;
+
+    public bool isHandReady = false;
+    public bool isHandValiid = false;
 
     private void Awake()
     {
@@ -18,12 +25,95 @@ public class GameController : MonoBehaviour
     {
         playedCardSlots = playedCardHandle.transform.Find("NumberCard").gameObject;
         playedOperatorSlots = playedCardHandle.transform.Find("OparetorCard").gameObject;
+        PlayStateText = playedCardHandle.transform.Find("PlayState").gameObject;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        isHandReady = CheckIfPlayedCardReadyToplay();
+        if (isHandReady)
+        {
+            PlayStateText.GetComponent<TMP_Text>().text = "Valid";
+        } else
+        {
+            PlayStateText.GetComponent<TMP_Text>().text = "Invalid";
+        }
+    }
+
+    private bool CheckIfPlayedCardReadyToplay()
+    {
+        int cardCount = 0;
+        int operatorCount = 0;
+
+        foreach(Transform playedcard in playedCardSlots.transform)
+        {
+            //playedcard.GetChild(0);
+
+            if (playedcard.childCount == 1 && playedcard.GetChild(0).GetComponent<Card>()!= null )
+            {
+                cardCount++;
+            }
+        }
+
+        foreach (Transform operatorcard in playedOperatorSlots.transform)
+        {
+            //playedcard.GetChild(0);
+
+            if (operatorcard.childCount == 1 && operatorcard.GetChild(0).GetComponent<Operatorcard>() != null)
+            {
+                operatorCount++;
+            }
+        }
+
+        if(cardCount == 4 && operatorCount == 3)
+        {
+            return true;
+            
+        } else
+        {
+            return false;
+        }
+    }
+
+    public void PreviewScore()
+    {
+
+    }
+
+    public void PlayCard()
+    {
+
+    }
+
+    public double DoOperation(double a,double b, OperationEnum operation)
+    {
+        //double.NegativeInfinity mean Invalid, preview must say so and should be able to play this hand
+        switch (operation)
+        {
+            case OperationEnum.Plus:
+                return a + b;
+
+
+            case OperationEnum.Minus:
+                return a - b;
+
+
+            case OperationEnum.Multiply:
+                return a * b;
+
+
+            case OperationEnum.Divide:
+                if(b == 0)
+                {
+                    return double.NegativeInfinity;
+                }
+                return a / b;
+                // dont forget to check for divide by zero
+
+        }
+
+        return double.NegativeInfinity;
     }
 
     public bool RectOverlaps(RectTransform rt1, RectTransform rt2)
@@ -41,4 +131,6 @@ public class GameController : MonoBehaviour
         Vector3 topRight = corners[2];
         return new Rect(bottomLeft, topRight - bottomLeft);
     }
+
+
 }

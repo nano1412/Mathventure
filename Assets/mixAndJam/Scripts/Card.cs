@@ -8,6 +8,12 @@ using UnityEngine.UI;
 
 public class Card : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler, IPointerUpHandler, IPointerDownHandler
 {
+    [Header("Card Properties")]
+    [SerializeField] private double cardValue;
+    //card class
+    //card speical effect
+
+    [Header("Visual and Feel")]
     public Vector3 deckPosition;
 
     private Canvas canvas;
