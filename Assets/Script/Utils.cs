@@ -11,6 +11,14 @@ public static class Utils
         Divide
     }
 
+    public enum EffectType
+    {
+        None,
+        Heal,
+        Empty
+        // Add more as needed
+    }
+
 
     public static double RoundUpToDecimalPlaces(double value, int decimalPlaces)
     {

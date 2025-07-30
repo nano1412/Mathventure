@@ -5,12 +5,14 @@ using UnityEngine.EventSystems;
 using System.Collections.Generic;
 using System.Collections;
 using UnityEngine.UI;
+using static Utils;
 
 public class Card : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler, IPointerUpHandler, IPointerDownHandler
 {
     [Header("Card Properties")]
     [SerializeField] private double faceValue; //use to calculate equation
     [SerializeField] private double effectValue; //use to calculate effectiveness of the card
+    [SerializeField] private EffectType effect;
 
     [Header("Visual and Feel")]
     public Vector3 deckPosition;
@@ -262,6 +264,11 @@ public class Card : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
         return effectValue;
     }
 
+    public EffectType GetFace()
+    {
+        return effect;
+    }
+
     public void SetFaceValue(double value)
     {
         faceValue = value;
@@ -270,5 +277,17 @@ public class Card : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
     public void SetEffectValue(double value)
     {
         effectValue = value;
+    }
+
+    public void SetEffect(EffectType value)
+    {
+        effect = value;
+    }
+
+    public void SetCardData(CardData cardData)
+    {
+        faceValue = cardData.FaceValue;
+        effectValue = cardData.EffectValue;
+        effect = cardData.Effect;
     }
 }

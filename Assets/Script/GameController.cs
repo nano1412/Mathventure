@@ -13,7 +13,9 @@ public class GameController : MonoBehaviour
     public GameObject playedOperatorSlots;
     public GameObject PlayStateText;
     [SerializeField] private GameObject card;
-    [SerializeField] private Transform deck;
+    [SerializeField] private Transform deckObject;
+    public Deck deckData;
+    [SerializeField] private Deck ingameDeckData;
 
     public bool isHandReady = false;
     public bool isHandValiid = false;
@@ -25,6 +27,7 @@ public class GameController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        ingameDeckData = deckData;
         playedCardSlots = playedCardHandle.transform.Find("NumberCard").gameObject;
         playedOperatorSlots = playedCardHandle.transform.Find("OparetorCard").gameObject;
         PlayStateText = playedCardHandle.transform.Find("PlayState").gameObject;
@@ -152,23 +155,18 @@ public class GameController : MonoBehaviour
 
         if (isHandHaveSpace)
         {
-            double min = -20;
-            double max = 20;
-
-            System.Random rand = new System.Random();
-            double faceValue = rand.NextDouble() * (max - min) + min;
-            rand = new System.Random();
-            double effectValue = rand.NextDouble() * (max - min) + min;
-
-            faceValue = RoundUpToDecimalPlaces(faceValue, 0);
-            effectValue = RoundUpToDecimalPlaces(effectValue, 0);
+            CardData SelectedCarddata = ingameDeckData.GetRandomCard();
+            if(SelectedCarddata.Effect == EffectType.Empty)
+            {
+                Debug.Log("run out of card in deck");
+                return;
+            }
 
 
-            GameObject newCard = Instantiate(card, deck.position, new Quaternion(), currentCardSlot);
+            GameObject newCard = Instantiate(card, deckObject.position, new Quaternion(), currentCardSlot);
             Card newCardScript = newCard.GetComponent<Card>();
-            newCardScript.deckPosition = deck.position;
-            newCardScript.SetFaceValue(faceValue);
-            newCardScript.SetEffectValue(effectValue);
+            newCardScript.deckPosition = deckObject.position;
+            newCardScript.SetCardData(SelectedCarddata);
 
             currentCardSlot.gameObject.SetActive(true);
         }
