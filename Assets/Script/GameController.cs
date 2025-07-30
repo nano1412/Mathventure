@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using static Operatorcard;
+using static Utils;
 
 public class GameController : MonoBehaviour
 {
@@ -12,6 +12,8 @@ public class GameController : MonoBehaviour
     public GameObject playedCardSlots;
     public GameObject playedOperatorSlots;
     public GameObject PlayStateText;
+    [SerializeField] private GameObject card;
+    [SerializeField] private Transform deck;
 
     public bool isHandReady = false;
     public bool isHandValiid = false;
@@ -132,5 +134,43 @@ public class GameController : MonoBehaviour
         return new Rect(bottomLeft, topRight - bottomLeft);
     }
 
+    public void AddCard()
+    {
 
+
+        bool isHandHaveSpace = false;
+        Transform currentCardSlot = null;
+        foreach (Transform cardSlot in cardInHand.transform)
+        {
+            if (cardSlot.CompareTag("Slot") && cardSlot.transform.childCount == 0)
+            {
+                currentCardSlot = cardSlot;
+                isHandHaveSpace = true;
+                break;
+            }
+        }
+
+        if (isHandHaveSpace)
+        {
+            double min = -20;
+            double max = 20;
+
+            System.Random rand = new System.Random();
+            double faceValue = rand.NextDouble() * (max - min) + min;
+            rand = new System.Random();
+            double effectValue = rand.NextDouble() * (max - min) + min;
+
+            faceValue = RoundUpToDecimalPlaces(faceValue, 0);
+            effectValue = RoundUpToDecimalPlaces(effectValue, 0);
+
+
+            GameObject newCard = Instantiate(card, deck.position, new Quaternion(), currentCardSlot);
+            Card newCardScript = newCard.GetComponent<Card>();
+            newCardScript.deckPosition = deck.position;
+            newCardScript.SetFaceValue(faceValue);
+            newCardScript.SetEffectValue(effectValue);
+
+            currentCardSlot.gameObject.SetActive(true);
+        }
+    }
 }

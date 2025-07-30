@@ -9,9 +9,8 @@ using UnityEngine.UI;
 public class Card : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler, IPointerUpHandler, IPointerDownHandler
 {
     [Header("Card Properties")]
-    [SerializeField] private double cardValue;
-    //card class
-    //card speical effect
+    [SerializeField] private double faceValue; //use to calculate equation
+    [SerializeField] private double effectValue; //use to calculate effectiveness of the card
 
     [Header("Visual and Feel")]
     public Vector3 deckPosition;
@@ -251,5 +250,25 @@ public class Card : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
                 }
             }
         }
+    }
+
+    public double GetFaceValue()
+    {
+        return faceValue;
+    }
+
+    public double GetEffectValue()
+    {
+        return effectValue;
+    }
+
+    public void SetFaceValue(double value)
+    {
+        faceValue = value;
+    }
+
+    public void SetEffectValue(double value)
+    {
+        effectValue = value;
     }
 }

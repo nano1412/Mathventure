@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 using Unity.Collections;
 using UnityEngine.UI;
 using Unity.VisualScripting;
+using TMPro;
 
 public class CardVisual : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class CardVisual : MonoBehaviour
     private int savedIndex;
     Vector3 movementDelta;
     private Canvas canvas;
+    [SerializeField] private TMP_Text faceValueText;
+    [SerializeField] private TMP_Text effectValueText;
 
     [Header("References")]
     public Transform visualShadow;
@@ -77,6 +80,8 @@ public class CardVisual : MonoBehaviour
         cardTransform = target.transform;
         canvas = GetComponent<Canvas>();
         shadowCanvas = visualShadow.GetComponent<Canvas>();
+        faceValueText.text = parentCard.GetFaceValue().ToString();
+        effectValueText.text = parentCard.GetEffectValue().ToString();
 
         //Event Listening
         parentCard.PointerEnterEvent.AddListener(PointerEnter);

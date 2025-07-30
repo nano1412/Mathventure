@@ -2,16 +2,11 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UIElements;
+using static Utils;
 
 public class Operatorcard : MonoBehaviour, IPointerUpHandler
 {
-    public enum OperationEnum
-    {
-        Plus,
-        Minus,
-        Multiply,
-        Divide
-    }
+
     public OperationEnum operation;
     private TMP_Text operationText;
 

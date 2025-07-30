@@ -5,6 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using DG.Tweening;
 using System.Linq;
+using static Utils;
 
 public class HorizontalCardHolder : MonoBehaviour
 {
@@ -13,8 +14,7 @@ public class HorizontalCardHolder : MonoBehaviour
     [SerializeReference] private Card hoveredCard;
 
     [SerializeField] private GameObject slotPrefab;
-    [SerializeField] private GameObject card;
-    [SerializeField] private Transform deck;
+    
     private RectTransform rect;
 
     [Header("Spawn Settings")]
@@ -165,26 +165,4 @@ public class HorizontalCardHolder : MonoBehaviour
             card.cardVisual.UpdateIndex(transform.childCount);
         }
     }
-
-    public void AddCard()
-    {
-        bool isHandHaveSpace = false;
-        Transform currentCardSlot = null;
-        foreach(Transform cardSlot in transform)
-        {
-            if (cardSlot.CompareTag("Slot") && cardSlot.transform.childCount == 0)
-            {
-                currentCardSlot = cardSlot;
-                isHandHaveSpace = true;
-                break;
-            }
-        }
-
-        if (isHandHaveSpace)
-        {
-            Instantiate(card, deck.position,new Quaternion(), currentCardSlot).GetComponent<Card>().deckPosition = deck.position;
-            currentCardSlot.gameObject.SetActive(true);
-        }
-    }
-
 }
