@@ -189,14 +189,14 @@ public class Card : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
             // cardSlots if first parent is "PlayedCard"
             if (!transform.parent.parent.parent.CompareTag("PlayedCard"))
             {
-                selected = CheckValidSpaceAndChangeParent(GameController.current.playedCardSlots.transform);  
+                selected = CheckValidSpaceAndChangeParent(CardPlayGameController.current.playedCardSlots.transform);  
             }
         } else
         {
             // cardSlots if first parent is "CardInHand"
             if (!transform.parent.parent.CompareTag("CardInHand"))
             {
-                selected = !CheckValidSpaceAndChangeParent(GameController.current.cardInHand.transform);
+                selected = !CheckValidSpaceAndChangeParent(CardPlayGameController.current.cardInHand.transform);
             }
         }
     }
@@ -244,9 +244,9 @@ public class Card : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
     {
         if(isDragging == false)
         {
-            foreach(Transform playedCard in GameController.current.playedCardSlots.transform)
+            foreach(Transform playedCard in CardPlayGameController.current.playedCardSlots.transform)
             {
-                if (GameController.current.RectOverlaps(transform.GetComponent<RectTransform>(), playedCard.GetComponent<RectTransform>()))
+                if (CardPlayGameController.current.RectOverlaps(transform.GetComponent<RectTransform>(), playedCard.GetComponent<RectTransform>()))
                 {
                     transform.SetParent(playedCard);
                 }

@@ -3,9 +3,9 @@ using TMPro;
 using UnityEngine;
 using static Utils;
 
-public class GameController : MonoBehaviour
+public class CardPlayGameController : MonoBehaviour
 {
-    public static GameController current;
+    public static CardPlayGameController current;
     public GameObject playedCardHandle;
     public GameObject cardInHand;
     public GameObject operatorInHand;
@@ -14,8 +14,9 @@ public class GameController : MonoBehaviour
     public GameObject PlayStateText;
     [SerializeField] private GameObject card;
     [SerializeField] private Transform deckObject;
-    public Deck deckData;
-    [SerializeField] private Deck ingameDeckData;
+    public Deck templateDeck;
+    [SerializeField] private Deck persistentDeck;
+    [SerializeField] private Deck roundDeck;
 
     public bool isHandReady = false;
     public bool isHandValiid = false;
@@ -27,7 +28,9 @@ public class GameController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        ingameDeckData = deckData;
+        persistentDeck = Instantiate(templateDeck);
+        roundDeck = Instantiate(persistentDeck);
+
         playedCardSlots = playedCardHandle.transform.Find("NumberCard").gameObject;
         playedOperatorSlots = playedCardHandle.transform.Find("OparetorCard").gameObject;
         PlayStateText = playedCardHandle.transform.Find("PlayState").gameObject;
@@ -155,10 +158,9 @@ public class GameController : MonoBehaviour
 
         if (isHandHaveSpace)
         {
-            CardData SelectedCarddata = ingameDeckData.GetRandomCard();
+            CardData SelectedCarddata = roundDeck.GetRandomCard();
             if(SelectedCarddata.Effect == EffectType.Empty)
             {
-                Debug.Log("run out of card in deck");
                 return;
             }
 

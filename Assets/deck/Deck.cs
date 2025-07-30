@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using System.Linq;
+using Unity.Collections.LowLevel.Unsafe;
 using UnityEditor;
 using UnityEditorInternal;
 using UnityEngine;
@@ -23,6 +25,23 @@ public class Deck : ScriptableObject
         CardData randomCardData = cardDatas[index];
         cardDatas.RemoveAt(index);
         return randomCardData;
+    }
+
+    public void ChangeCard(CardData target, CardData newCardData)
+    {
+        for (int i = 0; i < cardDatas.Count; i++)
+        {
+            if (cardDatas[i] == target)
+            {
+                cardDatas[i] = newCardData;
+                break; // Only change once
+            }
+        }
+    }
+
+    public void AddCardData(CardData newCardData)
+    {
+        cardDatas.Append(newCardData);
     }
 }
 
