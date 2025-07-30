@@ -12,4 +12,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e04083fccfef93145bd56144281b77fd, type: 3}
   m_Name: 1stDeck
   m_EditorClassIdentifier: 
+  cardDatas:
+  - FaceValue: 1
+    EffectValue: 15
+    Effect: 0
+  - FaceValue: 3
+    EffectValue: 13
+    Effect: 0
+  - FaceValue: 4
+    EffectValue: 12
+    Effect: 0
+  - FaceValue: 10
+    EffectValue: 6
+    Effect: 0
+  - FaceValue: 11
+    EffectValue: 5
+    Effect: 0
+  - FaceValue: 12
+    EffectValue: 4
+    Effect: 0
+  - FaceValue: 14
+    EffectValue: 1
+    Effect: 0
+  - FaceValue: 15
+    EffectValue: 0
+    Effect: 0
   backCard: {fileID: 0}

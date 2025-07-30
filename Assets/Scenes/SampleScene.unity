@@ -289,6 +289,13 @@ MonoBehaviour:
   playedCardSlots: {fileID: 0}
   playedOperatorSlots: {fileID: 0}
   PlayStateText: {fileID: 0}
+  card: {fileID: 8994356602663114153, guid: 38aa6ba35be5144dc931edb1e6e43818, type: 3}
+  deckObject: {fileID: 1149134203}
+  templateDeck: {fileID: 11400000, guid: 5009f4b849de2c44eaf0937517670067, type: 2}
+  persistentDeck: {fileID: 0}
+  roundDeck: {fileID: 0}
+  isHandReady: 0
+  isHandValiid: 0
 --- !u!4 &392799242
 Transform:
   m_ObjectHideFlags: 0
@@ -535,17 +542,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5816114311426269269, guid: e7e7b567f7cc6164bbc50fef542e5862, type: 3}
   m_PrefabInstance: {fileID: 7140399856345139333}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &833704894 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8387384084771550147, guid: e7e7b567f7cc6164bbc50fef542e5862, type: 3}
-  m_PrefabInstance: {fileID: 7140399856345139333}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 833704892}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8436a7e3d3df42d7a7058aec5e41a69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &869248683
 GameObject:
   m_ObjectHideFlags: 0
@@ -939,7 +935,15 @@ PrefabInstance:
     - target: {fileID: 8540458748182452085, guid: c68c216108e5a9e44a8665c50df0e3cc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 833704894}
+      objectReference: {fileID: 392799241}
+    - target: {fileID: 8540458748182452085, guid: c68c216108e5a9e44a8665c50df0e3cc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: AddCard
+      objectReference: {fileID: 0}
+    - target: {fileID: 8540458748182452085, guid: c68c216108e5a9e44a8665c50df0e3cc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameController, Assembly-CSharp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
