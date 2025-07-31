@@ -10,7 +10,6 @@ public class CardPlayGameController : MonoBehaviour
     public GameObject cardInHand;
     public GameObject operatorInHand;
     public GameObject playedCardSlots;
-    public GameObject playedOperatorSlots;
     public GameObject PlayStateText;
     [SerializeField] private GameObject card;
     [SerializeField] private Transform deckObject;
@@ -32,7 +31,6 @@ public class CardPlayGameController : MonoBehaviour
         roundDeck = Instantiate(persistentDeck);
 
         playedCardSlots = playedCardHandle.transform.Find("NumberCard").gameObject;
-        playedOperatorSlots = playedCardHandle.transform.Find("OparetorCard").gameObject;
         PlayStateText = playedCardHandle.transform.Find("PlayState").gameObject;
     }
 
@@ -54,21 +52,16 @@ public class CardPlayGameController : MonoBehaviour
         int cardCount = 0;
         int operatorCount = 0;
 
-        foreach(Transform playedcard in playedCardSlots.transform)
+        foreach(Transform slot in playedCardSlots.transform)
         {
-            //playedcard.GetChild(0);
+            //slot.GetChild(0);
 
-            if (playedcard.childCount == 1 && playedcard.GetChild(0).GetComponent<Card>()!= null )
+            if (slot.childCount == 1 && slot.GetChild(0).GetComponent<Card>()!= null && slot.CompareTag("Slot"))
             {
                 cardCount++;
             }
-        }
 
-        foreach (Transform operatorcard in playedOperatorSlots.transform)
-        {
-            //playedcard.GetChild(0);
-
-            if (operatorcard.childCount == 1 && operatorcard.GetChild(0).GetComponent<Operatorcard>() != null)
+            if (slot.childCount == 1 && slot.GetChild(0).GetComponent<Operatorcard>() != null && slot.CompareTag("OperatorSlot"))
             {
                 operatorCount++;
             }

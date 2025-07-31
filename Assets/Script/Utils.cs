@@ -19,6 +19,14 @@ public static class Utils
         // Add more as needed
     }
 
+    public enum OperationPriority
+    {
+        AdditionAndSubtraction,
+        MultiplicationAndDivision,
+        Parentheses
+
+    }
+
 
     public static double RoundUpToDecimalPlaces(double value, int decimalPlaces)
     {

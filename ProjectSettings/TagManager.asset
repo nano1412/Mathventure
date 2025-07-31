@@ -7,6 +7,7 @@ TagManager:
   - Slot
   - PlayedCard
   - CardInHand
+  - OperatorSlot
   layers:
   - Default
   - TransparentFX

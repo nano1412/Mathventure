@@ -206,10 +206,10 @@ public class Card : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
     {
         foreach (Transform cardSlot in cardSlots)
         {
-            if (cardSlot.childCount == 0)
+            if (cardSlot.childCount == 0 && !cardSlot.CompareTag("OperatorSlot"))
             {
                 cardSlot.gameObject.SetActive(true);
-                transform.parent = cardSlot;
+                transform.SetParent(cardSlot);
                 transform.localPosition = Vector3.zero;
                 return true;
             }
@@ -246,7 +246,7 @@ public class Card : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
         {
             foreach(Transform playedCard in CardPlayGameController.current.playedCardSlots.transform)
             {
-                if (CardPlayGameController.current.RectOverlaps(transform.GetComponent<RectTransform>(), playedCard.GetComponent<RectTransform>()))
+                if (CardPlayGameController.current.RectOverlaps(transform.GetComponent<RectTransform>(), playedCard.GetComponent<RectTransform>()) && playedCard.CompareTag("Slot"))
                 {
                     transform.SetParent(playedCard);
                 }

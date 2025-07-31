@@ -40,10 +40,9 @@ public class OperatorButton : MonoBehaviour
 
     private void AddOperatorCard(OperationEnum operation)
     {
-        foreach(Transform operatorCardSlot in CardPlayGameController.current.playedOperatorSlots.transform)
+        foreach(Transform operatorCardSlot in CardPlayGameController.current.playedCardSlots.transform)
         {
-            Debug.Log(operatorCardSlot.name);
-            if (operatorCardSlot.CompareTag("Slot") && operatorCardSlot.childCount == 0)
+            if (operatorCardSlot.CompareTag("OperatorSlot") && operatorCardSlot.childCount == 0)
             {
                 GameObject newOperatorCard = Instantiate(operatorCardPrefab, transform.position, new Quaternion(), operatorCardSlot);
                 newOperatorCard.GetComponent<Operatorcard>().operation = operation;
