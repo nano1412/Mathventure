@@ -8,7 +8,7 @@ public class CardPlayGameController : MonoBehaviour
     public static CardPlayGameController current;
     public GameObject playedCardHandle;
     public GameObject cardInHand;
-    public GameObject operatorInHand;
+    public GameObject operatorButton;
     public GameObject playedCardSlots;
     public GameObject PlayStateText;
     [SerializeField] private GameObject card;
