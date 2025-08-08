@@ -8,15 +8,15 @@ using static Utils;
 public class Operatorcard : MonoBehaviour, IPointerUpHandler
 {
 
-    public OperationEnum operation;
+    private OperationEnum operation;
     private TMP_Text operationText;
-    public OperationPriority priority;
     /*
      * priority are follow PEMDAS principal
-     * Parentheses = 2
+     * Parentheses = 3
      * Exponents (not use in this game)
-     * Multiplication and Division = 1
-     * Addition and Subtraction = 0
+     * Multiplication and Division = 2
+     * Addition and Subtraction = 1
+     * not Operator = 0
      * if the priority are equal then process from left to right
      */
 
@@ -42,22 +42,18 @@ public class Operatorcard : MonoBehaviour, IPointerUpHandler
         switch (operation)
         {
             case OperationEnum.Plus:
-                priority = OperationPriority.AdditionAndSubtraction;
                 return "+";
 
 
             case OperationEnum.Minus:
-                priority = OperationPriority.AdditionAndSubtraction;
                 return "-";
 
 
             case OperationEnum.Multiply:
-                priority = OperationPriority.MultiplicationAndDivision;
                 return "X";
 
 
             case OperationEnum.Divide:
-                priority = OperationPriority.MultiplicationAndDivision;
                 return "/";
 
         }
@@ -71,5 +67,15 @@ public class Operatorcard : MonoBehaviour, IPointerUpHandler
         //    return;
 
         Destroy(gameObject);
+    }
+
+    public OperationEnum GetOperator()
+    {
+        return operation;
+    }
+
+    public void SetOperator(OperationEnum value)
+    {
+        operation = value;
     }
 }

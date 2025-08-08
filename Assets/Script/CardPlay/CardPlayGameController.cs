@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using static Utils;
+using static PlayCardCalculation;
 
 public class CardPlayGameController : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class CardPlayGameController : MonoBehaviour
     public Deck templateDeck;
     [SerializeField] private Deck persistentDeck;
     [SerializeField] private Deck roundDeck;
+    [SerializeField] private ParenthesesMode parenthesesMode;
 
     public bool isHandReady = false;
     public bool isHandValiid = false;
@@ -84,7 +86,24 @@ public class CardPlayGameController : MonoBehaviour
 
     public void PlayCard()
     {
+        if (!isHandReady) {
+            Debug.Log("invalid hand");
+            return; 
+        }
+        Debug.Log("valid hand go to calculation");
+            List<GameObject> cardsPlayed = new List<GameObject>();
 
+        foreach (Transform child in playedCardSlots.transform)
+        {
+            cardsPlayed.Add(child.GetChild(0).gameObject);
+        }
+
+        Debug.Log(cardsPlayed.Count);
+
+
+        List<object[]> steplog = PlayCardCalculation.EvaluateEquation(cardsPlayed, parenthesesMode);
+        foreach (var step in steplog)
+            Debug.Log($"{step[0]}, Pos: {step[1]}");
     }
 
     public double DoOperation(double a,double b, OperationEnum operation)

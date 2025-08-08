@@ -7,6 +7,8 @@ using System.Collections;
 using UnityEngine.UI;
 using static Utils;
 
+
+
 public class Card : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler, IPointerUpHandler, IPointerDownHandler
 {
     [Header("Card Properties")]

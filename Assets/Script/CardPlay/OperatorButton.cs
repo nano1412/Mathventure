@@ -45,7 +45,7 @@ public class OperatorButton : MonoBehaviour
             if (operatorCardSlot.CompareTag("OperatorSlot") && operatorCardSlot.childCount == 0)
             {
                 GameObject newOperatorCard = Instantiate(operatorCardPrefab, transform.position, new Quaternion(), operatorCardSlot);
-                newOperatorCard.GetComponent<Operatorcard>().operation = operation;
+                newOperatorCard.GetComponent<Operatorcard>().SetOperator(operation);
                 newOperatorCard.transform.localPosition = Vector3.zero;
                 return;
             }

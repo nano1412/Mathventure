@@ -21,10 +21,22 @@ public static class Utils
 
     public enum OperationPriority
     {
+        NotOperator,
         AdditionAndSubtraction,
         MultiplicationAndDivision,
         Parentheses
 
+    }
+
+    public enum CardType { Number, Operator }
+
+    public enum ParenthesesMode
+    {
+        Mode0, // No parentheses
+        Mode1, // (XX)XX
+        Mode2, // X(XX)X
+        Mode3, // XX(XX)
+        Mode4  // (XX)(XX)
     }
 
 
