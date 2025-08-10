@@ -15,6 +15,11 @@ public class CardPlayGameController : MonoBehaviour
     public GameObject playedCardSlots;
     public GameObject PlayStateText;
 
+    [Header("CoreData")]
+    [SerializeField] private double playerAnswer;
+    [SerializeField] double multiplier;
+    [SerializeField] List<int> OperatorOrders = new List<int>();
+
     [Header("Card and Deck")]
     [SerializeField] private GameObject card;
     [SerializeField] private Transform deckObject;
@@ -26,12 +31,14 @@ public class CardPlayGameController : MonoBehaviour
     [SerializeField] private ParenthesesMode parenthesesMode;
     public bool isHandReady = false;
     public bool isHandValiid = false;
+    [SerializeField] List<object[]> steplog = new List<object[]>();
 
     [Header("Target Number finder")]
     [SerializeField] private List<OperationEnum> posibleOperators = new List<OperationEnum>();
     [SerializeField] private double targetNumber;
     [SerializeField] private double difficulty;
     private Dictionary<double, int> allPossibleEquationAnswers;
+
 
     private void Awake()
     {
@@ -117,9 +124,13 @@ public class CardPlayGameController : MonoBehaviour
         Debug.Log(cardsPlayed.Count);
 
 
-        List<object[]> steplog = PlayCardCalculation.EvaluateEquation(cardsPlayed, parenthesesMode);
+        steplog = PlayCardCalculation.EvaluateEquation(cardsPlayed, parenthesesMode);
         foreach (var step in steplog)
+        {
             Debug.Log($"{step[0]}, Pos: {step[1]}");
+        }
+
+        playerAnswer = (double)steplog[steplog.Count - 1][1];
     }
 
     public void GetAllPossibleEquation()
