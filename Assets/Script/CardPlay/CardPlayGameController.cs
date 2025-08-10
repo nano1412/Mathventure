@@ -29,7 +29,7 @@ public class CardPlayGameController : MonoBehaviour
 
     [Header("Target Number finder")]
     [SerializeField] private List<OperationEnum> posibleOperators = new List<OperationEnum>();
-    [SerializeField] private double targetNumbers;
+    [SerializeField] private double targetNumber;
     [SerializeField] private double difficulty;
     private Dictionary<double, int> allPossibleEquationAnswers;
 
@@ -173,7 +173,8 @@ public class CardPlayGameController : MonoBehaviour
             return;
         }
 
-        Debug.Log(PlayCardCalculation.GetAnswerByDifficulty(allPossibleEquationAnswers, difficulty));
+        targetNumber = PlayCardCalculation.GetAnswerByDifficulty(allPossibleEquationAnswers, difficulty);
+        Debug.Log("target number: " + targetNumber);
     }
 
     public double DoOperation(double a,double b, OperationEnum operation)
