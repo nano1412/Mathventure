@@ -1,9 +1,13 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Linq;
 using UnityEngine;
 using static UnityEngine.Rendering.GPUSort;
 using static Utils;
+using Random = System.Random;
 
+#region calculate card in hand
 public class SimplifiedCard
 {
     public CardType type;
@@ -143,23 +147,21 @@ public class SimplifiedCard
             resultLog.Add(new object[] { "END", simplified[0].numberValue });
             return resultLog;
         }
-
-
-
-        private static void ApplyParenthesesMode(List<SimplifiedCard> cards, ParenthesesMode mode)
+    
+    private static void ApplyParenthesesMode(List<SimplifiedCard> cards, ParenthesesMode mode)
         {
             switch (mode)
             {
-                case ParenthesesMode.Mode1:
+                case ParenthesesMode.DoFrontOperationFirst:
                     cards[1].priority = 3;
                     break;
-                case ParenthesesMode.Mode2:
+                case ParenthesesMode.DoMiddleOperationFirst:
                     cards[3].priority = 3;
                     break;
-                case ParenthesesMode.Mode3:
+                case ParenthesesMode.DoLastOperationFirst:
                     cards[5].priority = 3;
                     break;
-                case ParenthesesMode.Mode4:
+                case ParenthesesMode.DoMiddleOperationLast:
                     cards[1].priority = 3;
                     cards[5].priority = 3;
                     break;
@@ -171,5 +173,191 @@ public class SimplifiedCard
         {
             return string.Join("", cards);
         }
+    #endregion
+
+    #region Get all equation possibility
+    static List<string> stringPosibleOperator = new List<string>();
+    public static (double[,], Dictionary<double, int>) GetMostFrequentResults(List<double> numbers, List<OperationEnum> posibleOperators)
+    {
+        stringPosibleOperator = new List<string>();
+        if (posibleOperators.Contains(OperationEnum.Plus)) { stringPosibleOperator.Add("+"); }
+        if (posibleOperators.Contains(OperationEnum.Minus)) { stringPosibleOperator.Add("-"); }
+        if (posibleOperators.Contains(OperationEnum.Multiply)) { stringPosibleOperator.Add("*"); }
+        if (posibleOperators.Contains(OperationEnum.Divide)) { stringPosibleOperator.Add("/"); }
+
+        var resultCounts = new Dictionary<double, int>();
+
+        // Step 1: Get all 4-number combinations
+        var combinations = GetCombinations(numbers, 4);
+
+        foreach (var combo in combinations)
+        {
+            // Step 2: Get all permutations of 4 numbers
+            foreach (var nums in GetPermutations(combo, 4))
+            {
+                // Step 3: All operator combinations
+                foreach (var ops in GetOperatorCombinations())
+                {
+                    // Step 4: Apply all parenthesis placements
+                    var expressions = GetParenthesizedExpressions(nums, ops);
+                    foreach (var expr in expressions)
+                    {
+                        try
+                        {
+                            var value = Evaluate(expr);
+                            if (!double.IsNaN(value) && !double.IsInfinity(value))
+                            {
+                                double rounded = Math.Round(value, 2); // ⬅ 2 decimal places
+
+                                if (!resultCounts.ContainsKey(rounded))
+                                    resultCounts[rounded] = 0;
+
+                                resultCounts[rounded]++;
+                            }
+                        }
+                        catch { /* Invalid expressions, e.g., divide by zero */ }
+                    }
+                }
+            }
+        }
+
+        // Calculate median count
+        var counts = resultCounts.Values.OrderBy(v => v).ToList();
+        double median;
+        int mid = counts.Count / 2;
+        if (counts.Count % 2 == 0)
+            median = (counts[mid - 1] + counts[mid]) / 2.0;
+        else
+            median = counts[mid];
+
+        //remove number that are too infrequent
+        var keysToRemove = resultCounts
+    .Where(kvp => kvp.Value < median)
+    .Select(kvp => kvp.Key)
+    .ToList();
+
+        foreach (var key in keysToRemove)
+        {
+            resultCounts.Remove(key);
+        }
+
+        // Step 5: Output as 2D array sorted by count descending
+        var sorted = resultCounts.OrderByDescending(kv => kv.Value).ToArray();
+        double[,] output = new double[sorted.Length, 2];
+        for (int i = 0; i < sorted.Length; i++)
+        {
+            output[i, 0] = sorted[i].Key;    // Result (rounded double)
+            output[i, 1] = sorted[i].Value;  // Count
+        }
+
+        return (output, resultCounts);
     }
-   
+
+    static double Evaluate(string expression)
+    {
+        var table = new DataTable();
+        object result = table.Compute(expression, "");
+        return Convert.ToDouble(result);
+    }
+
+    static List<string> GetParenthesizedExpressions(double[] nums, string[] ops)
+    {
+        string a = nums[0].ToString("0.##");
+        string b = nums[1].ToString("0.##");
+        string c = nums[2].ToString("0.##");
+        string d = nums[3].ToString("0.##");
+
+        string op1 = ops[0];
+        string op2 = ops[1];
+        string op3 = ops[2];
+
+        return new List<string>
+        {
+            $"(({a}{op1}{b}){op2}{c}){op3}{d}",
+            $"({a}{op1}({b}{op2}{c})){op3}{d}",
+            $"{a}{op1}(({b}{op2}{c}){op3}{d})",
+            $"({a}{op1}{b}){op2}({c}{op3}{d})"
+        };
+    }
+    static IEnumerable<string[]> GetOperatorCombinations()
+    {
+        foreach (var op1 in stringPosibleOperator)
+            foreach (var op2 in stringPosibleOperator)
+                foreach (var op3 in stringPosibleOperator)
+                    yield return new[] { op1, op2, op3 };
+    }
+
+    static IEnumerable<T[]> GetPermutations<T>(IList<T> list, int length)
+    {
+        if (length == 1)
+            return list.Select(t => new T[] { t });
+
+        return GetPermutations(list, length - 1)
+            .SelectMany(t => list.Where(o => !t.Contains(o)),
+                        (t1, t2) => t1.Concat(new T[] { t2 }).ToArray());
+    }
+
+    static List<List<T>> GetCombinations<T>(List<T> list, int length)
+    {
+        var result = new List<List<T>>();
+        void Recurse(int start, List<T> current)
+        {
+            if (current.Count == length)
+            {
+                result.Add(new List<T>(current));
+                return;
+            }
+
+            for (int i = start; i < list.Count; i++)
+            {
+                current.Add(list[i]);
+                Recurse(i + 1, current);
+                current.RemoveAt(current.Count - 1);
+            }
+        }
+        Recurse(0, new List<T>());
+        return result;
+    }
+    #endregion
+
+
+    #region get target number base on GetMostFrequentResults() with 
+    public static double GetAnswerByDifficulty(Dictionary<double, int> resultCounts, double difficulty)
+    {
+        if (resultCounts == null || resultCounts.Count == 0)
+            throw new ArgumentException("Result counts are empty.");
+
+        if (difficulty < 0 || difficulty > 1)
+            throw new ArgumentOutOfRangeException(nameof(difficulty), "Difficulty must be between 0 and 1.");
+
+        // only get round number
+        var filtered = resultCounts
+            .Where(kv => Math.Abs(kv.Key % 1) < 0.0001)
+    .OrderByDescending(kv => kv.Value)
+    .ToList();
+
+        // Determine target index from percentile
+        int index = (int)Math.Round(difficulty * (filtered.Count - 1));
+        int targetCount = filtered[index].Value;
+
+        // Get all entries with the same count as target
+        var sameCountKeys = filtered
+            .Where(kv => kv.Value == targetCount)
+            .Select(kv => kv.Key)
+            .ToList();
+
+        // Randomly pick one from them
+        Random rng = new Random();
+        int randIndex = rng.Next(sameCountKeys.Count);
+
+        return sameCountKeys[randIndex];
+    }
+
+
+    #endregion
+
+    #region
+
+    #endregion
+}
+

@@ -32,11 +32,11 @@ public static class Utils
 
     public enum ParenthesesMode
     {
-        Mode0, // No parentheses
-        Mode1, // (XX)XX
-        Mode2, // X(XX)X
-        Mode3, // XX(XX)
-        Mode4  // (XX)(XX)
+        NoParentheses, // NoParentheses
+        DoFrontOperationFirst, // (XX)XX
+        DoMiddleOperationFirst, // X(XX)X
+        DoLastOperationFirst, // XX(XX)
+        DoMiddleOperationLast  // (XX)(XX)
     }
 
 

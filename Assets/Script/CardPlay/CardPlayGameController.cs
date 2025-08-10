@@ -3,24 +3,35 @@ using TMPro;
 using UnityEngine;
 using static Utils;
 using static PlayCardCalculation;
+using UnityEngine.Windows;
 
 public class CardPlayGameController : MonoBehaviour
 {
+    [Header("Univasal entry")]
     public static CardPlayGameController current;
     public GameObject playedCardHandle;
-    public GameObject cardInHand;
+    public GameObject playerHand;
     public GameObject operatorButton;
     public GameObject playedCardSlots;
     public GameObject PlayStateText;
+
+    [Header("Card and Deck")]
     [SerializeField] private GameObject card;
     [SerializeField] private Transform deckObject;
     public Deck templateDeck;
     [SerializeField] private Deck persistentDeck;
     [SerializeField] private Deck roundDeck;
-    [SerializeField] private ParenthesesMode parenthesesMode;
 
+    [Header("Equation Solver")]
+    [SerializeField] private ParenthesesMode parenthesesMode;
     public bool isHandReady = false;
     public bool isHandValiid = false;
+
+    [Header("Target Number finder")]
+    [SerializeField] private List<OperationEnum> posibleOperators = new List<OperationEnum>();
+    [SerializeField] private double targetNumbers;
+    [SerializeField] private double difficulty;
+    private Dictionary<double, int> allPossibleEquationAnswers;
 
     private void Awake()
     {
@@ -34,6 +45,11 @@ public class CardPlayGameController : MonoBehaviour
 
         playedCardSlots = playedCardHandle.transform.Find("NumberCard").gameObject;
         PlayStateText = playedCardHandle.transform.Find("PlayState").gameObject;
+
+        posibleOperators.Add(OperationEnum.Plus);
+        posibleOperators.Add(OperationEnum.Minus);
+        posibleOperators.Add(OperationEnum.Multiply);
+        posibleOperators.Add(OperationEnum.Divide);
     }
 
     // Update is called once per frame
@@ -106,6 +122,60 @@ public class CardPlayGameController : MonoBehaviour
             Debug.Log($"{step[0]}, Pos: {step[1]}");
     }
 
+    public void GetAllPossibleEquation()
+    {
+        // get faceValue of card on hand
+        int cardInHandCount = 0;
+        List<double> numbers = new List<double>();
+        foreach(Transform cardInHand in playerHand.transform)
+        {
+            if(cardInHand.childCount == 1)
+            {
+                if(cardInHand.GetChild(0).GetComponent<Card>() != null)
+                {
+                    cardInHandCount++;
+                    numbers.Add(cardInHand.GetChild(0).GetComponent<Card>().GetFaceValue());
+                }
+            }
+        }
+
+        //get all possible operator that player can play
+        // as for now we will just set that player can play all 4 operators
+        
+
+        if (cardInHandCount < 4)
+        {
+            Debug.Log("player have fewer than 4 card. they cant play it");
+            return;
+        }
+
+        //run the function to get value
+        var (results, resultsDict) = PlayCardCalculation.GetMostFrequentResults(numbers, posibleOperators);
+
+        if (resultsDict.Count <= 0)
+        {
+            Debug.Log("there is no equation in the dic, maybe the threshold is too high");
+        }
+
+        for (int i = 0; i < results.GetLength(0); i++)
+        {
+            Debug.Log($"Result: {results[i, 0]:0.00}, Count: {results[i, 1]}");
+        }
+
+        allPossibleEquationAnswers = resultsDict;
+    }
+
+    public void GetTargetNumber()
+    {
+        if (allPossibleEquationAnswers.Count <= 0 || allPossibleEquationAnswers == null)
+        {
+            Debug.Log("there is no equation in the dic, maybe the threshold is too high");
+            return;
+        }
+
+        Debug.Log(PlayCardCalculation.GetAnswerByDifficulty(allPossibleEquationAnswers, difficulty));
+    }
+
     public double DoOperation(double a,double b, OperationEnum operation)
     {
         //double.NegativeInfinity mean Invalid, preview must say so and should be able to play this hand
@@ -158,7 +228,7 @@ public class CardPlayGameController : MonoBehaviour
 
         bool isHandHaveSpace = false;
         Transform currentCardSlot = null;
-        foreach (Transform cardSlot in cardInHand.transform)
+        foreach (Transform cardSlot in playerHand.transform)
         {
             if (cardSlot.CompareTag("Slot") && cardSlot.transform.childCount == 0)
             {

@@ -198,7 +198,7 @@ public class Card : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
             // cardSlots if first parent is "CardInHand"
             if (!transform.parent.parent.CompareTag("CardInHand"))
             {
-                selected = !CheckValidSpaceAndChangeParent(CardPlayGameController.current.cardInHand.transform);
+                selected = !CheckValidSpaceAndChangeParent(CardPlayGameController.current.playerHand.transform);
             }
         }
     }
