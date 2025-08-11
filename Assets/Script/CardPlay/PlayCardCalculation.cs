@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using static UnityEngine.Rendering.GPUSort;
 using static Utils;
 using Random = System.Random;
@@ -177,7 +178,7 @@ public class SimplifiedCard
 
     #region Get all equation possibility
     static List<string> stringPosibleOperator = new List<string>();
-    public static (double[,], Dictionary<double, int>) GetMostFrequentResults(List<double> numbers, List<OperationEnum> posibleOperators)
+    public static Dictionary<double, List<string>> GetMostFrequentResults(List<double> numbers, List<OperationEnum> posibleOperators)
     {
         stringPosibleOperator = new List<string>();
         if (posibleOperators.Contains(OperationEnum.Plus)) { stringPosibleOperator.Add("+"); }
@@ -185,7 +186,9 @@ public class SimplifiedCard
         if (posibleOperators.Contains(OperationEnum.Multiply)) { stringPosibleOperator.Add("*"); }
         if (posibleOperators.Contains(OperationEnum.Divide)) { stringPosibleOperator.Add("/"); }
 
-        var resultCounts = new Dictionary<double, int>();
+        List<string> resultCount = new List<string>();
+
+        var resultCounts = new Dictionary<double, List<string>>();
 
         // Step 1: Get all 4-number combinations
         var combinations = GetCombinations(numbers, 4);
@@ -207,12 +210,13 @@ public class SimplifiedCard
                             var value = Evaluate(expr);
                             if (!double.IsNaN(value) && !double.IsInfinity(value))
                             {
-                                double rounded = Math.Round(value, 2); // ⬅ 2 decimal places
+                                double rounded = Math.Round(value, 2);
 
                                 if (!resultCounts.ContainsKey(rounded))
-                                    resultCounts[rounded] = 0;
-
-                                resultCounts[rounded]++;
+                                {
+                                    resultCounts[rounded] = new List<string>();
+                                }
+                                resultCounts[rounded].Add(expr);
                             }
                         }
                         catch { /* Invalid expressions, e.g., divide by zero */ }
@@ -222,7 +226,8 @@ public class SimplifiedCard
         }
 
         // Calculate median count
-        var counts = resultCounts.Values.OrderBy(v => v).ToList();
+        List<int> counts = resultCounts.Values.Select(list => list.Count).ToList();
+
         double median;
         int mid = counts.Count / 2;
         if (counts.Count % 2 == 0)
@@ -232,7 +237,7 @@ public class SimplifiedCard
 
         //remove number that are too infrequent
         var keysToRemove = resultCounts
-    .Where(kvp => kvp.Value < median)
+    .Where(kvp => kvp.Value.Count() < median)
     .Select(kvp => kvp.Key)
     .ToList();
 
@@ -241,16 +246,7 @@ public class SimplifiedCard
             resultCounts.Remove(key);
         }
 
-        // Step 5: Output as 2D array sorted by count descending
-        var sorted = resultCounts.OrderByDescending(kv => kv.Value).ToArray();
-        double[,] output = new double[sorted.Length, 2];
-        for (int i = 0; i < sorted.Length; i++)
-        {
-            output[i, 0] = sorted[i].Key;    // Result (rounded double)
-            output[i, 1] = sorted[i].Value;  // Count
-        }
-
-        return (output, resultCounts);
+        return resultCounts;
     }
 
     static double Evaluate(string expression)
@@ -322,7 +318,7 @@ public class SimplifiedCard
 
 
     #region get target number base on GetMostFrequentResults() with 
-    public static double GetAnswerByDifficulty(Dictionary<double, int> resultCounts, double difficulty)
+    public static Dictionary<double, List<string>> GetAnswerByDifficulty(Dictionary<double, List<string>> resultCounts, double difficulty)
     {
         if (resultCounts == null || resultCounts.Count == 0)
             throw new ArgumentException("Result counts are empty.");
@@ -333,16 +329,16 @@ public class SimplifiedCard
         // only get round number
         var filtered = resultCounts
             .Where(kv => Math.Abs(kv.Key % 1) < 0.0001)
-    .OrderByDescending(kv => kv.Value)
+    .OrderByDescending(kv => kv.Value.Count)
     .ToList();
 
         // Determine target index from percentile
         int index = (int)Math.Round(difficulty * (filtered.Count - 1));
-        int targetCount = filtered[index].Value;
+        int targetCount = filtered[index].Value.Count();
 
         // Get all entries with the same count as target
         var sameCountKeys = filtered
-            .Where(kv => kv.Value == targetCount)
+            .Where(kv => kv.Value.Count() == targetCount)
             .Select(kv => kv.Key)
             .ToList();
 
@@ -350,7 +346,10 @@ public class SimplifiedCard
         Random rng = new Random();
         int randIndex = rng.Next(sameCountKeys.Count);
 
-        return sameCountKeys[randIndex];
+        double key = sameCountKeys[randIndex];
+        List<string> value = resultCounts[key];
+
+        return new Dictionary<double, List<string>>() { { key, value } };
     }
 
 

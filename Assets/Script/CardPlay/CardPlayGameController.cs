@@ -4,6 +4,7 @@ using UnityEngine;
 using static Utils;
 using static PlayCardCalculation;
 using UnityEngine.Windows;
+using System.Linq;
 
 public class CardPlayGameController : MonoBehaviour
 {
@@ -15,10 +16,10 @@ public class CardPlayGameController : MonoBehaviour
     public GameObject playedCardSlots;
     public GameObject PlayStateText;
 
-    [Header("CoreData")]
+    [Header("Core Data")]
     [SerializeField] private double playerAnswer;
-    [SerializeField] double multiplier;
-    [SerializeField] List<int> OperatorOrders = new List<int>();
+    [SerializeField] private double multiplier;
+    [SerializeField] private List<int> OperatorOrders = new List<int>();
 
     [Header("Card and Deck")]
     [SerializeField] private GameObject card;
@@ -28,7 +29,7 @@ public class CardPlayGameController : MonoBehaviour
     [SerializeField] private Deck roundDeck;
 
     [Header("Equation Solver")]
-    [SerializeField] private ParenthesesMode parenthesesMode;
+    public ParenthesesMode parenthesesMode;
     public bool isHandReady = false;
     public bool isHandValiid = false;
     [SerializeField] List<object[]> steplog = new List<object[]>();
@@ -37,8 +38,25 @@ public class CardPlayGameController : MonoBehaviour
     [SerializeField] private List<OperationEnum> posibleOperators = new List<OperationEnum>();
     [SerializeField] private double targetNumber;
     [SerializeField] private double difficulty;
-    private Dictionary<double, int> allPossibleEquationAnswers;
+    private Dictionary<double, List<string>> allPossibleEquationAnswers;
 
+    [Header("Multiplier Finder")]
+    //  targetNumber is blueZone (perfect hit)
+    [SerializeField] private double blueZoneMultiplier = 3;
+    [Space(5)]
+
+    [SerializeField] private double greenZoneValue = 13;
+    [SerializeField] private double greenZoneRatio;
+    [SerializeField] private double greenZoneMultiplier = 2;
+    [Space(5)]
+
+    [SerializeField] private double yellowZoneValue = 25;
+    [SerializeField] private double yellowZoneRatio;
+    [SerializeField] private double yellowZoneMultiplier = 1;
+    [Space(5)]
+
+    // redZone is range outside yellowZone
+    [SerializeField] private double redZoneMultiplier = 0.5;
 
     private void Awake()
     {
@@ -131,6 +149,38 @@ public class CardPlayGameController : MonoBehaviour
         }
 
         playerAnswer = (double)steplog[steplog.Count - 1][1];
+
+        GetMultiplier();
+    }
+
+    private void GetMultiplier()
+    {
+        if (greenZoneRatio > 0)
+        {
+            greenZoneValue = (greenZoneRatio * targetNumber) + targetNumber;
+        }
+
+        if(yellowZoneRatio > 0)
+        {
+            yellowZoneValue = (yellowZoneRatio * targetNumber) + targetNumber;
+        }
+
+        switch (playerAnswer)
+        {
+            case double i when i == targetNumber:
+                multiplier = blueZoneMultiplier;
+                break;
+            case double i when i <= greenZoneValue && i >= -greenZoneValue:
+                multiplier = greenZoneMultiplier;
+                break;
+            case double i when i <= yellowZoneValue && i >= -yellowZoneValue:
+                multiplier = yellowZoneMultiplier;
+                break;
+            default:
+                multiplier = redZoneMultiplier;
+                break;
+        }
+
     }
 
     public void GetAllPossibleEquation()
@@ -161,16 +211,19 @@ public class CardPlayGameController : MonoBehaviour
         }
 
         //run the function to get value
-        var (results, resultsDict) = PlayCardCalculation.GetMostFrequentResults(numbers, posibleOperators);
+        Dictionary<double, List<string>>  resultsDict = PlayCardCalculation.GetMostFrequentResults(numbers, posibleOperators);
 
         if (resultsDict.Count <= 0)
         {
             Debug.Log("there is no equation in the dic, maybe the threshold is too high");
         }
 
-        for (int i = 0; i < results.GetLength(0); i++)
+        var sorted = resultsDict.OrderByDescending(kvp => kvp.Value?.Count ?? 0);
+        foreach (var kvp in sorted)
         {
-            Debug.Log($"Result: {results[i, 0]:0.00}, Count: {results[i, 1]}");
+            double key = kvp.Key;
+            int count = kvp.Value != null ? kvp.Value.Count : 0;
+            Debug.Log($"Number: {key}, Count: {count}");
         }
 
         allPossibleEquationAnswers = resultsDict;
@@ -183,9 +236,11 @@ public class CardPlayGameController : MonoBehaviour
             Debug.Log("there is no equation in the dic, maybe the threshold is too high");
             return;
         }
-
-        targetNumber = PlayCardCalculation.GetAnswerByDifficulty(allPossibleEquationAnswers, difficulty);
+        Dictionary<double, List<string>> targetNumberWithItsEquation = PlayCardCalculation.GetAnswerByDifficulty(allPossibleEquationAnswers, difficulty);
+        targetNumber = targetNumberWithItsEquation.Keys.First();
+        List<string> correctEquation = targetNumberWithItsEquation.Values.First();
         Debug.Log("target number: " + targetNumber);
+        Debug.Log("One of correct equation: " + correctEquation[Random.Range(0, correctEquation.Count-1)]);
     }
 
     public double DoOperation(double a,double b, OperationEnum operation)
