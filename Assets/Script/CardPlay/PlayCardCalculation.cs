@@ -269,9 +269,10 @@ public class SimplifiedCard
 
         return new List<string>
         {
-            $"(({a}{op1}{b}){op2}{c}){op3}{d}",
-            $"({a}{op1}({b}{op2}{c})){op3}{d}",
-            $"{a}{op1}(({b}{op2}{c}){op3}{d})",
+            $"{a}{op1}{b}{op2}{c}{op3}{d}",
+            $"({a}{op1}{b}){op2}{c}{op3}{d}",
+            $"{a}{op1}({b}{op2}{c}){op3}{d}",
+            $"{a}{op1}{b}{op2}({c}{op3}{d})",
             $"({a}{op1}{b}){op2}({c}{op3}{d})"
         };
     }
