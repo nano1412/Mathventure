@@ -22,7 +22,7 @@ public class CardPlayGameController : MonoBehaviour
     [SerializeField] private List<int> OperatorOrders = new List<int>();
 
     [Header("Card and Deck")]
-    [SerializeField] private GameObject card;
+    [SerializeField] private GameObject cardPrefab;
     [SerializeField] private Transform deckObject;
     public Deck templateDeck;
     [SerializeField] private Deck persistentDeck;
@@ -204,17 +204,16 @@ public class CardPlayGameController : MonoBehaviour
             }
         }
 
-        //get all possible operator that player can play
-        // as for now we will just set that player can play all 4 operators
-        
-
         if (cardInHandCount < 4)
         {
             Debug.Log("player have fewer than 4 card. they cant play it");
             return;
         }
 
-        //run the function to get value
+        //get all possible operator that player can play
+        // as for now we will just set that player can play all 4 operators
+        
+
         Dictionary<double, List<string>>  resultsDict = PlayCardCalculation.GetMostFrequentResults(numbers, posibleOperators);
 
         if (resultsDict.Count <= 0)
@@ -247,52 +246,6 @@ public class CardPlayGameController : MonoBehaviour
         Debug.Log("One of correct equation: " + correctEquation[Random.Range(0, correctEquation.Count-1)]);
     }
 
-    public double DoOperation(double a,double b, OperationEnum operation)
-    {
-        //double.NegativeInfinity mean Invalid, preview must say so and should be able to play this hand
-        switch (operation)
-        {
-            case OperationEnum.Plus:
-                return a + b;
-
-
-            case OperationEnum.Minus:
-                return a - b;
-
-
-            case OperationEnum.Multiply:
-                return a * b;
-
-
-            case OperationEnum.Divide:
-                if(b == 0)
-                {
-                    return double.NegativeInfinity;
-                }
-                return a / b;
-                // dont forget to check for divide by zero
-
-        }
-
-        return double.NegativeInfinity;
-    }
-
-    public bool RectOverlaps(RectTransform rt1, RectTransform rt2)
-    {
-        Rect r1 = GetWorldRect(rt1);
-        Rect r2 = GetWorldRect(rt2);
-        return r1.Overlaps(r2);
-    }
-
-    private static Rect GetWorldRect(RectTransform rt)
-    {
-        Vector3[] corners = new Vector3[4];
-        rt.GetWorldCorners(corners);
-        Vector3 bottomLeft = corners[0];
-        Vector3 topRight = corners[2];
-        return new Rect(bottomLeft, topRight - bottomLeft);
-    }
-
     public void AddCard()
     {
 
@@ -318,7 +271,7 @@ public class CardPlayGameController : MonoBehaviour
             }
 
 
-            GameObject newCard = Instantiate(card, deckObject.position, new Quaternion(), currentCardSlot);
+            GameObject newCard = Instantiate(cardPrefab, deckObject.position, new Quaternion(), currentCardSlot);
             Card newCardScript = newCard.GetComponent<Card>();
             newCardScript.deckPosition = deckObject.position;
             newCardScript.SetCardData(SelectedCarddata);

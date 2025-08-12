@@ -248,7 +248,7 @@ public class Card : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
         {
             foreach(Transform playedCard in CardPlayGameController.current.playedCardSlots.transform)
             {
-                if (CardPlayGameController.current.RectOverlaps(transform.GetComponent<RectTransform>(), playedCard.GetComponent<RectTransform>()) && playedCard.CompareTag("Slot"))
+                if (Utils.RectOverlaps(transform.GetComponent<RectTransform>(), playedCard.GetComponent<RectTransform>()) && playedCard.CompareTag("Slot"))
                 {
                     transform.SetParent(playedCard);
                 }
