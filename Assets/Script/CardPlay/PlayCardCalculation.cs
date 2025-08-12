@@ -235,7 +235,7 @@ public class SimplifiedCard
         else
             median = counts[mid];
 
-        //remove number that are too infrequent
+        //remove number that are too infrequent from median
         var keysToRemove = resultCounts
     .Where(kvp => kvp.Value.Count() < median)
     .Select(kvp => kvp.Key)
@@ -319,7 +319,7 @@ public class SimplifiedCard
 
 
     #region get target number base on GetMostFrequentResults() with 
-    public static Dictionary<double, List<string>> GetAnswerByDifficulty(Dictionary<double, List<string>> resultCounts, double difficulty)
+    public static Dictionary<double, List<string>> GetAnswerByDifficulty(Dictionary<double, List<string>> resultCounts, double difficulty, double maxAnswerRange)
     {
         if (resultCounts == null || resultCounts.Count == 0)
             throw new ArgumentException("Result counts are empty.");
@@ -342,6 +342,10 @@ public class SimplifiedCard
             .Where(kv => kv.Value.Count() == targetCount)
             .Select(kv => kv.Key)
             .ToList();
+
+        //remove the answer that are too high or low
+        sameCountKeys.RemoveAll(n => n >= maxAnswerRange);
+        sameCountKeys.RemoveAll(n => n <= -maxAnswerRange);
 
         // Randomly pick one from them
         Random rng = new Random();
