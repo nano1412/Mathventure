@@ -5,6 +5,7 @@ using static Utils;
 using static PlayCardCalculation;
 using UnityEngine.Windows;
 using System.Linq;
+using System;
 
 public class CardPlayGameController : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class CardPlayGameController : MonoBehaviour
 
     [Header("Core Data")]
     [SerializeField] private double playerAnswer;
+    [SerializeField] private double previewPlayerAnswer;
     [SerializeField] private double multiplier;
     [SerializeField] private List<int> OperatorOrders = new List<int>();
 
@@ -29,8 +31,9 @@ public class CardPlayGameController : MonoBehaviour
     [SerializeField] private Deck roundDeck;
 
     [Header("Equation Solver")]
+    private List<GameObject> CardInhandGameObject = new List<GameObject>();
     public ParenthesesMode parenthesesMode;
-    public bool isHandReady = false;
+    public int isHandReady = 0;
     public bool isHandValiid = false;
     [SerializeField] List<object[]> steplog = new List<object[]>();
 
@@ -83,75 +86,75 @@ public class CardPlayGameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        isHandReady = CheckIfPlayedCardReadyToplay();
-        if (isHandReady)
+        CardInhandGameObject = new List<GameObject>();
+        foreach (Transform child in playedCardSlots.transform)
         {
-            PlayStateText.GetComponent<TMP_Text>().text = "Valid";
-        } else
+            if(child.childCount > 0)
+            {
+                CardInhandGameObject.Add(child.GetChild(0).gameObject);
+            }
+        }
+
+
+        isHandReady = ValidationHand(CardInhandGameObject);
+        if (isHandReady < 0)
         {
             PlayStateText.GetComponent<TMP_Text>().text = "Invalid";
+        } else if(isHandReady > 0 && isHandReady < 4)
+        {
+            PlayStateText.GetComponent<TMP_Text>().text = "Ready to preview";
+            PreviewScore(ParenthesesMode.NoParentheses);
+        } else if(isHandReady >= 4)
+        {
+            PlayStateText.GetComponent<TMP_Text>().text = "Valid";
+            PreviewScore(parenthesesMode);
         }
     }
 
-    private bool CheckIfPlayedCardReadyToplay()
+    public void PreviewScore(ParenthesesMode parentheses)
     {
-        int cardCount = 0;
-        int operatorCount = 0;
-
-        foreach(Transform slot in playedCardSlots.transform)
+        if (isHandReady < 0)
         {
-            //slot.GetChild(0);
-
-            if (slot.childCount == 1 && slot.GetChild(0).GetComponent<Card>()!= null && slot.CompareTag("Slot"))
-            {
-                cardCount++;
-            }
-
-            if (slot.childCount == 1 && slot.GetChild(0).GetComponent<Operatorcard>() != null && slot.CompareTag("OperatorSlot"))
-            {
-                operatorCount++;
-            }
+            //Debug.Log("invalid hand to preview");
+            return;
         }
+        //Debug.Log("valid hand go to calculation");
 
-        if(cardCount == 4 && operatorCount == 3)
-        {
-            return true;
-            
-        } else
-        {
-            return false;
-        }
-    }
+        List<object[]> previewSteplog = new List<object[]>();
+        previewSteplog = PlayCardCalculation.EvaluateEquation(CardInhandGameObject, parentheses);
+        //foreach (var step in steplog)
+        //{
+        //    Debug.Log($"{step[0]}, Pos: {step[1]}");
+        //}
 
-    public void PreviewScore()
-    {
-
+        previewPlayerAnswer = (double)previewSteplog[previewSteplog.Count - 1][1];
     }
 
     public void PlayCard()
     {
-        if (!isHandReady) {
+        if (isHandReady < 4) {
             Debug.Log("invalid hand");
             return; 
         }
         Debug.Log("valid hand go to calculation");
-            List<GameObject> cardsPlayed = new List<GameObject>();
 
-        foreach (Transform child in playedCardSlots.transform)
-        {
-            cardsPlayed.Add(child.GetChild(0).gameObject);
-        }
+        
 
-        Debug.Log(cardsPlayed.Count);
+        Debug.Log(CardInhandGameObject.Count);
 
         OperatorOrders = new List<int>();
-        steplog = PlayCardCalculation.EvaluateEquation(cardsPlayed, parenthesesMode);
+        steplog = PlayCardCalculation.EvaluateEquation(CardInhandGameObject, parenthesesMode);
         foreach (var step in steplog)
         {
             Debug.Log($"{step[0]}, Pos: {step[1]}");
-            OperatorOrders.Add((int)step[1]);
         }
 
+        for (int i = 0; i < steplog.Count; i++)
+        {
+            OperatorOrders.Add(Convert.ToInt32(steplog[i][1]));
+        }
+
+        previewPlayerAnswer = 0; //reset previewPlayerAnswer for next round
         playerAnswer = (double)steplog[steplog.Count - 1][1];
 
         GetMultiplier();
@@ -243,7 +246,7 @@ public class CardPlayGameController : MonoBehaviour
         targetNumber = targetNumberWithItsEquation.Keys.First();
         List<string> correctEquation = targetNumberWithItsEquation.Values.First();
         Debug.Log("target number: " + targetNumber);
-        Debug.Log("One of correct equation: " + correctEquation[Random.Range(0, correctEquation.Count-1)]);
+        Debug.Log("One of correct equation: " + correctEquation[UnityEngine.Random.Range(0, correctEquation.Count-1)]);
     }
 
     public void AddCard()

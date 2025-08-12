@@ -67,29 +67,15 @@ public class SimplifiedCard
 
     public static class PlayCardCalculation
     {
+
+
         public static List<object[]> EvaluateEquation(List<GameObject> handEquation, ParenthesesMode mode)
         {
-            List<object[]> resultLog = new List<object[]>();
-
-            // Validation check if first and last Gameobject have Card component
-            if (handEquation.Count % 2 == 0 || handEquation[0].GetComponent<Card>() == null || handEquation[^1].GetComponent<Card>() == null)
-            {
-                Debug.Log("wrong order, the number must come first and last");
-                return null;
-            }
-
-            // Validation check if the list got the number and operator zip in together
-            for (int i = 0; i < handEquation.Count; i++)
-            {
-                if (i % 2 == 0 && handEquation[i].GetComponent<Card>() == null ||
-                    i % 2 == 1 && handEquation[i].GetComponent<Operatorcard>() == null)
-                {
-                    Debug.Log("wrong order, operator and number must be zipped between each other");
-                    return null;
-                }
-            }
-
-
+            if(ValidationHand(handEquation) < 0)
+        {
+            return null;
+        }
+            
             // Convert to simplified struct
             List<SimplifiedCard> simplified = new List<SimplifiedCard>();
             for (int i = 0; i < handEquation.Count; i++)
@@ -104,6 +90,7 @@ public class SimplifiedCard
 
             // Apply parentheses collapsing
             ApplyParenthesesMode(simplified, mode);
+            List<object[]> resultLog = new List<object[]>();
 
             for (int priorityOrder = 3; priorityOrder > 0; priorityOrder--)
             {
@@ -360,8 +347,35 @@ public class SimplifiedCard
 
     #endregion
 
-    #region
+    #region hand Validation
+    public static int ValidationHand(List<GameObject> handEquation)
+    {
+        int numberCount = 0;
+        // Validation check if first and last Gameobject have Card component
+        if (handEquation.Count % 2 == 0 || handEquation[0].GetComponent<Card>() == null || handEquation[^1].GetComponent<Card>() == null)
+        {
+            //wrong order, the number must come first and last
+            return -1;
+        }
 
+        // Validation check if the list got the number and operator zip in together
+        for (int i = 0; i < handEquation.Count; i++)
+        {
+            if (i % 2 == 0 && handEquation[i].GetComponent<Card>() == null ||
+                i % 2 == 1 && handEquation[i].GetComponent<Operatorcard>() == null)
+            {
+                //wrong order, operator and number must be zipped between each other
+                return -2;
+            }
+
+            if (i % 2 == 0 && handEquation[i].GetComponent<Card>() != null)
+            {
+                numberCount++;
+            }
+        }
+
+        return numberCount;
+    }
     #endregion
 }
 
