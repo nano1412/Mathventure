@@ -6,6 +6,8 @@ using static PlayCardCalculation;
 using UnityEngine.Windows;
 using System.Linq;
 using System;
+using static UnityEngine.Rendering.DebugUI;
+using UnityEditor;
 
 public class CardPlayGameController : MonoBehaviour
 {
@@ -15,7 +17,11 @@ public class CardPlayGameController : MonoBehaviour
     public GameObject playerHand;
     public GameObject operatorButton;
     public GameObject playedCardSlots;
-    public GameObject PlayStateText;
+    [SerializeField] private TMP_Text PlayStateText;
+    [SerializeField] private TMP_Text actualAnswerText;
+    [SerializeField] private TMP_Text previewAnswerText;
+    [SerializeField] private TMP_Text targetNumberText;
+    [SerializeField] private TMP_Text previewDataText;
 
     [Header("Core Data")]
     [SerializeField] private double playerAnswer;
@@ -73,7 +79,6 @@ public class CardPlayGameController : MonoBehaviour
         roundDeck = Instantiate(persistentDeck);
 
         playedCardSlots = playedCardHandle.transform.Find("NumberCard").gameObject;
-        PlayStateText = playedCardHandle.transform.Find("PlayState").gameObject;
 
 
         //will have to look on possible operators again once we imperment character
@@ -95,18 +100,22 @@ public class CardPlayGameController : MonoBehaviour
             }
         }
 
+        previewAnswerText.text = previewPlayerAnswer.ToString();
+        actualAnswerText.text = playerAnswer.ToString();
+        targetNumberText.text = targetNumber.ToString();
+
 
         isHandReady = ValidationHand(CardInhandGameObject);
         if (isHandReady < 0)
         {
-            PlayStateText.GetComponent<TMP_Text>().text = "Invalid";
+            PlayStateText.text = "Invalid";
         } else if(isHandReady > 0 && isHandReady < 4)
         {
-            PlayStateText.GetComponent<TMP_Text>().text = "Ready to preview";
+            PlayStateText.text = "Ready to preview";
             PreviewScore(ParenthesesMode.NoParentheses);
         } else if(isHandReady >= 4)
         {
-            PlayStateText.GetComponent<TMP_Text>().text = "Valid";
+            PlayStateText.text = "Valid";
             PreviewScore(parenthesesMode);
         }
     }
@@ -157,10 +166,10 @@ public class CardPlayGameController : MonoBehaviour
         previewPlayerAnswer = 0; //reset previewPlayerAnswer for next round
         playerAnswer = (double)steplog[steplog.Count - 1][1];
 
-        GetMultiplier();
+        GetMultiplierValue();
     }
 
-    private void GetMultiplier()
+    private void GetMultiplierValue()
     {
         if (greenZoneRatio > 0)
         {
@@ -282,4 +291,45 @@ public class CardPlayGameController : MonoBehaviour
             currentCardSlot.gameObject.SetActive(true);
         }
     }
+
+    #region Get Set boi
+    public double GetPreviewAnswer()
+    {
+        return previewPlayerAnswer;
+    }
+
+    public double GetAnswer()
+    {
+        return playerAnswer;
+    }
+
+    public double GetMultiplier()
+    {
+        return multiplier;
+    }
+     
+
+    public List<int> GetOperatorOrders()
+    {
+        return OperatorOrders;
+    }
+
+    public List<OperatorOrder> GetOperatorOrdersAsEnum()
+    {
+        List<OperatorOrder> OperatorOrderEnum = new List<OperatorOrder>();
+        foreach(int OperatorOrder in OperatorOrders)
+        {
+            bool isValid = Enum.IsDefined(typeof(OperatorOrder), OperatorOrder);
+            if (isValid)
+            {
+                OperatorOrderEnum.Add((OperatorOrder)OperatorOrder);
+            }
+        }
+
+        return OperatorOrderEnum;
+    }
+
+
+
+    #endregion
 }

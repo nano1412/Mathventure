@@ -39,6 +39,18 @@ public static class Utils
         DoMiddleOperationLast  // (XX)(XX)
     }
 
+    public enum OperatorOrder
+    {
+        numberPlace1,
+        firstOperator,
+        numberPlace2,
+        middleOperator,
+        numberPlace3,
+        lastOperator,
+        numberPlace4
+
+    }
+
 
     public static double RoundUpToDecimalPlaces(double value, int decimalPlaces)
     {

@@ -212,27 +212,6 @@ public class SimplifiedCard
             }
         }
 
-        // Calculate median count
-        List<int> counts = resultCounts.Values.Select(list => list.Count).ToList();
-
-        double median;
-        int mid = counts.Count / 2;
-        if (counts.Count % 2 == 0)
-            median = (counts[mid - 1] + counts[mid]) / 2.0;
-        else
-            median = counts[mid];
-
-        //remove number that are too infrequent from median
-        var keysToRemove = resultCounts
-    .Where(kvp => kvp.Value.Count() < median)
-    .Select(kvp => kvp.Key)
-    .ToList();
-
-        foreach (var key in keysToRemove)
-        {
-            resultCounts.Remove(key);
-        }
-
         return resultCounts;
     }
 
@@ -320,6 +299,10 @@ public class SimplifiedCard
     .OrderByDescending(kv => kv.Value.Count)
     .ToList();
 
+        //remove the answer that are too high or low
+        filtered.RemoveAll(n => n.Key >= maxAnswerRange);
+        filtered.RemoveAll(n => n.Key <= -maxAnswerRange);
+
         // Determine target index from percentile
         int index = (int)Math.Round(difficulty * (filtered.Count - 1));
         int targetCount = filtered[index].Value.Count();
@@ -330,14 +313,11 @@ public class SimplifiedCard
             .Select(kv => kv.Key)
             .ToList();
 
-        //remove the answer that are too high or low
-        sameCountKeys.RemoveAll(n => n >= maxAnswerRange);
-        sameCountKeys.RemoveAll(n => n <= -maxAnswerRange);
-
         // Randomly pick one from them
         Random rng = new Random();
         int randIndex = rng.Next(sameCountKeys.Count);
 
+        Debug.Log(randIndex);
         double key = sameCountKeys[randIndex];
         List<string> value = resultCounts[key];
 
