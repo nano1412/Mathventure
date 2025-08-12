@@ -72,6 +72,8 @@ public class CardPlayGameController : MonoBehaviour
         playedCardSlots = playedCardHandle.transform.Find("NumberCard").gameObject;
         PlayStateText = playedCardHandle.transform.Find("PlayState").gameObject;
 
+
+        //will have to look on possible operators again once we imperment character
         posibleOperators.Add(OperationEnum.Plus);
         posibleOperators.Add(OperationEnum.Minus);
         posibleOperators.Add(OperationEnum.Multiply);
@@ -142,11 +144,12 @@ public class CardPlayGameController : MonoBehaviour
 
         Debug.Log(cardsPlayed.Count);
 
-
+        OperatorOrders = new List<int>();
         steplog = PlayCardCalculation.EvaluateEquation(cardsPlayed, parenthesesMode);
         foreach (var step in steplog)
         {
             Debug.Log($"{step[0]}, Pos: {step[1]}");
+            OperatorOrders.Add((int)step[1]);
         }
 
         playerAnswer = (double)steplog[steplog.Count - 1][1];
