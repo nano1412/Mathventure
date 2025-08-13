@@ -41,14 +41,9 @@ public static class Utils
 
     public enum OperatorOrder
     {
-        numberPlace1,
-        firstOperator,
-        numberPlace2,
-        middleOperator,
-        numberPlace3,
-        lastOperator,
-        numberPlace4
-
+        firstOperator = 1,
+        middleOperator = 3,
+        lastOperator = 5
     }
 
 

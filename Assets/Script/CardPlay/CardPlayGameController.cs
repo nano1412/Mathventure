@@ -17,11 +17,24 @@ public class CardPlayGameController : MonoBehaviour
     public GameObject playerHand;
     public GameObject operatorButton;
     public GameObject playedCardSlots;
+
+    [Header("Preview text")]
     [SerializeField] private TMP_Text PlayStateText;
     [SerializeField] private TMP_Text actualAnswerText;
     [SerializeField] private TMP_Text previewAnswerText;
     [SerializeField] private TMP_Text targetNumberText;
     [SerializeField] private TMP_Text previewDataText;
+    [Space(5)]
+
+    [SerializeField] private TMP_Text minGreenZoneValueText;
+    [SerializeField] private TMP_Text maxGreenZoneValueText;
+    [SerializeField] private TMP_Text greenZoneMultiplierText;
+    [Space(5)]
+
+    [SerializeField] private TMP_Text minYellowZoneValueText;
+    [SerializeField] private TMP_Text maxYellowZoneValueText;
+    [SerializeField] private TMP_Text yellowZoneMultiplierText;
+
 
     [Header("Core Data")]
     [SerializeField] private double playerAnswer;
@@ -100,9 +113,9 @@ public class CardPlayGameController : MonoBehaviour
             }
         }
 
-        previewAnswerText.text = previewPlayerAnswer.ToString();
-        actualAnswerText.text = playerAnswer.ToString();
-        targetNumberText.text = targetNumber.ToString();
+        previewAnswerText.text = "preview answer: " + previewPlayerAnswer.ToString();
+        actualAnswerText.text = "actual answer: " + playerAnswer.ToString();
+        targetNumberText.text = "target number: " + targetNumber.ToString();
 
 
         isHandReady = ValidationHand(CardInhandGameObject);
@@ -255,6 +268,7 @@ public class CardPlayGameController : MonoBehaviour
         targetNumber = targetNumberWithItsEquation.Keys.First();
         List<string> correctEquation = targetNumberWithItsEquation.Values.First();
         Debug.Log("target number: " + targetNumber);
+        Debug.Log("number of possible equation " + correctEquation.Count);
         Debug.Log("One of correct equation: " + correctEquation[UnityEngine.Random.Range(0, correctEquation.Count-1)]);
     }
 

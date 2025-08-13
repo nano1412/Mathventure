@@ -317,7 +317,6 @@ public class SimplifiedCard
         Random rng = new Random();
         int randIndex = rng.Next(sameCountKeys.Count);
 
-        Debug.Log(randIndex);
         double key = sameCountKeys[randIndex];
         List<string> value = resultCounts[key];
 
