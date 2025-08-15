@@ -27,7 +27,7 @@ public class AnswerReport : MonoBehaviour
         double multiplier = CardPlayGameController.current.GetMultiplier();
         List<OperatorOrder> operatorOrder = CardPlayGameController.current.GetOperatorOrdersAsEnum();
 
-        if(operatorOrder.Count < 3) { return "Invalid"; }
+        if (operatorOrder.Count < 3) { return "Invalid"; }
 
         return "Player answer: " + answer + " with " + multiplier + "x multiplier. order of operator are "
             + operatorOrder[0].ToString() + ", " + operatorOrder[1].ToString() + ", " + operatorOrder[2].ToString();

@@ -33,7 +33,7 @@ public class Operatorcard : MonoBehaviour, IPointerUpHandler
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private string ChangeOperationTextToSymbol(OperationEnum operation)

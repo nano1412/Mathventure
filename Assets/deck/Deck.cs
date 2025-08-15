@@ -15,10 +15,10 @@ public class Deck : ScriptableObject
 
     public CardData GetRandomCard()
     {
-        if(cardDatas.Count <= 0)
+        if (cardDatas.Count <= 0)
         {
             Debug.Log("run out of card in deck");
-            return new CardData(0,0, EffectType.Empty);
+            return new CardData(0, 0, EffectType.Empty);
         }
 
         int index = Random.Range(0, cardDatas.Count);

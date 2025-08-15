@@ -107,7 +107,7 @@ public class CardPlayGameController : MonoBehaviour
         CardInhandGameObject = new List<GameObject>();
         foreach (Transform child in playedCardSlots.transform)
         {
-            if(child.childCount > 0)
+            if (child.childCount > 0)
             {
                 CardInhandGameObject.Add(child.GetChild(0).gameObject);
             }
@@ -122,11 +122,13 @@ public class CardPlayGameController : MonoBehaviour
         if (isHandReady < 0)
         {
             PlayStateText.text = "Invalid";
-        } else if(isHandReady > 0 && isHandReady < 4)
+        }
+        else if (isHandReady > 0 && isHandReady < 4)
         {
             PlayStateText.text = "Ready to preview";
             PreviewScore(ParenthesesMode.NoParentheses);
-        } else if(isHandReady >= 4)
+        }
+        else if (isHandReady >= 4)
         {
             PlayStateText.text = "Valid";
             PreviewScore(parenthesesMode);
@@ -154,13 +156,14 @@ public class CardPlayGameController : MonoBehaviour
 
     public void PlayCard()
     {
-        if (isHandReady < 4) {
+        if (isHandReady < 4)
+        {
             Debug.Log("invalid hand");
-            return; 
+            return;
         }
         Debug.Log("valid hand go to calculation");
 
-        
+
 
         Debug.Log(CardInhandGameObject.Count);
 
@@ -189,7 +192,7 @@ public class CardPlayGameController : MonoBehaviour
             greenZoneValue = (greenZoneRatio * targetNumber) + targetNumber;
         }
 
-        if(yellowZoneRatio > 0)
+        if (yellowZoneRatio > 0)
         {
             yellowZoneValue = (yellowZoneRatio * targetNumber) + targetNumber;
         }
@@ -217,11 +220,11 @@ public class CardPlayGameController : MonoBehaviour
         // get faceValue of card on hand
         int cardInHandCount = 0;
         List<double> numbers = new List<double>();
-        foreach(Transform cardInHand in playerHand.transform)
+        foreach (Transform cardInHand in playerHand.transform)
         {
-            if(cardInHand.childCount == 1)
+            if (cardInHand.childCount == 1)
             {
-                if(cardInHand.GetChild(0).GetComponent<Card>() != null)
+                if (cardInHand.GetChild(0).GetComponent<Card>() != null)
                 {
                     cardInHandCount++;
                     numbers.Add(cardInHand.GetChild(0).GetComponent<Card>().GetFaceValue());
@@ -237,9 +240,9 @@ public class CardPlayGameController : MonoBehaviour
 
         //get all possible operator that player can play
         // as for now we will just set that player can play all 4 operators
-        
 
-        Dictionary<double, List<string>>  resultsDict = PlayCardCalculation.GetMostFrequentResults(numbers, posibleOperators);
+
+        Dictionary<double, List<string>> resultsDict = PlayCardCalculation.GetMostFrequentResults(numbers, posibleOperators);
 
         if (resultsDict.Count <= 0)
         {
@@ -269,7 +272,7 @@ public class CardPlayGameController : MonoBehaviour
         List<string> correctEquation = targetNumberWithItsEquation.Values.First();
         Debug.Log("target number: " + targetNumber);
         Debug.Log("number of possible equation " + correctEquation.Count);
-        Debug.Log("One of correct equation: " + correctEquation[UnityEngine.Random.Range(0, correctEquation.Count-1)]);
+        Debug.Log("One of correct equation: " + correctEquation[UnityEngine.Random.Range(0, correctEquation.Count - 1)]);
     }
 
     public void AddCard()
@@ -291,7 +294,7 @@ public class CardPlayGameController : MonoBehaviour
         if (isHandHaveSpace)
         {
             CardData SelectedCarddata = roundDeck.GetRandomCard();
-            if(SelectedCarddata.Effect == EffectType.Empty)
+            if (SelectedCarddata.Effect == EffectType.Empty)
             {
                 return;
             }
@@ -321,7 +324,7 @@ public class CardPlayGameController : MonoBehaviour
     {
         return multiplier;
     }
-     
+
 
     public List<int> GetOperatorOrders()
     {
@@ -331,7 +334,7 @@ public class CardPlayGameController : MonoBehaviour
     public List<OperatorOrder> GetOperatorOrdersAsEnum()
     {
         List<OperatorOrder> OperatorOrderEnum = new List<OperatorOrder>();
-        foreach(int OperatorOrder in OperatorOrders)
+        foreach (int OperatorOrder in OperatorOrders)
         {
             bool isValid = Enum.IsDefined(typeof(OperatorOrder), OperatorOrder);
             if (isValid)

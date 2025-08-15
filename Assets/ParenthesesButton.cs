@@ -5,7 +5,7 @@ public class ParenthesesButton : MonoBehaviour
 {
     public void DoFrontOperationFirst()
     {
-        if(CardPlayGameController.current.parenthesesMode != ParenthesesMode.DoFrontOperationFirst)
+        if (CardPlayGameController.current.parenthesesMode != ParenthesesMode.DoFrontOperationFirst)
         {
             CardPlayGameController.current.parenthesesMode = ParenthesesMode.DoFrontOperationFirst;
         }

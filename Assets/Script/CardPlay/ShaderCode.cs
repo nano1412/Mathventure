@@ -49,7 +49,7 @@ public class ShaderCode : MonoBehaviour
         yAngle = ClampAngle(yAngle, -90f, 90);
 
 
-        m.SetVector("_Rotation", new Vector2(ExtensionMethods.Remap(xAngle,-20,20,-.5f,.5f), ExtensionMethods.Remap(yAngle, -20, 20, -.5f, .5f)));
+        m.SetVector("_Rotation", new Vector2(ExtensionMethods.Remap(xAngle, -20, 20, -.5f, .5f), ExtensionMethods.Remap(yAngle, -20, 20, -.5f, .5f)));
 
     }
 

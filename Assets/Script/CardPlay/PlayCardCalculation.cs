@@ -62,105 +62,105 @@ public class SimplifiedCard
         else
             return operatorValue.ToString();
 
-    } 
+    }
 }
 
-    public static class PlayCardCalculation
+public static class PlayCardCalculation
+{
+
+
+    public static List<object[]> EvaluateEquation(List<GameObject> handEquation, ParenthesesMode mode)
     {
-
-
-        public static List<object[]> EvaluateEquation(List<GameObject> handEquation, ParenthesesMode mode)
-        {
-            if(ValidationHand(handEquation) < 0)
+        if (ValidationHand(handEquation) < 0)
         {
             return null;
         }
-            
-            // Convert to simplified struct
-            List<SimplifiedCard> simplified = new List<SimplifiedCard>();
-            for (int i = 0; i < handEquation.Count; i++)
+
+        // Convert to simplified struct
+        List<SimplifiedCard> simplified = new List<SimplifiedCard>();
+        for (int i = 0; i < handEquation.Count; i++)
+        {
+            SimplifiedCard sCard = new SimplifiedCard(
+                handEquation[i].GetComponent<Card>() != null ? handEquation[i].GetComponent<Card>().GetFaceValue() : 0,
+                handEquation[i].GetComponent<Operatorcard>() != null ? handEquation[i].GetComponent<Operatorcard>().GetOperator() : null,
+                i);
+
+            simplified.Add(sCard);
+        }
+
+        // Apply parentheses collapsing
+        ApplyParenthesesMode(simplified, mode);
+        List<object[]> resultLog = new List<object[]>();
+
+        for (int priorityOrder = 3; priorityOrder > 0; priorityOrder--)
+        {
+            for (int i = 1; i < simplified.Count - 1; i += 2)
             {
-                SimplifiedCard sCard = new SimplifiedCard(
-                    handEquation[i].GetComponent<Card>() != null ? handEquation[i].GetComponent<Card>().GetFaceValue() : 0,
-                    handEquation[i].GetComponent<Operatorcard>() != null ? handEquation[i].GetComponent<Operatorcard>().GetOperator() : null,
-                    i);
-
-                simplified.Add(sCard);
-            }
-
-            // Apply parentheses collapsing
-            ApplyParenthesesMode(simplified, mode);
-            List<object[]> resultLog = new List<object[]>();
-
-            for (int priorityOrder = 3; priorityOrder > 0; priorityOrder--)
-            {
-                for (int i = 1; i < simplified.Count - 1; i += 2)
+                if (simplified[i].priority == priorityOrder)
                 {
-                    if (simplified[i].priority == priorityOrder)
+                    double left = simplified[i - 1].numberValue;
+                    double right = simplified[i + 1].numberValue;
+
+                    if (simplified[i].operatorValue == OperationEnum.Divide && right == 0)
                     {
-                        double left = simplified[i - 1].numberValue;
-                        double right = simplified[i + 1].numberValue;
-
-                        if (simplified[i].operatorValue == OperationEnum.Divide && right == 0)
-                        {
-                            Debug.Log($"div by 0 on operator position {simplified[i].position}");
-                            return null;
-                        }
-
-                        double result = simplified[i].operatorValue switch
-                        {
-                            OperationEnum.Plus => left + right,
-                            OperationEnum.Minus => left - right,
-                            OperationEnum.Multiply => left * right,
-                            OperationEnum.Divide => Math.Round(left / right, 2),
-                            _ => throw new Exception("Unknown operator")
-                        };
-
-                        // Collapse result
-                        simplified[i - 1].numberValue = result;
-                        simplified[i - 1].isProcessedNumber = true;
-                        int operatorPosition = simplified[i].position;
-
-                        simplified.RemoveAt(i + 1);
-                        simplified.RemoveAt(i);
-
-                        resultLog.Add(new object[] { BuildEquationString(simplified), operatorPosition });
-
-
-                        i -= 2;
+                        Debug.Log($"div by 0 on operator position {simplified[i].position}");
+                        return null;
                     }
+
+                    double result = simplified[i].operatorValue switch
+                    {
+                        OperationEnum.Plus => left + right,
+                        OperationEnum.Minus => left - right,
+                        OperationEnum.Multiply => left * right,
+                        OperationEnum.Divide => Math.Round(left / right, 2),
+                        _ => throw new Exception("Unknown operator")
+                    };
+
+                    // Collapse result
+                    simplified[i - 1].numberValue = result;
+                    simplified[i - 1].isProcessedNumber = true;
+                    int operatorPosition = simplified[i].position;
+
+                    simplified.RemoveAt(i + 1);
+                    simplified.RemoveAt(i);
+
+                    resultLog.Add(new object[] { BuildEquationString(simplified), operatorPosition });
+
+
+                    i -= 2;
                 }
             }
-
-            resultLog.Add(new object[] { "END", simplified[0].numberValue });
-            return resultLog;
         }
-    
+
+        resultLog.Add(new object[] { "END", simplified[0].numberValue });
+        return resultLog;
+    }
+
     private static void ApplyParenthesesMode(List<SimplifiedCard> cards, ParenthesesMode mode)
+    {
+        switch (mode)
         {
-            switch (mode)
-            {
-                case ParenthesesMode.DoFrontOperationFirst:
-                    cards[1].priority = 3;
-                    break;
-                case ParenthesesMode.DoMiddleOperationFirst:
-                    cards[3].priority = 3;
-                    break;
-                case ParenthesesMode.DoLastOperationFirst:
-                    cards[5].priority = 3;
-                    break;
-                case ParenthesesMode.DoMiddleOperationLast:
-                    cards[1].priority = 3;
-                    cards[5].priority = 3;
-                    break;
-            }
+            case ParenthesesMode.DoFrontOperationFirst:
+                cards[1].priority = 3;
+                break;
+            case ParenthesesMode.DoMiddleOperationFirst:
+                cards[3].priority = 3;
+                break;
+            case ParenthesesMode.DoLastOperationFirst:
+                cards[5].priority = 3;
+                break;
+            case ParenthesesMode.DoMiddleOperationLast:
+                cards[1].priority = 3;
+                cards[5].priority = 3;
+                break;
         }
+    }
 
 
-        private static string BuildEquationString(List<SimplifiedCard> cards)
-        {
-            return string.Join("", cards);
-        }
+    private static string BuildEquationString(List<SimplifiedCard> cards)
+    {
+        return string.Join("", cards);
+    }
     #endregion
 
     #region Get all equation possibility

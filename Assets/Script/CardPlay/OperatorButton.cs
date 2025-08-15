@@ -10,7 +10,7 @@ public class OperatorButton : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -40,7 +40,7 @@ public class OperatorButton : MonoBehaviour
 
     private void AddOperatorCard(OperationEnum operation)
     {
-        foreach(Transform operatorCardSlot in CardPlayGameController.current.playedCardSlots.transform)
+        foreach (Transform operatorCardSlot in CardPlayGameController.current.playedCardSlots.transform)
         {
             if (operatorCardSlot.CompareTag("OperatorSlot") && operatorCardSlot.childCount == 0)
             {

@@ -14,7 +14,7 @@ public class HorizontalCardHolder : MonoBehaviour
     [SerializeReference] private Card hoveredCard;
 
     [SerializeField] private GameObject slotPrefab;
-    
+
     private RectTransform rect;
 
     [Header("Spawn Settings")]
@@ -32,7 +32,7 @@ public class HorizontalCardHolder : MonoBehaviour
         }
 
         rect = GetComponent<RectTransform>();
-        
+
     }
 
     private void BeginDrag(Card card)
@@ -46,7 +46,7 @@ public class HorizontalCardHolder : MonoBehaviour
         if (selectedCard == null)
             return;
 
-        selectedCard.transform.DOLocalMove(selectedCard.selected ? new Vector3(0,selectedCard.selectionOffset,0) : Vector3.zero, tweenCardReturn ? .15f : 0).SetEase(Ease.OutBack);
+        selectedCard.transform.DOLocalMove(selectedCard.selected ? new Vector3(0, selectedCard.selectionOffset, 0) : Vector3.zero, tweenCardReturn ? .15f : 0).SetEase(Ease.OutBack);
 
         rect.sizeDelta += Vector2.right;
         rect.sizeDelta -= Vector2.right;

@@ -175,7 +175,7 @@ public class CardVisual : MonoBehaviour
 
     private void BeginDrag(Card card)
     {
-        if(scaleAnimations)
+        if (scaleAnimations)
             transform.DOScale(scaleOnSelect, scaleTransition).SetEase(scaleEase);
 
         canvas.overrideSorting = true;
@@ -189,7 +189,7 @@ public class CardVisual : MonoBehaviour
 
     private void PointerEnter(Card card)
     {
-        if(scaleAnimations)
+        if (scaleAnimations)
             transform.DOScale(scaleOnHover, scaleTransition).SetEase(scaleEase);
 
         DOTween.Kill(2, true);
@@ -204,7 +204,7 @@ public class CardVisual : MonoBehaviour
 
     private void PointerUp(Card card, bool longPress)
     {
-        if(scaleAnimations)
+        if (scaleAnimations)
             transform.DOScale(longPress ? scaleOnHover : scaleOnSelect, scaleTransition).SetEase(scaleEase);
         canvas.overrideSorting = false;
 
@@ -214,9 +214,9 @@ public class CardVisual : MonoBehaviour
 
     private void PointerDown(Card card)
     {
-        if(scaleAnimations)
+        if (scaleAnimations)
             transform.DOScale(scaleOnSelect, scaleTransition).SetEase(scaleEase);
-            
+
         visualShadow.localPosition += (-Vector3.up * shadowOffset);
         shadowCanvas.overrideSorting = false;
     }

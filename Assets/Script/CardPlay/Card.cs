@@ -135,7 +135,7 @@ public class Card : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
         PointerExitEvent.Invoke(this);
         isHovering = false;
 
-        
+
     }
 
 
@@ -191,9 +191,10 @@ public class Card : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
             // cardSlots if first parent is "PlayedCard"
             if (!transform.parent.parent.parent.CompareTag("PlayedCard"))
             {
-                selected = CheckValidSpaceAndChangeParent(CardPlayGameController.current.playedCardSlots.transform);  
+                selected = CheckValidSpaceAndChangeParent(CardPlayGameController.current.playedCardSlots.transform);
             }
-        } else
+        }
+        else
         {
             // cardSlots if first parent is "CardInHand"
             if (!transform.parent.parent.CompareTag("CardInHand"))
@@ -202,7 +203,7 @@ public class Card : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
             }
         }
     }
-    
+
 
     public bool CheckValidSpaceAndChangeParent(Transform cardSlots)
     {
@@ -238,15 +239,15 @@ public class Card : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
 
     private void OnDestroy()
     {
-        if(cardVisual != null)
-        Destroy(cardVisual.gameObject);
+        if (cardVisual != null)
+            Destroy(cardVisual.gameObject);
     }
 
     private void CheckColliderWithPlayedCardSlots()
     {
-        if(isDragging == false)
+        if (isDragging == false)
         {
-            foreach(Transform playedCard in CardPlayGameController.current.playedCardSlots.transform)
+            foreach (Transform playedCard in CardPlayGameController.current.playedCardSlots.transform)
             {
                 if (Utils.RectOverlaps(transform.GetComponent<RectTransform>(), playedCard.GetComponent<RectTransform>()) && playedCard.CompareTag("Slot"))
                 {
