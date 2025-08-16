@@ -8,6 +8,8 @@ TagManager:
   - PlayedCard
   - CardInHand
   - OperatorSlot
+  - CharacterSlot
+  - EnemySlot
   layers:
   - Default
   - TransparentFX
