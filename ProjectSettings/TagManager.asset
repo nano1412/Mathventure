@@ -10,6 +10,8 @@ TagManager:
   - OperatorSlot
   - CharacterSlot
   - EnemySlot
+  - Character
+  - Enemy
   layers:
   - Default
   - TransparentFX

@@ -26,6 +26,9 @@ public class CardPlayGameController : MonoBehaviour
     [SerializeField] private TMP_Text previewDataText;
     [Space(5)]
 
+    [SerializeField] private TMP_Text blueZoneMultiplierText;
+    [Space(5)]
+
     [SerializeField] private TMP_Text minGreenZoneValueText;
     [SerializeField] private TMP_Text maxGreenZoneValueText;
     [SerializeField] private TMP_Text greenZoneMultiplierText;
@@ -34,6 +37,9 @@ public class CardPlayGameController : MonoBehaviour
     [SerializeField] private TMP_Text minYellowZoneValueText;
     [SerializeField] private TMP_Text maxYellowZoneValueText;
     [SerializeField] private TMP_Text yellowZoneMultiplierText;
+    [Space(5)]
+
+    [SerializeField] private TMP_Text redZoneMultiplierText;
 
 
     [Header("Core Data")]
@@ -99,6 +105,11 @@ public class CardPlayGameController : MonoBehaviour
         posibleOperators.Add(OperationEnum.Minus);
         posibleOperators.Add(OperationEnum.Multiply);
         posibleOperators.Add(OperationEnum.Divide);
+
+        blueZoneMultiplierText.text = "x" + blueZoneMultiplier;
+        greenZoneMultiplierText.text = "x" + greenZoneMultiplier;
+        yellowZoneMultiplierText.text = "x" + yellowZoneMultiplier;
+        redZoneMultiplierText.text = "x" + redZoneMultiplier;
     }
 
     // Update is called once per frame
@@ -116,6 +127,16 @@ public class CardPlayGameController : MonoBehaviour
         previewAnswerText.text = "preview answer: " + previewPlayerAnswer.ToString();
         actualAnswerText.text = "actual answer: " + playerAnswer.ToString();
         targetNumberText.text = "target number: " + targetNumber.ToString();
+
+        if (!double.IsNaN(targetNumber))
+        {
+            minGreenZoneValueText.text = (targetNumber - greenZoneValue).ToString();
+            maxGreenZoneValueText.text = (targetNumber + greenZoneValue).ToString();
+
+            minYellowZoneValueText.text = (targetNumber - yellowZoneValue).ToString();
+            maxYellowZoneValueText.text = (targetNumber + yellowZoneValue).ToString();
+
+        }
 
 
         isHandReady = ValidationHand(CardInhandGameObject);
