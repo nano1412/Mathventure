@@ -11,10 +11,20 @@ public static class Utils
         Divide
     }
 
+    public enum AttackType
+    {
+        front,
+        back,
+        firstTwo,
+        all,
+    }
+
     public enum EffectType
     {
         None,
-        Heal,
+        OvertimeHeal,
+        Poison,
+        Stun,
         Empty
         // Add more as needed
     }
