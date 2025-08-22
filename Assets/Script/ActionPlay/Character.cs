@@ -86,7 +86,7 @@ public abstract class Character : MonoBehaviour
         statusEffect.turnDuration--;
         if(statusEffect.turnDuration <= 0)
         {
-            Debug.Log(statusEffect.effectName + " has been resolve");
+            Debug.Log(statusEffect.name + " has been resolve");
 
             if(statusEffect.effectType == EffectType.Stun)
             {
