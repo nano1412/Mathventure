@@ -14,7 +14,7 @@ public abstract class Character : MonoBehaviour
     [SerializeField] protected List<StatusEffect> statusEffects = new List<StatusEffect>();
 
     [Header("Attack data")]
-    [SerializeField] Move defaultAttack;
+    [SerializeField] protected abstract Move defaultAttack { get; }
 
     public double GetMaxHP()
     {
@@ -33,17 +33,28 @@ public abstract class Character : MonoBehaviour
 
     public void TakeDamage(double damage, string owner)
     {
+        if (damage < 0)
+        {
+            Debug.LogWarning("TakeDamage received a negative value. Use Heal() instead.");
+            return;
+        }
+
         hp -= damage;
         Debug.Log(transform.name + " take " + damage + " damages from " + name);
     }
 
     public void Heal(double heal, string owner)
     {
+        if (heal < 0)
+        {
+            Debug.LogWarning("Heal received a negative value. Use TakeDamage() instead.");
+            return;
+        }
+
         hp += heal;
         Debug.Log(transform.name + " gain " + heal + " hp from " + name);
     }
 
-    
 
     public void EndTurnUpdate()
     {
@@ -97,5 +108,6 @@ public abstract class Character : MonoBehaviour
         }
     }
 
+    protected abstract void Attack(List<Transform> targets, Move move);
 }
 

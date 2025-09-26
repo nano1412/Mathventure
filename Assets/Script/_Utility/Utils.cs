@@ -29,6 +29,13 @@ public static class Utils
         // Add more as needed
     }
 
+    public enum AnimationType
+    {
+        GetClose,
+        Casting,
+        Projectile
+    }
+
     public enum OperationPriority
     {
         NotOperator,

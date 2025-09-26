@@ -175,7 +175,7 @@ public class CardPlayGameController : MonoBehaviour
         previewPlayerAnswer = (double)previewSteplog[previewSteplog.Count - 1][1];
     }
 
-    public void PlayCard()
+    public void PlayCard(Action onComplete)
     {
         if (isHandReady < 4)
         {
@@ -204,6 +204,8 @@ public class CardPlayGameController : MonoBehaviour
         playerAnswer = (double)steplog[steplog.Count - 1][1];
 
         GetMultiplierValue();
+
+        onComplete?.Invoke();
     }
 
     private void GetMultiplierValue()
@@ -296,37 +298,47 @@ public class CardPlayGameController : MonoBehaviour
         Debug.Log("One of correct equation: " + correctEquation[UnityEngine.Random.Range(0, correctEquation.Count - 1)]);
     }
 
-    public void AddCard()
+    public void AddCardButton()
     {
+        AddCard(1);
+    }
 
-
-        bool isHandHaveSpace = false;
-        Transform currentCardSlot = null;
-        foreach (Transform cardSlot in playerHand.transform)
+    public void AddCard(int amount)
+    {
+        for(int i = 0; i < amount; i++)
         {
-            if (cardSlot.CompareTag("Slot") && cardSlot.transform.childCount == 0)
+            bool isHandHaveSpace = false;
+            Transform currentCardSlot = null;
+            foreach (Transform cardSlot in playerHand.transform)
             {
-                currentCardSlot = cardSlot;
-                isHandHaveSpace = true;
-                break;
+                if (cardSlot.CompareTag("Slot") && cardSlot.transform.childCount == 0)
+                {
+                    currentCardSlot = cardSlot;
+                    isHandHaveSpace = true;
+                    break;
+                }
             }
-        }
 
-        if (isHandHaveSpace)
-        {
-            CardData SelectedCarddata = roundDeck.GetRandomCard();
-            if (SelectedCarddata.Effect == EffectType.Empty)
+            if (isHandHaveSpace)
             {
+                CardData SelectedCarddata = roundDeck.GetRandomCard();
+                if (SelectedCarddata.Effect == EffectType.Empty)
+                {
+                    return;
+                }
+
+
+                GameObject newCard = Instantiate(cardPrefab, deckObject.position, new Quaternion(), currentCardSlot);
+                Card newCardScript = newCard.GetComponent<Card>();
+                newCardScript.deckPosition = deckObject.position;
+                newCardScript.SetCardData(SelectedCarddata);
+
+                currentCardSlot.gameObject.SetActive(true);
+            } else
+            {
+                Debug.Log("hand already full");
                 return;
             }
-
-
-            GameObject newCard = Instantiate(cardPrefab, deckObject.position, new Quaternion(), currentCardSlot);
-            Card newCardScript = newCard.GetComponent<Card>();
-            newCardScript.deckPosition = deckObject.position;
-            newCardScript.SetCardData(SelectedCarddata);
-
-            currentCardSlot.gameObject.SetActive(true);
         }
     }
 
