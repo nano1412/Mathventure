@@ -1,0 +1,1005 @@
+fileFormatVersion: 2
+guid: 5f2fe66d8d778b64e98012fa7607e052
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1420567926481723605
+    second: Thief_ATK_0
+  - first:
+      213: -6473702503220810151
+    second: Thief_ATK_1
+  - first:
+      213: -8416712083127903838
+    second: Thief_ATK_2
+  - first:
+      213: -1697753619907072434
+    second: Thief_ATK_3
+  - first:
+      213: -5339520902826011139
+    second: Thief_ATK_4
+  - first:
+      213: 6781268348447728886
+    second: Thief_ATK_5
+  - first:
+      213: -913723295754320592
+    second: Thief_ATK_6
+  - first:
+      213: -8661112795834049043
+    second: Thief_ATK_7
+  - first:
+      213: 8292489411955609796
+    second: Thief_ATK_8
+  - first:
+      213: -8647915937401306748
+    second: Thief_ATK_9
+  - first:
+      213: -8268519235932837477
+    second: Thief_ATK_10
+  - first:
+      213: -6552952236117134534
+    second: Thief_ATK_11
+  - first:
+      213: -6531721578552329519
+    second: Thief_ATK_12
+  - first:
+      213: -5690004068150254968
+    second: Thief_ATK_13
+  - first:
+      213: -540797797027348326
+    second: Thief_ATK_14
+  - first:
+      213: -2242604959261731337
+    second: Thief_ATK_15
+  - first:
+      213: -3723298883850947094
+    second: Thief_ATK_16
+  - first:
+      213: 363285973740849996
+    second: Thief_ATK_17
+  - first:
+      213: -8148678652151130121
+    second: Thief_ATK_18
+  - first:
+      213: 1966073078963944976
+    second: Thief_ATK_19
+  - first:
+      213: 6003673372414675763
+    second: Thief_ATK_20
+  - first:
+      213: 6208323519364236899
+    second: Thief_ATK_21
+  - first:
+      213: -4413083882552584345
+    second: Thief_ATK_22
+  - first:
+      213: -8724847777453757712
+    second: Thief_ATK_23
+  - first:
+      213: 8900103202477177883
+    second: Thief_ATK_24
+  - first:
+      213: -2084040655509180033
+    second: Thief_ATK_25
+  - first:
+      213: 249516405174428748
+    second: Thief_ATK_26
+  - first:
+      213: 3198965060084942838
+    second: Thief_ATK_27
+  - first:
+      213: 2199150231448204978
+    second: Thief_ATK_28
+  - first:
+      213: -415626135610151467
+    second: Thief_ATK_29
+  - first:
+      213: -6532734348624820951
+    second: Thief_ATK_30
+  - first:
+      213: -6068969317062068497
+    second: Thief_ATK_31
+  - first:
+      213: 6035656115413350880
+    second: Thief_ATK_32
+  - first:
+      213: 898666251210147979
+    second: Thief_ATK_33
+  - first:
+      213: -4868819948319138673
+    second: Thief_ATK_34
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Thief_ATK_0
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1917
+        width: 77
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d0a14da00fd6b310800000000000000
+      internalID: 1420567926481723605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thief_ATK_1
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 1918
+        width: 77
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95e67f95fd9c826a0800000000000000
+      internalID: -6473702503220810151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thief_ATK_2
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 1918
+        width: 67
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a95c6c34f4d13b80800000000000000
+      internalID: -8416712083127903838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thief_ATK_3
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 1917
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4e2e49e31e5078e0800000000000000
+      internalID: -1697753619907072434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thief_ATK_4
+      rect:
+        serializedVersion: 2
+        x: 1118
+        y: 1917
+        width: 65
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df55844670636e5b0800000000000000
+      internalID: -5339520902826011139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thief_ATK_5
+      rect:
+        serializedVersion: 2
+        x: 1375
+        y: 1917
+        width: 64
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f4a3db52a7eb1e50800000000000000
+      internalID: 6781268348447728886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thief_ATK_6
+      rect:
+        serializedVersion: 2
+        x: 1631
+        y: 1918
+        width: 64
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 035809de08dc153f0800000000000000
+      internalID: -913723295754320592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thief_ATK_7
+      rect:
+        serializedVersion: 2
+        x: 1887
+        y: 1918
+        width: 64
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ded98bcfccb8dc780800000000000000
+      internalID: -8661112795834049043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thief_ATK_8
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 1662
+        width: 63
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c05d474f27d41370800000000000000
+      internalID: 8292489411955609796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thief_ATK_9
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 1662
+        width: 63
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48181c7064e6cf780800000000000000
+      internalID: -8647915937401306748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thief_ATK_10
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 1662
+        width: 79
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b992dbb3091504d80800000000000000
+      internalID: -8268519235932837477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thief_ATK_11
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 1662
+        width: 94
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a33f22809ac3f05a0800000000000000
+      internalID: -6552952236117134534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thief_ATK_12
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 1662
+        width: 84
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1da72a2b4d9aa55a0800000000000000
+      internalID: -6531721578552329519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thief_ATK_13
+      rect:
+        serializedVersion: 2
+        x: 1366
+        y: 1662
+        width: 81
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 882606b627b0901b0800000000000000
+      internalID: -5690004068150254968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thief_ATK_14
+      rect:
+        serializedVersion: 2
+        x: 1624
+        y: 1662
+        width: 79
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a900fd4d443be78f0800000000000000
+      internalID: -540797797027348326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thief_ATK_15
+      rect:
+        serializedVersion: 2
+        x: 1881
+        y: 1662
+        width: 77
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f5dcafdbaaa0e0e0800000000000000
+      internalID: -2242604959261731337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thief_ATK_16
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 1406
+        width: 75
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae5b47b546f245cc0800000000000000
+      internalID: -3723298883850947094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thief_ATK_17
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 1406
+        width: 80
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4b84b81ba6aa0500800000000000000
+      internalID: 363285973740849996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thief_ATK_18
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 1406
+        width: 86
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f719bd70f31aee80800000000000000
+      internalID: -8148678652151130121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thief_ATK_19
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 1406
+        width: 86
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01eba127c05e84b10800000000000000
+      internalID: 1966073078963944976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thief_ATK_20
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 1406
+        width: 84
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33b8f369f15515350800000000000000
+      internalID: 6003673372414675763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thief_ATK_21
+      rect:
+        serializedVersion: 2
+        x: 1375
+        y: 1406
+        width: 85
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36688660955682650800000000000000
+      internalID: 6208323519364236899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thief_ATK_22
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 1406
+        width: 85
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7679370279391c2c0800000000000000
+      internalID: -4413083882552584345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thief_ATK_23
+      rect:
+        serializedVersion: 2
+        x: 1886
+        y: 1406
+        width: 66
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fa23813c2d1be680800000000000000
+      internalID: -8724847777453757712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thief_ATK_24
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 1150
+        width: 58
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1cf7f735b4838b70800000000000000
+      internalID: 8900103202477177883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thief_ATK_25
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 1150
+        width: 58
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7137e6c0100413e0800000000000000
+      internalID: -2084040655509180033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thief_ATK_26
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 1150
+        width: 59
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c44ed0839d5767300800000000000000
+      internalID: 249516405174428748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thief_ATK_27
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 1150
+        width: 59
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f7cf37f5c1056c20800000000000000
+      internalID: 3198965060084942838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thief_ATK_28
+      rect:
+        serializedVersion: 2
+        x: 1118
+        y: 1150
+        width: 58
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b63031eb73f48e10800000000000000
+      internalID: 2199150231448204978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thief_ATK_29
+      rect:
+        serializedVersion: 2
+        x: 1371
+        y: 1150
+        width: 66
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dda6935b366b3af0800000000000000
+      internalID: -415626135610151467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thief_ATK_30
+      rect:
+        serializedVersion: 2
+        x: 1625
+        y: 1150
+        width: 78
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 925893ac8b01755a0800000000000000
+      internalID: -6532734348624820951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thief_ATK_31
+      rect:
+        serializedVersion: 2
+        x: 1880
+        y: 1150
+        width: 92
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe635c79f80b6cba0800000000000000
+      internalID: -6068969317062068497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thief_ATK_32
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 894
+        width: 91
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e970a93245f2c350800000000000000
+      internalID: 6035656115413350880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thief_ATK_33
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 895
+        width: 88
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b884303b134b87c00800000000000000
+      internalID: 898666251210147979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thief_ATK_34
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 895
+        width: 85
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8c1a199d0a7e6cb0800000000000000
+      internalID: -4868819948319138673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
