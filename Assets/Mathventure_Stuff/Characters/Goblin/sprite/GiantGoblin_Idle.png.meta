@@ -1,187 +1,187 @@
 fileFormatVersion: 2
-guid: fcbdacdd8999d4946b59372486f4e9dc
+guid: d6f26df4e743fc94fbc9c00faf863c8f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4260761016296704264
-    second: GiantGoblin_0
+      213: 5285182276268631327
+    second: GiantGoblin_Idle_0
   - first:
-      213: 5778934030678399870
-    second: GiantGoblin_1
+      213: 3336555977170238537
+    second: GiantGoblin_Idle_1
   - first:
-      213: -2459732583647361781
-    second: GiantGoblin_2
+      213: -5900244540813345751
+    second: GiantGoblin_Idle_2
   - first:
-      213: 3969688621059872644
-    second: GiantGoblin_3
+      213: 5184171947677294745
+    second: GiantGoblin_Idle_3
   - first:
-      213: -1504360465820382490
-    second: GiantGoblin_4
+      213: -5624485880331541004
+    second: GiantGoblin_Idle_4
   - first:
-      213: 3301410878803984140
-    second: GiantGoblin_5
+      213: 1887517927126118975
+    second: GiantGoblin_Idle_5
   - first:
-      213: 6152150750812552832
-    second: GiantGoblin_6
+      213: 4783846775237259843
+    second: GiantGoblin_Idle_6
   - first:
-      213: 37400118459383241
-    second: GiantGoblin_7
+      213: -181559057321507258
+    second: GiantGoblin_Idle_7
   - first:
-      213: 3262222680781641991
-    second: GiantGoblin_8
+      213: 7543713924112642916
+    second: GiantGoblin_Idle_8
   - first:
-      213: -3031079981590814344
-    second: GiantGoblin_9
+      213: -8682883331396520497
+    second: GiantGoblin_Idle_9
   - first:
-      213: -3499106049397592669
-    second: GiantGoblin_10
+      213: 1395224462006508216
+    second: GiantGoblin_Idle_10
   - first:
-      213: -6406746435754999804
-    second: GiantGoblin_11
+      213: -8728561587386132054
+    second: GiantGoblin_Idle_11
   - first:
-      213: 7874035310712249649
-    second: GiantGoblin_12
+      213: -7788723648476206478
+    second: GiantGoblin_Idle_12
   - first:
-      213: -712944285933615448
-    second: GiantGoblin_13
+      213: -3984338992637228537
+    second: GiantGoblin_Idle_13
   - first:
-      213: 4087837590996745599
-    second: GiantGoblin_14
+      213: 7747022594257181180
+    second: GiantGoblin_Idle_14
   - first:
-      213: 6120874109450796282
-    second: GiantGoblin_15
+      213: 7148001485519401188
+    second: GiantGoblin_Idle_15
   - first:
-      213: -9095710828459321217
-    second: GiantGoblin_16
+      213: -6876770401141645630
+    second: GiantGoblin_Idle_16
   - first:
-      213: 5482280795408312161
-    second: GiantGoblin_17
+      213: 3530925762861171366
+    second: GiantGoblin_Idle_17
   - first:
-      213: 3085708258082191387
-    second: GiantGoblin_18
+      213: -8888759468583497771
+    second: GiantGoblin_Idle_18
   - first:
-      213: 890468295901729273
-    second: GiantGoblin_19
+      213: 3125693868766652978
+    second: GiantGoblin_Idle_19
   - first:
-      213: 5914415266900888130
-    second: GiantGoblin_20
+      213: 8234307544674929188
+    second: GiantGoblin_Idle_20
   - first:
-      213: -5166785237909219417
-    second: GiantGoblin_21
+      213: -6375980357649161998
+    second: GiantGoblin_Idle_21
   - first:
-      213: 1551712106767302388
-    second: GiantGoblin_22
+      213: -4588979699334568857
+    second: GiantGoblin_Idle_22
   - first:
-      213: 663441986928265927
-    second: GiantGoblin_23
+      213: -6514756498880108799
+    second: GiantGoblin_Idle_23
   - first:
-      213: 744498468154653249
-    second: GiantGoblin_24
+      213: -6139383799770013321
+    second: GiantGoblin_Idle_24
   - first:
-      213: -1683667729110257876
-    second: GiantGoblin_25
+      213: -2007067421815657245
+    second: GiantGoblin_Idle_25
   - first:
-      213: 380081253862062811
-    second: GiantGoblin_26
+      213: 3743911847111995256
+    second: GiantGoblin_Idle_26
   - first:
-      213: -4742122094606734887
-    second: GiantGoblin_27
+      213: -3792716608823578546
+    second: GiantGoblin_Idle_27
   - first:
-      213: -7288546704242336644
-    second: GiantGoblin_28
+      213: 873522916682343431
+    second: GiantGoblin_Idle_28
   - first:
-      213: -7843029355355510940
-    second: GiantGoblin_29
+      213: 5421310317576034038
+    second: GiantGoblin_Idle_29
   - first:
-      213: 698983359293957388
-    second: GiantGoblin_30
+      213: 3049307645742228158
+    second: GiantGoblin_Idle_30
   - first:
-      213: -7461135091539474527
-    second: GiantGoblin_31
+      213: -3399493342891650212
+    second: GiantGoblin_Idle_31
   - first:
-      213: 2760368565490697403
-    second: GiantGoblin_32
+      213: 6618609580439331331
+    second: GiantGoblin_Idle_32
   - first:
-      213: 4964924472259776788
-    second: GiantGoblin_33
+      213: -3872815299826471319
+    second: GiantGoblin_Idle_33
   - first:
-      213: -4737475085801971628
-    second: GiantGoblin_34
+      213: -826421779511625260
+    second: GiantGoblin_Idle_34
   - first:
-      213: 1647489150849861180
-    second: GiantGoblin_35
+      213: 3611257309698732636
+    second: GiantGoblin_Idle_35
   - first:
-      213: 68296301682842324
-    second: GiantGoblin_36
+      213: -2487171333232330565
+    second: GiantGoblin_Idle_36
   - first:
-      213: -2822929479673090422
-    second: GiantGoblin_37
+      213: -5460310153474161069
+    second: GiantGoblin_Idle_37
   - first:
-      213: -2975793331693305304
-    second: GiantGoblin_38
+      213: -6814316503114367112
+    second: GiantGoblin_Idle_38
   - first:
-      213: -8855701143162346403
-    second: GiantGoblin_39
+      213: -2367536148924051971
+    second: GiantGoblin_Idle_39
   - first:
-      213: 7091016834016325657
-    second: GiantGoblin_40
+      213: -863675412121376872
+    second: GiantGoblin_Idle_40
   - first:
-      213: -1648120695517836904
-    second: GiantGoblin_41
+      213: 7960274414179030342
+    second: GiantGoblin_Idle_41
   - first:
-      213: 2994801400825242250
-    second: GiantGoblin_42
+      213: 6603252924913995516
+    second: GiantGoblin_Idle_42
   - first:
-      213: 8177761715182813557
-    second: GiantGoblin_43
+      213: 7746216654243521524
+    second: GiantGoblin_Idle_43
   - first:
-      213: -3022790552425041222
-    second: GiantGoblin_44
+      213: -3873744745021996294
+    second: GiantGoblin_Idle_44
   - first:
-      213: -3224005952594440324
-    second: GiantGoblin_45
+      213: 1055297091565054855
+    second: GiantGoblin_Idle_45
   - first:
-      213: -3205620074169254107
-    second: GiantGoblin_46
+      213: 7954742188774707763
+    second: GiantGoblin_Idle_46
   - first:
-      213: -339523708386012556
-    second: GiantGoblin_47
+      213: 5616028747473384495
+    second: GiantGoblin_Idle_47
   - first:
-      213: -8140418908144531849
-    second: GiantGoblin_48
+      213: -8613215588074315497
+    second: GiantGoblin_Idle_48
   - first:
-      213: -8240054974673098799
-    second: GiantGoblin_49
+      213: 6059251475177638352
+    second: GiantGoblin_Idle_49
   - first:
-      213: -4736203177804085415
-    second: GiantGoblin_50
+      213: 6551871207502369483
+    second: GiantGoblin_Idle_50
   - first:
-      213: -7297412766904173521
-    second: GiantGoblin_51
+      213: -1142116070923105918
+    second: GiantGoblin_Idle_51
   - first:
-      213: -5872129189943494403
-    second: GiantGoblin_52
+      213: 584110754831555351
+    second: GiantGoblin_Idle_52
   - first:
-      213: -7777029309938574760
-    second: GiantGoblin_53
+      213: 3644191705652760078
+    second: GiantGoblin_Idle_53
   - first:
-      213: 9010764206031335827
-    second: GiantGoblin_54
+      213: 1580483903123946810
+    second: GiantGoblin_Idle_54
   - first:
-      213: 1115523333638466282
-    second: GiantGoblin_55
+      213: -8943749001613822219
+    second: GiantGoblin_Idle_55
   - first:
-      213: 4732654583952835111
-    second: GiantGoblin_56
+      213: -6504836414194151898
+    second: GiantGoblin_Idle_56
   - first:
-      213: 3877147301222140499
-    second: GiantGoblin_57
+      213: -7225277938279281809
+    second: GiantGoblin_Idle_57
   - first:
-      213: 239374297919154606
-    second: GiantGoblin_58
+      213: -2342270564787504660
+    second: GiantGoblin_Idle_58
   - first:
-      213: -1645922541475317791
-    second: GiantGoblin_59
+      213: 6531330527496549342
+    second: GiantGoblin_Idle_59
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -228,7 +228,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 70
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -286,24 +286,11 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GiantGoblin_0
+      name: GiantGoblin_Idle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -316,16 +303,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 9a39d6a3dbe28ad4f89a992ea70af7f6
-      internalID: -1542597471
+      spriteID: f15ae26374db85940800000000000000
+      internalID: 5285182276268631327
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_1
+      name: GiantGoblin_Idle_1
       rect:
         serializedVersion: 2
         x: 256
@@ -338,16 +325,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 81cae81b56199f046ad8a3b534e6a2c2
-      internalID: 91861456
+      spriteID: 94c3070cbf3dd4e20800000000000000
+      internalID: 3336555977170238537
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_2
+      name: GiantGoblin_Idle_2
       rect:
         serializedVersion: 2
         x: 512
@@ -360,16 +347,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: f8ddf792418e1f344b8680d87acc0c06
-      internalID: -941411212
+      spriteID: 92cf1e8d9de1e1ea0800000000000000
+      internalID: -5900244540813345751
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_3
+      name: GiantGoblin_Idle_3
       rect:
         serializedVersion: 2
         x: 768
@@ -382,16 +369,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: dde41290ce426164c94e5652df91764f
-      internalID: 795820948
+      spriteID: 990a9d36be0e1f740800000000000000
+      internalID: 5184171947677294745
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_4
+      name: GiantGoblin_Idle_4
       rect:
         serializedVersion: 2
         x: 1024
@@ -404,16 +391,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 2d919b2b331079a4c9d6144e83d340a9
-      internalID: 1125650621
+      spriteID: 4f563a244efc1f1b0800000000000000
+      internalID: -5624485880331541004
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_5
+      name: GiantGoblin_Idle_5
       rect:
         serializedVersion: 2
         x: 1280
@@ -426,16 +413,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: cbcecb1854c9b1845a3e1cbc3024a294
-      internalID: -75205677
+      spriteID: f32b881ed8fc13a10800000000000000
+      internalID: 1887517927126118975
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_6
+      name: GiantGoblin_Idle_6
       rect:
         serializedVersion: 2
         x: 1536
@@ -448,16 +435,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 9a8b4a280603c894da497ae1f75bc9f4
-      internalID: -964321965
+      spriteID: 3423ae1db43a36240800000000000000
+      internalID: 4783846775237259843
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_7
+      name: GiantGoblin_Idle_7
       rect:
         serializedVersion: 2
         x: 1792
@@ -470,16 +457,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 44578d6718d775b42a7f7ebbf538dbf0
-      internalID: 1557663464
+      spriteID: 646c892dff8fa7df0800000000000000
+      internalID: -181559057321507258
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_8
+      name: GiantGoblin_Idle_8
       rect:
         serializedVersion: 2
         x: 0
@@ -492,16 +479,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 8c50566711415ff40b1c5682b918a83f
-      internalID: -1421749814
+      spriteID: 463f6ed78d7a0b860800000000000000
+      internalID: 7543713924112642916
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_9
+      name: GiantGoblin_Idle_9
       rect:
         serializedVersion: 2
         x: 256
@@ -514,16 +501,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 22c357bb73cf5e244b9ccae9a3479f8e
-      internalID: -235144253
+      spriteID: fc533fd2d93308780800000000000000
+      internalID: -8682883331396520497
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_10
+      name: GiantGoblin_Idle_10
       rect:
         serializedVersion: 2
         x: 512
@@ -536,16 +523,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: ffa5146bbe1a098438ed9ae9d2e01c13
-      internalID: -1127711150
+      spriteID: 8ba55d78145dc5310800000000000000
+      internalID: 1395224462006508216
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_11
+      name: GiantGoblin_Idle_11
       rect:
         serializedVersion: 2
         x: 768
@@ -558,16 +545,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: b98fbf662cdaf7f4cbac5d51eb1a1bf2
-      internalID: -939551169
+      spriteID: aa9dabf6b7bedd680800000000000000
+      internalID: -8728561587386132054
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_12
+      name: GiantGoblin_Idle_12
       rect:
         serializedVersion: 2
         x: 1024
@@ -580,16 +567,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 7d3af70d4a76664469c85132900003c5
-      internalID: 316599064
+      spriteID: 27a24eeab15e8e390800000000000000
+      internalID: -7788723648476206478
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_13
+      name: GiantGoblin_Idle_13
       rect:
         serializedVersion: 2
         x: 1280
@@ -602,16 +589,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 7c05637e224fdd3478acf35f01e200d6
-      internalID: 1571005930
+      spriteID: 70ace1fcbc8c4b8c0800000000000000
+      internalID: -3984338992637228537
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_14
+      name: GiantGoblin_Idle_14
       rect:
         serializedVersion: 2
         x: 1536
@@ -624,16 +611,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 1757657a09faa214ba0c8115e1226986
-      internalID: -1290632348
+      spriteID: cf9df950104f28b60800000000000000
+      internalID: 7747022594257181180
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_15
+      name: GiantGoblin_Idle_15
       rect:
         serializedVersion: 2
         x: 1792
@@ -646,16 +633,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: fab7ea9fcdcfc15428a96112d9929c5f
-      internalID: -732351520
+      spriteID: 4e03956ba7dc23360800000000000000
+      internalID: 7148001485519401188
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_16
+      name: GiantGoblin_Idle_16
       rect:
         serializedVersion: 2
         x: 0
@@ -668,16 +655,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 78a45980996701246a5ccae6dd2dc1ec
-      internalID: 425425553
+      spriteID: 2ce180e31cdc090a0800000000000000
+      internalID: -6876770401141645630
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_17
+      name: GiantGoblin_Idle_17
       rect:
         serializedVersion: 2
         x: 256
@@ -690,16 +677,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 0743247f07ba89d45b4d47e6ec65b1ae
-      internalID: 379694783
+      spriteID: 6a28d9f064e500130800000000000000
+      internalID: 3530925762861171366
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_18
+      name: GiantGoblin_Idle_18
       rect:
         serializedVersion: 2
         x: 512
@@ -712,16 +699,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 9cf42cf4524ecec45bfa023826f6026e
-      internalID: 685476419
+      spriteID: 5dfc035ab58c4a480800000000000000
+      internalID: -8888759468583497771
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_19
+      name: GiantGoblin_Idle_19
       rect:
         serializedVersion: 2
         x: 768
@@ -734,16 +721,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 5e80bb3ea0949e24eb033a4d74e9f136
-      internalID: 599558170
+      spriteID: 23ae3745302b06b20800000000000000
+      internalID: 3125693868766652978
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_20
+      name: GiantGoblin_Idle_20
       rect:
         serializedVersion: 2
         x: 1024
@@ -756,16 +743,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 3cbe4b1771d274040a4937437a1416a6
-      internalID: 748375159
+      spriteID: 42a0baba513264270800000000000000
+      internalID: 8234307544674929188
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_21
+      name: GiantGoblin_Idle_21
       rect:
         serializedVersion: 2
         x: 1280
@@ -778,16 +765,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 7c544fcb272f29a42ba74766a7254ad1
-      internalID: -553869759
+      spriteID: 2f0247765a7f387a0800000000000000
+      internalID: -6375980357649161998
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_22
+      name: GiantGoblin_Idle_22
       rect:
         serializedVersion: 2
         x: 1536
@@ -800,16 +787,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 9eb013e678ad4f448803f40b89df5f30
-      internalID: 732645922
+      spriteID: 7642fa3e64ba050c0800000000000000
+      internalID: -4588979699334568857
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_23
+      name: GiantGoblin_Idle_23
       rect:
         serializedVersion: 2
         x: 1792
@@ -822,16 +809,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 5ae5e563ef1153f48acdb6ee3f85a36c
-      internalID: -687116020
+      spriteID: 107651e1b7fe695a0800000000000000
+      internalID: -6514756498880108799
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_24
+      name: GiantGoblin_Idle_24
       rect:
         serializedVersion: 2
         x: 0
@@ -844,16 +831,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 53bdeadade6bd3d48bb77c9ff4a561a0
-      internalID: 1176743627
+      spriteID: 771abe246f68ccaa0800000000000000
+      internalID: -6139383799770013321
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_25
+      name: GiantGoblin_Idle_25
       rect:
         serializedVersion: 2
         x: 256
@@ -866,16 +853,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: a048d25b35140a849875e9287a582ed0
-      internalID: 1972690723
+      spriteID: 3ec2b6250d67524e0800000000000000
+      internalID: -2007067421815657245
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_26
+      name: GiantGoblin_Idle_26
       rect:
         serializedVersion: 2
         x: 512
@@ -888,16 +875,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 3daad698c5d29444b9bdd90a19783e6a
-      internalID: 477858421
+      spriteID: 87fac752dfb05f330800000000000000
+      internalID: 3743911847111995256
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_27
+      name: GiantGoblin_Idle_27
       rect:
         serializedVersion: 2
         x: 768
@@ -910,16 +897,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 3c9560ae7d1bcf0498ba719debc8e690
-      internalID: 1147192347
+      spriteID: e40b855c6509d5bc0800000000000000
+      internalID: -3792716608823578546
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_28
+      name: GiantGoblin_Idle_28
       rect:
         serializedVersion: 2
         x: 1024
@@ -932,16 +919,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: ac01db38c822af04aac62e9999224d95
-      internalID: -1295462987
+      spriteID: 704a300f6706f1c00800000000000000
+      internalID: 873522916682343431
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_29
+      name: GiantGoblin_Idle_29
       rect:
         serializedVersion: 2
         x: 1280
@@ -954,16 +941,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 12227c0972e1b6341acb56ab966611c7
-      internalID: -625889746
+      spriteID: 6f69740b20d5c3b40800000000000000
+      internalID: 5421310317576034038
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_30
+      name: GiantGoblin_Idle_30
       rect:
         serializedVersion: 2
         x: 1536
@@ -976,16 +963,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 468ba896457ba4b42b707ce608d86a91
-      internalID: -1086616886
+      spriteID: eb2295bd521515a20800000000000000
+      internalID: 3049307645742228158
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_31
+      name: GiantGoblin_Idle_31
       rect:
         serializedVersion: 2
         x: 1792
@@ -998,16 +985,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 7fe01f7e3b437d143a04cb9b4219c383
-      internalID: 29488667
+      spriteID: c5353a0e0d292d0d0800000000000000
+      internalID: -3399493342891650212
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_32
+      name: GiantGoblin_Idle_32
       rect:
         serializedVersion: 2
         x: 0
@@ -1020,16 +1007,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: c2bdc5c950bdf924d9ad3f29eeb6f387
-      internalID: 23005558
+      spriteID: 3026515b8560adb50800000000000000
+      internalID: 6618609580439331331
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_33
+      name: GiantGoblin_Idle_33
       rect:
         serializedVersion: 2
         x: 256
@@ -1042,16 +1029,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 4957fee8f5e85e547ae22c4ca472b04e
-      internalID: 657051794
+      spriteID: 96e252df00ff04ac0800000000000000
+      internalID: -3872815299826471319
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_34
+      name: GiantGoblin_Idle_34
       rect:
         serializedVersion: 2
         x: 512
@@ -1064,16 +1051,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: f01aa2648358bf0409b600cc3e82a85f
-      internalID: 408322048
+      spriteID: 4d9309525c5f784f0800000000000000
+      internalID: -826421779511625260
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_35
+      name: GiantGoblin_Idle_35
       rect:
         serializedVersion: 2
         x: 768
@@ -1086,16 +1073,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 85e15f5fc6ec8d54888961871dc02b67
-      internalID: 2087450829
+      spriteID: c523021d363cd1230800000000000000
+      internalID: 3611257309698732636
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_36
+      name: GiantGoblin_Idle_36
       rect:
         serializedVersion: 2
         x: 1024
@@ -1108,16 +1095,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 284dd8b5e8bded64f903cf9ffec9067e
-      internalID: 326223280
+      spriteID: bb8f62b99dacb7dd0800000000000000
+      internalID: -2487171333232330565
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_37
+      name: GiantGoblin_Idle_37
       rect:
         serializedVersion: 2
         x: 1280
@@ -1130,16 +1117,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 628c0cc298f09ea44b28c6ba54774fd7
-      internalID: -1608167930
+      spriteID: 356c6ba68d41934b0800000000000000
+      internalID: -5460310153474161069
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_38
+      name: GiantGoblin_Idle_38
       rect:
         serializedVersion: 2
         x: 1536
@@ -1152,16 +1139,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 336f0df1d06cc644b9c72a4326a99f71
-      internalID: -1386734377
+      spriteID: 87f39c48e3fae61a0800000000000000
+      internalID: -6814316503114367112
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_39
+      name: GiantGoblin_Idle_39
       rect:
         serializedVersion: 2
         x: 1792
@@ -1174,16 +1161,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 5114f936fb2ded64c9616789a1428701
-      internalID: -1516826280
+      spriteID: dfd4c729a62d42fd0800000000000000
+      internalID: -2367536148924051971
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_40
+      name: GiantGoblin_Idle_40
       rect:
         serializedVersion: 2
         x: 0
@@ -1196,16 +1183,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 17297c049b4297342be69c02c10a8845
-      internalID: -1721714606
+      spriteID: 8972443e9cb9304f0800000000000000
+      internalID: -863675412121376872
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_41
+      name: GiantGoblin_Idle_41
       rect:
         serializedVersion: 2
         x: 256
@@ -1218,16 +1205,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 98cd3730f708bfd4e8ffbef622b8bfb7
-      internalID: 2085308862
+      spriteID: 64595c38763987e60800000000000000
+      internalID: 7960274414179030342
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_42
+      name: GiantGoblin_Idle_42
       rect:
         serializedVersion: 2
         x: 512
@@ -1240,16 +1227,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 88279ba8e06be1942b99b8f80229f0b8
-      internalID: -153965492
+      spriteID: cfece87bc8773ab50800000000000000
+      internalID: 6603252924913995516
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_43
+      name: GiantGoblin_Idle_43
       rect:
         serializedVersion: 2
         x: 768
@@ -1262,16 +1249,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: c5a874539c4521b449edd1e33af9ecb1
-      internalID: 995481490
+      spriteID: 4f3666d7107108b60800000000000000
+      internalID: 7746216654243521524
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_44
+      name: GiantGoblin_Idle_44
       rect:
         serializedVersion: 2
         x: 1024
@@ -1284,16 +1271,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 94a018d0b2bcc7d489176a9ac69738cf
-      internalID: 890683626
+      spriteID: af28d6aada1bd3ac0800000000000000
+      internalID: -3873744745021996294
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_45
+      name: GiantGoblin_Idle_45
       rect:
         serializedVersion: 2
         x: 1280
@@ -1306,16 +1293,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: eb3f6367952fb2446a50d739ec534cc2
-      internalID: -1465570145
+      spriteID: 78bec331d1b25ae00800000000000000
+      internalID: 1055297091565054855
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_46
+      name: GiantGoblin_Idle_46
       rect:
         serializedVersion: 2
         x: 1536
@@ -1328,16 +1315,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 1d8f58eafaf31644f922023ee47c3941
-      internalID: 1616022367
+      spriteID: 332dab9efdbe46e60800000000000000
+      internalID: 7954742188774707763
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_47
+      name: GiantGoblin_Idle_47
       rect:
         serializedVersion: 2
         x: 1792
@@ -1350,16 +1337,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 2774d3c451adc3e48bf6cd0447ac3e75
-      internalID: -566435685
+      spriteID: f24788d046420fd40800000000000000
+      internalID: 5616028747473384495
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_48
+      name: GiantGoblin_Idle_48
       rect:
         serializedVersion: 2
         x: 0
@@ -1372,16 +1359,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 732d1f4fb589ab14688c3dbcb5643efa
-      internalID: -1541594619
+      spriteID: 71129f2be06b77880800000000000000
+      internalID: -8613215588074315497
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_49
+      name: GiantGoblin_Idle_49
       rect:
         serializedVersion: 2
         x: 256
@@ -1394,16 +1381,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: cffe35574bb75344e996ba6340363604
-      internalID: 718412746
+      spriteID: 0d989b60d19c61450800000000000000
+      internalID: 6059251475177638352
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_50
+      name: GiantGoblin_Idle_50
       rect:
         serializedVersion: 2
         x: 512
@@ -1416,16 +1403,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: fcc28e9b162341d40bb0a65cfa159fca
-      internalID: 398827117
+      spriteID: bc2d941662cecea50800000000000000
+      internalID: 6551871207502369483
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_51
+      name: GiantGoblin_Idle_51
       rect:
         serializedVersion: 2
         x: 768
@@ -1438,16 +1425,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 028a26f122747eb48b48498a18819fa0
-      internalID: -115803333
+      spriteID: 2890d541c736620f0800000000000000
+      internalID: -1142116070923105918
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_52
+      name: GiantGoblin_Idle_52
       rect:
         serializedVersion: 2
         x: 1024
@@ -1460,16 +1447,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 28f08fc0d220f7b438751cca28a2d696
-      internalID: -1499130070
+      spriteID: 71b583303ad2b1800800000000000000
+      internalID: 584110754831555351
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_53
+      name: GiantGoblin_Idle_53
       rect:
         serializedVersion: 2
         x: 1280
@@ -1482,16 +1469,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 150094aafcc9337458744f7be4fcefdb
-      internalID: 90730797
+      spriteID: e0e8bdc6c05c29230800000000000000
+      internalID: 3644191705652760078
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_54
+      name: GiantGoblin_Idle_54
       rect:
         serializedVersion: 2
         x: 1536
@@ -1504,16 +1491,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 9695fd516753329439c86feb7a6621b1
-      internalID: 1921778403
+      spriteID: a3dfce27cb10fe510800000000000000
+      internalID: 1580483903123946810
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_55
+      name: GiantGoblin_Idle_55
       rect:
         serializedVersion: 2
         x: 1792
@@ -1526,16 +1513,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: cc61e4f1f26efd84997fde9aae8f6179
-      internalID: -14873444
+      spriteID: 5f6bd864bab61e380800000000000000
+      internalID: -8943749001613822219
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_56
+      name: GiantGoblin_Idle_56
       rect:
         serializedVersion: 2
         x: 0
@@ -1548,16 +1535,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 8f5a96468d51a63409296c89fb8b86af
-      internalID: 1534143279
+      spriteID: 62e8ee1debd2ab5a0800000000000000
+      internalID: -6504836414194151898
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_57
+      name: GiantGoblin_Idle_57
       rect:
         serializedVersion: 2
         x: 256
@@ -1570,16 +1557,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 62f771174613b554c865d9a229b6a848
-      internalID: -64517212
+      spriteID: f6b856d0ff7aabb90800000000000000
+      internalID: -7225277938279281809
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_58
+      name: GiantGoblin_Idle_58
       rect:
         serializedVersion: 2
         x: 512
@@ -1592,16 +1579,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 2a84aac07df1eda448070626a6b8f9e6
-      internalID: 933767235
+      spriteID: ce9bcf9c4559e7fd0800000000000000
+      internalID: -2342270564787504660
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GiantGoblin_59
+      name: GiantGoblin_Idle_59
       rect:
         serializedVersion: 2
         x: 768
@@ -1614,10 +1601,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 4180a4d1ea9859941ad7110d9a20f7c6
-      internalID: 260228622
+      spriteID: ed3b812a282f3aa50800000000000000
+      internalID: 6531330527496549342
       vertices: []
       indices: 
       edges: []
@@ -1626,7 +1613,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: c68a50e963cafcc46a5e42961b245390
+    spriteID: 4ff75caf4615550419e3d66782f3d7d5
     internalID: 0
     vertices: []
     indices: 
@@ -1636,66 +1623,66 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      GiantGoblin_0: -1542597471
-      GiantGoblin_1: 91861456
-      GiantGoblin_10: -1127711150
-      GiantGoblin_11: -939551169
-      GiantGoblin_12: 316599064
-      GiantGoblin_13: 1571005930
-      GiantGoblin_14: -1290632348
-      GiantGoblin_15: -732351520
-      GiantGoblin_16: 425425553
-      GiantGoblin_17: 379694783
-      GiantGoblin_18: 685476419
-      GiantGoblin_19: 599558170
-      GiantGoblin_2: -941411212
-      GiantGoblin_20: 748375159
-      GiantGoblin_21: -553869759
-      GiantGoblin_22: 732645922
-      GiantGoblin_23: -687116020
-      GiantGoblin_24: 1176743627
-      GiantGoblin_25: 1972690723
-      GiantGoblin_26: 477858421
-      GiantGoblin_27: 1147192347
-      GiantGoblin_28: -1295462987
-      GiantGoblin_29: -625889746
-      GiantGoblin_3: 795820948
-      GiantGoblin_30: -1086616886
-      GiantGoblin_31: 29488667
-      GiantGoblin_32: 23005558
-      GiantGoblin_33: 657051794
-      GiantGoblin_34: 408322048
-      GiantGoblin_35: 2087450829
-      GiantGoblin_36: 326223280
-      GiantGoblin_37: -1608167930
-      GiantGoblin_38: -1386734377
-      GiantGoblin_39: -1516826280
-      GiantGoblin_4: 1125650621
-      GiantGoblin_40: -1721714606
-      GiantGoblin_41: 2085308862
-      GiantGoblin_42: -153965492
-      GiantGoblin_43: 995481490
-      GiantGoblin_44: 890683626
-      GiantGoblin_45: -1465570145
-      GiantGoblin_46: 1616022367
-      GiantGoblin_47: -566435685
-      GiantGoblin_48: -1541594619
-      GiantGoblin_49: 718412746
-      GiantGoblin_5: -75205677
-      GiantGoblin_50: 398827117
-      GiantGoblin_51: -115803333
-      GiantGoblin_52: -1499130070
-      GiantGoblin_53: 90730797
-      GiantGoblin_54: 1921778403
-      GiantGoblin_55: -14873444
-      GiantGoblin_56: 1534143279
-      GiantGoblin_57: -64517212
-      GiantGoblin_58: 933767235
-      GiantGoblin_59: 260228622
-      GiantGoblin_6: -964321965
-      GiantGoblin_7: 1557663464
-      GiantGoblin_8: -1421749814
-      GiantGoblin_9: -235144253
+      GiantGoblin_Idle_0: 5285182276268631327
+      GiantGoblin_Idle_1: 3336555977170238537
+      GiantGoblin_Idle_10: 1395224462006508216
+      GiantGoblin_Idle_11: -8728561587386132054
+      GiantGoblin_Idle_12: -7788723648476206478
+      GiantGoblin_Idle_13: -3984338992637228537
+      GiantGoblin_Idle_14: 7747022594257181180
+      GiantGoblin_Idle_15: 7148001485519401188
+      GiantGoblin_Idle_16: -6876770401141645630
+      GiantGoblin_Idle_17: 3530925762861171366
+      GiantGoblin_Idle_18: -8888759468583497771
+      GiantGoblin_Idle_19: 3125693868766652978
+      GiantGoblin_Idle_2: -5900244540813345751
+      GiantGoblin_Idle_20: 8234307544674929188
+      GiantGoblin_Idle_21: -6375980357649161998
+      GiantGoblin_Idle_22: -4588979699334568857
+      GiantGoblin_Idle_23: -6514756498880108799
+      GiantGoblin_Idle_24: -6139383799770013321
+      GiantGoblin_Idle_25: -2007067421815657245
+      GiantGoblin_Idle_26: 3743911847111995256
+      GiantGoblin_Idle_27: -3792716608823578546
+      GiantGoblin_Idle_28: 873522916682343431
+      GiantGoblin_Idle_29: 5421310317576034038
+      GiantGoblin_Idle_3: 5184171947677294745
+      GiantGoblin_Idle_30: 3049307645742228158
+      GiantGoblin_Idle_31: -3399493342891650212
+      GiantGoblin_Idle_32: 6618609580439331331
+      GiantGoblin_Idle_33: -3872815299826471319
+      GiantGoblin_Idle_34: -826421779511625260
+      GiantGoblin_Idle_35: 3611257309698732636
+      GiantGoblin_Idle_36: -2487171333232330565
+      GiantGoblin_Idle_37: -5460310153474161069
+      GiantGoblin_Idle_38: -6814316503114367112
+      GiantGoblin_Idle_39: -2367536148924051971
+      GiantGoblin_Idle_4: -5624485880331541004
+      GiantGoblin_Idle_40: -863675412121376872
+      GiantGoblin_Idle_41: 7960274414179030342
+      GiantGoblin_Idle_42: 6603252924913995516
+      GiantGoblin_Idle_43: 7746216654243521524
+      GiantGoblin_Idle_44: -3873744745021996294
+      GiantGoblin_Idle_45: 1055297091565054855
+      GiantGoblin_Idle_46: 7954742188774707763
+      GiantGoblin_Idle_47: 5616028747473384495
+      GiantGoblin_Idle_48: -8613215588074315497
+      GiantGoblin_Idle_49: 6059251475177638352
+      GiantGoblin_Idle_5: 1887517927126118975
+      GiantGoblin_Idle_50: 6551871207502369483
+      GiantGoblin_Idle_51: -1142116070923105918
+      GiantGoblin_Idle_52: 584110754831555351
+      GiantGoblin_Idle_53: 3644191705652760078
+      GiantGoblin_Idle_54: 1580483903123946810
+      GiantGoblin_Idle_55: -8943749001613822219
+      GiantGoblin_Idle_56: -6504836414194151898
+      GiantGoblin_Idle_57: -7225277938279281809
+      GiantGoblin_Idle_58: -2342270564787504660
+      GiantGoblin_Idle_59: 6531330527496549342
+      GiantGoblin_Idle_6: 4783846775237259843
+      GiantGoblin_Idle_7: -181559057321507258
+      GiantGoblin_Idle_8: 7543713924112642916
+      GiantGoblin_Idle_9: -8682883331396520497
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
