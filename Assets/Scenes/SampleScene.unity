@@ -1100,6 +1100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5cdc9654a04fc1449ef93eb167129a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxCardInHand: 4
 --- !u!1 &428267037
 GameObject:
   m_ObjectHideFlags: 0
@@ -5330,8 +5331,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 392799241}
-        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
-        m_MethodName: AddCard
+        m_TargetAssemblyTypeName: CardPlayGameController, Assembly-CSharp
+        m_MethodName: AddCardButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5356,7 +5357,6 @@ MonoBehaviour:
   selectedCard: {fileID: 0}
   hoveredCard: {fileID: 0}
   slotPrefab: {fileID: 3655645598659960977, guid: e99c361e7acdd41f0b904fef6be48fea, type: 3}
-  cardsToSpawn: 8
   cards: []
   tweenCardReturn: 1
 --- !u!1 &1694862311832906838
@@ -5914,9 +5914,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 392799241}
-        m_TargetAssemblyTypeName: CardPlayGameController, Assembly-CSharp
-        m_MethodName: PlayCard
+      - m_Target: {fileID: 392799244}
+        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
+        m_MethodName: PlayCardButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
