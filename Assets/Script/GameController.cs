@@ -6,6 +6,10 @@ public class GameController : MonoBehaviour
 
     public int maxCardInHand = 8;
 
+    //coin
+    //charector that player pick
+    //valid operator
+
     private void Awake()
     {
         current = this;
