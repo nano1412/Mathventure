@@ -18,30 +18,6 @@ public class CardPlayGameController : MonoBehaviour
     public GameObject operatorButton;
     public GameObject playedCardSlots;
 
-    [Header("Preview text")]
-    [SerializeField] private TMP_Text PlayStateText;
-    [SerializeField] private TMP_Text actualAnswerText;
-    [SerializeField] private TMP_Text previewAnswerText;
-    [SerializeField] private TMP_Text targetNumberText;
-    [SerializeField] private TMP_Text previewDataText;
-    [Space(5)]
-
-    [SerializeField] private TMP_Text blueZoneMultiplierText;
-    [Space(5)]
-
-    [SerializeField] private TMP_Text minGreenZoneValueText;
-    [SerializeField] private TMP_Text maxGreenZoneValueText;
-    [SerializeField] private TMP_Text greenZoneMultiplierText;
-    [Space(5)]
-
-    [SerializeField] private TMP_Text minYellowZoneValueText;
-    [SerializeField] private TMP_Text maxYellowZoneValueText;
-    [SerializeField] private TMP_Text yellowZoneMultiplierText;
-    [Space(5)]
-
-    [SerializeField] private TMP_Text redZoneMultiplierText;
-
-
     [Header("Core Data")]
     [SerializeField] private double playerAnswer;
     [SerializeField] private double previewPlayerAnswer;
@@ -62,7 +38,7 @@ public class CardPlayGameController : MonoBehaviour
     public bool isHandValiid = false;
     [SerializeField] List<object[]> steplog = new List<object[]>();
 
-    [Header("Target Number finder")]
+    [Header("Target Number Finder")]
     [SerializeField] private List<OperationEnum> posibleOperators = new List<OperationEnum>();
     [SerializeField] private double targetNumber;
     [SerializeField] private double difficulty = 0.5;
@@ -70,22 +46,39 @@ public class CardPlayGameController : MonoBehaviour
     private Dictionary<double, List<string>> allPossibleEquationAnswers;
 
     [Header("Multiplier Finder")]
-    //  targetNumber is blueZone (perfect hit)
     [SerializeField] private double blueZoneMultiplier = 3;
-    [Space(5)]
 
+    [Space(5)]
     [SerializeField] private double greenZoneValue = 13;
     [SerializeField] private double greenZoneRatio;
     [SerializeField] private double greenZoneMultiplier = 2;
-    [Space(5)]
 
+    [Space(5)]
     [SerializeField] private double yellowZoneValue = 25;
     [SerializeField] private double yellowZoneRatio;
     [SerializeField] private double yellowZoneMultiplier = 1;
-    [Space(5)]
 
-    // redZone is range outside yellowZone
+    [Space(5)]
     [SerializeField] private double redZoneMultiplier = 0.5;
+
+    // --- Public Read-Only Accessors ---
+    public double PlayerAnswer => playerAnswer;
+    public double PreviewPlayerAnswer => previewPlayerAnswer;
+
+    public List<OperationEnum> PosibleOperators => posibleOperators;
+    public double TargetNumber => targetNumber;
+    public double Difficulty => difficulty;
+    public double MaxAnswerRange => maxAnswerRange;
+    public Dictionary<double, List<string>> AllPossibleEquationAnswers => allPossibleEquationAnswers;
+
+    public double BlueZoneMultiplier => blueZoneMultiplier;
+    public double GreenZoneValue => greenZoneValue;
+    public double GreenZoneRatio => greenZoneRatio;
+    public double GreenZoneMultiplier => greenZoneMultiplier;
+    public double YellowZoneValue => yellowZoneValue;
+    public double YellowZoneRatio => yellowZoneRatio;
+    public double YellowZoneMultiplier => yellowZoneMultiplier;
+    public double RedZoneMultiplier => redZoneMultiplier;
 
     private void Awake()
     {
@@ -106,10 +99,7 @@ public class CardPlayGameController : MonoBehaviour
         posibleOperators.Add(OperationEnum.Multiply);
         posibleOperators.Add(OperationEnum.Divide);
 
-        blueZoneMultiplierText.text = "x" + blueZoneMultiplier;
-        greenZoneMultiplierText.text = "x" + greenZoneMultiplier;
-        yellowZoneMultiplierText.text = "x" + yellowZoneMultiplier;
-        redZoneMultiplierText.text = "x" + redZoneMultiplier;
+
     }
 
     // Update is called once per frame
@@ -124,36 +114,16 @@ public class CardPlayGameController : MonoBehaviour
             }
         }
 
-        previewAnswerText.text = "preview answer: " + previewPlayerAnswer.ToString();
-        actualAnswerText.text = "actual answer: " + playerAnswer.ToString();
-        targetNumberText.text = "target number: " + targetNumber.ToString();
-
-        if (!double.IsNaN(targetNumber))
-        {
-            minGreenZoneValueText.text = (targetNumber - greenZoneValue).ToString();
-            maxGreenZoneValueText.text = (targetNumber + greenZoneValue).ToString();
-
-            minYellowZoneValueText.text = (targetNumber - yellowZoneValue).ToString();
-            maxYellowZoneValueText.text = (targetNumber + yellowZoneValue).ToString();
-
-        }
-
-
         isHandReady = ValidationHand(CardInhandGameObject);
-        if (isHandReady < 0)
+        if (CardPlayGameController.current.isHandReady > 0 && CardPlayGameController.current.isHandReady < 4)
         {
-            PlayStateText.text = "Invalid";
-        }
-        else if (isHandReady > 0 && isHandReady < 4)
-        {
-            PlayStateText.text = "Ready to preview";
             PreviewScore(ParenthesesMode.NoParentheses);
         }
-        else if (isHandReady >= 4)
+        else if (CardPlayGameController.current.isHandReady >= 4)
         {
-            PlayStateText.text = "Valid";
             PreviewScore(parenthesesMode);
         }
+
     }
 
     public void PreviewScore(ParenthesesMode parentheses)
@@ -175,7 +145,7 @@ public class CardPlayGameController : MonoBehaviour
         previewPlayerAnswer = (double)previewSteplog[previewSteplog.Count - 1][1];
     }
 
-    public void PlayCard()
+    public void PlayCard(Action onComplete)
     {
         if (isHandReady < 4)
         {
@@ -204,6 +174,8 @@ public class CardPlayGameController : MonoBehaviour
         playerAnswer = (double)steplog[steplog.Count - 1][1];
 
         GetMultiplierValue();
+
+        onComplete?.Invoke();
     }
 
     private void GetMultiplierValue()
@@ -296,37 +268,47 @@ public class CardPlayGameController : MonoBehaviour
         Debug.Log("One of correct equation: " + correctEquation[UnityEngine.Random.Range(0, correctEquation.Count - 1)]);
     }
 
-    public void AddCard()
+    public void AddCardButton()
     {
+        AddCard(1);
+    }
 
-
-        bool isHandHaveSpace = false;
-        Transform currentCardSlot = null;
-        foreach (Transform cardSlot in playerHand.transform)
+    public void AddCard(int amount)
+    {
+        for(int i = 0; i < amount; i++)
         {
-            if (cardSlot.CompareTag("Slot") && cardSlot.transform.childCount == 0)
+            bool isHandHaveSpace = false;
+            Transform currentCardSlot = null;
+            foreach (Transform cardSlot in playerHand.transform)
             {
-                currentCardSlot = cardSlot;
-                isHandHaveSpace = true;
-                break;
+                if (cardSlot.CompareTag("Slot") && cardSlot.transform.childCount == 0)
+                {
+                    currentCardSlot = cardSlot;
+                    isHandHaveSpace = true;
+                    break;
+                }
             }
-        }
 
-        if (isHandHaveSpace)
-        {
-            CardData SelectedCarddata = roundDeck.GetRandomCard();
-            if (SelectedCarddata.Effect == EffectType.Empty)
+            if (isHandHaveSpace)
             {
+                CardData SelectedCarddata = roundDeck.GetRandomCard();
+                if (SelectedCarddata.Effect == EffectType.Empty)
+                {
+                    return;
+                }
+
+
+                GameObject newCard = Instantiate(cardPrefab, deckObject.position, new Quaternion(), currentCardSlot);
+                Card newCardScript = newCard.GetComponent<Card>();
+                newCardScript.deckPosition = deckObject.position;
+                newCardScript.SetCardData(SelectedCarddata);
+
+                currentCardSlot.gameObject.SetActive(true);
+            } else
+            {
+                Debug.Log("hand already full");
                 return;
             }
-
-
-            GameObject newCard = Instantiate(cardPrefab, deckObject.position, new Quaternion(), currentCardSlot);
-            Card newCardScript = newCard.GetComponent<Card>();
-            newCardScript.deckPosition = deckObject.position;
-            newCardScript.SetCardData(SelectedCarddata);
-
-            currentCardSlot.gameObject.SetActive(true);
         }
     }
 

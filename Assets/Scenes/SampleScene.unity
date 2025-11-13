@@ -999,6 +999,10 @@ GameObject:
   m_Component:
   - component: {fileID: 392799242}
   - component: {fileID: 392799241}
+  - component: {fileID: 392799244}
+  - component: {fileID: 392799243}
+  - component: {fileID: 392799245}
+  - component: {fileID: 392799246}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -1022,19 +1026,6 @@ MonoBehaviour:
   playerHand: {fileID: 2983681958893131434}
   operatorButton: {fileID: 0}
   playedCardSlots: {fileID: 0}
-  PlayStateText: {fileID: 6529509703589178119}
-  actualAnswerText: {fileID: 1070316459}
-  previewAnswerText: {fileID: 1324564597}
-  targetNumberText: {fileID: 692659588}
-  previewDataText: {fileID: 1555942971}
-  blueZoneMultiplierText: {fileID: 1720236214}
-  minGreenZoneValueText: {fileID: 1148664233}
-  maxGreenZoneValueText: {fileID: 247999478}
-  greenZoneMultiplierText: {fileID: 470722193}
-  minYellowZoneValueText: {fileID: 2084708146}
-  maxYellowZoneValueText: {fileID: 428267039}
-  yellowZoneMultiplierText: {fileID: 2023302934}
-  redZoneMultiplierText: {fileID: 208867907}
   playerAnswer: 0
   previewPlayerAnswer: 0
   multiplier: 0
@@ -1074,6 +1065,68 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &392799243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 392799240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3061fe03702e05d48a4609be9406c627, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &392799244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 392799240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5cdc9654a04fc1449ef93eb167129a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxCardInHand: 4
+--- !u!114 &392799245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 392799240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58ce88f500ca1e74a83e08c80862ae59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayStateText: {fileID: 6529509703589178119}
+  actualAnswerText: {fileID: 1070316459}
+  previewAnswerText: {fileID: 1324564597}
+  targetNumberText: {fileID: 692659588}
+  previewDataText: {fileID: 1555942971}
+  blueZoneMultiplierText: {fileID: 1720236214}
+  minGreenZoneValueText: {fileID: 1148664233}
+  maxGreenZoneValueText: {fileID: 247999478}
+  greenZoneMultiplierText: {fileID: 470722193}
+  minYellowZoneValueText: {fileID: 2084708146}
+  maxYellowZoneValueText: {fileID: 428267039}
+  yellowZoneMultiplierText: {fileID: 2023302934}
+  redZoneMultiplierText: {fileID: 208867907}
+--- !u!114 &392799246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 392799240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3ccdef9fc845248a1081b7b9edad1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &428267037
 GameObject:
   m_ObjectHideFlags: 0
@@ -3196,7 +3249,6 @@ GameObject:
   - component: {fileID: 1555942970}
   - component: {fileID: 1555942972}
   - component: {fileID: 1555942971}
-  - component: {fileID: 1555942973}
   m_Layer: 5
   m_Name: Logger
   m_TagString: Untagged
@@ -3322,19 +3374,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1555942969}
   m_CullTransparentMesh: 1
---- !u!114 &1555942973
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1555942969}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4cd5c68f462f026428656b31f06e78bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: 
 --- !u!1001 &1619718259
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5304,8 +5343,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 392799241}
-        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
-        m_MethodName: AddCard
+        m_TargetAssemblyTypeName: CardPlayGameController, Assembly-CSharp
+        m_MethodName: AddCardButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5330,7 +5369,6 @@ MonoBehaviour:
   selectedCard: {fileID: 0}
   hoveredCard: {fileID: 0}
   slotPrefab: {fileID: 3655645598659960977, guid: e99c361e7acdd41f0b904fef6be48fea, type: 3}
-  cardsToSpawn: 8
   cards: []
   tweenCardReturn: 1
 --- !u!1 &1694862311832906838
@@ -5888,9 +5926,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 392799241}
-        m_TargetAssemblyTypeName: CardPlayGameController, Assembly-CSharp
-        m_MethodName: PlayCard
+      - m_Target: {fileID: 392799244}
+        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
+        m_MethodName: PlayCardButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
