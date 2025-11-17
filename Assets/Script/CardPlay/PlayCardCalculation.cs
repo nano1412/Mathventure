@@ -285,7 +285,7 @@ public static class PlayCardCalculation
 
 
     #region get target number base on GetMostFrequentResults() with 
-    public static Dictionary<double, List<string>> GetAnswerByDifficulty(Dictionary<double, List<string>> resultCounts, double difficulty, double maxAnswerRange)
+    public static Dictionary<double, List<string>> GetAnswerByDifficulty(Dictionary<double, List<string>> resultCounts, double difficulty, double maxAnswerRange, bool isPositiveOnly)
     {
         if (resultCounts == null || resultCounts.Count == 0)
             throw new ArgumentException("Result counts are empty.");
@@ -301,10 +301,16 @@ public static class PlayCardCalculation
 
         //remove the answer that are too high or low
         filtered.RemoveAll(n => n.Key >= maxAnswerRange);
-        filtered.RemoveAll(n => n.Key <= -maxAnswerRange);
+        if (isPositiveOnly)
+        {
+            filtered.RemoveAll(n => n.Key <= -maxAnswerRange);
+        } else
+        {
+            filtered.RemoveAll(n => n.Key <= 0);
+        }
 
-        // Determine target index from percentile
-        int index = (int)Math.Round(difficulty * (filtered.Count - 1));
+            // Determine target index from percentile
+            int index = (int)Math.Round(difficulty * (filtered.Count - 1));
         int targetCount = filtered[index].Value.Count();
 
         // Get all entries with the same count as target

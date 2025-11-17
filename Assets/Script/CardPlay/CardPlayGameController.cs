@@ -43,6 +43,7 @@ public class CardPlayGameController : MonoBehaviour
     [SerializeField] private double targetNumber;
     [SerializeField] private double difficulty = 0.5;
     [SerializeField] private double maxAnswerRange = 100;
+    [SerializeField] private bool isPositiveOnly = false;
     private Dictionary<double, List<string>> allPossibleEquationAnswers;
 
     [Header("Multiplier Finder")]
@@ -260,7 +261,7 @@ public class CardPlayGameController : MonoBehaviour
             Debug.Log("there is no equation in the dic, maybe the threshold is too high");
             return;
         }
-        Dictionary<double, List<string>> targetNumberWithItsEquation = PlayCardCalculation.GetAnswerByDifficulty(allPossibleEquationAnswers, difficulty, maxAnswerRange);
+        Dictionary<double, List<string>> targetNumberWithItsEquation = PlayCardCalculation.GetAnswerByDifficulty(allPossibleEquationAnswers, difficulty, maxAnswerRange, isPositiveOnly);
         targetNumber = targetNumberWithItsEquation.Keys.First();
         List<string> correctEquation = targetNumberWithItsEquation.Values.First();
         Debug.Log("target number: " + targetNumber);

@@ -69,7 +69,7 @@ public class Card : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
 
     void Update()
     {
-        ClampPosition();
+        //ClampPosition();
 
         if (isDragging)
         {
