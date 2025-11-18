@@ -67,16 +67,8 @@ public class SimplifiedCard
 
 public static class PlayCardCalculation
 {
-
-
-    public static List<object[]> EvaluateEquation(List<GameObject> handEquation, ParenthesesMode mode)
+    public static List<SimplifiedCard> GameObjectToSimplifiedCard(List<GameObject> handEquation)
     {
-        if (ValidationHand(handEquation) < 0)
-        {
-            return null;
-        }
-
-        // Convert to simplified struct
         List<SimplifiedCard> simplified = new List<SimplifiedCard>();
         for (int i = 0; i < handEquation.Count; i++)
         {
@@ -87,6 +79,20 @@ public static class PlayCardCalculation
 
             simplified.Add(sCard);
         }
+
+        return simplified;
+    }
+
+
+    public static List<object[]> EvaluateEquation(List<GameObject> handEquation, ParenthesesMode mode)
+    {
+        if (ValidationHand(handEquation) < 0)
+        {
+            return null;
+        }
+
+        // Convert to simplified struct
+        simplified = GameObjectToSimplifiedCard(handEquation);
 
         // Apply parentheses collapsing
         ApplyParenthesesMode(simplified, mode);
@@ -165,6 +171,9 @@ public static class PlayCardCalculation
 
     #region Get all equation possibility
     static List<string> stringPosibleOperator = new List<string>();
+
+    public static List<SimplifiedCard> simplified { get; private set; }
+
     public static Dictionary<double, List<string>> GetMostFrequentResults(List<double> numbers, List<OperationEnum> posibleOperators)
     {
         stringPosibleOperator = new List<string>();

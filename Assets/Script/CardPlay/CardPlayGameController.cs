@@ -22,7 +22,7 @@ public class CardPlayGameController : MonoBehaviour
     [SerializeField] private double playerAnswer;
     [SerializeField] private double previewPlayerAnswer;
     [SerializeField] private double multiplier;
-    [SerializeField] private List<int> OperatorOrders = new List<int>();
+    [SerializeField] private List<int> operatorOrders = new List<int>();
 
     [Header("Card and Deck")]
     [SerializeField] private GameObject cardPrefab;
@@ -63,6 +63,9 @@ public class CardPlayGameController : MonoBehaviour
     [SerializeField] private double redZoneMultiplier = 0.5;
 
     // --- Public Read-Only Accessors ---
+    public double Multiplier => multiplier;
+    public List<int> OperatorOrders => operatorOrders;
+
     public double PlayerAnswer => playerAnswer;
     public double PreviewPlayerAnswer => previewPlayerAnswer;
 
@@ -153,7 +156,7 @@ public class CardPlayGameController : MonoBehaviour
 
         Debug.Log(CardInhandGameObject.Count);
 
-        OperatorOrders = new List<int>();
+        operatorOrders = new List<int>();
         steplog = PlayCardCalculation.EvaluateEquation(CardInhandGameObject, parenthesesMode);
         foreach (var step in steplog)
         {
@@ -162,7 +165,7 @@ public class CardPlayGameController : MonoBehaviour
 
         for (int i = 0; i < steplog.Count; i++)
         {
-            OperatorOrders.Add(Convert.ToInt32(steplog[i][1]));
+            operatorOrders.Add(Convert.ToInt32(steplog[i][1]));
         }
 
         previewPlayerAnswer = 0; //reset previewPlayerAnswer for next round
@@ -308,31 +311,11 @@ public class CardPlayGameController : MonoBehaviour
     }
 
     #region Get Set boi
-    public double GetPreviewAnswer()
-    {
-        return previewPlayerAnswer;
-    }
-
-    public double GetAnswer()
-    {
-        return playerAnswer;
-    }
-
-    public double GetMultiplier()
-    {
-        return multiplier;
-    }
-
-
-    public List<int> GetOperatorOrders()
-    {
-        return OperatorOrders;
-    }
 
     public List<OperatorOrder> GetOperatorOrdersAsEnum()
     {
         List<OperatorOrder> OperatorOrderEnum = new List<OperatorOrder>();
-        foreach (int OperatorOrder in OperatorOrders)
+        foreach (int OperatorOrder in operatorOrders)
         {
             bool isValid = Enum.IsDefined(typeof(OperatorOrder), OperatorOrder);
             if (isValid)

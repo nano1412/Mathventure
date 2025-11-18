@@ -39,7 +39,7 @@ public abstract class Character : MonoBehaviour
             return;
         }
 
-        hp -= damage;
+        hp -= damage - shield;
         Debug.Log(transform.name + " take " + damage + " damages from " + name);
     }
 

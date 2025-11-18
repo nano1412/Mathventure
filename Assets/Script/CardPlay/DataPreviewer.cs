@@ -71,8 +71,8 @@ public class DataPreviewer : MonoBehaviour
 
     private string GetAttackOrderSummary()
     {
-        double answer = CardPlayGameController.current.GetAnswer();
-        double multiplier = CardPlayGameController.current.GetMultiplier();
+        double answer = CardPlayGameController.current.PlayerAnswer;
+        double multiplier = CardPlayGameController.current.Multiplier;
         List<OperatorOrder> operatorOrder = CardPlayGameController.current.GetOperatorOrdersAsEnum();
 
         if (operatorOrder.Count < 3) { return "player haven't summit equation yet"; }

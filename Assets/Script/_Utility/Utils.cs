@@ -63,6 +63,21 @@ public static class Utils
         lastOperator = 5
     }
 
+    public enum GameState
+    {
+        PlayerInput,
+        CardCalculation,
+        CharecterAttack,
+        EnemyAttack,
+        Win,
+        RoundVictory,
+        Lose,
+        Shop,
+        Pause,
+        Menu
+
+    }
+
 
     public static double RoundUpToDecimalPlaces(double value, int decimalPlaces)
     {
