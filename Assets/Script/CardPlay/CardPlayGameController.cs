@@ -66,11 +66,9 @@ public class CardPlayGameController : MonoBehaviour
     public double PlayerAnswer => playerAnswer;
     public double PreviewPlayerAnswer => previewPlayerAnswer;
 
-    public List<OperationEnum> PosibleOperators => posibleOperators;
     public double TargetNumber => targetNumber;
     public double Difficulty => difficulty;
     public double MaxAnswerRange => maxAnswerRange;
-    public Dictionary<double, List<string>> AllPossibleEquationAnswers => allPossibleEquationAnswers;
 
     public double BlueZoneMultiplier => blueZoneMultiplier;
     public double GreenZoneValue => greenZoneValue;
@@ -85,22 +83,18 @@ public class CardPlayGameController : MonoBehaviour
     {
         current = this;
     }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+
+    public void SetupCardContoller()
     {
         persistentDeck = Instantiate(templateDeck);
         roundDeck = Instantiate(persistentDeck);
-
         playedCardSlots = playedCardHandle.transform.Find("NumberCard").gameObject;
-
 
         //will have to look on possible operators again once we imperment character
         posibleOperators.Add(OperationEnum.Plus);
         posibleOperators.Add(OperationEnum.Minus);
         posibleOperators.Add(OperationEnum.Multiply);
         posibleOperators.Add(OperationEnum.Divide);
-
-
     }
 
     // Update is called once per frame

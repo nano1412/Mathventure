@@ -18,6 +18,7 @@ public class GameController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        CardPlayGameController.current.SetupCardContoller();
         CardPlayGameController.current.playerHand.GetComponent<HorizontalCardHolder>().SetUpPlayerSlot(RoundStart);
     }
 

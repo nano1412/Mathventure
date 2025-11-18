@@ -303,10 +303,10 @@ public static class PlayCardCalculation
         filtered.RemoveAll(n => n.Key >= maxAnswerRange);
         if (isPositiveOnly)
         {
-            filtered.RemoveAll(n => n.Key <= -maxAnswerRange);
+            filtered.RemoveAll(n => n.Key <= 0);
         } else
         {
-            filtered.RemoveAll(n => n.Key <= 0);
+            filtered.RemoveAll(n => n.Key <= -maxAnswerRange);
         }
 
             // Determine target index from percentile

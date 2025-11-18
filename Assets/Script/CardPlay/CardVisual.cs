@@ -142,7 +142,6 @@ public class CardVisual : MonoBehaviour
 
         //Vector3 offset = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3 offset = new Vector3();
-        Debug.Log(offset);
 
         float tiltX = parentCard.isHovering ? ((offset.y * -1) * manualTiltAmount) : 0;
         float tiltY = parentCard.isHovering ? ((offset.x) * manualTiltAmount) : 0;
