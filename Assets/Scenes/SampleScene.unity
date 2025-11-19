@@ -1026,10 +1026,9 @@ MonoBehaviour:
   playerAnswer: 0
   previewPlayerAnswer: 0
   multiplier: 0
-  OperatorOrders: 
+  operatorOrders: 
   cardPrefab: {fileID: 8994356602663114153, guid: 38aa6ba35be5144dc931edb1e6e43818, type: 3}
   deckObject: {fileID: 8970141609527228859}
-  templateDeck: {fileID: 11400000, guid: 5009f4b849de2c44eaf0937517670067, type: 2}
   persistentDeck: {fileID: 0}
   roundDeck: {fileID: 0}
   parenthesesMode: 0
@@ -2449,6 +2448,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8786516175686430025, guid: 750d537e68df2d342aaf27bee30c4e62, type: 3}
   m_PrefabInstance: {fileID: 5618127123777679275}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1021864678 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6687903444630188797, guid: 923e9b02afcd8ac46af96c6a151f6805, type: 3}
+  m_PrefabInstance: {fileID: 5750363048541571619}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1050907286
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3151,6 +3155,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3061fe03702e05d48a4609be9406c627, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ActionGameController
+  charecterSlots: {fileID: 1117776342}
+  enemySlots: {fileID: 1273160276}
 --- !u!1 &1324564595
 GameObject:
   m_ObjectHideFlags: 0
@@ -4485,6 +4491,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameController
   maxCardInHand: 4
+  level: 1
+  posibleOperators: 
+  gamestate: 9
+  templateDeck: {fileID: 11400000, guid: 5009f4b849de2c44eaf0937517670067, type: 2}
+  coin: 0
+  wave: 1
 --- !u!4 &1986135735
 Transform:
   m_ObjectHideFlags: 0
@@ -6228,7 +6240,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1986135734}
         m_TargetAssemblyTypeName: GameController, Assembly-CSharp
         m_MethodName: PlayCardButton
         m_Mode: 1
@@ -7129,13 +7141,33 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6687903444630188797, guid: 923e9b02afcd8ac46af96c6a151f6805, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5750363048541571621}
   m_SourcePrefab: {fileID: 100100000, guid: 923e9b02afcd8ac46af96c6a151f6805, type: 3}
 --- !u!4 &5750363048541571620 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1263084055307201280, guid: 923e9b02afcd8ac46af96c6a151f6805, type: 3}
   m_PrefabInstance: {fileID: 5750363048541571619}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5750363048541571621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021864678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe5b03e888085154aa9738e604fd9fe6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Hero
+  maxHp: 0
+  hp: 0
+  shield: 0
+  isStuned: 0
+  statusEffects: []
 --- !u!1 &5867220234251597429
 GameObject:
   m_ObjectHideFlags: 0
