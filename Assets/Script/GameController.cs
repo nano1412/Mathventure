@@ -7,13 +7,16 @@ public class GameController : MonoBehaviour
     public static GameController current;
 
     public int maxCardInHand = 8;
+    public int level = 1;
+    public List<OperationEnum> posibleOperators = new List<OperationEnum>();
+    public GameState gamestate = GameState.Menu;
+    public Deck templateDeck;
+
     public int coin = 0;
     public int wave = 1;
 
-    public GameState gamestate = GameState.Menu;
 
     //charector that player pick
-    //valid operator
 
     private void Awake()
     {
@@ -22,6 +25,11 @@ public class GameController : MonoBehaviour
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
+    {
+        GameStart();
+    }
+
+    void GameStart()
     {
         CardPlayGameController.current.SetupCardContoller();
         CardPlayGameController.current.playerHand.GetComponent<HorizontalCardHolder>().SetUpPlayerSlot(NextRoundStart);
@@ -38,7 +46,7 @@ public class GameController : MonoBehaviour
 
     public void PlayCardButton()
     {
-        CardPlayGameController.current.PlayCard(OnPlayClassSucess); 
+        CardPlayGameController.current.SummitEquation(OnEquationSummitionSucess); 
     }
 
     // Update is called once per frame
@@ -47,14 +55,8 @@ public class GameController : MonoBehaviour
         
     }
 
-    void OnPlayClassSucess()
+    void OnEquationSummitionSucess()
     {
-        if (CardPlayGameController.current.OperatorOrders.Count != 3 || CardPlayGameController.current.OperatorOrders == null)
-        {
-            Debug.Log("Player haven't answer yet");
-            return;
-        }
-
         double multiplier = CardPlayGameController.current.Multiplier;
         List<int> operatorOrders = CardPlayGameController.current.OperatorOrders;
         List<SimplifiedCard> simplifiedCardData = PlayCardCalculation.simplified;
@@ -63,7 +65,7 @@ public class GameController : MonoBehaviour
 
         ActionGameController.current.CharecterAttack();
 
-
+        //cleanup
         foreach (Transform cardAlreadyPlayed in CardPlayGameController.current.playedCardSlots.transform)
         {
             Destroy(cardAlreadyPlayed.GetChild(0).gameObject);

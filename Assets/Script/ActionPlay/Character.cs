@@ -31,7 +31,7 @@ public abstract class Character : MonoBehaviour
         return shield;
     }
 
-    public void TakeDamage(double damage, string owner)
+    public void TakeDamage(double damage, string attacker)
     {
         if (damage < 0)
         {
@@ -40,10 +40,10 @@ public abstract class Character : MonoBehaviour
         }
 
         hp -= damage - shield;
-        Debug.Log(transform.name + " take " + damage + " damages from " + name);
+        Debug.Log(transform.name + " take " + damage + " damages from " + attacker);
     }
 
-    public void Heal(double heal, string owner)
+    public void Heal(double heal, string healer)
     {
         if (heal < 0)
         {
@@ -52,7 +52,7 @@ public abstract class Character : MonoBehaviour
         }
 
         hp += heal;
-        Debug.Log(transform.name + " gain " + heal + " hp from " + name);
+        Debug.Log(transform.name + " gain " + heal + " hp from " + healer);
     }
 
 

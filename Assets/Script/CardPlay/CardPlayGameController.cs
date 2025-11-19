@@ -27,7 +27,7 @@ public class CardPlayGameController : MonoBehaviour
     [Header("Card and Deck")]
     [SerializeField] private GameObject cardPrefab;
     [SerializeField] private Transform deckObject;
-    public Deck templateDeck;
+
     [SerializeField] private Deck persistentDeck;
     [SerializeField] private Deck roundDeck;
 
@@ -89,15 +89,11 @@ public class CardPlayGameController : MonoBehaviour
 
     public void SetupCardContoller()
     {
-        persistentDeck = Instantiate(templateDeck);
+        persistentDeck = Instantiate(GameController.current.templateDeck);
         roundDeck = Instantiate(persistentDeck);
         playedCardSlots = playedCardHandle.transform.Find("NumberCard").gameObject;
-
-        //will have to look on possible operators again once we imperment character
-        posibleOperators.Add(OperationEnum.Plus);
-        posibleOperators.Add(OperationEnum.Minus);
-        posibleOperators.Add(OperationEnum.Multiply);
-        posibleOperators.Add(OperationEnum.Divide);
+        posibleOperators = GameController.current.posibleOperators;
+        isPositiveOnly = GameController.current.level < 2;
     }
 
     // Update is called once per frame
@@ -143,7 +139,7 @@ public class CardPlayGameController : MonoBehaviour
         previewPlayerAnswer = (double)previewSteplog[previewSteplog.Count - 1][1];
     }
 
-    public void PlayCard(Action onComplete)
+    public void SummitEquation(Action onComplete)
     {
         if (isHandReady < 4)
         {
