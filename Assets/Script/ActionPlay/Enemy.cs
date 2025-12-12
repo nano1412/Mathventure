@@ -19,7 +19,7 @@ public class Enemy : Character
         
     }
 
-    public override void Attack()
+    public void Attack()
     {
         Debug.Log(transform.name + " is attacking");
     }

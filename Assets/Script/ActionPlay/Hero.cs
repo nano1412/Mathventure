@@ -19,7 +19,7 @@ public class Hero : Character
         
     }
 
-    public override void Attack()
+    public void Attack(double mul, double atkValue)
     {
 
     }

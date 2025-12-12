@@ -121,7 +121,5 @@ public abstract class Character : MonoBehaviour
             statusEffects.RemoveAt(index);
         }
     }
-
-    public abstract void Attack();
 }
 

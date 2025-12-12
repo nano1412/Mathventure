@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using static Utils;
 
@@ -43,32 +44,33 @@ public class ActionGameController : MonoBehaviour
         List<int> operatorOrders = CardPlayGameController.current.OperatorOrders;
         List<SimplifiedCard> simplifiedCardData = PlayCardCalculation.simplified;
 
-        List<Hero> heroQueue = new List<Hero>();
 
         for (int i = 0; i < 3; i++)
         {
-            switch (CardPlayGameController.current.PlayCardList[operatorOrders[i]].GetChild(0).GetComponent<Operatorcard>().operation)
+            OperationEnum heroType = CardPlayGameController.current.PlayCardList[operatorOrders[i]].GetChild(0).GetComponent<Operatorcard>().operation;
+
+            double leftNumberCardEffectValue = CardPlayGameController.current.PlayCardList[operatorOrders[i-1]].GetChild(0).GetComponent<Card>().GetEffectValue();
+            double rightNumberCardEffectValue = CardPlayGameController.current.PlayCardList[operatorOrders[i+1]].GetChild(0).GetComponent<Card>().GetEffectValue();
+
+            Hero hero = new Hero();
+            switch (heroType)
             {
                 case OperationEnum.Plus:
-                    heroQueue.Add(plusHero.transform.GetChild(0).GetComponent<Hero>());
-                    break;
+                    hero = plusHero.transform.GetChild(0).GetComponent<Hero>();
+                break;
                 case OperationEnum.Minus:
-                    heroQueue.Add(minusHero.transform.GetChild(0).GetComponent<Hero>());
-                    break;
+                    hero = minusHero.transform.GetChild(0).GetComponent<Hero>();
+                break;
                 case OperationEnum.Multiply:
-                    heroQueue.Add(multiplyHero.transform.GetChild(0).GetComponent<Hero>());
-                    break;
+                    hero = multiplyHero.transform.GetChild(0).GetComponent<Hero>();
+                break;
                 case OperationEnum.Divide:
-                    heroQueue.Add(divideHero.transform.GetChild(0).GetComponent<Hero>());
-                    break;
+                    hero = divideHero.transform.GetChild(0).GetComponent<Hero>();
+                break;
             }
+
+            hero.Attack(CardPlayGameController.current.Multiplier, leftNumberCardEffectValue + rightNumberCardEffectValue);
         }
-
-        Debug.Log("turn order are");
-        Debug.Log(heroQueue[0].transform.name);
-        Debug.Log(heroQueue[1].transform.name);
-        Debug.Log(heroQueue[2].transform.name);
-
     }
 
     private bool IsEnemyRemain()
