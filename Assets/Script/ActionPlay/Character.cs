@@ -14,7 +14,7 @@ public abstract class Character : MonoBehaviour
     [SerializeField] protected List<StatusEffect> statusEffects = new List<StatusEffect>();
 
     [Header("Attack data")]
-    [SerializeField] protected abstract Move defaultAttack { get; }
+    public abstract Move DefaultMove { get; }
 
     public double GetMaxHP()
     {
@@ -53,6 +53,20 @@ public abstract class Character : MonoBehaviour
 
         hp += heal;
         Debug.Log(transform.name + " gain " + heal + " hp from " + healer);
+    }
+
+    public virtual void CheckDead()
+    {
+        if(hp < 0)
+        {
+            Debug.Log(transform.name + "is dead");
+            Dead();
+        }
+    }
+
+    protected void Dead()
+    {
+        Destroy(transform);
     }
 
 
@@ -108,6 +122,6 @@ public abstract class Character : MonoBehaviour
         }
     }
 
-    protected abstract void Attack(List<Transform> targets, Move move);
+    public abstract void Attack();
 }
 

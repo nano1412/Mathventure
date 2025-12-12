@@ -3,7 +3,9 @@ using UnityEngine;
 
 public class Enemy : Character
 {
-    protected override Move defaultAttack => throw new System.NotImplementedException();
+    [SerializeField] private Move defaultMove;
+
+    public override Move DefaultMove => defaultMove;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -17,8 +19,8 @@ public class Enemy : Character
         
     }
 
-    protected override void Attack(List<Transform> targets, Move move)
+    public override void Attack()
     {
-
+        Debug.Log(transform.name + " is attacking");
     }
 }

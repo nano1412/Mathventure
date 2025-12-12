@@ -26,6 +26,12 @@ public class GameController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        //temp fix
+        posibleOperators.Add(OperationEnum.Plus);
+        posibleOperators.Add(OperationEnum.Minus);
+        posibleOperators.Add(OperationEnum.Multiply);
+        posibleOperators.Add(OperationEnum.Divide);
+
         GameStart();
     }
 
@@ -49,24 +55,16 @@ public class GameController : MonoBehaviour
         CardPlayGameController.current.SummitEquation(OnEquationSummitionSucess); 
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnEquationSummitionSucess()
     {
+        ActionGameController.current.AllCharecterAttack(CleanupFornextRound,RounndWin);
+
         
     }
 
-    void OnEquationSummitionSucess()
+    void CleanupFornextRound()
     {
-        double multiplier = CardPlayGameController.current.Multiplier;
-        List<int> operatorOrders = CardPlayGameController.current.OperatorOrders;
-        List<SimplifiedCard> simplifiedCardData = PlayCardCalculation.simplified;
-
-        PlayCalculationAnimation(multiplier, operatorOrders, simplifiedCardData);
-
-        ActionGameController.current.CharecterAttack();
-
-        //cleanup
-        foreach (Transform cardAlreadyPlayed in CardPlayGameController.current.playedCardSlots.transform)
+        foreach (Transform cardAlreadyPlayed in CardPlayGameController.current.PlayCardList)
         {
             Destroy(cardAlreadyPlayed.GetChild(0).gameObject);
         }
@@ -74,17 +72,28 @@ public class GameController : MonoBehaviour
         NextRoundStart();
     }
 
-    void PlayCalculationAnimation(double multiplier, List<int> operatorOrders, List<SimplifiedCard> simplifiedCardData)
+    void RounndWin()
     {
-        this.SetGamestate(GameState.CardCalculation);
-
-        for (int i = 0; i <= 2; i++)
+        //to round victory screen or check win
+        if(level < 4 && wave >= 4)
         {
-            Debug.Log("play something");
+            this.SetGamestate(GameState.Win);
+            //show sumary of this run
+        } else
+        {
+            this.SetGamestate(GameState.RoundVictory);
         }
-
-
     }
+
+    public void Lose()
+    {
+        //hero.cs gonna be the caller
+
+        this.SetGamestate(GameState.Lose);
+        //show lose screen
+    }
+
+
 
     public GameState GetGamestate()
     {

@@ -13,10 +13,25 @@ public class CardPlayGameController : MonoBehaviour
 {
     [Header("Univasal entry")]
     public static CardPlayGameController current;
-    public GameObject playedCardHandle;
     public GameObject playerHand;
     public GameObject operatorButton;
     public GameObject playedCardSlots;
+
+    [Header("Play Card Slot")]
+    public List<Transform> PlayCardList;
+
+    public Transform PlayNumberSlot1;
+    public Transform PlayOperatorSlot1;
+    public Transform PlayNumberSlot2;
+    public Transform PlayOperatorSlot2;
+    public Transform PlayNumberSlot3;
+    public Transform PlayOperatorSlot3;
+    public Transform PlayNumberSlot4;
+
+    public Transform PlayOpenParentheses1;
+    public Transform PlayCloseParentheses1;
+    public Transform PlayOpenParentheses2;
+    public Transform PlayCloseParentheses2;
 
     [Header("Core Data")]
     [SerializeField] private double playerAnswer;
@@ -91,10 +106,17 @@ public class CardPlayGameController : MonoBehaviour
     {
         persistentDeck = Instantiate(GameController.current.templateDeck);
         roundDeck = Instantiate(persistentDeck);
-        playedCardSlots = playedCardHandle.transform.Find("NumberCard").gameObject;
         posibleOperators = GameController.current.posibleOperators;
         isPositiveOnly = GameController.current.level < 2;
-    }
+
+        PlayCardList.Add(PlayNumberSlot1);
+        PlayCardList.Add(PlayOperatorSlot1);
+        PlayCardList.Add(PlayNumberSlot2);
+        PlayCardList.Add(PlayOperatorSlot2);
+        PlayCardList.Add(PlayNumberSlot3);
+        PlayCardList.Add(PlayOperatorSlot3);
+        PlayCardList.Add(PlayNumberSlot4);
+}
 
     // Update is called once per frame
     void Update()
@@ -207,6 +229,8 @@ public class CardPlayGameController : MonoBehaviour
         // get faceValue of card on hand
         int cardInHandCount = 0;
         List<double> numbers = new List<double>();
+
+
         foreach (Transform cardInHand in playerHand.transform)
         {
             if (cardInHand.childCount == 1)

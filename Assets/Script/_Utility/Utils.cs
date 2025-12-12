@@ -11,12 +11,20 @@ public static class Utils
         Divide
     }
 
-    public enum AttackType
+    public enum TargetType
     {
         front,
         back,
         firstTwo,
         all,
+        allFriendly
+    }
+
+    public enum MoveType
+    {
+        RawAttack,
+        ApplyStatusToEnemy,
+        ApplyStatusToFriendly
     }
 
     public enum EffectType
@@ -67,7 +75,7 @@ public static class Utils
     {
         PlayerInput,
         CardCalculation,
-        CharecterAttack,
+        HeroAttack,
         EnemyAttack,
         Win,
         RoundVictory,

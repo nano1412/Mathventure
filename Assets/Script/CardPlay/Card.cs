@@ -247,7 +247,7 @@ public class Card : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
     {
         if (isDragging == false)
         {
-            foreach (Transform playedCard in CardPlayGameController.current.playedCardSlots.transform)
+            foreach (Transform playedCard in CardPlayGameController.current.PlayCardList)
             {
                 if (Utils.RectOverlaps(transform.GetComponent<RectTransform>(), playedCard.GetComponent<RectTransform>()) && playedCard.CompareTag("Slot"))
                 {

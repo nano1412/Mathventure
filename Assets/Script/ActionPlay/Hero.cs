@@ -3,7 +3,9 @@ using UnityEngine;
 
 public class Hero : Character
 {
-    protected override Move defaultAttack => throw new System.NotImplementedException();
+    [SerializeField] private Move defaultMove;
+
+    public override Move DefaultMove => defaultMove;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -17,8 +19,19 @@ public class Hero : Character
         
     }
 
-    protected override void Attack(List<Transform> targets, Move move)
+    public override void Attack()
     {
 
+    }
+
+    public override void CheckDead()
+    {
+        if (hp < 0)
+        {
+            Debug.Log(transform.name + "is dead");
+            Dead();
+
+            GameController.current.Lose();
+        }
     }
 }
