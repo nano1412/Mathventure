@@ -15,6 +15,9 @@ public class ActionGameController : MonoBehaviour
     public GameObject multiplyHero;
     public GameObject divideHero;
 
+
+    private Hero attackerHero;
+
     private void Awake()
     {
         current = this;
@@ -49,27 +52,28 @@ public class ActionGameController : MonoBehaviour
         {
             OperationEnum heroType = CardPlayGameController.current.PlayCardList[operatorOrders[i]].GetChild(0).GetComponent<Operatorcard>().operation;
 
-            double leftNumberCardEffectValue = CardPlayGameController.current.PlayCardList[operatorOrders[i-1]].GetChild(0).GetComponent<Card>().GetEffectValue();
-            double rightNumberCardEffectValue = CardPlayGameController.current.PlayCardList[operatorOrders[i+1]].GetChild(0).GetComponent<Card>().GetEffectValue();
+            double leftNumberCardEffectValue = CardPlayGameController.current.PlayCardList[operatorOrders[i] - 1].GetChild(0).GetComponent<Card>().GetEffectValue();
+            double rightNumberCardEffectValue = CardPlayGameController.current.PlayCardList[operatorOrders[i] + 1].GetChild(0).GetComponent<Card>().GetEffectValue();
 
-            Hero hero = new Hero();
             switch (heroType)
             {
                 case OperationEnum.Plus:
-                    hero = plusHero.transform.GetChild(0).GetComponent<Hero>();
+                    attackerHero = plusHero.transform.GetChild(0).GetComponent<Hero>();
                 break;
                 case OperationEnum.Minus:
-                    hero = minusHero.transform.GetChild(0).GetComponent<Hero>();
+                    attackerHero = minusHero.transform.GetChild(0).GetComponent<Hero>();
                 break;
                 case OperationEnum.Multiply:
-                    hero = multiplyHero.transform.GetChild(0).GetComponent<Hero>();
+                    attackerHero = multiplyHero.transform.GetChild(0).GetComponent<Hero>();
                 break;
                 case OperationEnum.Divide:
-                    hero = divideHero.transform.GetChild(0).GetComponent<Hero>();
+                    attackerHero = divideHero.transform.GetChild(0).GetComponent<Hero>();
                 break;
             }
 
-            hero.Attack(CardPlayGameController.current.Multiplier, leftNumberCardEffectValue + rightNumberCardEffectValue);
+            Debug.Log(attackerHero.transform.name + " is attacking with Lcard:" + leftNumberCardEffectValue + " Rcard:" + rightNumberCardEffectValue + " multiplier:" + CardPlayGameController.current.Multiplier);
+
+            attackerHero.Attack(CardPlayGameController.current.Multiplier, leftNumberCardEffectValue + rightNumberCardEffectValue);
         }
     }
 

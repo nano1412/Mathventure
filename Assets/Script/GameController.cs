@@ -87,7 +87,7 @@ public class GameController : MonoBehaviour
 
     public void Lose()
     {
-        //hero.cs gonna be the caller
+        //attackerHero.cs gonna be the caller
 
         this.SetGamestate(GameState.Lose);
         //show lose screen

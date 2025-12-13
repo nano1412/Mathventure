@@ -11,7 +11,7 @@ public abstract class Character : MonoBehaviour
     [SerializeField] protected double shield;
     [SerializeField] protected bool isStuned;
 
-    [SerializeField] protected List<StatusEffect> statusEffects = new List<StatusEffect>();
+    [SerializeField] protected List<StatusEffect> statusEffects;
 
     [Header("Attack data")]
     public abstract Move DefaultMove { get; }

@@ -172,7 +172,7 @@ public class CardPlayGameController : MonoBehaviour
 
 
 
-        Debug.Log(CardInhandGameObject.Count);
+        //Debug.Log(CardInhandGameObject.Count);
 
         operatorOrders = new List<int>();
         steplog = PlayCardCalculation.EvaluateEquation(CardInhandGameObject, parenthesesMode);
@@ -265,7 +265,7 @@ public class CardPlayGameController : MonoBehaviour
         {
             double key = kvp.Key;
             int count = kvp.Value != null ? kvp.Value.Count : 0;
-            Debug.Log($"Number: {key}, Count: {count}");
+            //Debug.Log($"Number: {key}, Count: {count}");
         }
 
         allPossibleEquationAnswers = resultsDict;
