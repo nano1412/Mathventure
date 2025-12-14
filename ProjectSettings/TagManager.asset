@@ -12,6 +12,11 @@ TagManager:
   - EnemySlot
   - Character
   - Enemy
+  - ItemSlot
+  - Weapon
+  - Armor
+  - Consumable
+  - Equipment
   layers:
   - Default
   - TransparentFX

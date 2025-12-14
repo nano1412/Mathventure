@@ -10,5 +10,5 @@ public class Move : ScriptableObject
     [SerializeField] protected MoveType moveType;
     [SerializeField] protected AnimationType AnimationType;
 
-    [SerializeField] protected List<StatusEffect> applyStatusViaAttack = new List<StatusEffect>();
+    [SerializeField] protected List<ModifierSO> applyStatusViaAttack = new List<ModifierSO>();
 }

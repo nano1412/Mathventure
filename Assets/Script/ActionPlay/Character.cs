@@ -11,7 +11,7 @@ public abstract class Character : MonoBehaviour
     [SerializeField] protected double shield;
     [SerializeField] protected bool isStuned;
 
-    [SerializeField] protected List<StatusEffect> statusEffects;
+    [SerializeField] protected List<StatusEffect> statusEffects = new List<StatusEffect>();
 
     [Header("Attack data")]
     public abstract Move DefaultMove { get; }
@@ -91,12 +91,12 @@ public abstract class Character : MonoBehaviour
         //do the effect
         switch (statusEffect.effectType)
         {
-            case EffectType.OvertimeHeal:
+            case EffectType.HealOvertime:
                 Heal(statusEffect.value, statusEffect.name);
 
                 break;
 
-            case EffectType.Poison:
+            case EffectType.DamageOveertime:
                 TakeDamage(statusEffect.value, statusEffect.name);
 
                 break;
@@ -108,8 +108,8 @@ public abstract class Character : MonoBehaviour
         }
 
 
-        statusEffect.turnDuration--;
-        if(statusEffect.turnDuration <= 0)
+        statusEffect.duration--;
+        if(statusEffect.duration <= 0)
         {
             Debug.Log(statusEffect.name + " has been resolve");
 

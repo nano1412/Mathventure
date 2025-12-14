@@ -30,8 +30,8 @@ public static class Utils
     public enum EffectType
     {
         None,
-        OvertimeHeal,
-        Poison,
+        HealOvertime,
+        DamageOveertime,
         Stun,
         Empty
         // Add more as needed
@@ -54,6 +54,57 @@ public static class Utils
     }
 
     public enum CardType { Number, Operator }
+
+    public enum ItemType { Weapon, Armor, Equipment,Consumable, General_Item}
+
+    public enum ModifierCondition
+    {
+        Card_All,
+        Card_IsEven,
+        Card_IsOdd,
+        Card_IsPrime,
+        Card_Morethan,
+        Card_Lessthan,
+        Card_Equal,
+
+        Hero_All,
+        Hero_Plus,
+        Hero_Minus,
+        Hero_Multiply,
+        Hero_Divide,
+        Hero_OnlyEquiper,
+
+        Enemy_All,
+        Enemy_Front,
+        Enemy_Back,
+        Enemy_FirstTwo,
+        Enemy_RecriveAttack
+    }
+
+    public enum ModifierMethod
+    {
+        AddValue,
+        TemporaryAddValue,
+        MultiplyValue,
+        TemporaryMultiplyValue,
+        AddEffect,
+        RemoveEffect
+    }
+
+    public enum ModifierTarget
+    {
+        HP,
+        ATK,
+        DEF
+    }
+
+    public class StatusEffect
+    {
+        public string name;
+        public EffectType effectType;
+        public int value;
+        public int duration;
+    }
 
     public enum ParenthesesMode
     {
