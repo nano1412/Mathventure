@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using Random = System.Random;
 
 public static class Utils
 {
@@ -162,4 +163,6 @@ public static class Utils
         Vector3 topRight = corners[2];
         return new Rect(bottomLeft, topRight - bottomLeft);
     }
+
+    public static Random rnd = new Random();
 }
