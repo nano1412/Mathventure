@@ -100,6 +100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3447710258527519899}
   - component: {fileID: 4479055572798902710}
+  - component: {fileID: -3746205287628266338}
   m_Layer: 0
   m_Name: Guild
   m_TagString: Character
@@ -141,6 +142,20 @@ MonoBehaviour:
   isStuned: 0
   statusEffects: []
   defaultMove: {fileID: 0}
+--- !u!114 &-3746205287628266338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1466289955758267998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b18c1f9fbd2a544db5842902226c0a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EquipmentSlot
+  weapon: {fileID: 0}
+  armor: {fileID: 0}
 --- !u!1 &2246979080626507038
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,6 +14,7 @@ public class ActionGameController : MonoBehaviour
     public GameObject minusHero;
     public GameObject multiplyHero;
     public GameObject divideHero;
+    public GameObject buffHero;
 
 
     private Hero attackerHero;
