@@ -561,8 +561,8 @@ MonoBehaviour:
   rerollPrice: 1
   SpawnableItem:
   - {fileID: 5888584148792912404, guid: 5a658fcc3549d094898c45a92cdecccf, type: 3}
-  - {fileID: 1021864678}
   - {fileID: 1095311628101397342, guid: 0f5bfdba1c869bc4cafe1f07bd8ae1fb, type: 3}
+  - {fileID: 1095311628101397342, guid: da4041eebd624b1438ecc64def9910bd, type: 3}
 --- !u!1001 &183277905
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -9,10 +9,10 @@ public abstract class Item : MonoBehaviour
     [SerializeField] private string name;
 
     [Header ("ShopData")]
-    [SerializeField] private int price;
-    [SerializeField] private int sellPrice;
-    [SerializeField] private string shortDiscription;
-    [SerializeField] private string discription;
+    public int price;
+    public int sellPrice;
+    public string shortDiscription;
+    public string discription;
 
     [Header("ItemData")]
     [SerializeField] ItemType itemType;
