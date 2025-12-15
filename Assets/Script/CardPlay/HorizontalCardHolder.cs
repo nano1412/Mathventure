@@ -9,7 +9,6 @@ using static Utils;
 
 public class HorizontalCardHolder : MonoBehaviour
 {
-
     [SerializeField] private Card selectedCard;
     [SerializeReference] private Card hoveredCard;
 
@@ -18,20 +17,21 @@ public class HorizontalCardHolder : MonoBehaviour
     private RectTransform rect;
 
     [Header("Spawn Settings")]
-    [SerializeField] private int cardsToSpawn = 7;
     public List<Card> cards;
 
     bool isCrossing = false;
     [SerializeField] private bool tweenCardReturn = true;
 
-    void Start()
+    public void SetUpPlayerSlot(Action onComplete)
     {
-        for (int i = 0; i < cardsToSpawn; i++)
+        for (int i = 0; i < GameController.current.maxCardInHand; i++)
         {
             Instantiate(slotPrefab, transform);
         }
 
         rect = GetComponent<RectTransform>();
+
+        onComplete?.Invoke();
 
     }
 

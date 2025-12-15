@@ -11,12 +11,37 @@ public static class Utils
         Divide
     }
 
+    public enum TargetType
+    {
+        front,
+        back,
+        firstTwo,
+        all,
+        allFriendly
+    }
+
+    public enum MoveType
+    {
+        RawAttack,
+        ApplyStatusToEnemy,
+        ApplyStatusToFriendly
+    }
+
     public enum EffectType
     {
         None,
-        Heal,
+        OvertimeHeal,
+        Poison,
+        Stun,
         Empty
         // Add more as needed
+    }
+
+    public enum AnimationType
+    {
+        GetClose,
+        Casting,
+        Projectile
     }
 
     public enum OperationPriority
@@ -44,6 +69,21 @@ public static class Utils
         firstOperator = 1,
         middleOperator = 3,
         lastOperator = 5
+    }
+
+    public enum GameState
+    {
+        PlayerInput,
+        CardCalculation,
+        HeroAttack,
+        EnemyAttack,
+        Win,
+        RoundVictory,
+        Lose,
+        Shop,
+        Pause,
+        Menu
+
     }
 
 

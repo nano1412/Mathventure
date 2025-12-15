@@ -8,7 +8,7 @@ using static Utils;
 public class Operatorcard : MonoBehaviour, IPointerUpHandler
 {
 
-    private OperationEnum operation;
+    public OperationEnum operation;
     private TMP_Text operationText;
     /*
      * priority are follow PEMDAS principal

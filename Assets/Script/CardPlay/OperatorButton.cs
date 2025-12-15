@@ -40,7 +40,7 @@ public class OperatorButton : MonoBehaviour
 
     private void AddOperatorCard(OperationEnum operation)
     {
-        foreach (Transform operatorCardSlot in CardPlayGameController.current.playedCardSlots.transform)
+        foreach (Transform operatorCardSlot in CardPlayGameController.current.PlayCardList)
         {
             if (operatorCardSlot.CompareTag("OperatorSlot") && operatorCardSlot.childCount == 0)
             {

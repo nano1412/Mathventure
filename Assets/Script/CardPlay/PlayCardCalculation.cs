@@ -67,16 +67,8 @@ public class SimplifiedCard
 
 public static class PlayCardCalculation
 {
-
-
-    public static List<object[]> EvaluateEquation(List<GameObject> handEquation, ParenthesesMode mode)
+    public static List<SimplifiedCard> GameObjectToSimplifiedCard(List<GameObject> handEquation)
     {
-        if (ValidationHand(handEquation) < 0)
-        {
-            return null;
-        }
-
-        // Convert to simplified struct
         List<SimplifiedCard> simplified = new List<SimplifiedCard>();
         for (int i = 0; i < handEquation.Count; i++)
         {
@@ -87,6 +79,20 @@ public static class PlayCardCalculation
 
             simplified.Add(sCard);
         }
+
+        return simplified;
+    }
+
+
+    public static List<object[]> EvaluateEquation(List<GameObject> handEquation, ParenthesesMode mode)
+    {
+        if (ValidationHand(handEquation) < 0)
+        {
+            return null;
+        }
+
+        // Convert to simplified struct
+        simplified = GameObjectToSimplifiedCard(handEquation);
 
         // Apply parentheses collapsing
         ApplyParenthesesMode(simplified, mode);
@@ -165,6 +171,9 @@ public static class PlayCardCalculation
 
     #region Get all equation possibility
     static List<string> stringPosibleOperator = new List<string>();
+
+    public static List<SimplifiedCard> simplified { get; private set; }
+
     public static Dictionary<double, List<string>> GetMostFrequentResults(List<double> numbers, List<OperationEnum> posibleOperators)
     {
         stringPosibleOperator = new List<string>();
@@ -285,7 +294,7 @@ public static class PlayCardCalculation
 
 
     #region get target number base on GetMostFrequentResults() with 
-    public static Dictionary<double, List<string>> GetAnswerByDifficulty(Dictionary<double, List<string>> resultCounts, double difficulty, double maxAnswerRange)
+    public static Dictionary<double, List<string>> GetAnswerByDifficulty(Dictionary<double, List<string>> resultCounts, double difficulty, double maxAnswerRange, bool isPositiveOnly)
     {
         if (resultCounts == null || resultCounts.Count == 0)
             throw new ArgumentException("Result counts are empty.");
@@ -301,10 +310,16 @@ public static class PlayCardCalculation
 
         //remove the answer that are too high or low
         filtered.RemoveAll(n => n.Key >= maxAnswerRange);
-        filtered.RemoveAll(n => n.Key <= -maxAnswerRange);
+        if (isPositiveOnly)
+        {
+            filtered.RemoveAll(n => n.Key <= 0);
+        } else
+        {
+            filtered.RemoveAll(n => n.Key <= -maxAnswerRange);
+        }
 
-        // Determine target index from percentile
-        int index = (int)Math.Round(difficulty * (filtered.Count - 1));
+            // Determine target index from percentile
+            int index = (int)Math.Round(difficulty * (filtered.Count - 1));
         int targetCount = filtered[index].Value.Count();
 
         // Get all entries with the same count as target
