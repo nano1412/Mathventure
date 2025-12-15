@@ -542,6 +542,7 @@ GameObject:
   - component: {fileID: 178939926}
   - component: {fileID: 178939928}
   - component: {fileID: 178939927}
+  - component: {fileID: 178939929}
   m_Layer: 5
   m_Name: ShopMenu
   m_TagString: Untagged
@@ -612,6 +613,38 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 178939925}
   m_CullTransparentMesh: 1
+--- !u!114 &178939929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178939925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66a0a25525fd8f14198cd5addb4d5121, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  shopSlots:
+  - {fileID: 664505439}
+  - {fileID: 625704577}
+  - {fileID: 489337522}
+  - {fileID: 232684209}
+  - {fileID: 761606377}
+  DiscriptionPreview: {fileID: 1436044843}
+  shopSelectedItem: {fileID: 0}
+  shopSelectedItemImagePreview: {fileID: 121936778}
+  buyBtn: {fileID: 822351999}
+  buyPriceText: {fileID: 834753496}
+  rerollBtn: {fileID: 1830155014}
+  rerollPriceText: {fileID: 909174300}
+  rerollPrice: 1
+  currentRerollPrice: 0
+  rerollInflation: 0
+  SpawnableItem:
+  - {fileID: 5888584148792912404, guid: 5a658fcc3549d094898c45a92cdecccf, type: 3}
+  - {fileID: 1095311628101397342, guid: 0f5bfdba1c869bc4cafe1f07bd8ae1fb, type: 3}
+  - {fileID: 1095311628101397342, guid: da4041eebd624b1438ecc64def9910bd, type: 3}
 --- !u!1001 &183277905
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3426,19 +3459,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 163078b265fd19742986a106599a61b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  coin: 0
   plusHeroEquipmentSlot: {fileID: 5496351581225323754}
   minusHeroEquipmentSlot: {fileID: 1388523321}
   multiplyHeroEquipmentSlot: {fileID: 908960951}
   divideHeroEquipmentSlot: {fileID: 1779148709}
   buffHeroEquipmentSlot: {fileID: 2093115347}
-  EquipmentInventorySlot1: {fileID: 1367518486}
-  EquipmentInventorySlot2: {fileID: 6418940523400070879}
-  EquipmentInventorySlot3: {fileID: 173127913}
-  EquipmentInventorySlot4: {fileID: 1028662867}
-  ConsumableInventorySlot1: {fileID: 596951673631267112}
-  ConsumableInventorySlot2: {fileID: 648893735}
-  ConsumableInventorySlot3: {fileID: 452168326}
-  ConsumableInventorySlot4: {fileID: 557602712}
+  EquipmentInventorySlots:
+  - {fileID: 1367518486}
+  - {fileID: 6418940523400070879}
+  - {fileID: 173127913}
+  - {fileID: 1028662867}
+  ConsumableInventorySlots:
+  - {fileID: 596951673631267112}
+  - {fileID: 648893735}
+  - {fileID: 452168326}
+  - {fileID: 557602712}
 --- !u!1001 &690720904
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3983,7 +4019,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 822352000}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 178939929}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: BuyItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &822352000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6727,64 +6775,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1436044841}
   m_CullTransparentMesh: 1
---- !u!1 &1443118608
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1443118609}
-  - component: {fileID: 1443118610}
-  m_Layer: 0
-  m_Name: ShopController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1443118609
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1443118608}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1986135735}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1443118610
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1443118608}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66a0a25525fd8f14198cd5addb4d5121, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  shopSlots:
-  - {fileID: 664505439}
-  - {fileID: 625704577}
-  - {fileID: 489337522}
-  - {fileID: 232684209}
-  - {fileID: 761606377}
-  DiscriptionPreview: {fileID: 1436044843}
-  selectedItem: {fileID: 0}
-  selectedItemImagePreview: {fileID: 121936778}
-  rerollPrice: 1
-  SpawnableItem:
-  - {fileID: 5888584148792912404, guid: 5a658fcc3549d094898c45a92cdecccf, type: 3}
-  - {fileID: 1095311628101397342, guid: 0f5bfdba1c869bc4cafe1f07bd8ae1fb, type: 3}
-  - {fileID: 1095311628101397342, guid: da4041eebd624b1438ecc64def9910bd, type: 3}
 --- !u!4 &1488112084 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8786516175686430025, guid: 750d537e68df2d342aaf27bee30c4e62, type: 3}
@@ -7423,7 +7413,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 455, y: -6.3065}
+  m_AnchoredPosition: {x: 383, y: -6.3065}
   m_SizeDelta: {x: 225.44238, y: -52.32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1714788094
@@ -8143,7 +8133,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1830155015}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 178939929}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: Reroll
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1830155015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8552,7 +8554,6 @@ MonoBehaviour:
   posibleOperators: 
   gamestate: 9
   templateDeck: {fileID: 11400000, guid: 5009f4b849de2c44eaf0937517670067, type: 2}
-  coin: 0
   wave: 1
 --- !u!4 &1986135735
 Transform:
@@ -8570,7 +8571,6 @@ Transform:
   - {fileID: 392799242}
   - {fileID: 1322794185}
   - {fileID: 668068788}
-  - {fileID: 1443118609}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1986135736
@@ -10922,7 +10922,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 258, y: -6.4467}
+  m_AnchoredPosition: {x: 105, y: -6.4467}
   m_SizeDelta: {x: 578.7904, y: -63.879997}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3810444834440529551
@@ -12140,7 +12140,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 178, y: -6.1664}
+  m_AnchoredPosition: {x: 141, y: -6.1664}
   m_SizeDelta: {x: 180.9823, y: -52.039703}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &6418940523400070877
@@ -13200,7 +13200,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -72, y: -7.4268}
+  m_AnchoredPosition: {x: -237, y: -7.4268}
   m_SizeDelta: {x: 90, y: -54}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &9005111994108687957

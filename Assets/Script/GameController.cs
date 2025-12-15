@@ -12,7 +12,7 @@ public class GameController : MonoBehaviour
     public GameState gamestate = GameState.Menu;
     public Deck templateDeck;
 
-    public int coin = 0;
+
     public int wave = 1;
 
 
