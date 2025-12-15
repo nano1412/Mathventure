@@ -6,7 +6,7 @@ using static Utils;
 public abstract class Item : MonoBehaviour
 {
     [Header ("Apparent")]
-    [SerializeField] private string name;
+    public string name;
 
     [Header ("ShopData")]
     public int price;

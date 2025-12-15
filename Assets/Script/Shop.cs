@@ -6,6 +6,8 @@ using static Utils;
 
 public class Shop : MonoBehaviour
 {
+    public Shop current;
+
     [SerializeField] private List<GameObject> shopSlots;
 
     [SerializeField] private TMP_Text DiscriptionPreview;
@@ -13,6 +15,11 @@ public class Shop : MonoBehaviour
     [SerializeField] private int rerollPrice;
 
     [SerializeField] private List<GameObject> SpawnableItem;
+
+    private void Awake()
+    {
+        current = this;
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
