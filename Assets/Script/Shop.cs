@@ -2,16 +2,19 @@ using NUnit.Framework;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 using static Utils;
 
 public class Shop : MonoBehaviour
 {
-    public Shop current;
+    public static Shop current;
 
     [SerializeField] private List<GameObject> shopSlots;
 
     [SerializeField] private TMP_Text DiscriptionPreview;
     [SerializeField] private Item selectedItem;
+    [SerializeField] private Image selectedItemImagePreview;
     [SerializeField] private int rerollPrice;
 
     [SerializeField] private List<GameObject> SpawnableItem;
@@ -24,7 +27,6 @@ public class Shop : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Debug.Log("shop start");
         //on enable
         SpawnItem();
     }
@@ -38,6 +40,14 @@ public class Shop : MonoBehaviour
     public void Reroll()
     {
 
+    }
+
+    public void SelectItem(GameObject item)
+    {
+            
+            selectedItem = item.GetComponent<Item>();
+        selectedItemImagePreview.sprite = item.GetComponent<Image>().sprite;
+        DiscriptionPreview.text = selectedItem.discription;
     }
 
     void SpawnItem()

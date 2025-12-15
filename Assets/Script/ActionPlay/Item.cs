@@ -6,7 +6,7 @@ using static Utils;
 public abstract class Item : MonoBehaviour
 {
     [Header ("Apparent")]
-    public string name;
+    public string itemName;
 
     [Header ("ShopData")]
     public int price;

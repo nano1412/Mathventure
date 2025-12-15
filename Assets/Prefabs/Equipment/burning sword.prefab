@@ -88,7 +88,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81180301569dbaa499281bbff3c18ba8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Equipment
-  name: burning sword
+  itemName: burning sword
   price: 10
   sellPrice: 5
   shortDiscription: +5 ATK, fire

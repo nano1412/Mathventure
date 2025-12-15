@@ -88,7 +88,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57d0ff9623fbbe04e811db3c10328b88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Consumable
-  name: potion
+  itemName: Potion
   price: 10
   sellPrice: 5
   shortDiscription: +20 HP

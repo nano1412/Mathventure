@@ -17,6 +17,10 @@ TagManager:
   - Armor
   - Consumable
   - Equipment
+  - ShopItemSlot
+  - ConsumableSlot
+  - WeaponSlot
+  - ArmorSlot
   layers:
   - Default
   - TransparentFX
