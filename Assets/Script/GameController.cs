@@ -1,19 +1,29 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 using static Utils;
 
 public class GameController : MonoBehaviour
 {
     public static GameController current;
 
-    public int maxCardInHand = 8;
-    public int level = 1;
-    public List<OperationEnum> posibleOperators = new List<OperationEnum>();
-    public GameState gamestate = GameState.Menu;
-    public Deck templateDeck;
+    [field: SerializeField]
+    public int MaxCardInHand { get; private set; }
 
+    [field: SerializeField]
+    public int Level { get; private set; }
 
-    public int wave = 1;
+    [field: SerializeField]
+    public List<OperationEnum> PossibleOperators { get; private set; }
+
+    [field: SerializeField]
+    public GameState GameState { get; private set; }
+
+    [field: SerializeField]
+    public Deck TemplateDeck { get; private set; }
+
+    [field: SerializeField]
+    public int Wave { get; private set; }
 
 
     //charector that player pick
@@ -27,10 +37,10 @@ public class GameController : MonoBehaviour
     void Start()
     {
         //temp fix
-        posibleOperators.Add(OperationEnum.Plus);
-        posibleOperators.Add(OperationEnum.Minus);
-        posibleOperators.Add(OperationEnum.Multiply);
-        posibleOperators.Add(OperationEnum.Divide);
+        PossibleOperators.Add(OperationEnum.Plus);
+        PossibleOperators.Add(OperationEnum.Minus);
+        PossibleOperators.Add(OperationEnum.Multiply);
+        PossibleOperators.Add(OperationEnum.Divide);
 
         GameStart();
     }
@@ -38,13 +48,13 @@ public class GameController : MonoBehaviour
     void GameStart()
     {
         CardPlayGameController.current.SetupCardContoller();
-        CardPlayGameController.current.playerHand.GetComponent<HorizontalCardHolder>().SetUpPlayerSlot(NextRoundStart);
+        CardPlayGameController.current.PlayerHand.GetComponent<HorizontalCardHolder>().SetUpPlayerSlot(NextRoundStart);
     }
 
     private void NextRoundStart()
     {
         this.SetGamestate(GameState.PlayerInput);
-        CardPlayGameController.current.AddCard(maxCardInHand);
+        CardPlayGameController.current.AddCard(MaxCardInHand);
 
         CardPlayGameController.current.GetAllPossibleEquation();
         CardPlayGameController.current.GetTargetNumber();
@@ -75,7 +85,7 @@ public class GameController : MonoBehaviour
     void RounndWin()
     {
         //to round victory screen or check win
-        if(level < 4 && wave >= 4)
+        if(Level < 4 && Wave >= 4)
         {
             this.SetGamestate(GameState.Win);
             //show sumary of this run
@@ -93,15 +103,8 @@ public class GameController : MonoBehaviour
         //show lose screen
     }
 
-
-
-    public GameState GetGamestate()
-    {
-        return gamestate;
-    }
-
     public void SetGamestate(GameState GS)
     {
-        gamestate = GS;
+        GameState = GS;
     }
 }

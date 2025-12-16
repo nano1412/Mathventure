@@ -24,7 +24,7 @@ public class HorizontalCardHolder : MonoBehaviour
 
     public void SetUpPlayerSlot(Action onComplete)
     {
-        for (int i = 0; i < GameController.current.maxCardInHand; i++)
+        for (int i = 0; i < GameController.current.MaxCardInHand; i++)
         {
             Instantiate(slotPrefab, transform);
         }

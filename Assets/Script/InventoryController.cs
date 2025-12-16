@@ -8,22 +8,31 @@ public class InventoryController : MonoBehaviour
 {
     public static InventoryController current;
 
-    [Header("Currency")]
-    public int coin = 0;
+    [field: Header("Currency"), SerializeField]
+    public int Coin { get; private set; } = 0;
+
     public event Action<int> OnCoinsChanged;
 
-    [Header("Hero Equipment Slot")]
-    [SerializeField] private GameObject plusHeroEquipmentSlot;
-    [SerializeField] private GameObject minusHeroEquipmentSlot;
-    [SerializeField] private GameObject multiplyHeroEquipmentSlot;
-    [SerializeField] private GameObject divideHeroEquipmentSlot;
-    [SerializeField] private GameObject buffHeroEquipmentSlot;
+    [field: Header("Hero Equipment Slot"), SerializeField]
+    public GameObject PlusHeroEquipmentSlot { get; private set; }
 
-    [Header("Equipment Inventory")]
-    [SerializeField] private List<GameObject> EquipmentInventorySlots;
+    [field: SerializeField]
+    public GameObject MinusHeroEquipmentSlot { get; private set; }
 
-    [Header("Consumable Inventory")]
-    [SerializeField] private List<GameObject> ConsumableInventorySlots;
+    [field: SerializeField]
+    public GameObject MultiplyHeroEquipmentSlot { get; private set; }
+
+    [field: SerializeField]
+    public GameObject DivideHeroEquipmentSlot { get; private set; }
+
+    [field: SerializeField]
+    public GameObject BuffHeroEquipmentSlot { get; private set; }
+
+    [field: Header("Equipment Inventory"), SerializeField]
+    public List<GameObject> EquipmentInventorySlots { get; private set; }
+
+    [field: Header("Consumable Inventory"), SerializeField]
+    public List<GameObject> ConsumableInventorySlots { get; private set; }
 
     private void Awake()
     {
@@ -37,9 +46,9 @@ public class InventoryController : MonoBehaviour
             Debug.LogWarning("amount is negative, use SpendCoin() instead");
         }
 
-        coin += amount;
-        Debug.Log("Money Added: " + amount + " G. Current coin:" + coin + "G");
-        OnCoinsChanged?.Invoke(coin);
+        Coin += amount;
+        Debug.Log("Money Added: " + amount + " G. Current Coin:" + Coin + "G");
+        OnCoinsChanged?.Invoke(Coin);
     }
 
     public bool SpendCoin(int amount)
@@ -49,15 +58,15 @@ public class InventoryController : MonoBehaviour
             Debug.LogWarning("amount is negative, use AddCoin() instead");
         }
 
-        if (amount > coin)
+        if (amount > Coin)
         {
             Debug.Log("BB no money");
             return false;
         }
 
-        coin -= amount;
-        Debug.Log("Money spended: " + amount + " G. Coin left:" + coin + "G");
-        OnCoinsChanged?.Invoke(coin);
+        Coin -= amount;
+        Debug.Log("Money spended: " + amount + " G. Coin left:" + Coin + "G");
+        OnCoinsChanged?.Invoke(Coin);
         return true;
     }
 

@@ -1883,45 +1883,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a2ae0a34c2aa9342a1aac4d96418544, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHand: {fileID: 2983681958893131434}
-  operatorButton: {fileID: 0}
-  playedCardSlots: {fileID: 6252857976482067356}
-  PlayCardList: []
-  PlayNumberSlot1: {fileID: 1546324737415473434}
-  PlayOperatorSlot1: {fileID: 6784841865152208306}
-  PlayNumberSlot2: {fileID: 5555726496724786816}
-  PlayOperatorSlot2: {fileID: 4374779036600542711}
-  PlayNumberSlot3: {fileID: 4709804140398179003}
-  PlayOperatorSlot3: {fileID: 1502407232260923640}
-  PlayNumberSlot4: {fileID: 7458473486600308994}
-  PlayOpenParentheses1: {fileID: 613476421}
-  PlayCloseParentheses1: {fileID: 932754473}
-  PlayOpenParentheses2: {fileID: 223096366}
-  PlayCloseParentheses2: {fileID: 378651882}
-  playerAnswer: 0
-  previewPlayerAnswer: 0
-  multiplier: 0
-  operatorOrders: 
-  cardPrefab: {fileID: 8994356602663114153, guid: 38aa6ba35be5144dc931edb1e6e43818, type: 3}
-  deckObject: {fileID: 8970141609527228859}
-  persistentDeck: {fileID: 0}
-  roundDeck: {fileID: 0}
-  parenthesesMode: 0
-  isHandReady: 0
-  isHandValiid: 0
-  posibleOperators: 
-  targetNumber: 0
-  difficulty: 0.5
-  maxAnswerRange: 100
-  isPositiveOnly: 0
-  blueZoneMultiplier: 3
-  greenZoneValue: 13
-  greenZoneRatio: 0
-  greenZoneMultiplier: 2
-  yellowZoneValue: 25
-  yellowZoneRatio: 0
-  yellowZoneMultiplier: 1
-  redZoneMultiplier: 0.5
+  <PlayerHand>k__BackingField: {fileID: 2983681958893131434}
+  <OperatorButton>k__BackingField: {fileID: 0}
+  <PlayedCardSlots>k__BackingField: {fileID: 6252857976482067356}
+  <PlayCardList>k__BackingField: []
+  <PlayNumberSlot1>k__BackingField: {fileID: 1546324737415473434}
+  <PlayOperatorSlot1>k__BackingField: {fileID: 6784841865152208306}
+  <PlayNumberSlot2>k__BackingField: {fileID: 5555726496724786816}
+  <PlayOperatorSlot2>k__BackingField: {fileID: 4374779036600542711}
+  <PlayNumberSlot3>k__BackingField: {fileID: 4709804140398179003}
+  <PlayOperatorSlot3>k__BackingField: {fileID: 1502407232260923640}
+  <PlayNumberSlot4>k__BackingField: {fileID: 7458473486600308994}
+  <PlayOpenParentheses1>k__BackingField: {fileID: 613476421}
+  <PlayCloseParentheses1>k__BackingField: {fileID: 932754473}
+  <PlayOpenParentheses2>k__BackingField: {fileID: 223096366}
+  <PlayCloseParentheses2>k__BackingField: {fileID: 378651882}
+  <PlayerAnswer>k__BackingField: 0
+  <PreviewPlayerAnswer>k__BackingField: 0
+  <Multiplier>k__BackingField: 0
+  <OperatorOrders>k__BackingField: 
+  <CardPrefab>k__BackingField: {fileID: 8994356602663114153, guid: 38aa6ba35be5144dc931edb1e6e43818, type: 3}
+  <DeckObject>k__BackingField: {fileID: 8970141609527228859}
+  <PersistentDeck>k__BackingField: {fileID: 0}
+  <RoundDeck>k__BackingField: {fileID: 0}
+  ParenthesesMode: 0
+  <IsHandReady>k__BackingField: 0
+  <IsHandValiid>k__BackingField: 0
+  <PossibleOperators>k__BackingField: 
+  <TargetNumber>k__BackingField: 0
+  <Difficulty>k__BackingField: 0.5
+  <MaxAnswerRange>k__BackingField: 100
+  <IsPositiveOnly>k__BackingField: 0
+  <BlueZoneMultiplier>k__BackingField: 3
+  <GreenZoneValue>k__BackingField: 13
+  <GreenZoneRatio>k__BackingField: 0
+  <GreenZoneMultiplier>k__BackingField: 2
+  <YellowZoneValue>k__BackingField: 25
+  <YellowZoneRatio>k__BackingField: 0
+  <YellowZoneMultiplier>k__BackingField: 1
+  <RedZoneMultiplier>k__BackingField: 0.5
 --- !u!4 &392799242
 Transform:
   m_ObjectHideFlags: 0
@@ -3773,18 +3773,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 163078b265fd19742986a106599a61b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  coin: 0
-  plusHeroEquipmentSlot: {fileID: 5496351581225323754}
-  minusHeroEquipmentSlot: {fileID: 1388523321}
-  multiplyHeroEquipmentSlot: {fileID: 908960951}
-  divideHeroEquipmentSlot: {fileID: 1779148709}
-  buffHeroEquipmentSlot: {fileID: 2093115347}
-  EquipmentInventorySlots:
+  <Coin>k__BackingField: 0
+  <PlusHeroEquipmentSlot>k__BackingField: {fileID: 5496351581225323754}
+  <MinusHeroEquipmentSlot>k__BackingField: {fileID: 1388523321}
+  <MultiplyHeroEquipmentSlot>k__BackingField: {fileID: 908960951}
+  <DivideHeroEquipmentSlot>k__BackingField: {fileID: 1779148709}
+  <BuffHeroEquipmentSlot>k__BackingField: {fileID: 2093115347}
+  <EquipmentInventorySlots>k__BackingField:
   - {fileID: 1367518486}
   - {fileID: 6418940523400070879}
   - {fileID: 173127913}
   - {fileID: 1028662867}
-  ConsumableInventorySlots:
+  <ConsumableInventorySlots>k__BackingField:
   - {fileID: 596951673631267112}
   - {fileID: 648893735}
   - {fileID: 452168326}
@@ -6617,13 +6617,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3061fe03702e05d48a4609be9406c627, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ActionGameController
-  HeroSlots: {fileID: 1117776343}
-  enemySlots: {fileID: 1273160277}
-  plusHero: {fileID: 803314327}
-  minusHero: {fileID: 854528467}
-  multiplyHero: {fileID: 632991531}
-  divideHero: {fileID: 1873348601}
-  buffHero: {fileID: 174199501}
+  <HeroSlotsTransform>k__BackingField: {fileID: 1117776343}
+  <EnemySlotsTransform>k__BackingField: {fileID: 1273160277}
+  <PlusHero>k__BackingField: {fileID: 803314327}
+  <MinusHero>k__BackingField: {fileID: 854528467}
+  <MultiplyHero>k__BackingField: {fileID: 632991531}
+  <DivideHero>k__BackingField: {fileID: 1873348601}
+  <BuffHero>k__BackingField: {fileID: 174199501}
 --- !u!1 &1324564595
 GameObject:
   m_ObjectHideFlags: 0
@@ -8889,12 +8889,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5cdc9654a04fc1449ef93eb167129a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameController
-  maxCardInHand: 6
-  level: 1
-  posibleOperators: 
-  gamestate: 9
-  templateDeck: {fileID: 11400000, guid: 5009f4b849de2c44eaf0937517670067, type: 2}
-  wave: 1
+  <MaxCardInHand>k__BackingField: 6
+  <Level>k__BackingField: 1
+  <PossibleOperators>k__BackingField: 
+  <GameState>k__BackingField: 9
+  <TemplateDeck>k__BackingField: {fileID: 11400000, guid: 5009f4b849de2c44eaf0937517670067, type: 2}
+  <Wave>k__BackingField: 1
 --- !u!4 &1986135735
 Transform:
   m_ObjectHideFlags: 0

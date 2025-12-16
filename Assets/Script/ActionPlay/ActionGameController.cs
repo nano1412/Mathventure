@@ -2,19 +2,33 @@ using System;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
 using static Utils;
 
 public class ActionGameController : MonoBehaviour
 {
     public static ActionGameController current;
-    public Transform HeroSlots;
-    public Transform enemySlots;
 
-    public GameObject plusHero;
-    public GameObject minusHero;
-    public GameObject multiplyHero;
-    public GameObject divideHero;
-    public GameObject buffHero;
+    [field: SerializeField]
+    public Transform HeroSlotsTransform { get; private set; }
+
+    [field: SerializeField]
+    public Transform EnemySlotsTransform { get; private set; }
+
+    [field: SerializeField]
+    public GameObject PlusHero { get; private set; }
+
+    [field: SerializeField]
+    public GameObject MinusHero { get; private set; }
+
+    [field: SerializeField]
+    public GameObject MultiplyHero { get; private set; }
+
+    [field: SerializeField]
+    public GameObject DivideHero { get; private set; }
+
+    [field: SerializeField]
+    public GameObject BuffHero { get; private set; }
 
 
     private Hero attackerHero;
@@ -59,16 +73,16 @@ public class ActionGameController : MonoBehaviour
             switch (heroType)
             {
                 case OperationEnum.Plus:
-                    attackerHero = plusHero.transform.GetChild(0).GetComponent<Hero>();
+                    attackerHero = PlusHero.transform.GetChild(0).GetComponent<Hero>();
                 break;
                 case OperationEnum.Minus:
-                    attackerHero = minusHero.transform.GetChild(0).GetComponent<Hero>();
+                    attackerHero = MinusHero.transform.GetChild(0).GetComponent<Hero>();
                 break;
                 case OperationEnum.Multiply:
-                    attackerHero = multiplyHero.transform.GetChild(0).GetComponent<Hero>();
+                    attackerHero = MultiplyHero.transform.GetChild(0).GetComponent<Hero>();
                 break;
                 case OperationEnum.Divide:
-                    attackerHero = divideHero.transform.GetChild(0).GetComponent<Hero>();
+                    attackerHero = DivideHero.transform.GetChild(0).GetComponent<Hero>();
                 break;
             }
 
@@ -80,7 +94,7 @@ public class ActionGameController : MonoBehaviour
 
     private bool IsEnemyRemain()
     {
-        foreach(Transform enemySlot in enemySlots)
+        foreach(Transform enemySlot in EnemySlotsTransform)
         {
             if(enemySlot.childCount >= 1)
             {
@@ -95,7 +109,7 @@ public class ActionGameController : MonoBehaviour
     {
         List<Enemy> enemyQueue = new List<Enemy>();
 
-        foreach (Transform enemyslot in enemySlots)
+        foreach (Transform enemyslot in EnemySlotsTransform)
         {
             if (enemyslot.childCount != 0)
             {

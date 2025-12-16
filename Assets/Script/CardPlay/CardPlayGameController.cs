@@ -8,94 +8,121 @@ using System.Linq;
 using System;
 using static UnityEngine.Rendering.DebugUI;
 using UnityEditor;
+using UnityEngine.Serialization;
 
 public class CardPlayGameController : MonoBehaviour
 {
-    [Header("Univasal entry")]
     public static CardPlayGameController current;
-    public GameObject playerHand;
-    public GameObject operatorButton;
-    public GameObject playedCardSlots;
 
-    [Header("Play Card Slot")]
-    public List<Transform> PlayCardList;
+    [field: Header("Univasal entry"), SerializeField]
+    public GameObject PlayerHand { get; private set; }
 
-    public Transform PlayNumberSlot1;
-    public Transform PlayOperatorSlot1;
-    public Transform PlayNumberSlot2;
-    public Transform PlayOperatorSlot2;
-    public Transform PlayNumberSlot3;
-    public Transform PlayOperatorSlot3;
-    public Transform PlayNumberSlot4;
+    [field: SerializeField]
+    public GameObject OperatorButton { get; private set; }
 
-    public Transform PlayOpenParentheses1;
-    public Transform PlayCloseParentheses1;
-    public Transform PlayOpenParentheses2;
-    public Transform PlayCloseParentheses2;
+    [field: SerializeField]
+    public GameObject PlayedCardSlots { get; private set; }
 
-    [Header("Core Data")]
-    [SerializeField] private double playerAnswer;
-    [SerializeField] private double previewPlayerAnswer;
-    [SerializeField] private double multiplier;
-    [SerializeField] private List<int> operatorOrders = new List<int>();
 
-    [Header("Card and Deck")]
-    [SerializeField] private GameObject cardPrefab;
-    [SerializeField] private Transform deckObject;
+    [field: Header("Play Card Slot"), SerializeField]
+    public List<Transform> PlayCardList { get; private set; }
 
-    [SerializeField] private Deck persistentDeck;
-    [SerializeField] private Deck roundDeck;
+    [field: SerializeField] public Transform PlayNumberSlot1 { get; private set; }
+    [field: SerializeField] public Transform PlayOperatorSlot1 { get; private set; }
+    [field: SerializeField] public Transform PlayNumberSlot2 { get; private set; }
+    [field: SerializeField] public Transform PlayOperatorSlot2 { get; private set; }
+    [field: SerializeField] public Transform PlayNumberSlot3 { get; private set; }
+    [field: SerializeField] public Transform PlayOperatorSlot3 { get; private set; }
+    [field: SerializeField] public Transform PlayNumberSlot4 { get; private set; }
+
+    [field: SerializeField] public Transform PlayOpenParentheses1 { get; private set; }
+    [field: SerializeField] public Transform PlayCloseParentheses1 { get; private set; }
+    [field: SerializeField] public Transform PlayOpenParentheses2 { get; private set; }
+    [field: SerializeField] public Transform PlayCloseParentheses2 { get; private set; }
+
+
+    [field: Header("Core Data"), SerializeField]
+    public double PlayerAnswer { get; private set; }
+
+    [field: SerializeField]
+    public double PreviewPlayerAnswer { get; private set; }
+
+    [field: SerializeField]
+    public double Multiplier { get; private set; }
+
+    [field: SerializeField]
+    public List<int> OperatorOrders { get; private set; }
+
+
+    [field: Header("Card and Deck"), SerializeField]
+    public GameObject CardPrefab { get; private set; }
+
+    [field: SerializeField]
+    public Transform DeckObject { get; private set; }
+
+    [field: SerializeField]
+    public Deck PersistentDeck { get; private set; }
+
+    [field: SerializeField]
+    public Deck RoundDeck { get; private set; }
+
 
     [Header("Equation Solver")]
-    private List<GameObject> CardInhandGameObject = new List<GameObject>();
-    public ParenthesesMode parenthesesMode;
-    public int isHandReady = 0;
-    public bool isHandValiid = false;
-    [SerializeField] List<object[]> steplog = new List<object[]>();
+    private List<GameObject> CardInhandGameObject = new();
 
-    [Header("Target Number Finder")]
-    [SerializeField] private List<OperationEnum> posibleOperators = new List<OperationEnum>();
-    [SerializeField] private double targetNumber;
-    [SerializeField] private double difficulty = 0.5;
-    [SerializeField] private double maxAnswerRange = 100;
-    [SerializeField] private bool isPositiveOnly = false;
+    public ParenthesesMode ParenthesesMode;
+
+    [field: SerializeField]
+    public int IsHandReady { get; private set; }
+
+    [field: SerializeField]
+    public bool IsHandValiid { get; private set; }
+
+    [field: SerializeField]
+    public List<object[]> StepLog { get; private set; }
+
+
+    [field: Header("Target Number Finder"), SerializeField]
+    public List<OperationEnum> PossibleOperators { get; private set; }
+
+    [field: SerializeField]
+    public double TargetNumber { get; private set; }
+
+    [field: SerializeField]
+    public double Difficulty { get; private set; }
+
+    [field: SerializeField]
+    public double MaxAnswerRange { get; private set; }
+
+    [field: SerializeField]
+    public bool IsPositiveOnly { get; private set; }
+
     private Dictionary<double, List<string>> allPossibleEquationAnswers;
 
-    [Header("Multiplier Finder")]
-    [SerializeField] private double blueZoneMultiplier = 3;
 
-    [Space(5)]
-    [SerializeField] private double greenZoneValue = 13;
-    [SerializeField] private double greenZoneRatio;
-    [SerializeField] private double greenZoneMultiplier = 2;
+    [field: Header("Multiplier Finder"), SerializeField]
+    public double BlueZoneMultiplier { get; private set; }
 
-    [Space(5)]
-    [SerializeField] private double yellowZoneValue = 25;
-    [SerializeField] private double yellowZoneRatio;
-    [SerializeField] private double yellowZoneMultiplier = 1;
+    [field: Space(5), SerializeField]
+    public double GreenZoneValue { get; private set; }
 
-    [Space(5)]
-    [SerializeField] private double redZoneMultiplier = 0.5;
+    [field: SerializeField]
+    public double GreenZoneRatio { get; private set; }
 
-    // --- Public Read-Only Accessors ---
-    public double Multiplier => multiplier;
-    public List<int> OperatorOrders => operatorOrders;
+    [field: SerializeField]
+    public double GreenZoneMultiplier { get; private set; }
 
-    public double PlayerAnswer => playerAnswer;
-    public double PreviewPlayerAnswer => previewPlayerAnswer;
+    [field: Space(5), SerializeField]
+    public double YellowZoneValue { get; private set; }
 
-    public double TargetNumber => targetNumber;
-    public double Difficulty => difficulty;
-    public double MaxAnswerRange => maxAnswerRange;
+    [field: SerializeField]
+    public double YellowZoneRatio { get; private set; }
 
-    public double BlueZoneMultiplier => blueZoneMultiplier;
-    public double GreenZoneValue => greenZoneValue;
-    public double GreenZoneRatio => greenZoneRatio;
-    public double GreenZoneMultiplier => greenZoneMultiplier;
-    public double YellowZoneValue => yellowZoneValue;
-    public double YellowZoneRatio => yellowZoneRatio;
-    public double YellowZoneMultiplier => yellowZoneMultiplier;
-    public double RedZoneMultiplier => redZoneMultiplier;
+    [field: SerializeField]
+    public double YellowZoneMultiplier { get; private set; }
+
+    [field: Space(5), SerializeField]
+    public double RedZoneMultiplier { get; private set; }
 
     private void Awake()
     {
@@ -104,10 +131,10 @@ public class CardPlayGameController : MonoBehaviour
 
     public void SetupCardContoller()
     {
-        persistentDeck = Instantiate(GameController.current.templateDeck);
-        roundDeck = Instantiate(persistentDeck);
-        posibleOperators = GameController.current.posibleOperators;
-        isPositiveOnly = GameController.current.level < 2;
+        PersistentDeck = Instantiate(GameController.current.TemplateDeck);
+        RoundDeck = Instantiate(PersistentDeck);
+        PossibleOperators = GameController.current.PossibleOperators;
+        IsPositiveOnly = GameController.current.Level < 2;
 
         PlayCardList.Add(PlayNumberSlot1);
         PlayCardList.Add(PlayOperatorSlot1);
@@ -122,7 +149,7 @@ public class CardPlayGameController : MonoBehaviour
     void Update()
     {
         CardInhandGameObject = new List<GameObject>();
-        foreach (Transform child in playedCardSlots.transform)
+        foreach (Transform child in PlayedCardSlots.transform)
         {
             if (child.childCount > 0)
             {
@@ -130,21 +157,21 @@ public class CardPlayGameController : MonoBehaviour
             }
         }
 
-        isHandReady = ValidationHand(CardInhandGameObject);
-        if (CardPlayGameController.current.isHandReady > 0 && CardPlayGameController.current.isHandReady < 4)
+        IsHandReady = ValidationHand(CardInhandGameObject);
+        if (CardPlayGameController.current.IsHandReady > 0 && CardPlayGameController.current.IsHandReady < 4)
         {
             PreviewScore(ParenthesesMode.NoParentheses);
         }
-        else if (CardPlayGameController.current.isHandReady >= 4)
+        else if (CardPlayGameController.current.IsHandReady >= 4)
         {
-            PreviewScore(parenthesesMode);
+            PreviewScore(ParenthesesMode);
         }
 
     }
 
     public void PreviewScore(ParenthesesMode parentheses)
     {
-        if (isHandReady < 0)
+        if (IsHandReady < 0)
         {
             //Debug.Log("invalid hand to preview");
             return;
@@ -153,17 +180,17 @@ public class CardPlayGameController : MonoBehaviour
 
         List<object[]> previewSteplog = new List<object[]>();
         previewSteplog = PlayCardCalculation.EvaluateEquation(CardInhandGameObject, parentheses);
-        //foreach (var step in steplog)
+        //foreach (var step in StepLog)
         //{
         //    Debug.Log($"{step[0]}, Pos: {step[1]}");
         //}
 
-        previewPlayerAnswer = (double)previewSteplog[previewSteplog.Count - 1][1];
+        PreviewPlayerAnswer = (double)previewSteplog[previewSteplog.Count - 1][1];
     }
 
     public void SummitEquation(Action onComplete)
     {
-        if (isHandReady < 4)
+        if (IsHandReady < 4)
         {
             Debug.Log("invalid hand");
             return;
@@ -174,20 +201,20 @@ public class CardPlayGameController : MonoBehaviour
 
         //Debug.Log(CardInhandGameObject.Count);
 
-        operatorOrders = new List<int>();
-        steplog = PlayCardCalculation.EvaluateEquation(CardInhandGameObject, parenthesesMode);
-        foreach (var step in steplog)
+        OperatorOrders = new List<int>();
+        StepLog = PlayCardCalculation.EvaluateEquation(CardInhandGameObject, ParenthesesMode);
+        foreach (var step in StepLog)
         {
             Debug.Log($"{step[0]}, Pos: {step[1]}");
         }
 
-        for (int i = 0; i < steplog.Count; i++)
+        for (int i = 0; i < StepLog.Count; i++)
         {
-            operatorOrders.Add(Convert.ToInt32(steplog[i][1]));
+            OperatorOrders.Add(Convert.ToInt32(StepLog[i][1]));
         }
 
-        previewPlayerAnswer = 0; //reset previewPlayerAnswer for next round
-        playerAnswer = (double)steplog[steplog.Count - 1][1];
+        PreviewPlayerAnswer = 0; //reset PreviewPlayerAnswer for next round
+        PlayerAnswer = (double)StepLog[StepLog.Count - 1][1];
 
         GetMultiplierValue();
 
@@ -196,29 +223,29 @@ public class CardPlayGameController : MonoBehaviour
 
     private void GetMultiplierValue()
     {
-        if (greenZoneRatio > 0)
+        if (GreenZoneRatio > 0)
         {
-            greenZoneValue = (greenZoneRatio * targetNumber) + targetNumber;
+            GreenZoneValue = (GreenZoneRatio * TargetNumber) + TargetNumber;
         }
 
-        if (yellowZoneRatio > 0)
+        if (YellowZoneRatio > 0)
         {
-            yellowZoneValue = (yellowZoneRatio * targetNumber) + targetNumber;
+            YellowZoneValue = (YellowZoneRatio * TargetNumber) + TargetNumber;
         }
 
-        switch (playerAnswer)
+        switch (PlayerAnswer)
         {
-            case double i when i == targetNumber:
-                multiplier = blueZoneMultiplier;
+            case double i when i == TargetNumber:
+                Multiplier = BlueZoneMultiplier;
                 break;
-            case double i when i <= greenZoneValue && i >= -greenZoneValue:
-                multiplier = greenZoneMultiplier;
+            case double i when i <= GreenZoneValue && i >= -GreenZoneValue:
+                Multiplier = GreenZoneMultiplier;
                 break;
-            case double i when i <= yellowZoneValue && i >= -yellowZoneValue:
-                multiplier = yellowZoneMultiplier;
+            case double i when i <= YellowZoneValue && i >= -YellowZoneValue:
+                Multiplier = YellowZoneMultiplier;
                 break;
             default:
-                multiplier = redZoneMultiplier;
+                Multiplier = RedZoneMultiplier;
                 break;
         }
 
@@ -231,7 +258,7 @@ public class CardPlayGameController : MonoBehaviour
         List<double> numbers = new List<double>();
 
 
-        foreach (Transform cardInHand in playerHand.transform)
+        foreach (Transform cardInHand in PlayerHand.transform)
         {
             if (cardInHand.childCount == 1)
             {
@@ -253,7 +280,7 @@ public class CardPlayGameController : MonoBehaviour
         // as for now we will just set that player can play all 4 operators
 
 
-        Dictionary<double, List<string>> resultsDict = PlayCardCalculation.GetMostFrequentResults(numbers, posibleOperators);
+        Dictionary<double, List<string>> resultsDict = PlayCardCalculation.GetMostFrequentResults(numbers, PossibleOperators);
 
         if (resultsDict.Count <= 0)
         {
@@ -278,10 +305,10 @@ public class CardPlayGameController : MonoBehaviour
             Debug.Log("there is no equation in the dic, maybe the threshold is too high");
             return;
         }
-        Dictionary<double, List<string>> targetNumberWithItsEquation = PlayCardCalculation.GetAnswerByDifficulty(allPossibleEquationAnswers, difficulty, maxAnswerRange, isPositiveOnly);
-        targetNumber = targetNumberWithItsEquation.Keys.First();
+        Dictionary<double, List<string>> targetNumberWithItsEquation = PlayCardCalculation.GetAnswerByDifficulty(allPossibleEquationAnswers, Difficulty, MaxAnswerRange, IsPositiveOnly);
+        TargetNumber = targetNumberWithItsEquation.Keys.First();
         List<string> correctEquation = targetNumberWithItsEquation.Values.First();
-        Debug.Log("target number: " + targetNumber);
+        Debug.Log("target number: " + TargetNumber);
         Debug.Log("number of possible equation " + correctEquation.Count);
         Debug.Log("One of correct equation: " + correctEquation[UnityEngine.Random.Range(0, correctEquation.Count - 1)]);
     }
@@ -297,7 +324,7 @@ public class CardPlayGameController : MonoBehaviour
         {
             bool isHandHaveSpace = false;
             Transform currentCardSlot = null;
-            foreach (Transform cardSlot in playerHand.transform)
+            foreach (Transform cardSlot in PlayerHand.transform)
             {
                 if (cardSlot.CompareTag("Slot") && cardSlot.transform.childCount == 0)
                 {
@@ -309,16 +336,16 @@ public class CardPlayGameController : MonoBehaviour
 
             if (isHandHaveSpace)
             {
-                CardData SelectedCarddata = roundDeck.GetRandomCard();
+                CardData SelectedCarddata = RoundDeck.GetRandomCard();
                 if (SelectedCarddata.Effect == EffectType.Empty)
                 {
                     return;
                 }
 
 
-                GameObject newCard = Instantiate(cardPrefab, deckObject.position, new Quaternion(), currentCardSlot);
+                GameObject newCard = Instantiate(CardPrefab, DeckObject.position, new Quaternion(), currentCardSlot);
                 Card newCardScript = newCard.GetComponent<Card>();
-                newCardScript.deckPosition = deckObject.position;
+                newCardScript.deckPosition = DeckObject.position;
                 newCardScript.SetCardData(SelectedCarddata);
 
                 currentCardSlot.gameObject.SetActive(true);
@@ -335,7 +362,7 @@ public class CardPlayGameController : MonoBehaviour
     public List<OperatorOrder> GetOperatorOrdersAsEnum()
     {
         List<OperatorOrder> OperatorOrderEnum = new List<OperatorOrder>();
-        foreach (int OperatorOrder in operatorOrders)
+        foreach (int OperatorOrder in OperatorOrders)
         {
             bool isValid = Enum.IsDefined(typeof(OperatorOrder), OperatorOrder);
             if (isValid)

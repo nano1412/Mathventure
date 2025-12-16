@@ -54,15 +54,15 @@ public class DataPreviewer : MonoBehaviour
 
         }
 
-        if (CardPlayGameController.current.isHandReady < 0)
+        if (CardPlayGameController.current.IsHandReady < 0)
         {
             PlayStateText.text = "Invalid";
         }
-        else if (CardPlayGameController.current.isHandReady > 0 && CardPlayGameController.current.isHandReady < 4)
+        else if (CardPlayGameController.current.IsHandReady > 0 && CardPlayGameController.current.IsHandReady < 4)
         {
             PlayStateText.text = "Ready to preview";
         }
-        else if (CardPlayGameController.current.isHandReady >= 4)
+        else if (CardPlayGameController.current.IsHandReady >= 4)
         {
             PlayStateText.text = "Valid";
 

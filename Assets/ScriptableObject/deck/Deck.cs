@@ -11,7 +11,7 @@ public class Deck : ScriptableObject
 {
     public List<CardData> cardDatas;
     public Sprite backCard;
-    //deckObject effect
+    //DeckObject effect
 
     public CardData GetRandomCard()
     {

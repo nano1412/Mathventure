@@ -55,7 +55,7 @@ public class Shop : MonoBehaviour
         SelectItem(null);
         buyBtn.interactable = false;
         currentRerollPrice = rerollPrice;
-        UpdateBtn(InventoryController.current.coin);
+        UpdateBtn(InventoryController.current.Coin);
         SpawnItem(0);
     }
 
@@ -107,7 +107,7 @@ public class Shop : MonoBehaviour
 
         }
 
-        UpdateBtn(InventoryController.current.coin);
+        UpdateBtn(InventoryController.current.Coin);
     }
 
     bool SpawnItem(int CoinSpend)
