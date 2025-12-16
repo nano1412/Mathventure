@@ -19,7 +19,7 @@ namespace DG.Tweening
 
         /// <summary>Tweens an AudioSource's volume to the given value.
         /// Also stores the AudioSource as the tween's target so it can be used for filtered operations</summary>
-        /// <param itemName="endValue">The end value to reach (0 to 1)</param><param itemName="duration">The duration of the tween</param>
+        /// <param ItemName="endValue">The end value to reach (0 to 1)</param><param ItemName="duration">The duration of the tween</param>
         public static TweenerCore<float, float, FloatOptions> DOFade(this AudioSource target, float endValue, float duration)
         {
             if (endValue < 0) endValue = 0;
@@ -31,7 +31,7 @@ namespace DG.Tweening
 
         /// <summary>Tweens an AudioSource's pitch to the given value.
         /// Also stores the AudioSource as the tween's target so it can be used for filtered operations</summary>
-        /// <param itemName="endValue">The end value to reach</param><param itemName="duration">The duration of the tween</param>
+        /// <param ItemName="endValue">The end value to reach</param><param ItemName="duration">The duration of the tween</param>
         public static TweenerCore<float, float, FloatOptions> DOPitch(this AudioSource target, float endValue, float duration)
         {
             TweenerCore<float, float, FloatOptions> t = DOTween.To(() => target.pitch, x => target.pitch = x, endValue, duration);
@@ -46,8 +46,8 @@ namespace DG.Tweening
         /// <summary>Tweens an AudioMixer's exposed float to the given value.
         /// Also stores the AudioMixer as the tween's target so it can be used for filtered operations.
         /// Note that you need to manually expose a float in an AudioMixerGroup in order to be able to tween it from an AudioMixer.</summary>
-        /// <param itemName="floatName">Name given to the exposed float to set</param>
-        /// <param itemName="endValue">The end value to reach</param><param itemName="duration">The duration of the tween</param>
+        /// <param ItemName="floatName">Name given to the exposed float to set</param>
+        /// <param ItemName="endValue">The end value to reach</param><param ItemName="duration">The duration of the tween</param>
         public static TweenerCore<float, float, FloatOptions> DOSetFloat(this AudioMixer target, string floatName, float endValue, float duration)
         {
             TweenerCore<float, float, FloatOptions> t = DOTween.To(()=> {
@@ -67,7 +67,7 @@ namespace DG.Tweening
         /// and returns the total number of tweens completed
         /// (meaning the tweens that don't have infinite loops and were not already complete)
         /// </summary>
-        /// <param itemName="withCallbacks">For Sequences only: if TRUE also internal Sequence callbacks will be fired,
+        /// <param ItemName="withCallbacks">For Sequences only: if TRUE also internal Sequence callbacks will be fired,
         /// otherwise they will be ignored</param>
         public static int DOComplete(this AudioMixer target, bool withCallbacks = false)
         {
@@ -79,7 +79,7 @@ namespace DG.Tweening
         /// (meaning tweens that were started from this target, or that had this target added as an Id)
         /// and returns the total number of tweens killed.
         /// </summary>
-        /// <param itemName="complete">If TRUE completes the tween before killing it</param>
+        /// <param ItemName="complete">If TRUE completes the tween before killing it</param>
         public static int DOKill(this AudioMixer target, bool complete = false)
         {
             return DOTween.Kill(target, complete);
@@ -100,9 +100,9 @@ namespace DG.Tweening
         /// (meaning tweens that were started from this target, or that had this target added as an Id)
         /// and returns the total number of tweens involved.
         /// </summary>
-        /// <param itemName="to">Time position to reach
+        /// <param ItemName="to">Time position to reach
         /// (if higher than the whole tween duration the tween will simply reach its end)</param>
-        /// <param itemName="andPlay">If TRUE will play the tween after reaching the given position, otherwise it will pause it</param>
+        /// <param ItemName="andPlay">If TRUE will play the tween after reaching the given position, otherwise it will pause it</param>
         public static int DOGoto(this AudioMixer target, float to, bool andPlay = false)
         {
             return DOTween.Goto(target, to, andPlay);

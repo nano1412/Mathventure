@@ -88,11 +88,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81180301569dbaa499281bbff3c18ba8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Equipment
-  itemName: iron sword
-  price: 10
-  sellPrice: 5
-  shortDiscription: +5 ATK
-  discription: An iron Sword Very Handy
-  itemType: 0
-  modifiers:
+  <ItemName>k__BackingField: Iron sword
+  <Price>k__BackingField: 10
+  <SellPrice>k__BackingField: 5
+  <ShortDescription>k__BackingField: +5ATK
+  <Description>k__BackingField: Generic Iron Sword
+  <ItemType>k__BackingField: 0
+  <Modifiers>k__BackingField:
   - {fileID: 11400000, guid: a796a6ad7ec474549b30f32152c77543, type: 2}
+  <EquipableHeros>k__BackingField: 00000000

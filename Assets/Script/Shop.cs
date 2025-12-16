@@ -78,7 +78,7 @@ public class Shop : MonoBehaviour
             return;
         }
 
-        if (!InventoryController.current.SpendCoin(shopSelectedItem.price))
+        if (!InventoryController.current.SpendCoin(shopSelectedItem.Price))
         {
             Debug.Log("can't buy");
 
@@ -103,7 +103,7 @@ public class Shop : MonoBehaviour
         {
             shopSelectedItem = item.GetComponent<Item>();
             shopSelectedItemImagePreview.sprite = item.GetComponent<Image>().sprite;
-            DiscriptionPreview.text = shopSelectedItem.discription;
+            DiscriptionPreview.text = shopSelectedItem.Description;
 
         }
 
@@ -137,7 +137,7 @@ public class Shop : MonoBehaviour
     {
         if(shopSelectedItem != null)
         {
-            int itemprice = shopSelectedItem.GetComponent<Item>().price;
+            int itemprice = shopSelectedItem.GetComponent<Item>().Price;
             buyPriceText.text = "buy (" + itemprice + "G)";
             buyBtn.interactable = itemprice <= coin;
         }

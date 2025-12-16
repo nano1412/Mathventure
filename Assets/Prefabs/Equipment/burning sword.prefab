@@ -88,12 +88,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81180301569dbaa499281bbff3c18ba8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Equipment
-  itemName: burning sword
-  price: 10
-  sellPrice: 5
-  shortDiscription: +5 ATK, fire
-  discription: a sword so hot that it make your enemy burn for 1 turn
-  itemType: 0
-  modifiers:
+  <ItemName>k__BackingField: Burning sword
+  <Price>k__BackingField: 20
+  <SellPrice>k__BackingField: 10
+  <ShortDescription>k__BackingField: +5ATK, burn
+  <Description>k__BackingField: burn the target enemy
+  <ItemType>k__BackingField: 0
+  <Modifiers>k__BackingField:
   - {fileID: 11400000, guid: a796a6ad7ec474549b30f32152c77543, type: 2}
   - {fileID: 11400000, guid: d4b5f07bc60db2e4bb100286e4643449, type: 2}
+  <EquipableHeros>k__BackingField: 00000000

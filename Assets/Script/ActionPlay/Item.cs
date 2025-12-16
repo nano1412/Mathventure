@@ -1,22 +1,31 @@
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using UnityEngine.UIElements;
 using static Utils;
 
 public abstract class Item : MonoBehaviour
 {
-    [Header ("Apparent")]
-    public string itemName;
+    [field: Header("Apparent"), SerializeField]
+    public string ItemName { get; private set; }
 
-    [Header ("ShopData")]
-    public int price;
-    public int sellPrice;
-    public string shortDiscription;
-    public string discription;
+    [field: Header("Shop Data"), SerializeField]
+    public int Price { get; private set; }
 
-    [Header("ItemData")]
-    [SerializeField] ItemType itemType;
-    [SerializeField] private List<ModifierSO> modifiers;
+    [field: SerializeField]
+    public int SellPrice { get; private set; }
+
+    [field: SerializeField]
+    public string ShortDescription { get; private set; }
+
+    [field: SerializeField]
+    public string Description { get; private set; }
+
+    [field: Header("Item Data"), SerializeField]
+    public ItemType ItemType { get; private set; }
+
+    [field: SerializeField]
+    public List<ModifierSO> Modifiers { get; private set; }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

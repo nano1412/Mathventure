@@ -88,11 +88,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57d0ff9623fbbe04e811db3c10328b88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Consumable
-  itemName: Potion
-  price: 10
-  sellPrice: 5
-  shortDiscription: +20 HP
-  discription: basic healing Potion
-  itemType: 3
-  modifiers:
+  <ItemName>k__BackingField: Potion
+  <Price>k__BackingField: 20
+  <SellPrice>k__BackingField: 10
+  <ShortDescription>k__BackingField: +20HP
+  <Description>k__BackingField: heal 20HP
+  <ItemType>k__BackingField: 3
+  <Modifiers>k__BackingField:
   - {fileID: 11400000, guid: fc8b97b88f68e77489a67c7e1f687fe4, type: 2}
