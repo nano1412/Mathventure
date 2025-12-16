@@ -58,6 +58,8 @@ public static class Utils
 
     public enum ItemType { Weapon, Armor, Equipment,Consumable, General_Item}
 
+    public enum ItemRelation {None, InShop, Equiped, InConsumableInventory, InEquipmentInventory, Use}
+
     public enum HeroType { Hero_Plus, Hero_Minus, Hero_Multiply, Hero_Divide, Hero_Buff }
 
     public enum ModifierCondition

@@ -25,6 +25,9 @@ public abstract class Item : MonoBehaviour
     public ItemType ItemType { get; private set; }
 
     [field: SerializeField]
+    public ItemRelation ItemRelation { get; private set; } = ItemRelation.InShop;
+
+    [field: SerializeField]
     public List<ModifierSO> Modifiers { get; private set; }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
