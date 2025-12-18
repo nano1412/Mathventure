@@ -5,7 +5,7 @@ using static Utils;
 [CreateAssetMenu(fileName = "move", menuName = "Scriptable Objects/move")]
 public class Move : ScriptableObject
 {
-    [SerializeField] protected double motionValue;
+    [SerializeField] protected double attackValue;
     [SerializeField] protected TargetType targetType;
     [SerializeField] protected MoveType moveType;
     [SerializeField] protected AnimationType AnimationType;

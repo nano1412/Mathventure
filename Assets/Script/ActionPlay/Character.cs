@@ -12,7 +12,7 @@ public abstract class Character : MonoBehaviour
     [field: SerializeField] public double Shield { get; private set; }
     [field: SerializeField] public bool IsStuned { get; private set; }
 
-    [field: SerializeField] public List<StatusEffect> statusEffects { get; private set; } = new List<StatusEffect>();
+    [field: SerializeField] public List<StatusEffect> StatusEffects { get; private set; } = new List<StatusEffect>();
 
     [field: Header("Attack data"), SerializeField] public Move DefaultMove { get; private set; }
 
@@ -63,9 +63,9 @@ public abstract class Character : MonoBehaviour
             //play ded animation here
         }
 
-        for (int i = statusEffects.Count - 1; i >= 0; i--)
+        for (int i = StatusEffects.Count - 1; i >= 0; i--)
         {
-            StatusEffect statusEffect = statusEffects[i];
+            StatusEffect statusEffect = StatusEffects[i];
             UpdateStatusEffect(statusEffect, i);
         }
 
@@ -103,7 +103,7 @@ public abstract class Character : MonoBehaviour
                 IsStuned = false;
                 Debug.Log(transform.name + " regain consciousness");
             }
-            statusEffects.RemoveAt(index);
+            StatusEffects.RemoveAt(index);
         }
     }
 }
