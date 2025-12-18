@@ -547,6 +547,14 @@ PrefabInstance:
       propertyPath: AcceptableItemType
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: -8004468677049927592, guid: cc21086bbfe8cbf48b603b057a2e9a52, type: 3}
+      propertyPath: <TypeOfSlot>k__BackingField
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8004468677049927592, guid: cc21086bbfe8cbf48b603b057a2e9a52, type: 3}
+      propertyPath: <AcceptableItemType>k__BackingField
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2414941785139941073, guid: cc21086bbfe8cbf48b603b057a2e9a52, type: 3}
       propertyPath: m_Name
       value: itemSlot

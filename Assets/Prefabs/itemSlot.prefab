@@ -60,7 +60,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -88,4 +88,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba1223b0844be7d4da65e53cb0d3bac0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  AcceptableItemType: 0
+  <AcceptableItemType>k__BackingField: 0
+  <TypeOfSlot>k__BackingField: 0

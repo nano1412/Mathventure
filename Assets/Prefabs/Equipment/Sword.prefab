@@ -60,7 +60,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -94,6 +94,8 @@ MonoBehaviour:
   <ShortDescription>k__BackingField: +5ATK
   <Description>k__BackingField: Generic Iron Sword
   <ItemType>k__BackingField: 0
+  <ItemRelation>k__BackingField: 4
+  <UsableCharacter>k__BackingField: 0000000001000000
   <Modifiers>k__BackingField:
   - {fileID: 11400000, guid: a796a6ad7ec474549b30f32152c77543, type: 2}
   <EquipableHeros>k__BackingField: 00000000

@@ -60,7 +60,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 1, b: 0.06020379, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -88,11 +88,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57d0ff9623fbbe04e811db3c10328b88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Consumable
-  name: potion
-  price: 10
-  sellPrice: 5
-  shortDiscription: +20 HP
-  discription: basic healing Potion
-  itemType: 3
-  modifiers:
-  - {fileID: 11400000, guid: fc8b97b88f68e77489a67c7e1f687fe4, type: 2}
+  <ItemName>k__BackingField: 
+  <Price>k__BackingField: 0
+  <SellPrice>k__BackingField: 0
+  <ShortDescription>k__BackingField: 
+  <Description>k__BackingField: 
+  <ItemType>k__BackingField: 0
+  <ItemRelation>k__BackingField: 4
+  <Modifiers>k__BackingField: []

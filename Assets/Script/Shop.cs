@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 using static Utils;
 
@@ -10,23 +11,48 @@ public class Shop : MonoBehaviour
 {
     public static Shop current;
 
-    [SerializeField] private List<GameObject> shopSlots;
+    [field: SerializeField]
+    public List<GameObject> ShopSlots { get; private set; }
 
-    [SerializeField] private TMP_Text DiscriptionPreview;
-    [SerializeField] private Item shopSelectedItem;
-    [SerializeField] private Image shopSelectedItemImagePreview;
-    [SerializeField] private Sprite defaultShopImgPreview;
 
-    [SerializeField] private Button buyBtn;
-    [SerializeField] private TMP_Text buyPriceText;
+    [field: SerializeField]
+    public TMP_Text DescriptionPreview { get; private set; }
 
-    [SerializeField] private Button rerollBtn;
-    [SerializeField] private TMP_Text rerollPriceText;
-    [SerializeField] private int rerollPrice;
-    [SerializeField] private int currentRerollPrice;
-    [SerializeField] private int rerollInflation;
+    [field: SerializeField]
+    public Item ShopSelectedItem { get; private set; }
 
-    [SerializeField] private List<GameObject> SpawnableItem;
+    [field: SerializeField]
+    public Image ShopSelectedItemImagePreview { get; private set; }
+
+    [field: SerializeField]
+    public Sprite DefaultShopImgPreview { get; private set; }
+
+
+    [field: SerializeField]
+    public Button BuyBtn { get; private set; }
+
+    [field: SerializeField]
+    public TMP_Text BuyPriceText { get; private set; }
+
+
+    [field: SerializeField]
+    public Button RerollBtn { get; private set; }
+
+    [field: SerializeField]
+    public TMP_Text RerollPriceText { get; private set; }
+
+    [field: SerializeField]
+    public int RerollPrice { get; private set; }
+
+    [field: SerializeField]
+    public int CurrentRerollPrice { get; private set; }
+
+    [field: SerializeField]
+    public int RerollInflation { get; private set; }
+
+
+    [field: SerializeField]
+    public List<GameObject> SpawnableItems { get; private set; }
 
     private void Awake()
     {
@@ -52,58 +78,58 @@ public class Shop : MonoBehaviour
 
     public void ResetShop()
     {
-        SelectItem(null);
-        buyBtn.interactable = false;
-        currentRerollPrice = rerollPrice;
+        ShopSelectItem(null);
+        BuyBtn.interactable = false;
+        CurrentRerollPrice = RerollPrice;
         UpdateBtn(InventoryController.current.Coin);
         SpawnItem(0);
     }
 
     public void Reroll()
     {
-        if (SpawnItem(currentRerollPrice))
+        if (SpawnItem(CurrentRerollPrice))
         {
             Debug.Log("rerolled shop item");
             
-            currentRerollPrice += rerollInflation;
+            CurrentRerollPrice += RerollInflation;
 
         }
     }
 
     public void BuyItem()
     {
-        if(shopSelectedItem == null)
+        if(ShopSelectedItem == null)
         {
             Debug.Log("No item selected");
             return;
         }
 
-        if (!InventoryController.current.SpendCoin(shopSelectedItem.Price))
+        if (!InventoryController.current.SpendCoin(ShopSelectedItem.Price))
         {
             Debug.Log("can't buy");
 
         }
 
 
-            if (InventoryController.current.AddItem(shopSelectedItem.gameObject))
+            if (InventoryController.current.AddItem(ShopSelectedItem.gameObject))
             {
-                Debug.Log("buy sucessgully");
-                SelectItem(null);
+                Debug.Log("buy successfully");
+                ShopSelectItem(null);
             }
     }
 
-    public void SelectItem(GameObject item)
+    public void ShopSelectItem(GameObject item)
     {
         if(item == null)
         {
-            shopSelectedItem = null;
-            shopSelectedItemImagePreview.sprite = defaultShopImgPreview;
-            DiscriptionPreview.text = "";
+            ShopSelectedItem = null;
+            ShopSelectedItemImagePreview.sprite = DefaultShopImgPreview;
+            DescriptionPreview.text = "";
         } else
         {
-            shopSelectedItem = item.GetComponent<Item>();
-            shopSelectedItemImagePreview.sprite = item.GetComponent<Image>().sprite;
-            DiscriptionPreview.text = shopSelectedItem.Description;
+            ShopSelectedItem = item.GetComponent<Item>();
+            ShopSelectedItemImagePreview.sprite = item.GetComponent<Image>().sprite;
+            DescriptionPreview.text = ShopSelectedItem.Description;
 
         }
 
@@ -114,20 +140,21 @@ public class Shop : MonoBehaviour
     {
         if(!InventoryController.current.SpendCoin(CoinSpend))
         {
+            Debug.Log("spawn item not sucessful");
             return false;
         }
 
-        SelectItem(null);
+        ShopSelectItem(null);
 
-        foreach (GameObject shopslot in shopSlots)
+        foreach (GameObject shopslot in ShopSlots)
         {
             if(shopslot.transform.Find("itemSlot").childCount > 0)
             {
                 Destroy(shopslot.transform.Find("itemSlot").GetChild(0).gameObject);
             }
 
-            int r = rnd.Next(SpawnableItem.Count);
-            GameObject newItem = Instantiate(SpawnableItem[r], shopslot.transform.Find("itemSlot"));
+            int r = rnd.Next(SpawnableItems.Count);
+            GameObject newItem = Instantiate(SpawnableItems[r], shopslot.transform.Find("itemSlot"));
         }
 
         return true;
@@ -135,15 +162,15 @@ public class Shop : MonoBehaviour
 
     void UpdateBtn(int coin)
     {
-        if(shopSelectedItem != null)
+        if(ShopSelectedItem != null)
         {
-            int itemprice = shopSelectedItem.GetComponent<Item>().Price;
-            buyPriceText.text = "buy (" + itemprice + "G)";
-            buyBtn.interactable = itemprice <= coin;
+            int itemprice = ShopSelectedItem.GetComponent<Item>().Price;
+            BuyPriceText.text = "buy (" + itemprice + "G)";
+            BuyBtn.interactable = itemprice <= coin;
         }
 
-        rerollPriceText.text = "Reroll (" + currentRerollPrice + "G)";
-        rerollBtn.interactable = currentRerollPrice <= coin;
+        RerollPriceText.text = "Reroll (" + CurrentRerollPrice + "G)";
+        RerollBtn.interactable = CurrentRerollPrice <= coin;
     }
 
     

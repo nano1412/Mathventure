@@ -60,7 +60,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 0.28773582, b: 0.28773582, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -94,6 +94,8 @@ MonoBehaviour:
   <ShortDescription>k__BackingField: +5ATK, burn
   <Description>k__BackingField: burn the target enemy
   <ItemType>k__BackingField: 0
+  <ItemRelation>k__BackingField: 4
+  <UsableCharacter>k__BackingField: 00000000
   <Modifiers>k__BackingField:
   - {fileID: 11400000, guid: a796a6ad7ec474549b30f32152c77543, type: 2}
   - {fileID: 11400000, guid: d4b5f07bc60db2e4bb100286e4643449, type: 2}

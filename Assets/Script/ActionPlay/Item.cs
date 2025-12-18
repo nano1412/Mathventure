@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 using static Utils;
 
 public abstract class Item : MonoBehaviour
@@ -25,20 +25,36 @@ public abstract class Item : MonoBehaviour
     public ItemType ItemType { get; private set; }
 
     [field: SerializeField]
-    public ItemRelation ItemRelation { get; private set; } = ItemRelation.InShop;
+    public SlotType ItemRelation { get; private set; } = SlotType.Shop;
+
+    [field: SerializeField]
+    public List<CharacterType> UsableCharacter { get; private set; }
 
     [field: SerializeField]
     public List<ModifierSO> Modifiers { get; private set; }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
+    private Image image;
 
+    private void Start()
+    {
+        image = GetComponent<Image>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTransformParentChanged()
     {
+        if (transform.parent.GetComponent<ItemSlot>())
+        {
+            ItemRelation = transform.parent.GetComponent<ItemSlot>().TypeOfSlot;
+        }
+
+        if(ItemRelation == SlotType.Shop)
+        {
+            image.raycastTarget = false;
+        }
+        else
+        {
+            image.raycastTarget = true;
+        }
         
     }
 }

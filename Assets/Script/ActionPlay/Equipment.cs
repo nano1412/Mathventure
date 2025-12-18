@@ -5,5 +5,5 @@ using static Utils;
 public class Equipment : Item
 {
     [Header("Equipable Hero")]
-    [field: SerializeField] public List<HeroType> EquipableHeros { get; private set; }
+    [field: SerializeField] public List<CharacterType> EquipableHeros { get; private set; }
 }

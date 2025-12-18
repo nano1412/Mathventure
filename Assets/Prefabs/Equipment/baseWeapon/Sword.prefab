@@ -60,7 +60,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -88,11 +88,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81180301569dbaa499281bbff3c18ba8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Equipment
-  name: IronSword
-  price: 10
-  sellPrice: 5
-  shortDiscription: +5 ATK
-  discription: An iron Sword Very Handy
-  itemType: 0
-  modifiers:
-  - {fileID: 11400000, guid: a796a6ad7ec474549b30f32152c77543, type: 2}
+  <ItemName>k__BackingField: 
+  <Price>k__BackingField: 0
+  <SellPrice>k__BackingField: 0
+  <ShortDescription>k__BackingField: 
+  <Description>k__BackingField: 
+  <ItemType>k__BackingField: 0
+  <ItemRelation>k__BackingField: 4
+  <Modifiers>k__BackingField: []
+  <EquipableHeros>k__BackingField: 

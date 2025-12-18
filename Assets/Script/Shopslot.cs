@@ -37,6 +37,6 @@ public class Shopslot : MonoBehaviour, IPointerClickHandler
         Debug.Log(this.displayItemname + " clicked");
         GameObject item = GetItem();
         Debug.Log(item.GetComponent<Item>().ItemName);
-        Shop.current.SelectItem(item);
+        Shop.current.ShopSelectItem(item);
     }
 }

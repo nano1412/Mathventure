@@ -13,21 +13,6 @@ public class InventoryController : MonoBehaviour
 
     public event Action<int> OnCoinsChanged;
 
-    [field: Header("Hero Equipment Slot"), SerializeField]
-    public GameObject PlusHeroEquipmentSlot { get; private set; }
-
-    [field: SerializeField]
-    public GameObject MinusHeroEquipmentSlot { get; private set; }
-
-    [field: SerializeField]
-    public GameObject MultiplyHeroEquipmentSlot { get; private set; }
-
-    [field: SerializeField]
-    public GameObject DivideHeroEquipmentSlot { get; private set; }
-
-    [field: SerializeField]
-    public GameObject BuffHeroEquipmentSlot { get; private set; }
-
     [field: Header("Equipment Inventory"), SerializeField]
     public List<GameObject> EquipmentInventorySlots { get; private set; }
 
