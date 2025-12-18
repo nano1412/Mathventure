@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -35,6 +36,16 @@ public class HeroEquipmentSlot : MonoBehaviour
             return;
         }
 
+        if (equipment.transform.IsChildOf(this.transform))
+        {
+            SetButton(UnequipItem, "Unequip");
+            EquipBtn.interactable = true;
+            return;
+        } else
+        {
+            SetButton(EquipItem, "Equip");
+        }
+
         Item item = equipment.GetComponent<Item>();
         if (!item.UsableCharacter.Contains(HeroTypeOwner))
         {
@@ -62,7 +73,12 @@ public class HeroEquipmentSlot : MonoBehaviour
 
     public void EquipItem()
     {
+        if (EquipmentInventory.current.EquipmentSelectedItem == null)
+        {
+            return;
+        }
         GameObject equipment = EquipmentInventory.current.EquipmentSelectedItem;
+
         Item item = equipment.GetComponent<Item>();
 
         GameObject equipmentSlot;
@@ -90,5 +106,26 @@ public class HeroEquipmentSlot : MonoBehaviour
 
         equipment.transform.SetParent(equipmentSlot.transform,false);
         EquipmentInventory.current.EquipmentSelectedItem = null;
+    }
+
+    public void UnequipItem()
+    {
+        if (EquipmentInventory.current.EquipmentSelectedItem == null)
+        {
+            return;
+        }
+
+
+        InventoryController.current.AddItem(EquipmentInventory.current.EquipmentSelectedItem);
+        EquipmentInventory.current.EquipmentSelectedItem = null;
+        SetButton(EquipItem, "Equip");
+    }
+
+    void SetButton(Action action, string text)
+    {
+        EquipBtn.onClick.RemoveAllListeners();
+        EquipBtn.onClick.AddListener(() => action?.Invoke());
+
+        EquipBtnText.text = text;
     }
 }

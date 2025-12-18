@@ -9,7 +9,7 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if((TypeOfSlot == SlotType.Equipment || TypeOfSlot == SlotType.Consumable) && transform.childCount >= 0)
+        if(!(TypeOfSlot == SlotType.Shop || TypeOfSlot == SlotType.Display) && transform.childCount >= 0)
         {
             EquipmentInventory.current.SetInventorySelectItem(transform.GetChild(0).gameObject);
         }
