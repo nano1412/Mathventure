@@ -45,11 +45,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edb30923980eb194a8ee4b1a55618bfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  maxHp: 0
-  hp: 0
-  shield: 0
-  isStuned: 0
-  statusEffects: []
+  <CharacterType>k__BackingField: 5
+  <MaxHp>k__BackingField: 0
+  <Hp>k__BackingField: 0
+  <Shield>k__BackingField: 0
+  <IsStuned>k__BackingField: 0
+  <DefaultMove>k__BackingField: {fileID: 0}
 --- !u!1 &6444919316157576528
 GameObject:
   m_ObjectHideFlags: 0

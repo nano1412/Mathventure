@@ -5,31 +5,16 @@ using static Utils;
 
 public abstract class Character : MonoBehaviour
 {
-    [Header("hp and status")]
-    [SerializeField] protected double maxHp;
-    [SerializeField] protected double hp;
-    [SerializeField] protected double shield;
-    [SerializeField] protected bool isStuned;
+    [field: Header("Character"), SerializeField] public CharacterType CharacterType { get; private set; }
 
-    [SerializeField] protected List<StatusEffect> statusEffects = new List<StatusEffect>();
+    [field: Header("Hp and status"),SerializeField] public double MaxHp { get; private set; }
+    [field: SerializeField] public double Hp { get; private set; }
+    [field: SerializeField] public double Shield { get; private set; }
+    [field: SerializeField] public bool IsStuned { get; private set; }
 
-    [Header("Attack data")]
-    public abstract Move DefaultMove { get; }
+    [field: SerializeField] public List<StatusEffect> statusEffects { get; private set; } = new List<StatusEffect>();
 
-    public double GetMaxHP()
-    {
-        return maxHp;
-    }
-
-    public double GetHP()
-    {
-        return hp;
-    }
-
-    public double GetShield()
-    {
-        return shield;
-    }
+    [field: Header("Attack data"), SerializeField] public Move DefaultMove { get; private set; }
 
     public void TakeDamage(double damage, string attacker)
     {
@@ -39,7 +24,7 @@ public abstract class Character : MonoBehaviour
             return;
         }
 
-        hp -= damage - shield;
+        Hp -= damage - Shield;
         Debug.Log(transform.name + " take " + damage + " damages from " + attacker);
     }
 
@@ -51,13 +36,13 @@ public abstract class Character : MonoBehaviour
             return;
         }
 
-        hp += heal;
-        Debug.Log(transform.name + " gain " + heal + " hp from " + healer);
+        Hp += heal;
+        Debug.Log(transform.name + " gain " + heal + " Hp from " + healer);
     }
 
     public virtual void CheckDead()
     {
-        if(hp < 0)
+        if(Hp < 0)
         {
             Debug.Log(transform.name + "is dead");
             Dead();
@@ -66,13 +51,13 @@ public abstract class Character : MonoBehaviour
 
     protected void Dead()
     {
-        Destroy(transform);
+        Destroy(gameObject);
     }
 
 
     public void EndTurnUpdate()
     {
-        if (hp <= 0)
+        if (Hp <= 0)
         {
             Debug.Log(transform.name + "is dead");
             //play ded animation here
@@ -102,7 +87,7 @@ public abstract class Character : MonoBehaviour
                 break;
 
             case EffectType.Stun:
-                isStuned = true;
+                IsStuned = true;
                 break;
 
         }
@@ -115,7 +100,7 @@ public abstract class Character : MonoBehaviour
 
             if(statusEffect.effectType == EffectType.Stun)
             {
-                isStuned = false;
+                IsStuned = false;
                 Debug.Log(transform.name + " regain consciousness");
             }
             statusEffects.RemoveAt(index);
