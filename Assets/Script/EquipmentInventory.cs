@@ -1,4 +1,6 @@
+using NUnit.Framework;
 using System;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using static Utils;
@@ -7,7 +9,7 @@ public class EquipmentInventory : MonoBehaviour
 {
     public static EquipmentInventory current;
     public event Action<GameObject> OnEquipmentSelectedItemChange;
-
+    [field: SerializeField] public List<GameObject> SelectedTargets { get; private set; }
     [field: SerializeField]
     private GameObject equipmentSelectedItem;
 

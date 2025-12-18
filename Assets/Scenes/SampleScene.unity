@@ -1214,6 +1214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91fd4d1ff12217947ab8cd441d0ba436, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  <SelectedTargets>k__BackingField: []
   equipmentSelectedItem: {fileID: 0}
   <HeroEquipmentMenu>k__BackingField: {fileID: 1815657100}
   <EquipmentSelectedItemNameText>k__BackingField: {fileID: 0}
@@ -4490,7 +4491,7 @@ GameObject:
   m_Component:
   - component: {fileID: 766953587}
   m_Layer: 5
-  m_Name: DebugMode
+  m_Name: Debug menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
