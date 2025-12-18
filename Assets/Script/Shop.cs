@@ -57,17 +57,26 @@ public class Shop : MonoBehaviour
     private void Awake()
     {
         current = this;
+        InventoryController.current.OnCoinsChanged += UpdateBtn;
+        GameController.current.OnGameStateChange += HandleGameStateChange;
     }
 
     private void OnEnable()
     {
-        InventoryController.current.OnCoinsChanged += UpdateBtn;
+        
         ResetShop();
     }
 
-    private void OnDisable()
+    private void HandleGameStateChange(GameState gameState)
     {
-        InventoryController.current.OnCoinsChanged -= UpdateBtn;
+        Debug.Log("check shop valid");
+        if(gameState != GameState.Shop)
+        {
+            gameObject.SetActive(false);
+        } else
+        {
+            gameObject.SetActive(true);
+        }
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

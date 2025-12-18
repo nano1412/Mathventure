@@ -26,6 +26,7 @@ public class HeroEquipmentSlot : MonoBehaviour
     private void Awake()
     {
         EquipmentInventory.current.OnEquipmentSelectedItemChange += CheckIsSelectedEquipmentWearable;
+        
     }
 
     void CheckIsSelectedEquipmentWearable(GameObject equipment)

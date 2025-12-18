@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -6,6 +7,7 @@ using static Utils;
 public class GameController : MonoBehaviour
 {
     public static GameController current;
+    public event Action<GameState> OnGameStateChange;
 
     [field: SerializeField]
     public int MaxCardInHand { get; private set; }
@@ -17,7 +19,11 @@ public class GameController : MonoBehaviour
     public List<OperationEnum> PossibleOperators { get; private set; }
 
     [field: SerializeField]
-    public GameState GameState { get; private set; }
+    private GameState gameState;
+    public GameState GameState { get => gameState; private set {
+            gameState = value;
+            OnGameStateChange?.Invoke(gameState);
+        } }
 
     [field: SerializeField]
     public Deck TemplateDeck { get; private set; }
@@ -51,8 +57,11 @@ public class GameController : MonoBehaviour
         CardPlayGameController.current.PlayerHand.GetComponent<HorizontalCardHolder>().SetUpPlayerSlot(NextRoundStart);
     }
 
-    private void NextRoundStart()
+    public void NextRoundStart()
     {
+        Debug.LogWarning("imprement ememy data reader and reset deck here");
+
+
         this.SetGamestate(GameState.PlayerInput);
         CardPlayGameController.current.AddCard(MaxCardInHand);
 
@@ -82,7 +91,7 @@ public class GameController : MonoBehaviour
         NextRoundStart();
     }
 
-    void RounndWin()
+    public void RounndWin()
     {
         //to round victory screen or check win
         if(Level < 4 && Wave >= 4)
@@ -91,7 +100,9 @@ public class GameController : MonoBehaviour
             //show sumary of this run
         } else
         {
-            this.SetGamestate(GameState.RoundVictory);
+            //this.SetGamestate(GameState.RoundVictory);
+            Wave++;
+            this.SetGamestate(GameState.Shop);
         }
     }
 

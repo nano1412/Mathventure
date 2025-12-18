@@ -1,6 +1,7 @@
 using System;
 using TMPro;
 using UnityEngine;
+using static Utils;
 
 public class EquipmentInventory : MonoBehaviour
 {
@@ -22,14 +23,27 @@ public class EquipmentInventory : MonoBehaviour
         }
     }
 
-
-    [field: SerializeField] public TMP_Text equipmentSelectedItemNameText { get; private set; }
-    [field: SerializeField] public TMP_Text equipmentSelectedItemNameShortdescriptionText { get; private set; }
-    [field: SerializeField] public TMP_Text equipmentSelectedItemNamedescriptionText { get; private set; }
+    private bool isActive;
+    [field: SerializeField] public GameObject HeroEquipmentMenu { get; private set; }
+    [field: SerializeField] public TMP_Text EquipmentSelectedItemNameText { get; private set; }
+    [field: SerializeField] public TMP_Text EquipmentSelectedItemNameShortdescriptionText { get; private set; }
+    [field: SerializeField] public TMP_Text EquipmentSelectedItemNamedescriptionText { get; private set; }
 
     void Awake()
     {
         current = this;
+        GameController.current.OnGameStateChange += HandleGameStateChange;
+    }
+
+    private void Start()
+    {
+        isActive = gameObject.activeSelf;
+    }
+
+    private void HandleGameStateChange(GameState gameState)
+    {
+        isActive = true;
+        ToggleEquipmentMenuPopup();
     }
 
 
@@ -37,17 +51,17 @@ public class EquipmentInventory : MonoBehaviour
     {
         if (equipmentSelectedItem == null)
         {
-            equipmentSelectedItemNameText.text = "itemName";
-            equipmentSelectedItemNameShortdescriptionText.text = "";
-            equipmentSelectedItemNamedescriptionText.text = "";
+            EquipmentSelectedItemNameText.text = "itemName";
+            EquipmentSelectedItemNameShortdescriptionText.text = "";
+            EquipmentSelectedItemNamedescriptionText.text = "";
             return;
         }
 
         Item item = equipmentSelectedItem.GetComponent<Item>();
 
-        equipmentSelectedItemNameText.text = item.ItemName;
-        equipmentSelectedItemNameShortdescriptionText.text = item.ShortDescription;
-        equipmentSelectedItemNamedescriptionText.text = item.Description;
+        EquipmentSelectedItemNameText.text = item.ItemName;
+        EquipmentSelectedItemNameShortdescriptionText.text = item.ShortDescription;
+        EquipmentSelectedItemNamedescriptionText.text = item.Description;
     }
 
     public void SetInventorySelectItem(GameObject item)
@@ -58,5 +72,19 @@ public class EquipmentInventory : MonoBehaviour
             return;
         }
         EquipmentSelectedItem = item;
+    }
+
+    public void ToggleEquipmentMenuPopup()
+    {
+        isActive = !isActive;
+
+        if(GameController.current.GameState == Utils.GameState.Shop)
+        {
+            gameObject.SetActive(true);
+            HeroEquipmentMenu.SetActive(false);
+            return;
+        }
+        gameObject.SetActive(isActive);
+        HeroEquipmentMenu.SetActive(isActive);
     }
 }

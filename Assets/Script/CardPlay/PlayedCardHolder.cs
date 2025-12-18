@@ -1,16 +1,28 @@
 using UnityEngine;
+using static Utils;
 
 public class PlayedCardHolder : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Start()
     {
-
+        GameController.current.OnGameStateChange += HandleGameStateChange;
+        
     }
 
-    // Update is called once per frame
-    void Update()
+    private void HandleGameStateChange(GameState gameState)
     {
+        if (gameState == GameState.HeroAttack ||
+            gameState == GameState.EnemyAttack ||
+            gameState == GameState.CardCalculation ||
+            gameState == GameState.PlayerInput
+            )
 
+        {
+            gameObject.SetActive(true);
+        }
+        else
+        {
+            gameObject.SetActive(false);
+        }
     }
 }
