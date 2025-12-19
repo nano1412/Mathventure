@@ -45,12 +45,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edb30923980eb194a8ee4b1a55618bfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  maxHp: 0
-  hp: 0
-  shield: 0
-  isStuned: 0
-  statusEffects: []
-  defaultMove: {fileID: 0}
+  <CharacterType>k__BackingField: 0
+  <MaxHp>k__BackingField: 0
+  <Hp>k__BackingField: 0
+  <Shield>k__BackingField: 0
+  <IsStuned>k__BackingField: 0
+  <DefaultMove>k__BackingField: {fileID: 0}
 --- !u!1 &6444919316157576528
 GameObject:
   m_ObjectHideFlags: 0
@@ -386,7 +386,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -1100349430, guid: 5764c71c8f16b3749b5ad7a051c8bf76, type: 3}
+  m_Sprite: {fileID: -969334989, guid: 433719b32aba83f42bec9096ba5ce1b2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
