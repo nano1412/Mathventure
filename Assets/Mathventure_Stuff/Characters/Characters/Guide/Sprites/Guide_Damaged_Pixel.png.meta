@@ -1,0 +1,799 @@
+fileFormatVersion: 2
+guid: 87304c7f12a0a1d4b90918bec759baf3
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 500
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Guide_Damaged_Pixel_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1120
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0475b44d80a486e40bfbf4b8e9a3a1f2
+      internalID: -332878938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guide_Damaged_Pixel_1
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1120
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43767e6edecb01d4dba0ad4beec569fe
+      internalID: 1606929414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guide_Damaged_Pixel_2
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1120
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c6abbd79fd97f14d989bd78f8991f41
+      internalID: -1389047756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guide_Damaged_Pixel_3
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1120
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c8b56deeaada77438a8704e12d5343e
+      internalID: 882079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guide_Damaged_Pixel_4
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1120
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e91f60b8a468374bb385e23d183036c
+      internalID: -676750875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guide_Damaged_Pixel_5
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1120
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1183787c24d43a649a90d098dd092f97
+      internalID: 390730415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guide_Damaged_Pixel_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 840
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c67784d00b702a4bb83690428f2c16e
+      internalID: 1815273984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guide_Damaged_Pixel_7
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 840
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3348bf52599da94587eafcc17998376
+      internalID: 9561779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guide_Damaged_Pixel_8
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 840
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47c177d6cb3817445b9d8a8ab8997221
+      internalID: -1397612702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guide_Damaged_Pixel_9
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 840
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d64cc3098826004190b5a56b0583b9f
+      internalID: 1164303680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guide_Damaged_Pixel_10
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 840
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d42d08898b29014abf0ee1d691f3e2c
+      internalID: 1362838885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guide_Damaged_Pixel_11
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 840
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3df93a0ea400d934b9541af034bac54e
+      internalID: -2053263591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guide_Damaged_Pixel_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 560
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1249bb6e3e905fe4e90975fa0fe5dac2
+      internalID: 1363183160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guide_Damaged_Pixel_13
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 560
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fad570aa4031fe4fa25cef4a86824f9
+      internalID: 96342100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guide_Damaged_Pixel_14
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 560
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 583e1cd6ae3b23a43a15a7e661aa01d9
+      internalID: -1185436406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guide_Damaged_Pixel_15
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 560
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e1a9c4d90004914b9eea50462e530c5
+      internalID: -1409207963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guide_Damaged_Pixel_16
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 560
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fb41d2a61ea9ee44ac815b82a9a7f8e
+      internalID: -1996830008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guide_Damaged_Pixel_17
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 560
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f15f1f8139e98274e8e84b403be32dfc
+      internalID: 1214750213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guide_Damaged_Pixel_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 280
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4b81182397660e49b49cdf3c0d30f30
+      internalID: 1872041987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guide_Damaged_Pixel_19
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 280
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dfebde9e7ba77242a5c462b2231395b
+      internalID: -1311436235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guide_Damaged_Pixel_20
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 280
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55ca5f90543ac7348b4f9ae2b23a805c
+      internalID: -2083513049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guide_Damaged_Pixel_21
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 280
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7abb72521df8e6146866fa0cc29b2f71
+      internalID: -216997256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guide_Damaged_Pixel_22
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 280
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a0b36257fa86bd488b4a82f9010fd95
+      internalID: 733449485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guide_Damaged_Pixel_23
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 280
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45f82b2616df7484c91fe666d09b384b
+      internalID: -1120939692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guide_Damaged_Pixel_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 378d5ba82ef2e8c47b0c066f654bed6b
+      internalID: -900662760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guide_Damaged_Pixel_25
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 255646d7cc3e73644ada8e9f40fc6f5e
+      internalID: 232387206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guide_Damaged_Pixel_26
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f80b28df9f4eb04398190573f3520a9
+      internalID: -1308803534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guide_Damaged_Pixel_27
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b86e80e708b65aa4aa807fe424729edc
+      internalID: 1675226391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guide_Damaged_Pixel_28
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60dcb06faf11143478084a4c975fa30a
+      internalID: -1871251522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 1488a20ee5d4c2b4fb4d63a777fe7cb2
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":5.0},"gridSpriteSize":{"x":384.0,"y":280.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Guide_Damaged_Pixel_0: -332878938
+      Guide_Damaged_Pixel_1: 1606929414
+      Guide_Damaged_Pixel_10: 1362838885
+      Guide_Damaged_Pixel_11: -2053263591
+      Guide_Damaged_Pixel_12: 1363183160
+      Guide_Damaged_Pixel_13: 96342100
+      Guide_Damaged_Pixel_14: -1185436406
+      Guide_Damaged_Pixel_15: -1409207963
+      Guide_Damaged_Pixel_16: -1996830008
+      Guide_Damaged_Pixel_17: 1214750213
+      Guide_Damaged_Pixel_18: 1872041987
+      Guide_Damaged_Pixel_19: -1311436235
+      Guide_Damaged_Pixel_2: -1389047756
+      Guide_Damaged_Pixel_20: -2083513049
+      Guide_Damaged_Pixel_21: -216997256
+      Guide_Damaged_Pixel_22: 733449485
+      Guide_Damaged_Pixel_23: -1120939692
+      Guide_Damaged_Pixel_24: -900662760
+      Guide_Damaged_Pixel_25: 232387206
+      Guide_Damaged_Pixel_26: -1308803534
+      Guide_Damaged_Pixel_27: 1675226391
+      Guide_Damaged_Pixel_28: -1871251522
+      Guide_Damaged_Pixel_3: 882079
+      Guide_Damaged_Pixel_4: -676750875
+      Guide_Damaged_Pixel_5: 390730415
+      Guide_Damaged_Pixel_6: 1815273984
+      Guide_Damaged_Pixel_7: 9561779
+      Guide_Damaged_Pixel_8: -1397612702
+      Guide_Damaged_Pixel_9: 1164303680
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

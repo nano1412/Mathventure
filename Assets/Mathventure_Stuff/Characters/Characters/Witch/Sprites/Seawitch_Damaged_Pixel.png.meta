@@ -1,0 +1,809 @@
+fileFormatVersion: 2
+guid: b1321605ff035bd48880080d024b39e0
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Seawitch_Damaged_Pixel_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1120
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8185101ccf259ad4985b79c7fc53e07f
+      internalID: 332998934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seawitch_Damaged_Pixel_1
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1120
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db390dbc6db00524bb958539cfa00eb4
+      internalID: 573752484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seawitch_Damaged_Pixel_2
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1120
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4abde9156d5e4da4e8730e32c32f382e
+      internalID: -1768419528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seawitch_Damaged_Pixel_3
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1120
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a49293cae6f413c44b8170c81c4c0bd3
+      internalID: -1418827095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seawitch_Damaged_Pixel_4
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1120
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcb0c048f29d4304aa05235b15d107d2
+      internalID: 494298387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seawitch_Damaged_Pixel_5
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1120
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbca033cb92888c438e22e0e15ceb6b5
+      internalID: 1288790164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seawitch_Damaged_Pixel_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 840
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a75998961596ea4cbb76876773ca7d0
+      internalID: -1415927334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seawitch_Damaged_Pixel_7
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 840
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bf3c8bf49b456e4da13df1c402c16b3
+      internalID: 1085527481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seawitch_Damaged_Pixel_8
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 840
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9f5a21c4824b4c4383385a8f545fc40
+      internalID: -920570317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seawitch_Damaged_Pixel_9
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 840
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af6b4bc2bdf02db40bdbb1cc4cf82202
+      internalID: -376901019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seawitch_Damaged_Pixel_10
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 840
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbd69656b1d729b4da5c472b2114f3e1
+      internalID: 877300855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seawitch_Damaged_Pixel_11
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 840
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfb899b6f78bac64b8538711615048d4
+      internalID: -1565515337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seawitch_Damaged_Pixel_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 560
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daa44652edace9d46889e36295401358
+      internalID: 1009507856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seawitch_Damaged_Pixel_13
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 560
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cb62700df8488c49bf0282d79267537
+      internalID: 379951361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seawitch_Damaged_Pixel_14
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 560
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52b2ef9b896749f4a908ec19ffaad8f8
+      internalID: -916178228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seawitch_Damaged_Pixel_15
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 560
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77292ce367a73db409bed19351725039
+      internalID: -519863904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seawitch_Damaged_Pixel_16
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 560
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d533e9eeada8a4e47a1c7c393763e066
+      internalID: 1223685715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seawitch_Damaged_Pixel_17
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 560
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c48dad8bf107b0246a29517bf334d141
+      internalID: -783835278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seawitch_Damaged_Pixel_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 280
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5861df9b322e6a48a1fe9e0d4d73594
+      internalID: -900345260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seawitch_Damaged_Pixel_19
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 280
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f15ff934c42c55d4f8866423c5f862db
+      internalID: -1313206160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seawitch_Damaged_Pixel_20
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 280
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea9379f2324e50c4db53393b52d91ce0
+      internalID: -946262791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seawitch_Damaged_Pixel_21
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 280
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe1e663fe1c599a4ea08f5c569ee0f6a
+      internalID: 1322981725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seawitch_Damaged_Pixel_22
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 280
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20901761f9f778d4b93341614f04d5c5
+      internalID: -875436826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seawitch_Damaged_Pixel_23
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 280
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8121ad10153f3fd44befc8ec2edff493
+      internalID: -529261681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seawitch_Damaged_Pixel_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41fceb362964dbd4390ee100229c0389
+      internalID: -562935541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seawitch_Damaged_Pixel_25
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ffbe932d04ed9743a9a21a876b4518f
+      internalID: -1090972390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seawitch_Damaged_Pixel_26
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dde4554de703c97499eaca0cc3cd2ddf
+      internalID: -1642756826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seawitch_Damaged_Pixel_27
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a4d7671af7b458469df924e34e72731
+      internalID: -1483743370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seawitch_Damaged_Pixel_28
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3f1adca71a6e1b4998e9c34c72986f4
+      internalID: -1006873569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seawitch_Damaged_Pixel_29
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7878d444354257141adda5776babfc4a
+      internalID: -1632569853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 37dd22d3af4435b468ffef34d5e3d50e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":5.0},"gridSpriteSize":{"x":384.0,"y":280.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Seawitch_Damaged_Pixel_0: 332998934
+      Seawitch_Damaged_Pixel_1: 573752484
+      Seawitch_Damaged_Pixel_10: 877300855
+      Seawitch_Damaged_Pixel_11: -1565515337
+      Seawitch_Damaged_Pixel_12: 1009507856
+      Seawitch_Damaged_Pixel_13: 379951361
+      Seawitch_Damaged_Pixel_14: -916178228
+      Seawitch_Damaged_Pixel_15: -519863904
+      Seawitch_Damaged_Pixel_16: 1223685715
+      Seawitch_Damaged_Pixel_17: -783835278
+      Seawitch_Damaged_Pixel_18: -900345260
+      Seawitch_Damaged_Pixel_19: -1313206160
+      Seawitch_Damaged_Pixel_2: -1768419528
+      Seawitch_Damaged_Pixel_20: -946262791
+      Seawitch_Damaged_Pixel_21: 1322981725
+      Seawitch_Damaged_Pixel_22: -875436826
+      Seawitch_Damaged_Pixel_23: -529261681
+      Seawitch_Damaged_Pixel_24: -562935541
+      Seawitch_Damaged_Pixel_25: -1090972390
+      Seawitch_Damaged_Pixel_26: -1642756826
+      Seawitch_Damaged_Pixel_27: -1483743370
+      Seawitch_Damaged_Pixel_28: -1006873569
+      Seawitch_Damaged_Pixel_29: -1632569853
+      Seawitch_Damaged_Pixel_3: -1418827095
+      Seawitch_Damaged_Pixel_4: 494298387
+      Seawitch_Damaged_Pixel_5: 1288790164
+      Seawitch_Damaged_Pixel_6: -1415927334
+      Seawitch_Damaged_Pixel_7: 1085527481
+      Seawitch_Damaged_Pixel_8: -920570317
+      Seawitch_Damaged_Pixel_9: -376901019
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

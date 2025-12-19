@@ -1,0 +1,809 @@
+fileFormatVersion: 2
+guid: b18441972acf72c449b15e2d085a2330
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Archer_Damaged_Pixel_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1120
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 484eb2f630450e241b4fb731f9f3a88b
+      internalID: 292303789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archer_Damaged_Pixel_1
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1120
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 644979ce7fe0e9747a55fd7e6a8a81b2
+      internalID: -1466576964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archer_Damaged_Pixel_2
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1120
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8324e570368fd4d47b244be14540f8ec
+      internalID: 1696856828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archer_Damaged_Pixel_3
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1120
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5e40f7c39a4b9344a1343e416fd9594
+      internalID: -723251510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archer_Damaged_Pixel_4
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1120
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a17c4dfde413be4580a1925ff8e038a
+      internalID: 19500229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archer_Damaged_Pixel_5
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1120
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6d2a25343388844ab13fcae5f4c5d7f
+      internalID: -1526504929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archer_Damaged_Pixel_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 840
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ddbd37aed18bab40a296d187218011d
+      internalID: 592766586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archer_Damaged_Pixel_7
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 840
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 802cff2eabcbf6a478d8cc291275e54e
+      internalID: 1818591464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archer_Damaged_Pixel_8
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 840
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f139e5b1982e82742976707e96220a06
+      internalID: 1031530793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archer_Damaged_Pixel_9
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 840
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e6890e307bd33147a8202d334b5201a
+      internalID: 1468843694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archer_Damaged_Pixel_10
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 840
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54e7c09454e3ab547ab05d2ffb7279f7
+      internalID: 676201864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archer_Damaged_Pixel_11
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 840
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4724d8a4dd243644fa7fb277d3d68deb
+      internalID: 2100238463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archer_Damaged_Pixel_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 560
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f68d541b655588e468a38dada8c98c99
+      internalID: 1852291969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archer_Damaged_Pixel_13
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 560
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6495ee594f615a44687ab3f1f269b814
+      internalID: -1066959861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archer_Damaged_Pixel_14
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 560
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef15e8d3c3549284c883a4d2b4b51652
+      internalID: -1898399411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archer_Damaged_Pixel_15
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 560
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c61622b3eca8f5b4e926103b25da1dd1
+      internalID: -489533226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archer_Damaged_Pixel_16
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 560
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56feeb81123bd424b84fc8c3c2c0dec0
+      internalID: 1628578595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archer_Damaged_Pixel_17
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 560
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b29b04a52ae93784aaa815fa828bffce
+      internalID: 1765644815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archer_Damaged_Pixel_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 280
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee9c0e3c09ace914eaa62ccc1bfdfe5b
+      internalID: -1889100207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archer_Damaged_Pixel_19
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 280
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f43310673588e748988e455ce6624f5
+      internalID: -555413493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archer_Damaged_Pixel_20
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 280
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a99485586d3450348ab9bad232983819
+      internalID: -80919601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archer_Damaged_Pixel_21
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 280
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eec5273f6f1691040a3ed8a2d480502f
+      internalID: 1506710925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archer_Damaged_Pixel_22
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 280
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4580d0a0ca5bf7a44a334b96ed4bee4d
+      internalID: 161589410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archer_Damaged_Pixel_23
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 280
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7793a71cbd6b897498265d65fe76e641
+      internalID: -1234713174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archer_Damaged_Pixel_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e15b75162d35e842b6b59e0aea31341
+      internalID: -143115086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archer_Damaged_Pixel_25
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b963c0d3e0d970448f02f3899af1af8
+      internalID: -1905281533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archer_Damaged_Pixel_26
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ab2a4291ae9f4149b8c335d945ded2b
+      internalID: -418743248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archer_Damaged_Pixel_27
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 242009256f087f743ab83db0a16cabec
+      internalID: -1926431991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archer_Damaged_Pixel_28
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5074667cb6d58c649b3994b266e087db
+      internalID: 563802297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archer_Damaged_Pixel_29
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4713ba4d78049f4f9c7997c06e04675
+      internalID: 1679591231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: c2e83b8628cf6a84a90d78f1bc958d7e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":5.0},"gridSpriteSize":{"x":384.0,"y":280.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Archer_Damaged_Pixel_0: 292303789
+      Archer_Damaged_Pixel_1: -1466576964
+      Archer_Damaged_Pixel_10: 676201864
+      Archer_Damaged_Pixel_11: 2100238463
+      Archer_Damaged_Pixel_12: 1852291969
+      Archer_Damaged_Pixel_13: -1066959861
+      Archer_Damaged_Pixel_14: -1898399411
+      Archer_Damaged_Pixel_15: -489533226
+      Archer_Damaged_Pixel_16: 1628578595
+      Archer_Damaged_Pixel_17: 1765644815
+      Archer_Damaged_Pixel_18: -1889100207
+      Archer_Damaged_Pixel_19: -555413493
+      Archer_Damaged_Pixel_2: 1696856828
+      Archer_Damaged_Pixel_20: -80919601
+      Archer_Damaged_Pixel_21: 1506710925
+      Archer_Damaged_Pixel_22: 161589410
+      Archer_Damaged_Pixel_23: -1234713174
+      Archer_Damaged_Pixel_24: -143115086
+      Archer_Damaged_Pixel_25: -1905281533
+      Archer_Damaged_Pixel_26: -418743248
+      Archer_Damaged_Pixel_27: -1926431991
+      Archer_Damaged_Pixel_28: 563802297
+      Archer_Damaged_Pixel_29: 1679591231
+      Archer_Damaged_Pixel_3: -723251510
+      Archer_Damaged_Pixel_4: 19500229
+      Archer_Damaged_Pixel_5: -1526504929
+      Archer_Damaged_Pixel_6: 592766586
+      Archer_Damaged_Pixel_7: 1818591464
+      Archer_Damaged_Pixel_8: 1031530793
+      Archer_Damaged_Pixel_9: 1468843694
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

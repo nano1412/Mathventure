@@ -1,0 +1,1430 @@
+fileFormatVersion: 2
+guid: d8bf0544bf4b35f4da7e30032afc4862
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7767600777158211182
+    second: SeaWitchAttack_0
+  - first:
+      213: 1218571470433562660
+    second: SeaWitchAttack_1
+  - first:
+      213: 1202587336920736069
+    second: SeaWitchAttack_2
+  - first:
+      213: 8295643963710662427
+    second: SeaWitchAttack_3
+  - first:
+      213: -5688150426359350575
+    second: SeaWitchAttack_4
+  - first:
+      213: 8816278040072610492
+    second: SeaWitchAttack_5
+  - first:
+      213: -6243282681206395526
+    second: SeaWitchAttack_6
+  - first:
+      213: -3795910165009457009
+    second: SeaWitchAttack_7
+  - first:
+      213: 5616916979390660248
+    second: SeaWitchAttack_8
+  - first:
+      213: -6147834624325958076
+    second: SeaWitchAttack_9
+  - first:
+      213: -7475821823510754721
+    second: SeaWitchAttack_10
+  - first:
+      213: -6891844588952779711
+    second: SeaWitchAttack_11
+  - first:
+      213: 3637100298059189420
+    second: SeaWitchAttack_12
+  - first:
+      213: -6194380048059292062
+    second: SeaWitchAttack_13
+  - first:
+      213: 8739107340418098592
+    second: SeaWitchAttack_14
+  - first:
+      213: -1312372419929464060
+    second: SeaWitchAttack_15
+  - first:
+      213: -8932714831256795149
+    second: SeaWitchAttack_16
+  - first:
+      213: -7547485420252926411
+    second: SeaWitchAttack_17
+  - first:
+      213: 4958448004250090251
+    second: SeaWitchAttack_18
+  - first:
+      213: 513998938263568642
+    second: SeaWitchAttack_19
+  - first:
+      213: 7546736293923855044
+    second: SeaWitchAttack_20
+  - first:
+      213: -5185667070013498278
+    second: SeaWitchAttack_21
+  - first:
+      213: 3459457978304623079
+    second: SeaWitchAttack_22
+  - first:
+      213: 447523054203498745
+    second: SeaWitchAttack_23
+  - first:
+      213: 5498678447834447658
+    second: SeaWitchAttack_24
+  - first:
+      213: -7604755162702881528
+    second: SeaWitchAttack_25
+  - first:
+      213: -6137720028682098202
+    second: SeaWitchAttack_26
+  - first:
+      213: -5417194047462558693
+    second: SeaWitchAttack_27
+  - first:
+      213: -7363011128983029702
+    second: SeaWitchAttack_28
+  - first:
+      213: 9205309172354327329
+    second: SeaWitchAttack_29
+  - first:
+      213: 3437461928574628845
+    second: SeaWitchAttack_30
+  - first:
+      213: 6823695742108136990
+    second: SeaWitchAttack_31
+  - first:
+      213: -3918858965416032149
+    second: SeaWitchAttack_32
+  - first:
+      213: -6583207042391691531
+    second: SeaWitchAttack_33
+  - first:
+      213: -4150051437222028813
+    second: SeaWitchAttack_34
+  - first:
+      213: 4038681169641727955
+    second: SeaWitchAttack_35
+  - first:
+      213: -3151362891986391237
+    second: SeaWitchAttack_36
+  - first:
+      213: -1170373832543803010
+    second: SeaWitchAttack_37
+  - first:
+      213: 502747188838728257
+    second: SeaWitchAttack_38
+  - first:
+      213: 6932233204295348960
+    second: SeaWitchAttack_39
+  - first:
+      213: 2907862034371457408
+    second: SeaWitchAttack_40
+  - first:
+      213: -3462552384668760748
+    second: SeaWitchAttack_41
+  - first:
+      213: -2811309069067965828
+    second: SeaWitchAttack_42
+  - first:
+      213: -8196152796052154842
+    second: SeaWitchAttack_43
+  - first:
+      213: 1150184037182442984
+    second: SeaWitchAttack_44
+  - first:
+      213: 6599860417263593356
+    second: SeaWitchAttack_45
+  - first:
+      213: -6160753524056058439
+    second: SeaWitchAttack_46
+  - first:
+      213: -7567814783569347137
+    second: SeaWitchAttack_47
+  - first:
+      213: -904989645462082960
+    second: SeaWitchAttack_48
+  - first:
+      213: 5609860751691688330
+    second: SeaWitchAttack_49
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 180
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SeaWitchAttack_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 299cf686f30f33490800000000000000
+      internalID: -7767600777158211182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeaWitchAttack_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4203e9ccb4c39e010800000000000000
+      internalID: 1218571470433562660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeaWitchAttack_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5412b84bfc270b010800000000000000
+      internalID: 1202587336920736069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeaWitchAttack_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1766189b3c002370800000000000000
+      internalID: 8295643963710662427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeaWitchAttack_4
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1da3dd70351af01b0800000000000000
+      internalID: -5688150426359350575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeaWitchAttack_5
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb2ea93ba26b95a70800000000000000
+      internalID: 8816278040072610492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeaWitchAttack_6
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7d2852da776b59a0800000000000000
+      internalID: -6243282681206395526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeaWitchAttack_7
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f80215701d7325bc0800000000000000
+      internalID: -3795910165009457009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeaWitchAttack_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89eb079ab3c43fd40800000000000000
+      internalID: 5616916979390660248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeaWitchAttack_9
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44644375bf08eaaa0800000000000000
+      internalID: -6147834624325958076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeaWitchAttack_10
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5a478df8ab804890800000000000000
+      internalID: -7475821823510754721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeaWitchAttack_11
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14485446cdf3b50a0800000000000000
+      internalID: -6891844588952779711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeaWitchAttack_12
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cac094e6373997230800000000000000
+      internalID: 3637100298059189420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeaWitchAttack_13
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 266a8af5a24290aa0800000000000000
+      internalID: -6194380048059292062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeaWitchAttack_14
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a521a703db874970800000000000000
+      internalID: 8739107340418098592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeaWitchAttack_15
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 403a511cc3489cde0800000000000000
+      internalID: -1312372419929464060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeaWitchAttack_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f74313403f980480800000000000000
+      internalID: -8932714831256795149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeaWitchAttack_17
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53e6262aff1f14790800000000000000
+      internalID: -7547485420252926411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeaWitchAttack_18
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0b329a5032ffc440800000000000000
+      internalID: 4958448004250090251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeaWitchAttack_19
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 201c022af47122700800000000000000
+      internalID: 513998938263568642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeaWitchAttack_20
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ca11eccca46bb860800000000000000
+      internalID: 7546736293923855044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeaWitchAttack_21
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5c9760564fc808b0800000000000000
+      internalID: -5185667070013498278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeaWitchAttack_22
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e1fc38c3b6720030800000000000000
+      internalID: 3459457978304623079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeaWitchAttack_23
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f0f892c8dbe53600800000000000000
+      internalID: 447523054203498745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeaWitchAttack_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2fb4414aea3f4c40800000000000000
+      internalID: 5498678447834447658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeaWitchAttack_25
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80dd643a87b767690800000000000000
+      internalID: -7604755162702881528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeaWitchAttack_26
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e96a97272072daa0800000000000000
+      internalID: -6137720028682098202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeaWitchAttack_27
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1432a127b242d4b0800000000000000
+      internalID: -5417194047462558693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeaWitchAttack_28
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a38f7bb936451d990800000000000000
+      internalID: -7363011128983029702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeaWitchAttack_29
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12323d1abe3dfbf70800000000000000
+      internalID: 9205309172354327329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeaWitchAttack_30
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de3be9d596154bf20800000000000000
+      internalID: 3437461928574628845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeaWitchAttack_31
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1673bbbf13a2be50800000000000000
+      internalID: 6823695742108136990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeaWitchAttack_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b68c581b88a6d99c0800000000000000
+      internalID: -3918858965416032149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeaWitchAttack_33
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fea4630310c3a4a0800000000000000
+      internalID: -6583207042391691531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeaWitchAttack_34
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f918cca43e0866c0800000000000000
+      internalID: -4150051437222028813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeaWitchAttack_35
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d7ed8d30274c0830800000000000000
+      internalID: 4038681169641727955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeaWitchAttack_36
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3fadc8752c1444d0800000000000000
+      internalID: -3151362891986391237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeaWitchAttack_37
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7960d0433ff1cfe0800000000000000
+      internalID: -1170373832543803010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeaWitchAttack_38
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1420f8297ed1af600800000000000000
+      internalID: 502747188838728257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeaWitchAttack_39
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e2313aee5d343060800000000000000
+      internalID: 6932233204295348960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeaWitchAttack_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0813e8e1d1dca5820800000000000000
+      internalID: 2907862034371457408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeaWitchAttack_41
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45503a793fa82ffc0800000000000000
+      internalID: -3462552384668760748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeaWitchAttack_42
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7aae50fb493cf8d0800000000000000
+      internalID: -2811309069067965828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeaWitchAttack_43
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6269c72057a614e80800000000000000
+      internalID: -8196152796052154842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeaWitchAttack_44
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ed8592b94646ff00800000000000000
+      internalID: 1150184037182442984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeaWitchAttack_45
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c87682af41a679b50800000000000000
+      internalID: 6599860417263593356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeaWitchAttack_46
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b517e99f4b908aa0800000000000000
+      internalID: -6160753524056058439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeaWitchAttack_47
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbd3663ec88b9f690800000000000000
+      internalID: -7567814783569347137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeaWitchAttack_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07a63d856b4d073f0800000000000000
+      internalID: -904989645462082960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeaWitchAttack_49
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a892dff91aa3add40800000000000000
+      internalID: 5609860751691688330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 6784a9fba6d86264e8c199c21a21b49e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SeaWitchAttack_0: -7767600777158211182
+      SeaWitchAttack_1: 1218571470433562660
+      SeaWitchAttack_10: -7475821823510754721
+      SeaWitchAttack_11: -6891844588952779711
+      SeaWitchAttack_12: 3637100298059189420
+      SeaWitchAttack_13: -6194380048059292062
+      SeaWitchAttack_14: 8739107340418098592
+      SeaWitchAttack_15: -1312372419929464060
+      SeaWitchAttack_16: -8932714831256795149
+      SeaWitchAttack_17: -7547485420252926411
+      SeaWitchAttack_18: 4958448004250090251
+      SeaWitchAttack_19: 513998938263568642
+      SeaWitchAttack_2: 1202587336920736069
+      SeaWitchAttack_20: 7546736293923855044
+      SeaWitchAttack_21: -5185667070013498278
+      SeaWitchAttack_22: 3459457978304623079
+      SeaWitchAttack_23: 447523054203498745
+      SeaWitchAttack_24: 5498678447834447658
+      SeaWitchAttack_25: -7604755162702881528
+      SeaWitchAttack_26: -6137720028682098202
+      SeaWitchAttack_27: -5417194047462558693
+      SeaWitchAttack_28: -7363011128983029702
+      SeaWitchAttack_29: 9205309172354327329
+      SeaWitchAttack_3: 8295643963710662427
+      SeaWitchAttack_30: 3437461928574628845
+      SeaWitchAttack_31: 6823695742108136990
+      SeaWitchAttack_32: -3918858965416032149
+      SeaWitchAttack_33: -6583207042391691531
+      SeaWitchAttack_34: -4150051437222028813
+      SeaWitchAttack_35: 4038681169641727955
+      SeaWitchAttack_36: -3151362891986391237
+      SeaWitchAttack_37: -1170373832543803010
+      SeaWitchAttack_38: 502747188838728257
+      SeaWitchAttack_39: 6932233204295348960
+      SeaWitchAttack_4: -5688150426359350575
+      SeaWitchAttack_40: 2907862034371457408
+      SeaWitchAttack_41: -3462552384668760748
+      SeaWitchAttack_42: -2811309069067965828
+      SeaWitchAttack_43: -8196152796052154842
+      SeaWitchAttack_44: 1150184037182442984
+      SeaWitchAttack_45: 6599860417263593356
+      SeaWitchAttack_46: -6160753524056058439
+      SeaWitchAttack_47: -7567814783569347137
+      SeaWitchAttack_48: -904989645462082960
+      SeaWitchAttack_49: 5609860751691688330
+      SeaWitchAttack_5: 8816278040072610492
+      SeaWitchAttack_6: -6243282681206395526
+      SeaWitchAttack_7: -3795910165009457009
+      SeaWitchAttack_8: 5616916979390660248
+      SeaWitchAttack_9: -6147834624325958076
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,1693 @@
+fileFormatVersion: 2
+guid: 603b802679d808c45b9c6a9f0c406f0a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8695451891635778507
+    second: Swordman_Idle_Pixel_0
+  - first:
+      213: 1198735032269090318
+    second: Swordman_Idle_Pixel_1
+  - first:
+      213: 1556606425767123059
+    second: Swordman_Idle_Pixel_2
+  - first:
+      213: 6914120673807577247
+    second: Swordman_Idle_Pixel_3
+  - first:
+      213: 8306831396802600720
+    second: Swordman_Idle_Pixel_4
+  - first:
+      213: -8148325791953112417
+    second: Swordman_Idle_Pixel_5
+  - first:
+      213: 4689058555661819316
+    second: Swordman_Idle_Pixel_6
+  - first:
+      213: -1083434554718257659
+    second: Swordman_Idle_Pixel_7
+  - first:
+      213: 3211358474747555957
+    second: Swordman_Idle_Pixel_8
+  - first:
+      213: 1315315939771228481
+    second: Swordman_Idle_Pixel_9
+  - first:
+      213: -1219464367614071198
+    second: Swordman_Idle_Pixel_10
+  - first:
+      213: -8133849754710597777
+    second: Swordman_Idle_Pixel_11
+  - first:
+      213: -873177010536999713
+    second: Swordman_Idle_Pixel_12
+  - first:
+      213: 269792213957141480
+    second: Swordman_Idle_Pixel_13
+  - first:
+      213: -7220366120720525135
+    second: Swordman_Idle_Pixel_14
+  - first:
+      213: 778937892021763877
+    second: Swordman_Idle_Pixel_15
+  - first:
+      213: -6061722756741785691
+    second: Swordman_Idle_Pixel_16
+  - first:
+      213: -1377375502268912183
+    second: Swordman_Idle_Pixel_17
+  - first:
+      213: -6335729265703880199
+    second: Swordman_Idle_Pixel_18
+  - first:
+      213: 1020992766140572300
+    second: Swordman_Idle_Pixel_19
+  - first:
+      213: -4661711558917691402
+    second: Swordman_Idle_Pixel_20
+  - first:
+      213: -7473131185165169042
+    second: Swordman_Idle_Pixel_21
+  - first:
+      213: -1470625312612252458
+    second: Swordman_Idle_Pixel_22
+  - first:
+      213: -504528196771016186
+    second: Swordman_Idle_Pixel_23
+  - first:
+      213: -2352646201295601172
+    second: Swordman_Idle_Pixel_24
+  - first:
+      213: 8061860290118319087
+    second: Swordman_Idle_Pixel_25
+  - first:
+      213: -8784004205849353005
+    second: Swordman_Idle_Pixel_26
+  - first:
+      213: -3170322467894459340
+    second: Swordman_Idle_Pixel_27
+  - first:
+      213: 3139430584053198532
+    second: Swordman_Idle_Pixel_28
+  - first:
+      213: 3389931474293458346
+    second: Swordman_Idle_Pixel_29
+  - first:
+      213: -1937711848290080156
+    second: Swordman_Idle_Pixel_30
+  - first:
+      213: 3000753569668325421
+    second: Swordman_Idle_Pixel_31
+  - first:
+      213: 1451903461475676073
+    second: Swordman_Idle_Pixel_32
+  - first:
+      213: 7605450034691505607
+    second: Swordman_Idle_Pixel_33
+  - first:
+      213: -1299516240937139451
+    second: Swordman_Idle_Pixel_34
+  - first:
+      213: -519924883775417385
+    second: Swordman_Idle_Pixel_35
+  - first:
+      213: 9121519462768281629
+    second: Swordman_Idle_Pixel_36
+  - first:
+      213: -1134034028366993134
+    second: Swordman_Idle_Pixel_37
+  - first:
+      213: -3918894037085113292
+    second: Swordman_Idle_Pixel_38
+  - first:
+      213: 4558369574853564552
+    second: Swordman_Idle_Pixel_39
+  - first:
+      213: -8396780957847145277
+    second: Swordman_Idle_Pixel_40
+  - first:
+      213: -3894682925463547599
+    second: Swordman_Idle_Pixel_41
+  - first:
+      213: -1085883351039992699
+    second: Swordman_Idle_Pixel_42
+  - first:
+      213: -1092449617432048345
+    second: Swordman_Idle_Pixel_43
+  - first:
+      213: 9128552304389467051
+    second: Swordman_Idle_Pixel_44
+  - first:
+      213: 8133394593785890684
+    second: Swordman_Idle_Pixel_45
+  - first:
+      213: 6006926864828188913
+    second: Swordman_Idle_Pixel_46
+  - first:
+      213: 2658597408714685893
+    second: Swordman_Idle_Pixel_47
+  - first:
+      213: 6729787542990358363
+    second: Swordman_Idle_Pixel_48
+  - first:
+      213: -8909122850175931289
+    second: Swordman_Idle_Pixel_49
+  - first:
+      213: -7310978605796768078
+    second: Swordman_Idle_Pixel_50
+  - first:
+      213: -8590899168928876229
+    second: Swordman_Idle_Pixel_51
+  - first:
+      213: 5126595452567739011
+    second: Swordman_Idle_Pixel_52
+  - first:
+      213: 8187080271149356876
+    second: Swordman_Idle_Pixel_53
+  - first:
+      213: -5856699067373669866
+    second: Swordman_Idle_Pixel_54
+  - first:
+      213: 4075894269957727664
+    second: Swordman_Idle_Pixel_55
+  - first:
+      213: 1496156848333464142
+    second: Swordman_Idle_Pixel_56
+  - first:
+      213: 7919815486156924020
+    second: Swordman_Idle_Pixel_57
+  - first:
+      213: -4453097669567906085
+    second: Swordman_Idle_Pixel_58
+  - first:
+      213: -5235601852071954894
+    second: Swordman_Idle_Pixel_59
+  - first:
+      213: -5208268492294082501
+    second: Swordman_Idle_Pixel_60
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1960
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4558100579214542bfb59e4874a5804
+      internalID: -831012828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_1
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1960
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9e485695baaced44a62bf5013db2214
+      internalID: -95078925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_2
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1960
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55970015b8b3bcb498d050b20c0d99da
+      internalID: -1907704801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_3
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1960
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 048fb94137ad96147ae44b10ebe739b4
+      internalID: -1352866738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_4
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1960
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb489046c64150945bb248c824f7bcf2
+      internalID: 595250156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_5
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1960
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ec9aeac996f3df47802037bff2a3852
+      internalID: 1528070271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_6
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 1960
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b020f875aee69804abce263c3a737a36
+      internalID: -337907716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_7
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 1960
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ae6233f4075368488f97f9ecd4afbbf
+      internalID: 264637758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1680
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a557be0bf674b414385106a61245b5bb
+      internalID: 696969267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_9
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1680
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1669e6b35ff3beb4bbda037f18293697
+      internalID: -1744536282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_10
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1680
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af4ee8aa9319ad84397b3e8525deca02
+      internalID: -775096258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_11
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1680
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f42c10604927be645ba3da0339b682c6
+      internalID: -2003061227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_12
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1680
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64b0b9da327d01140b7dfaed939c4716
+      internalID: -1580114916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_13
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1680
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72ea9b1b434108645bdac4c32f93d97f
+      internalID: 725994828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_14
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 1680
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1205b93b841e8f4c8c54a55c15a3f19
+      internalID: 1173722676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_15
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 1680
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b150818d3b67c08458081c44b641aa5d
+      internalID: 49081678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1400
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc86f256c5c31464ba508625318add38
+      internalID: 1406854539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_17
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1400
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb33908aac4756f43837ad9141e3e712
+      internalID: 815911015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_18
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1400
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35da1daad3f58d348a530c3aabc14aa9
+      internalID: -382220264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_19
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1400
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd571761be20ea74bac581213175f436
+      internalID: -592895202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_20
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1400
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 806ae2645f8826b43831556f0c6ad5a1
+      internalID: 1665761138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_21
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1400
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26b4bd07e89c59744b8dec92370d958e
+      internalID: -1096310173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_22
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 1400
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fb6c64c13435ae42ab61d522dc0ad56
+      internalID: 1131737282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_23
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 1400
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fb82b109ec291e47a6ba6d62d8f770b
+      internalID: -1467361792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1120
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e30956f5dfd73b4a939b6d77b7d4037
+      internalID: -1801972499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_25
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1120
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67ea99086397f3e4193f40104736f542
+      internalID: -1694662255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_26
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1120
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7f8d4e06a0773b41860ff7432e9da0c
+      internalID: 817532910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_27
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1120
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09582e744dae19c4fbd69e91813af5b6
+      internalID: -1805173993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_28
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1120
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1802db836d8f9d54d97cb6c319130899
+      internalID: -1756879221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_29
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1120
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d045aed80c8d0754ba88b05ab88b62bc
+      internalID: 611405421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_30
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 1120
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e03f9bf23c124e54e93da1c13c09be86
+      internalID: 171330400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_31
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 1120
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41833f65bd2bdbf428d02d0e84fbf691
+      internalID: 796055509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 840
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2a588a0926492543b88d6c89dff0505
+      internalID: -1564554855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_33
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 840
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91dde417fd252384a943f694e021cf99
+      internalID: 700138790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_34
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 840
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cbfb2704f9e2c245a7d245028d745a2
+      internalID: -565363510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_35
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 840
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad1085a6899353442ae9a9ca2cec18b3
+      internalID: 846365922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_36
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 840
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f95d0255aded0284ba9c1018d55bb5f3
+      internalID: 193289563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_37
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 840
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2393c4b6e7a70924a9e11d8b180c8da1
+      internalID: 2087703911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_38
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 840
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1726023f60cad848890c314f6790602
+      internalID: 1231293083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_39
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 840
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 799aae489cf595c4b87a3b2039379e9d
+      internalID: -2093250258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 560
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dfbfc71507e6c94eb105f4ef5a992e3
+      internalID: 1734861426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_41
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 560
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4458f379c1e9e9843ae017b45862a21a
+      internalID: 1915526634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_42
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 560
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c216555b63434342aace7d6db236784
+      internalID: 759017431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_43
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 560
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 918e094390695404ea4c6968f9a569ad
+      internalID: 474062293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_44
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 560
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eef3b232d9248e44a6cbbda3405e152
+      internalID: 1485930301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_45
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 560
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be1be8bf3d1d8a6488eada759d6e92d9
+      internalID: 1559310829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_46
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 560
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c98f621461f4f6a489a108fd298233ee
+      internalID: -1932986192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_47
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 560
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb4e7ed45a989bd4db72644a7461eb99
+      internalID: -611414449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 280
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bfef3af6f143844c9c5d25beaf58008
+      internalID: -1800409233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_49
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 280
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c48a38a28b1bed489012c326a2c9fab
+      internalID: 591319317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_50
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 280
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cff2ff968fa9c14b8dfc4df25dfc608
+      internalID: 1657650300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_51
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 280
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab3c81d45fcb2dc4db110a6c9eeea1c5
+      internalID: -961159353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_52
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 280
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d149230cd8347740b442f4f5d489e3b
+      internalID: -876031738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_53
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 280
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f62a979094bc3a468a73c977c38bacb
+      internalID: -1989881716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_54
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 280
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a096d2121ca2df4da5d3a5eaf04f1f8
+      internalID: 2143724028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_55
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 280
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae3a8c5f579734a428d5efe4c7046350
+      internalID: -36484759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0feea2f893061ce4ba1f5a55bf948d08
+      internalID: -2098373059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_57
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f456a1701fee2e04e81f609d5aeeae4b
+      internalID: -357984303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_58
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07022722da4611945b4e05328d688612
+      internalID: -577155068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordman_Idle_Pixel_59
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 384
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80110bbe13005b34ba765bef121c044b
+      internalID: 1654531319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: d519871dffca712468b275e1b0b0bb53
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Swordman_Idle_Pixel_0: -831012828
+      Swordman_Idle_Pixel_1: -95078925
+      Swordman_Idle_Pixel_10: -775096258
+      Swordman_Idle_Pixel_11: -2003061227
+      Swordman_Idle_Pixel_12: -1580114916
+      Swordman_Idle_Pixel_13: 725994828
+      Swordman_Idle_Pixel_14: 1173722676
+      Swordman_Idle_Pixel_15: 49081678
+      Swordman_Idle_Pixel_16: 1406854539
+      Swordman_Idle_Pixel_17: 815911015
+      Swordman_Idle_Pixel_18: -382220264
+      Swordman_Idle_Pixel_19: -592895202
+      Swordman_Idle_Pixel_2: -1907704801
+      Swordman_Idle_Pixel_20: 1665761138
+      Swordman_Idle_Pixel_21: -1096310173
+      Swordman_Idle_Pixel_22: 1131737282
+      Swordman_Idle_Pixel_23: -1467361792
+      Swordman_Idle_Pixel_24: -1801972499
+      Swordman_Idle_Pixel_25: -1694662255
+      Swordman_Idle_Pixel_26: 817532910
+      Swordman_Idle_Pixel_27: -1805173993
+      Swordman_Idle_Pixel_28: -1756879221
+      Swordman_Idle_Pixel_29: 611405421
+      Swordman_Idle_Pixel_3: -1352866738
+      Swordman_Idle_Pixel_30: 171330400
+      Swordman_Idle_Pixel_31: 796055509
+      Swordman_Idle_Pixel_32: -1564554855
+      Swordman_Idle_Pixel_33: 700138790
+      Swordman_Idle_Pixel_34: -565363510
+      Swordman_Idle_Pixel_35: 846365922
+      Swordman_Idle_Pixel_36: 193289563
+      Swordman_Idle_Pixel_37: 2087703911
+      Swordman_Idle_Pixel_38: 1231293083
+      Swordman_Idle_Pixel_39: -2093250258
+      Swordman_Idle_Pixel_4: 595250156
+      Swordman_Idle_Pixel_40: 1734861426
+      Swordman_Idle_Pixel_41: 1915526634
+      Swordman_Idle_Pixel_42: 759017431
+      Swordman_Idle_Pixel_43: 474062293
+      Swordman_Idle_Pixel_44: 1485930301
+      Swordman_Idle_Pixel_45: 1559310829
+      Swordman_Idle_Pixel_46: -1932986192
+      Swordman_Idle_Pixel_47: -611414449
+      Swordman_Idle_Pixel_48: -1800409233
+      Swordman_Idle_Pixel_49: 591319317
+      Swordman_Idle_Pixel_5: 1528070271
+      Swordman_Idle_Pixel_50: 1657650300
+      Swordman_Idle_Pixel_51: -961159353
+      Swordman_Idle_Pixel_52: -876031738
+      Swordman_Idle_Pixel_53: -1989881716
+      Swordman_Idle_Pixel_54: 2143724028
+      Swordman_Idle_Pixel_55: -36484759
+      Swordman_Idle_Pixel_56: -2098373059
+      Swordman_Idle_Pixel_57: -357984303
+      Swordman_Idle_Pixel_58: -577155068
+      Swordman_Idle_Pixel_59: 1654531319
+      Swordman_Idle_Pixel_6: -337907716
+      Swordman_Idle_Pixel_7: 264637758
+      Swordman_Idle_Pixel_8: 696969267
+      Swordman_Idle_Pixel_9: -1744536282
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

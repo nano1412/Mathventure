@@ -1,0 +1,780 @@
+fileFormatVersion: 2
+guid: 9c49447a033c9154faababde7de47453
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1303848380203312003
+    second: GiantGoblin_Walk_0
+  - first:
+      213: -1551618829294533526
+    second: GiantGoblin_Walk_1
+  - first:
+      213: 6779672078058533381
+    second: GiantGoblin_Walk_2
+  - first:
+      213: 7238064439429627745
+    second: GiantGoblin_Walk_3
+  - first:
+      213: -8937312109366956103
+    second: GiantGoblin_Walk_4
+  - first:
+      213: 8464725593442204714
+    second: GiantGoblin_Walk_5
+  - first:
+      213: 5185412709277068160
+    second: GiantGoblin_Walk_6
+  - first:
+      213: 7000046617605123654
+    second: GiantGoblin_Walk_7
+  - first:
+      213: 7683094105708085529
+    second: GiantGoblin_Walk_8
+  - first:
+      213: -1171535480120797065
+    second: GiantGoblin_Walk_9
+  - first:
+      213: 1532638037798948230
+    second: GiantGoblin_Walk_10
+  - first:
+      213: -1430753554430859267
+    second: GiantGoblin_Walk_11
+  - first:
+      213: -4666200507029186894
+    second: GiantGoblin_Walk_12
+  - first:
+      213: -4352055753185873095
+    second: GiantGoblin_Walk_13
+  - first:
+      213: 4350483269694356672
+    second: GiantGoblin_Walk_14
+  - first:
+      213: -2933807187615150964
+    second: GiantGoblin_Walk_15
+  - first:
+      213: 9095528811956989934
+    second: GiantGoblin_Walk_16
+  - first:
+      213: 6307953146383671236
+    second: GiantGoblin_Walk_17
+  - first:
+      213: -367129338900177249
+    second: GiantGoblin_Walk_18
+  - first:
+      213: -3178484956496386144
+    second: GiantGoblin_Walk_19
+  - first:
+      213: 3748613732665821110
+    second: GiantGoblin_Walk_20
+  - first:
+      213: 7638761779356282377
+    second: GiantGoblin_Walk_21
+  - first:
+      213: -9116794761737647073
+    second: GiantGoblin_Walk_22
+  - first:
+      213: -7401959009253132774
+    second: GiantGoblin_Walk_23
+  - first:
+      213: 1843600674318746695
+    second: GiantGoblin_Walk_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 70
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GiantGoblin_Walk_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7c53096eccc7ede0800000000000000
+      internalID: -1303848380203312003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GiantGoblin_Walk_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a64871545ea877ae0800000000000000
+      internalID: -1551618829294533526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GiantGoblin_Walk_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5023052b5db361e50800000000000000
+      internalID: 6779672078058533381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GiantGoblin_Walk_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16ff69d3245c27460800000000000000
+      internalID: 7238064439429627745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GiantGoblin_Walk_4
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bfa26a0df948f380800000000000000
+      internalID: -8937312109366956103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GiantGoblin_Walk_5
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2cb746441fb87570800000000000000
+      internalID: 8464725593442204714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GiantGoblin_Walk_6
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08b6146b26946f740800000000000000
+      internalID: 5185412709277068160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GiantGoblin_Walk_7
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64e27859f49252160800000000000000
+      internalID: 7000046617605123654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GiantGoblin_Walk_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 911c0a2e165df9a60800000000000000
+      internalID: 7683094105708085529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GiantGoblin_Walk_9
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77812a910beddbfe0800000000000000
+      internalID: -1171535480120797065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GiantGoblin_Walk_10
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68d0244dc26054510800000000000000
+      internalID: 1532638037798948230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GiantGoblin_Walk_11
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df765030931f42ce0800000000000000
+      internalID: -1430753554430859267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GiantGoblin_Walk_12
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b617c78c535e3fb0800000000000000
+      internalID: -4666200507029186894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GiantGoblin_Walk_13
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93339a4c9546a93c0800000000000000
+      internalID: -4352055753185873095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GiantGoblin_Walk_14
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cc7963eb75006c30800000000000000
+      internalID: 4350483269694356672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GiantGoblin_Walk_15
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8c06b628e50947d0800000000000000
+      internalID: -2933807187615150964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GiantGoblin_Walk_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eefe609a34fc93e70800000000000000
+      internalID: 9095528811956989934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GiantGoblin_Walk_17
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cf910637f95a8750800000000000000
+      internalID: 6307953146383671236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GiantGoblin_Walk_18
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9e1b38bfc1b7eaf0800000000000000
+      internalID: -367129338900177249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GiantGoblin_Walk_19
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a72c1cb5c0c3e3d0800000000000000
+      internalID: -3178484956496386144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GiantGoblin_Walk_20
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b782bf2450c50430800000000000000
+      internalID: 3748613732665821110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GiantGoblin_Walk_21
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90eac5ecd55520a60800000000000000
+      internalID: 7638761779356282377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GiantGoblin_Walk_22
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1c4c709773aa7180800000000000000
+      internalID: -9116794761737647073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GiantGoblin_Walk_23
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a16f6739f75f64990800000000000000
+      internalID: -7401959009253132774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GiantGoblin_Walk_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7448074ab09c59910800000000000000
+      internalID: 1843600674318746695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: f954ee56acb721842869dcf43c2e00a5
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      GiantGoblin_Walk_0: -1303848380203312003
+      GiantGoblin_Walk_1: -1551618829294533526
+      GiantGoblin_Walk_10: 1532638037798948230
+      GiantGoblin_Walk_11: -1430753554430859267
+      GiantGoblin_Walk_12: -4666200507029186894
+      GiantGoblin_Walk_13: -4352055753185873095
+      GiantGoblin_Walk_14: 4350483269694356672
+      GiantGoblin_Walk_15: -2933807187615150964
+      GiantGoblin_Walk_16: 9095528811956989934
+      GiantGoblin_Walk_17: 6307953146383671236
+      GiantGoblin_Walk_18: -367129338900177249
+      GiantGoblin_Walk_19: -3178484956496386144
+      GiantGoblin_Walk_2: 6779672078058533381
+      GiantGoblin_Walk_20: 3748613732665821110
+      GiantGoblin_Walk_21: 7638761779356282377
+      GiantGoblin_Walk_22: -9116794761737647073
+      GiantGoblin_Walk_23: -7401959009253132774
+      GiantGoblin_Walk_24: 1843600674318746695
+      GiantGoblin_Walk_3: 7238064439429627745
+      GiantGoblin_Walk_4: -8937312109366956103
+      GiantGoblin_Walk_5: 8464725593442204714
+      GiantGoblin_Walk_6: 5185412709277068160
+      GiantGoblin_Walk_7: 7000046617605123654
+      GiantGoblin_Walk_8: 7683094105708085529
+      GiantGoblin_Walk_9: -1171535480120797065
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

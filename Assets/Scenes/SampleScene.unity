@@ -1221,9 +1221,9 @@ MonoBehaviour:
   <SelectedTargets>k__BackingField: []
   equipmentSelectedItem: {fileID: 0}
   <HeroEquipmentMenu>k__BackingField: {fileID: 1815657100}
-  <EquipmentSelectedItemNameText>k__BackingField: {fileID: 0}
-  <EquipmentSelectedItemNameShortdescriptionText>k__BackingField: {fileID: 0}
-  <EquipmentSelectedItemNamedescriptionText>k__BackingField: {fileID: 0}
+  <EquipmentSelectedItemNameText>k__BackingField: {fileID: 1367395064}
+  <EquipmentSelectedItemNameShortdescriptionText>k__BackingField: {fileID: 461656906}
+  <EquipmentSelectedItemNamedescriptionText>k__BackingField: {fileID: 706397939}
 --- !u!1 &247999476
 GameObject:
   m_ObjectHideFlags: 0
