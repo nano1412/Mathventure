@@ -111,12 +111,12 @@ Transform:
   m_GameObject: {fileID: 4676256282529668309}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_LocalPosition: {x: -0.25, y: 1.137, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 5483298794899874156}
   - {fileID: 7016351298714828236}
+  - {fileID: 5483298794899874156}
   m_Father: {fileID: 953907951249399606}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7591867148556942136
@@ -166,9 +166,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -346372962, guid: f4e8e776cf73e8743b4bdf070dc658d2, type: 3}
+  m_Sprite: {fileID: -831012828, guid: 603b802679d808c45b9c6a9f0c406f0a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1.4222223, y: 1.4222223}
@@ -187,7 +187,7 @@ Animator:
   m_GameObject: {fileID: 4676256282529668309}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 749440ca92ebc644cacacff52378fea1, type: 2}
+  m_Controller: {fileID: 9100000, guid: 790f1e0abbc979b408ef9d90ba564888, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -225,8 +225,8 @@ Transform:
   m_GameObject: {fileID: 4924489813505689261}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.075, z: 0.075}
+  m_LocalPosition: {x: 0.26600003, y: -1.1079999, z: 0}
+  m_LocalScale: {x: 1, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 4510749128764394264}
@@ -279,7 +279,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.2}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.46666667}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -414,12 +414,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe5b03e888085154aa9738e604fd9fe6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Hero
-  maxHp: 0
-  hp: 0
-  shield: 0
-  isStuned: 0
-  statusEffects: []
-  defaultMove: {fileID: 0}
+  <CharacterType>k__BackingField: 0
+  <MaxHp>k__BackingField: 0
+  <Hp>k__BackingField: 0
+  <Shield>k__BackingField: 0
+  <IsStuned>k__BackingField: 0
+  <DefaultMove>k__BackingField: {fileID: 0}
 --- !u!114 &8424773630750803500
 MonoBehaviour:
   m_ObjectHideFlags: 0
