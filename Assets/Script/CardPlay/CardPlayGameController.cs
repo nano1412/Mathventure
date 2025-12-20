@@ -23,6 +23,8 @@ public class CardPlayGameController : MonoBehaviour
     [field: SerializeField]
     public GameObject PlayedCardSlots { get; private set; }
 
+    [field: SerializeField] public Transform ParenthesesRester { get; private set; }
+
 
     [field: Header("Play Card Slot"), SerializeField]
     public List<Transform> PlayCardList { get; private set; }
@@ -70,7 +72,21 @@ public class CardPlayGameController : MonoBehaviour
     [Header("Equation Solver")]
     private List<GameObject> CardInhandGameObject = new();
 
-    public ParenthesesMode ParenthesesMode;
+    private ParenthesesMode parenthesesMode;
+    public ParenthesesMode ParenthesesMode
+    {
+        get
+        {
+            return parenthesesMode;
+        }
+
+        set
+        {
+            if (value == parenthesesMode) return;
+            parenthesesMode = value;
+            UpdateParenthesesGameobjectPosition();
+        }
+    }
 
     [field: SerializeField]
     public int IsHandReady { get; private set; }
@@ -366,6 +382,65 @@ public class CardPlayGameController : MonoBehaviour
             {
                 return;
             }
+        }
+    }
+
+    private void UpdateParenthesesGameobjectPosition()
+    {
+        // reset
+        PlayOpenParentheses1.gameObject.SetActive(true);
+        PlayCloseParentheses1.gameObject.SetActive(true);
+        PlayOpenParentheses2.gameObject.SetActive(true); ;
+        PlayCloseParentheses2.gameObject.SetActive(true); ;
+        PlayOpenParentheses1.SetParent(ParenthesesRester,false);
+        PlayCloseParentheses1.SetParent(ParenthesesRester, false);
+        PlayOpenParentheses2.SetParent(ParenthesesRester, false);
+        PlayCloseParentheses2.SetParent(ParenthesesRester, false);
+
+        int numberSiblingIndex1 = PlayNumberSlot1.GetSiblingIndex();
+        int numberSiblingIndex2 = PlayNumberSlot2.GetSiblingIndex();
+        int numberSiblingIndex3 = PlayNumberSlot3.GetSiblingIndex();
+        int numberSiblingIndex4 = PlayNumberSlot4.GetSiblingIndex();
+        int increment = 1;
+
+        switch (ParenthesesMode)
+        {
+            case ParenthesesMode.NoParentheses: // NoParentheses
+                break;
+            case ParenthesesMode.DoFrontOperationFirst: // (XX)XX
+                PlayOpenParentheses1.SetParent(PlayedCardSlots.transform, false);
+                PlayCloseParentheses1.SetParent(PlayedCardSlots.transform, false);
+
+                PlayOpenParentheses1.SetSiblingIndex(numberSiblingIndex1);
+                PlayCloseParentheses1.SetSiblingIndex(numberSiblingIndex2 + 1 + increment++);
+
+                break;
+            case ParenthesesMode.DoMiddleOperationFirst: // X(XX)X
+                PlayOpenParentheses1.SetParent(PlayedCardSlots.transform, false);
+                PlayCloseParentheses1.SetParent(PlayedCardSlots.transform, false);
+
+                PlayOpenParentheses1.SetSiblingIndex(numberSiblingIndex2);
+                PlayCloseParentheses1.SetSiblingIndex(numberSiblingIndex3 + 1 + increment++);
+
+                break;
+            case ParenthesesMode.DoLastOperationFirst: // XX(XX)
+                PlayOpenParentheses1.SetParent(PlayedCardSlots.transform, false);
+                PlayCloseParentheses1.SetParent(PlayedCardSlots.transform, false);
+
+                PlayOpenParentheses1.SetSiblingIndex(numberSiblingIndex3);
+                PlayCloseParentheses1.SetSiblingIndex(numberSiblingIndex4 + 1 + increment++);
+                break;
+            case ParenthesesMode.DoMiddleOperationLast: // (XX)(XX)
+                PlayOpenParentheses1.SetParent(PlayedCardSlots.transform, false);
+                PlayCloseParentheses1.SetParent(PlayedCardSlots.transform, false);
+                PlayOpenParentheses2.SetParent(PlayedCardSlots.transform, false);
+                PlayCloseParentheses2.SetParent(PlayedCardSlots.transform, false);
+
+                PlayOpenParentheses1.SetSiblingIndex(numberSiblingIndex1);
+                PlayCloseParentheses1.SetSiblingIndex(numberSiblingIndex2 + 1 + increment++);
+                PlayOpenParentheses2.SetSiblingIndex(numberSiblingIndex3 + increment++);
+                PlayCloseParentheses2.SetSiblingIndex(numberSiblingIndex4 + 1 + increment++);
+                break;
         }
     }
 

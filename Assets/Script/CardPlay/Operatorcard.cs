@@ -1,7 +1,8 @@
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 using static UnityEngine.Rendering.HDROutputUtils;
 using static Utils;
 
@@ -9,26 +10,43 @@ public class Operatorcard : MonoBehaviour, IPointerUpHandler
 {
 
     public OperationEnum operation;
-    private TMP_Text operationText;
-    /*
-     * priority are follow PEMDAS principal
-     * Parentheses = 3
-     * Exponents (not use in this game)
-     * Multiplication and Division = 2
-     * Addition and Subtraction = 1
-     * not Operator = 0
-     * if the priority are equal then process from left to right
-     */
+    [SerializeField] private Image image;
+
+    [SerializeField] private Sprite plusSprite;
+    [SerializeField] private Sprite minusSprite;
+    [SerializeField] private Sprite multiplySprite;
+    [SerializeField] private Sprite divideSprite;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        image = gameObject.GetComponent<Image>();
+        switch (operation)
+        {
+            case OperationEnum.Plus:
+                image.sprite = plusSprite;
+                break;
 
-        operationText = transform.Find("operationText").GetComponent<TMP_Text>();
 
-        operationText.text = ChangeOperationTextToSymbol(operation);
+            case OperationEnum.Minus:
+                image.sprite = minusSprite;
+                break;
+
+
+            case OperationEnum.Multiply:
+                image.sprite = multiplySprite;
+                break;
+
+
+            case OperationEnum.Divide:
+                image.sprite = divideSprite;
+                break;
+
+        }
+
     }
+    
 
     // Update is called once per frame
     void Update()
