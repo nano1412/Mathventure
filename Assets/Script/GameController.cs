@@ -15,7 +15,20 @@ public class GameController : MonoBehaviour
     public int MaxCardInHand { get; private set; } = 6;
 
     [field: SerializeField]
+    public bool IsEndless { get; private set; }
+    
+    [field: SerializeField]
     public int Level { get; private set; }
+
+    [field: SerializeField]
+    public int Wave { get; private set; }
+
+    [field: Header("wave data"), SerializeField]
+    public List<LevelData> LevelDatas { get; private set; }
+
+    [field: SerializeField]
+    public List<WaveData> EndlessWaveDatas { get; private set; }
+
 
     [field: SerializeField]
     public List<OperationEnum> PossibleOperators { get; private set; }
@@ -30,8 +43,6 @@ public class GameController : MonoBehaviour
     [field: SerializeField]
     public Deck TemplateDeck { get; private set; }
 
-    [field: SerializeField]
-    public int Wave { get; private set; }
 
 
     //charector that player pick
@@ -63,6 +74,10 @@ public class GameController : MonoBehaviour
         PossibleOperators = LevelCreator.current.PossibleOperators;
         TemplateDeck = LevelCreator.current.TemplateDeck;
         Level = LevelCreator.current.Level;
+
+        IsEndless = LevelCreator.current.IsEndless;
+        LevelDatas = LevelCreator.current.LevelDatas;
+        EndlessWaveDatas = LevelCreator.current.EndlessWaveDatas;
 
         GameStart();
     }
@@ -96,6 +111,7 @@ public class GameController : MonoBehaviour
     public void NextRoundStart()
     {
         Debug.LogWarning("imprement ememy data reader and reset deck here");
+        ActionGameController.current.SpawnNextWave();
 
 
         this.SetGamestate(GameState.PlayerInput);
@@ -130,7 +146,7 @@ public class GameController : MonoBehaviour
     public void RounndWin()
     {
         //to round victory screen or check win
-        if(Level < 4 && Wave >= 4)
+        if(!IsEndless && Wave >= 3)
         {
             this.SetGamestate(GameState.Win);
             //show sumary of this run

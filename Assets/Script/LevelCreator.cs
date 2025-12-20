@@ -18,13 +18,16 @@ public class LevelCreator : MonoBehaviour
     public int Level { get; private set; }
 
     [field: SerializeField]
+    public bool IsEndless { get; private set; }
+
+    [field: SerializeField]
     public Deck TemplateDeck { get; private set; }
 
     [field: Header("wave data"), SerializeField]
     public List<LevelData> LevelDatas { get; private set; }
 
     [field:SerializeField]
-    public List<WaveData> Endless_waveDatas { get; private set; }
+    public List<WaveData> EndlessWaveDatas { get; private set; }
 
     [field:Header("Shop Data"), SerializeField]
     public List<GameObject> SpawnableItems { get; private set; }

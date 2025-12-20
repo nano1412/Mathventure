@@ -39,6 +39,11 @@ public class CharacterSlotsHolder : MonoBehaviour
                 Destroy(slot.GetChild(j).gameObject);
             }
 
+            if (characters[i] == null)
+            {
+                continue;
+            }
+
             GameObject instance = Instantiate(characters[i], slot, false);
             this.characters.Add(instance);
         }

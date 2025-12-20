@@ -1,9 +1,11 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Serialization;
 using static Utils;
+using Random = UnityEngine.Random;
 
 public class ActionGameController : MonoBehaviour
 {
@@ -132,6 +134,20 @@ public class ActionGameController : MonoBehaviour
         foreach(Enemy enemy in enemyQueue)
         {
             enemy.Attack();
+        }
+    }
+
+    public void SpawnNextWave()
+    {
+        if (!GameController.current.IsEndless && GameController.current.Wave <= 3)
+        {
+            EnemySlotsHolder.SpawnCharacters(GameController.current.LevelDatas[GameController.current.Level-1].Waves[GameController.current.Wave-1].Enemies.ToList());
+        } else if(GameController.current.IsEndless)
+        {
+            EnemySlotsHolder.SpawnCharacters(GameController.current.EndlessWaveDatas[Random.Range(0, GameController.current.EndlessWaveDatas.Count())].Enemies.ToList());
+        } else
+        {
+            EnemySlotsHolder.SpawnCharacters(new List<GameObject>());
         }
     }
 }

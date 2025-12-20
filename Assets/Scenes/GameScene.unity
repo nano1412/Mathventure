@@ -10586,11 +10586,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameController
   startWithoutLevelCretor: 0
   <MaxCardInHand>k__BackingField: 6
+  <IsEndless>k__BackingField: 0
   <Level>k__BackingField: 1
+  <Wave>k__BackingField: 1
+  <LevelDatas>k__BackingField: []
+  <EndlessWaveDatas>k__BackingField: []
   <PossibleOperators>k__BackingField: 
   gameState: 0
   <TemplateDeck>k__BackingField: {fileID: 11400000, guid: 5009f4b849de2c44eaf0937517670067, type: 2}
-  <Wave>k__BackingField: 1
 --- !u!4 &1986135735
 Transform:
   m_ObjectHideFlags: 0
@@ -10779,9 +10782,15 @@ MonoBehaviour:
   GameSceneName: 
   <PossibleOperators>k__BackingField: 00000000010000000200000003000000
   <Level>k__BackingField: 1
+  <IsEndless>k__BackingField: 1
   <TemplateDeck>k__BackingField: {fileID: 11400000, guid: 5009f4b849de2c44eaf0937517670067, type: 2}
-  <LevelDatas>k__BackingField: []
-  <Endless_waveDatas>k__BackingField: []
+  <LevelDatas>k__BackingField:
+  - {fileID: 11400000, guid: 39991ade54ad7f14696f29d4e362e91b, type: 2}
+  <EndlessWaveDatas>k__BackingField:
+  - {fileID: 11400000, guid: aecd1dbb6ad30b64da6b84ad232f0cb4, type: 2}
+  - {fileID: 11400000, guid: 627e353b81822d94fa19477ccf582580, type: 2}
+  - {fileID: 11400000, guid: 2358410be6bcd97459e34ee55de8a6b8, type: 2}
+  - {fileID: 11400000, guid: 3c9ba0cfd2ee02848a83d2bb627c39f7, type: 2}
   <SpawnableItems>k__BackingField:
   - {fileID: 1095311628101397342, guid: da4041eebd624b1438ecc64def9910bd, type: 3}
   - {fileID: 1095311628101397342, guid: 0f5bfdba1c869bc4cafe1f07bd8ae1fb, type: 3}
