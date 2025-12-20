@@ -27,15 +27,17 @@ public class CardPlayGameController : MonoBehaviour
 
 
     [field: Header("Play Card Slot"), SerializeField]
-    public List<Transform> PlayCardList { get; private set; }
+    public List<GameObject> PlayCardSlotList { get; private set; }
+    [field:SerializeField]
+    public List<GameObject> PlayCardList { get; private set; }
 
-    [field: SerializeField] public Transform PlayNumberSlot1 { get; private set; }
-    [field: SerializeField] public Transform PlayOperatorSlot1 { get; private set; }
-    [field: SerializeField] public Transform PlayNumberSlot2 { get; private set; }
-    [field: SerializeField] public Transform PlayOperatorSlot2 { get; private set; }
-    [field: SerializeField] public Transform PlayNumberSlot3 { get; private set; }
-    [field: SerializeField] public Transform PlayOperatorSlot3 { get; private set; }
-    [field: SerializeField] public Transform PlayNumberSlot4 { get; private set; }
+    [field: SerializeField] public GameObject PlayNumberSlot1 { get; private set; }
+    [field: SerializeField] public GameObject PlayOperatorSlot1 { get; private set; }
+    [field: SerializeField] public GameObject PlayNumberSlot2 { get; private set; }
+    [field: SerializeField] public GameObject PlayOperatorSlot2 { get; private set; }
+    [field: SerializeField] public GameObject PlayNumberSlot3 { get; private set; }
+    [field: SerializeField] public GameObject PlayOperatorSlot3 { get; private set; }
+    [field: SerializeField] public GameObject PlayNumberSlot4 { get; private set; }
 
     [field: SerializeField] public Transform PlayOpenParentheses1 { get; private set; }
     [field: SerializeField] public Transform PlayCloseParentheses1 { get; private set; }
@@ -157,18 +159,19 @@ public class CardPlayGameController : MonoBehaviour
         PossibleOperators = GameController.current.PossibleOperators;
         IsPositiveOnly = GameController.current.Level < 2;
 
-        PlayCardList.Add(PlayNumberSlot1);
-        PlayCardList.Add(PlayOperatorSlot1);
-        PlayCardList.Add(PlayNumberSlot2);
-        PlayCardList.Add(PlayOperatorSlot2);
-        PlayCardList.Add(PlayNumberSlot3);
-        PlayCardList.Add(PlayOperatorSlot3);
-        PlayCardList.Add(PlayNumberSlot4);
+        PlayCardSlotList.Add(PlayNumberSlot1);
+        PlayCardSlotList.Add(PlayOperatorSlot1);
+        PlayCardSlotList.Add(PlayNumberSlot2);
+        PlayCardSlotList.Add(PlayOperatorSlot2);
+        PlayCardSlotList.Add(PlayNumberSlot3);
+        PlayCardSlotList.Add(PlayOperatorSlot3);
+        PlayCardSlotList.Add(PlayNumberSlot4);
 }
 
     // Update is called once per frame
     void Update()
     {
+        PlayCardList = CardslotsToCards();
         CardInhandGameObject = new List<GameObject>();
         foreach (Transform child in PlayedCardSlots.transform)
         {
@@ -178,7 +181,7 @@ public class CardPlayGameController : MonoBehaviour
             }
         }
 
-        IsHandReady = ValidationHand(CardInhandGameObject);
+        IsHandReady = ValidationHand(PlayCardList);
         if (CardPlayGameController.current.IsHandReady > 0 && CardPlayGameController.current.IsHandReady < 4)
         {
             PreviewScore(ParenthesesMode.NoParentheses);
@@ -200,7 +203,7 @@ public class CardPlayGameController : MonoBehaviour
         //Debug.Log("valid hand go to calculation");
 
         List<object[]> previewSteplog = new List<object[]>();
-        previewSteplog = PlayCardCalculation.EvaluateEquation(CardInhandGameObject, parentheses);
+        previewSteplog = PlayCardCalculation.EvaluateEquation(PlayCardList, parentheses);
         //foreach (var step in StepLog)
         //{
         //    Debug.Log($"{step[0]}, Pos: {step[1]}");
@@ -223,7 +226,7 @@ public class CardPlayGameController : MonoBehaviour
         //Debug.Log(CardInhandGameObject.Count);
 
         OperatorOrders = new List<int>();
-        StepLog = PlayCardCalculation.EvaluateEquation(CardInhandGameObject, ParenthesesMode);
+        StepLog = PlayCardCalculation.EvaluateEquation(PlayCardList, ParenthesesMode);
         foreach (var step in StepLog)
         {
             Debug.Log($"{step[0]}, Pos: {step[1]}");
@@ -235,6 +238,7 @@ public class CardPlayGameController : MonoBehaviour
         }
 
         PreviewPlayerAnswer = 0; //reset PreviewPlayerAnswer for next round
+        ParenthesesMode = ParenthesesMode.NoParentheses;
         PlayerAnswer = (double)StepLog[StepLog.Count - 1][1];
 
         GetMultiplierValue();
@@ -397,10 +401,10 @@ public class CardPlayGameController : MonoBehaviour
         PlayOpenParentheses2.SetParent(ParenthesesRester, false);
         PlayCloseParentheses2.SetParent(ParenthesesRester, false);
 
-        int numberSiblingIndex1 = PlayNumberSlot1.GetSiblingIndex();
-        int numberSiblingIndex2 = PlayNumberSlot2.GetSiblingIndex();
-        int numberSiblingIndex3 = PlayNumberSlot3.GetSiblingIndex();
-        int numberSiblingIndex4 = PlayNumberSlot4.GetSiblingIndex();
+        int numberSiblingIndex1 = PlayNumberSlot1.transform.GetSiblingIndex();
+        int numberSiblingIndex2 = PlayNumberSlot2.transform.GetSiblingIndex();
+        int numberSiblingIndex3 = PlayNumberSlot3.transform.GetSiblingIndex();
+        int numberSiblingIndex4 = PlayNumberSlot4.transform.GetSiblingIndex();
         int increment = 1;
 
         switch (ParenthesesMode)
@@ -461,7 +465,20 @@ public class CardPlayGameController : MonoBehaviour
         return OperatorOrderEnum;
     }
 
+    public List<GameObject> CardslotsToCards()
+    {
+        List<GameObject> cards = new();
 
+        foreach (GameObject cardslot in PlayCardSlotList)
+        {
+            if (cardslot.transform.childCount > 0)
+            {
+                cards.Add(cardslot.transform.GetChild(0).gameObject);
+            }
+        }
+
+        return cards;
+    }
 
     #endregion
 }

@@ -135,11 +135,11 @@ public class GameController : MonoBehaviour
 
     public void CleanupFornextRound()
     {
-        foreach (Transform cardAlreadyPlayed in CardPlayGameController.current.PlayCardList)
+        foreach (GameObject cardAlreadyPlayed in CardPlayGameController.current.PlayCardSlotList)
         {
-            if(cardAlreadyPlayed.childCount > 0)
+            if(cardAlreadyPlayed.transform.childCount > 0)
             {
-                Destroy(cardAlreadyPlayed.GetChild(0).gameObject);
+                Destroy(cardAlreadyPlayed.transform.GetChild(0).gameObject);
             }
         }
 

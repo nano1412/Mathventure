@@ -84,15 +84,15 @@ public static class PlayCardCalculation
     }
 
 
-    public static List<object[]> EvaluateEquation(List<GameObject> handEquation, ParenthesesMode mode)
+    public static List<object[]> EvaluateEquation(List<GameObject> cards, ParenthesesMode mode)
     {
-        if (ValidationHand(handEquation) < 0)
+        if (ValidationHand(cards) < 0)
         {
             return null;
         }
 
         // Convert to simplified struct
-        simplified = GameObjectToSimplifiedCard(handEquation);
+        simplified = GameObjectToSimplifiedCard(cards);
 
         // Apply parentheses collapsing
         ApplyParenthesesMode(simplified, mode);
@@ -342,27 +342,29 @@ public static class PlayCardCalculation
     #endregion
 
     #region hand Validation
-    public static int ValidationHand(List<GameObject> handEquation)
+    public static int ValidationHand(List<GameObject> cards)
     {
+        
+
         int numberCount = 0;
         // Validation check if first and last Gameobject have Card component
-        if (handEquation.Count % 2 == 0 || handEquation[0].GetComponent<Card>() == null || handEquation[^1].GetComponent<Card>() == null)
+        if (cards.Count % 2 == 0 || cards[0].GetComponent<Card>() == null || cards[^1].GetComponent<Card>() == null)
         {
             //wrong order, the number must come first and last
             return -1;
         }
 
         // Validation check if the list got the number and operator zip in together
-        for (int i = 0; i < handEquation.Count; i++)
+        for (int i = 0; i < cards.Count; i++)
         {
-            if (i % 2 == 0 && handEquation[i].GetComponent<Card>() == null ||
-                i % 2 == 1 && handEquation[i].GetComponent<Operatorcard>() == null)
+            if (i % 2 == 0 && cards[i].GetComponent<Card>() == null ||
+                i % 2 == 1 && cards[i].GetComponent<Operatorcard>() == null)
             {
                 //wrong order, operator and number must be zipped between each other
                 return -2;
             }
 
-            if (i % 2 == 0 && handEquation[i].GetComponent<Card>() != null)
+            if (i % 2 == 0 && cards[i].GetComponent<Card>() != null)
             {
                 numberCount++;
             }

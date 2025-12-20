@@ -72,10 +72,10 @@ public class ActionGameController : MonoBehaviour
 
         for (int i = 0; i < 3; i++)
         {
-            OperationEnum heroType = CardPlayGameController.current.PlayCardList[operatorOrders[i]].GetChild(0).GetComponent<Operatorcard>().operation;
+            OperationEnum heroType = CardPlayGameController.current.PlayCardSlotList[operatorOrders[i]].transform.GetChild(0).GetComponent<Operatorcard>().operation;
 
-            double leftNumberCardEffectValue = CardPlayGameController.current.PlayCardList[operatorOrders[i] - 1].GetChild(0).GetComponent<Card>().GetEffectValue();
-            double rightNumberCardEffectValue = CardPlayGameController.current.PlayCardList[operatorOrders[i] + 1].GetChild(0).GetComponent<Card>().GetEffectValue();
+            double leftNumberCardEffectValue = CardPlayGameController.current.PlayCardSlotList[operatorOrders[i] - 1].transform.GetChild(0).GetComponent<Card>().GetEffectValue();
+            double rightNumberCardEffectValue = CardPlayGameController.current.PlayCardSlotList[operatorOrders[i] + 1].transform.GetChild(0).GetComponent<Card>().GetEffectValue();
 
             switch (heroType)
             {

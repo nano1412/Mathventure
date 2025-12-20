@@ -2219,14 +2219,15 @@ MonoBehaviour:
   <OperatorButton>k__BackingField: {fileID: 0}
   <PlayedCardSlots>k__BackingField: {fileID: 6252857976482067356}
   <ParenthesesRester>k__BackingField: {fileID: 1010751156}
+  <PlayCardSlotList>k__BackingField: []
   <PlayCardList>k__BackingField: []
-  <PlayNumberSlot1>k__BackingField: {fileID: 1546324737415473434}
-  <PlayOperatorSlot1>k__BackingField: {fileID: 6784841865152208306}
-  <PlayNumberSlot2>k__BackingField: {fileID: 5555726496724786816}
-  <PlayOperatorSlot2>k__BackingField: {fileID: 4374779036600542711}
-  <PlayNumberSlot3>k__BackingField: {fileID: 4709804140398179003}
-  <PlayOperatorSlot3>k__BackingField: {fileID: 1502407232260923640}
-  <PlayNumberSlot4>k__BackingField: {fileID: 7458473486600308994}
+  <PlayNumberSlot1>k__BackingField: {fileID: 7878243093317933071}
+  <PlayOperatorSlot1>k__BackingField: {fileID: 2589692679633930556}
+  <PlayNumberSlot2>k__BackingField: {fileID: 2357925076290943203}
+  <PlayOperatorSlot2>k__BackingField: {fileID: 7085830611445231624}
+  <PlayNumberSlot3>k__BackingField: {fileID: 6515567096677107997}
+  <PlayOperatorSlot3>k__BackingField: {fileID: 8600967434590161403}
+  <PlayNumberSlot4>k__BackingField: {fileID: 4631367716517917231}
   <PlayOpenParentheses1>k__BackingField: {fileID: 613476421}
   <PlayCloseParentheses1>k__BackingField: {fileID: 932754473}
   <PlayOpenParentheses2>k__BackingField: {fileID: 223096366}
@@ -13169,7 +13170,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.00025177, y: 0}
+  m_AnchoredPosition: {x: -0.00024414062, y: 0}
   m_SizeDelta: {x: -0.00048828, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4113524946997012619
