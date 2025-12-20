@@ -85,7 +85,6 @@ public class Shop : MonoBehaviour
 
     private void HandleGameStateChange(GameState gameState)
     {
-        Debug.Log("check shop valid");
         if(gameState != GameState.Shop)
         {
             gameObject.SetActive(false);

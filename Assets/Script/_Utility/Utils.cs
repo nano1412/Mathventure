@@ -42,7 +42,9 @@ public static class Utils
     {
         GetClose,
         Casting,
-        Projectile
+        Projectile,
+        ToTheBackOfOpponentLine,
+        InFrontOfOpponentLine
     }
 
     public enum OperationPriority

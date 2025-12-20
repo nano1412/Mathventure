@@ -24,10 +24,12 @@ public class HorizontalCardHolder : MonoBehaviour
 
     public void SetUpPlayerSlot(Action onComplete)
     {
-        for (int i = 0; i < GameController.current.MaxCardInHand; i++)
+        int currentChildCount = transform.childCount;
+        for (int i = 0; i < GameController.current.MaxCardInHand - currentChildCount; i++)
         {
             Instantiate(slotPrefab, transform);
         }
+
 
         rect = GetComponent<RectTransform>();
 

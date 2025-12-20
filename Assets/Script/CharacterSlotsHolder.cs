@@ -7,6 +7,17 @@ public class CharacterSlotsHolder : MonoBehaviour
     private List<GameObject> characters = new();
     public IReadOnlyList<GameObject> Characters => characters;
 
+    private void Start()
+    {
+        foreach(Transform characterSlot in CharacterSlots)
+        {
+            if(characterSlot.childCount > 0)
+            {
+                this.characters.Add(characterSlot.GetChild(0).gameObject);
+            }
+        }
+    }
+
     public void SpawnCharacters(List<GameObject> characters)
     {
         int spawnCount = Mathf.Min(characters.Count, CharacterSlots.Count);

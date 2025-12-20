@@ -10,10 +10,10 @@ public class ActionGameController : MonoBehaviour
     public static ActionGameController current;
 
     [field: SerializeField]
-    public Transform HeroSlotsTransform { get; private set; }
+    public CharacterSlotsHolder HeroSlotsHolder { get; private set; }
 
     [field: SerializeField]
-    public Transform EnemySlotsTransform { get; private set; }
+    public CharacterSlotsHolder EnemySlotsHolder { get; private set; }
 
     [field: SerializeField]
     public GameObject PlusHero { get; private set; }
@@ -91,15 +91,15 @@ public class ActionGameController : MonoBehaviour
                 break;
             }
 
-            Debug.Log(attackerHero.transform.name + " is attacking with Lcard:" + leftNumberCardEffectValue + " Rcard:" + rightNumberCardEffectValue + " multiplier:" + CardPlayGameController.current.Multiplier);
+            
 
-            attackerHero.Attack(CardPlayGameController.current.Multiplier, leftNumberCardEffectValue + rightNumberCardEffectValue);
+            attackerHero.Attack(CardPlayGameController.current.Multiplier, leftNumberCardEffectValue, rightNumberCardEffectValue);
         }
     }
 
     private bool IsEnemyRemain()
     {
-        foreach(Transform enemySlot in EnemySlotsTransform)
+        foreach(Transform enemySlot in EnemySlotsHolder.transform)
         {
             if(enemySlot.childCount >= 1)
             {
@@ -114,7 +114,7 @@ public class ActionGameController : MonoBehaviour
     {
         List<Enemy> enemyQueue = new List<Enemy>();
 
-        foreach (Transform enemyslot in EnemySlotsTransform)
+        foreach (Transform enemyslot in EnemySlotsHolder.transform)
         {
             if (enemyslot.childCount != 0)
             {

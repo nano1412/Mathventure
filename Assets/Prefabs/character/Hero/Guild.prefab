@@ -136,11 +136,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe5b03e888085154aa9738e604fd9fe6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Hero
-  maxHp: 0
-  hp: 0
-  shield: 0
-  isStuned: 0
-  defaultMove: {fileID: 0}
+  <CharacterType>k__BackingField: 1
+  <MaxHp>k__BackingField: 0
+  <Hp>k__BackingField: 0
+  <Shield>k__BackingField: 0
+  <IsStuned>k__BackingField: 0
+  <DefaultMove>k__BackingField: {fileID: 11400000, guid: 4c99e65115e82de4a82740bcd4ffd1b4, type: 2}
+  <FacingDirection>k__BackingField: {x: 0, y: 0}
 --- !u!114 &-3746205287628266338
 MonoBehaviour:
   m_ObjectHideFlags: 0

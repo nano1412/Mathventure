@@ -5,10 +5,10 @@ using static Utils;
 [CreateAssetMenu(fileName = "move", menuName = "Scriptable Objects/Action/move")]
 public class Move : ScriptableObject
 {
-    [SerializeField] protected double attackValue;
-    [SerializeField] protected TargetType targetType;
-    [SerializeField] protected MoveType moveType;
-    [SerializeField] protected AnimationType AnimationType;
+    [field:SerializeField] public double Value { get; private set; }
+    [field: SerializeField] public TargetType TargetType { get; private set; }
+    [field: SerializeField] public MoveType MoveType { get; private set; }
+    [field: SerializeField] public AnimationType AnimationType { get; private set; }
 
-    [SerializeField] protected List<ModifierSO> applyStatusViaAttack = new List<ModifierSO>();
+    [field: SerializeField] public List<ModifierSO> ApplyStatusViaAttack { get; private set; } = new List<ModifierSO>();
 }

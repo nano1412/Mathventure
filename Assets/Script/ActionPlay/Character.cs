@@ -15,6 +15,7 @@ public abstract class Character : MonoBehaviour
     [field: SerializeField] public List<StatusEffect> StatusEffects { get; private set; } = new List<StatusEffect>();
 
     [field: Header("Attack data"), SerializeField] public Move DefaultMove { get; private set; }
+    [field: SerializeField] public Vector2 FacingDirection { get; private set; }
 
     public void TakeDamage(double damage, string attacker)
     {
@@ -105,6 +106,43 @@ public abstract class Character : MonoBehaviour
             }
             StatusEffects.RemoveAt(index);
         }
+    }
+
+    protected List<GameObject> GetTargetByMove()
+    {
+        CharacterSlotsHolder ally;
+        CharacterSlotsHolder opponent;
+
+        if(CharacterType == CharacterType.Enemy)
+        {
+            ally = ActionGameController.current.EnemySlotsHolder;
+            opponent = ActionGameController.current.HeroSlotsHolder;
+        } else
+        {
+            ally = ActionGameController.current.HeroSlotsHolder;
+            opponent = ActionGameController.current.EnemySlotsHolder;
+        }
+
+            switch (DefaultMove.TargetType)
+            {
+                case TargetType.front:
+                return opponent.GetFirstCharacterAsList();
+
+                case TargetType.firstTwo:
+                return opponent.GetFirstTwoCharactersAsList();
+
+                case TargetType.back:
+                return opponent.GetLastCharacterAsList();
+
+                case TargetType.all:
+                return opponent.GetAllCharactersAsList();
+
+                case TargetType.allFriendly:
+                return ally.GetAllCharactersAsList();
+
+            }
+
+        return new List<GameObject>();
     }
 }
 

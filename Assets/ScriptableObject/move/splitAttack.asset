@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9df704bf0044914caf00bc147676f14, type: 3}
   m_Name: splitAttack
   m_EditorClassIdentifier: 
-  attackDamage: 0.5
-  attackType: 3
-  applyStatusViaAttack: []
+  <Value>k__BackingField: 2
+  <TargetType>k__BackingField: 3
+  <MoveType>k__BackingField: 0
+  <AnimationType>k__BackingField: 4
+  <ApplyStatusViaAttack>k__BackingField: []

@@ -327,6 +327,8 @@ public class CardPlayGameController : MonoBehaviour
     {
         for(int i = 0; i < amount; i++)
         {
+            
+
             bool isHandHaveSpace = false;
             Transform currentCardSlot = null;
             foreach (Transform cardSlot in PlayerHand.transform)
@@ -357,6 +359,11 @@ public class CardPlayGameController : MonoBehaviour
             } else
             {
                 Debug.Log("hand already full");
+                return;
+            }
+
+            if (PlayerHand.transform.childCount > GameController.current.MaxCardInHand)
+            {
                 return;
             }
         }

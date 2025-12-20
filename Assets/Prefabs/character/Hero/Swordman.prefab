@@ -419,7 +419,8 @@ MonoBehaviour:
   <Hp>k__BackingField: 0
   <Shield>k__BackingField: 0
   <IsStuned>k__BackingField: 0
-  <DefaultMove>k__BackingField: {fileID: 0}
+  <DefaultMove>k__BackingField: {fileID: 11400000, guid: cfccbbd814f09574989235ccde3ab89f, type: 2}
+  <FacingDirection>k__BackingField: {x: 0, y: 0}
 --- !u!114 &8424773630750803500
 MonoBehaviour:
   m_ObjectHideFlags: 0

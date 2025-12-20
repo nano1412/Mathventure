@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9df704bf0044914caf00bc147676f14, type: 3}
   m_Name: wideSwing
   m_EditorClassIdentifier: 
-  attackDamage: 1
-  attackType: 2
-  applyStatusViaAttack: []
+  <Value>k__BackingField: 5
+  <TargetType>k__BackingField: 2
+  <MoveType>k__BackingField: 0
+  <AnimationType>k__BackingField: 4
+  <ApplyStatusViaAttack>k__BackingField: []
