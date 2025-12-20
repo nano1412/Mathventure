@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using static Utils;
 
-[CreateAssetMenu(fileName = "move", menuName = "Scriptable Objects/move")]
+[CreateAssetMenu(fileName = "move", menuName = "Scriptable Objects/Action/move")]
 public class Move : ScriptableObject
 {
     [SerializeField] protected double attackValue;

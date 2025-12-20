@@ -20,6 +20,12 @@ public class LevelCreator : MonoBehaviour
     [field: SerializeField]
     public Deck TemplateDeck { get; private set; }
 
+    [field: Header("wave data"), SerializeField]
+    public List<LevelData> LevelDatas { get; private set; }
+
+    [field:SerializeField]
+    public List<WaveData> Endless_waveDatas { get; private set; }
+
     [field:Header("Shop Data"), SerializeField]
     public List<GameObject> SpawnableItems { get; private set; }
 

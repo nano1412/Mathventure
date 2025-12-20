@@ -1,7 +1,7 @@
 using UnityEngine;
 using static Utils;
 
-[CreateAssetMenu(fileName = "ModifierSO", menuName = "Scriptable Objects/ModifierSO")]
+[CreateAssetMenu(fileName = "ModifierSO", menuName = "Scriptable Objects/Action/ModifierSO")]
 public class ModifierSO : ScriptableObject
 {
     [Header("universal")]

@@ -6,7 +6,7 @@ using UnityEditorInternal;
 using UnityEngine;
 using static Utils;
 
-[CreateAssetMenu(fileName = "deck", menuName = "Scriptable Objects/deck")]
+[CreateAssetMenu(fileName = "deck", menuName = "Scriptable Objects/Card/deck")]
 public class Deck : ScriptableObject
 {
     public List<CardData> cardDatas;
