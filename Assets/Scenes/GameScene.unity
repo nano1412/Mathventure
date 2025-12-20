@@ -7085,6 +7085,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1117776343}
+  - component: {fileID: 1117776344}
   m_Layer: 0
   m_Name: hero slots
   m_TagString: Untagged
@@ -7112,6 +7113,19 @@ Transform:
   - {fileID: 1237306310}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1117776344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117776342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 360b033dbe39deb4eb3144192159410e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterSlots
+  <CharacterSlots>k__BackingField: []
 --- !u!1 &1148664231
 GameObject:
   m_ObjectHideFlags: 0
@@ -7524,6 +7538,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1273160277}
+  - component: {fileID: 1273160278}
   m_Layer: 0
   m_Name: enemy slots
   m_TagString: Untagged
@@ -7550,6 +7565,19 @@ Transform:
   - {fileID: 2075304956}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1273160278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273160276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 360b033dbe39deb4eb3144192159410e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterSlots
+  <CharacterSlots>k__BackingField: []
 --- !u!4 &1315042917 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8786516175686430025, guid: 750d537e68df2d342aaf27bee30c4e62, type: 3}
@@ -10739,6 +10767,8 @@ MonoBehaviour:
   <PossibleOperators>k__BackingField: 00000000010000000200000003000000
   <Level>k__BackingField: 1
   <TemplateDeck>k__BackingField: {fileID: 11400000, guid: 5009f4b849de2c44eaf0937517670067, type: 2}
+  <LevelDatas>k__BackingField: []
+  <Endless_waveDatas>k__BackingField: []
   <SpawnableItems>k__BackingField:
   - {fileID: 1095311628101397342, guid: da4041eebd624b1438ecc64def9910bd, type: 3}
   - {fileID: 1095311628101397342, guid: 0f5bfdba1c869bc4cafe1f07bd8ae1fb, type: 3}
