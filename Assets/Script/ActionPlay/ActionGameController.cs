@@ -95,7 +95,7 @@ public class ActionGameController : MonoBehaviour
 
             
 
-            attackerHero.Attack(CardPlayGameController.current.Multiplier, leftNumberCardEffectValue, rightNumberCardEffectValue);
+            attackerHero.Attack(multiplier, leftNumberCardEffectValue, rightNumberCardEffectValue);
         }
     }
 
@@ -148,6 +148,59 @@ public class ActionGameController : MonoBehaviour
         } else
         {
             EnemySlotsHolder.SpawnCharacters(new List<GameObject>());
+        }
+    }
+
+    public void Debug_ForceAttack()
+    {
+        Action onCompleteAttack = GameController.current.CleanupFornextRound;
+        Action onWin = GameController.current.RounndWin;
+
+        //formerly heroattack();
+        GameController.current.SetGamestate(GameState.HeroAttack);
+
+        double multiplier = 1;
+        List<int> operatorOrders = CardPlayGameController.current.OperatorOrders;
+        List<SimplifiedCard> simplifiedCardData = PlayCardCalculation.simplified;
+
+        List<OperationEnum> heroTypes = new List<OperationEnum> { OperationEnum.Plus, OperationEnum.Minus, OperationEnum.Multiply };
+        for (int i = 0; i < 3; i++)
+        {
+            OperationEnum heroType = heroTypes[i];
+
+            double leftNumberCardEffectValue = 5;
+            double rightNumberCardEffectValue = 5;
+
+            switch (heroType)
+            {
+                case OperationEnum.Plus:
+                    attackerHero = PlusHero.transform.GetChild(0).GetComponent<Hero>();
+                    break;
+                case OperationEnum.Minus:
+                    attackerHero = MinusHero.transform.GetChild(0).GetComponent<Hero>();
+                    break;
+                case OperationEnum.Multiply:
+                    attackerHero = MultiplyHero.transform.GetChild(0).GetComponent<Hero>();
+                    break;
+                case OperationEnum.Divide:
+                    attackerHero = DivideHero.transform.GetChild(0).GetComponent<Hero>();
+                    break;
+            }
+
+
+
+            attackerHero.Attack(multiplier, leftNumberCardEffectValue, rightNumberCardEffectValue);
+        }
+
+        if (IsEnemyRemain())
+        {
+            EmenyAttack(GetEnemyAttackQueue());
+
+            onCompleteAttack?.Invoke();
+        }
+        else
+        {
+            onWin?.Invoke();
         }
     }
 }
