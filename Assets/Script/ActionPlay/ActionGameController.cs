@@ -38,6 +38,11 @@ public class ActionGameController : MonoBehaviour
         current = this;
     }
 
+    private void OnDestroy()
+    {
+        if (current == this) current = null;
+    }
+
     public void AllCharecterAttack(Action onCompleteAttack,Action onWin)
     {
         HeroAttack();

@@ -129,6 +129,11 @@ public class CardPlayGameController : MonoBehaviour
         current = this;
     }
 
+    private void OnDestroy()
+    {
+        if (current == this) current = null;
+    }
+
     public void SetupCardContoller()
     {
         PersistentDeck = Instantiate(GameController.current.TemplateDeck);

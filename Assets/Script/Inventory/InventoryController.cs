@@ -24,6 +24,11 @@ public class InventoryController : MonoBehaviour
         current = this;
     }
 
+    private void OnDestroy()
+    {
+        if (current == this) current = null;
+    }
+
     public void AddCoin(int amount)
     {
         if(amount <= 0)

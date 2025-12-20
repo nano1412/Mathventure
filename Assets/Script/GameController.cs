@@ -8,9 +8,11 @@ public class GameController : MonoBehaviour
 {
     public static GameController current;
     public event Action<GameState> OnGameStateChange;
+    [field: SerializeField]
+    private bool startWithoutLevelCretor;
 
     [field: SerializeField]
-    public int MaxCardInHand { get; private set; }
+    public int MaxCardInHand { get; private set; } = 6;
 
     [field: SerializeField]
     public int Level { get; private set; }
@@ -37,12 +39,46 @@ public class GameController : MonoBehaviour
     private void Awake()
     {
         current = this;
+        
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private void OnEnable()
+    {
+        LevelCreator.current.OnGameStart += GameSetup;
+    }
+
+    private void OnDisable()
+    {
+        LevelCreator.current.OnGameStart -= GameSetup;
+    }
+
+    private void OnDestroy()
+    { 
+      if (current == this) current = null; 
+    }
+
+    private void GameSetup(int i)
+    {
+        GameState = GameState.PlayerInput;
+        PossibleOperators = LevelCreator.current.PossibleOperators;
+        TemplateDeck = LevelCreator.current.TemplateDeck;
+        Level = LevelCreator.current.Level;
+
+        GameStart();
+    }
+
+
     void Start()
     {
-        //temp fix
+        if (startWithoutLevelCretor)
+        {
+            StartWithOutLevelCretor();
+        }
+    }
+
+    private void StartWithOutLevelCretor()
+    {
+
         PossibleOperators.Add(OperationEnum.Plus);
         PossibleOperators.Add(OperationEnum.Minus);
         PossibleOperators.Add(OperationEnum.Multiply);

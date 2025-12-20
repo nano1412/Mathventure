@@ -65,6 +65,22 @@ public class Shop : MonoBehaviour
     {
         
         ResetShop();
+        LevelCreator.current.OnGameStart += UpdatdPossibleShopItem;
+    }
+
+    private void OnDisable()
+    {
+        LevelCreator.current.OnGameStart -= UpdatdPossibleShopItem;
+    }
+
+    private void OnDestroy()
+    {
+        if (current == this) current = null;
+    }
+
+    private void UpdatdPossibleShopItem(int i)
+    {
+        SpawnableItems = LevelCreator.current.SpawnableItems;
     }
 
     private void HandleGameStateChange(GameState gameState)
