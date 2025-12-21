@@ -46,6 +46,15 @@ public class CharacterSlotsHolder : MonoBehaviour
             GameObject instance = Instantiate(characters[i], slot, false);
             this.characters.Add(instance);
         }
+
+        characters = new();
+        foreach (Transform characterSlot in CharacterSlots)
+        {
+            if (characterSlot.childCount > 0)
+            {
+                this.characters.Add(characterSlot.GetChild(0).gameObject);
+            }
+        }
     }
 
     public void UpdateCharactersPosition()

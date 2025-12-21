@@ -110,7 +110,7 @@ public class GameController : MonoBehaviour
     void GameStart()
     {
         CardPlayGameController.current.SetupCardContoller();
-        CardPlayGameController.current.PlayerHand.GetComponent<HorizontalCardHolder>().SetUpPlayerSlot(NextRoundStart);
+        CardPlayGameController.current.PlayerHand.GetComponent<HorizontalCardHolder>().SetUpPlayerSlot(OnNextWaveStart);
     }
 
     public void OnNextWaveStart()
