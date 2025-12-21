@@ -28,7 +28,7 @@ public class CardPlayGameController : MonoBehaviour
 
     [field: Header("Play Card Slot"), SerializeField]
     public List<GameObject> PlayCardSlotList { get; private set; }
-    [field:SerializeField]
+    [field: SerializeField]
     public List<GameObject> PlayCardList { get; private set; }
 
     [field: SerializeField] public GameObject PlayNumberSlot1 { get; private set; }
@@ -171,7 +171,7 @@ public class CardPlayGameController : MonoBehaviour
         PlayCardSlotList.Add(PlayNumberSlot3);
         PlayCardSlotList.Add(PlayOperatorSlot3);
         PlayCardSlotList.Add(PlayNumberSlot4);
-}
+    }
 
     // Update is called once per frame
     void Update()
@@ -350,9 +350,9 @@ public class CardPlayGameController : MonoBehaviour
 
     public void AddCard(int amount)
     {
-        for(int i = 0; i < amount; i++)
+        for (int i = 0; i < amount; i++)
         {
-            
+
 
             bool isHandHaveSpace = false;
             Transform currentCardSlot = null;
@@ -381,7 +381,8 @@ public class CardPlayGameController : MonoBehaviour
                 newCardScript.SetCardData(SelectedCarddata);
 
                 currentCardSlot.gameObject.SetActive(true);
-            } else
+            }
+            else
             {
                 Debug.Log("hand already full");
                 return;
@@ -401,7 +402,7 @@ public class CardPlayGameController : MonoBehaviour
         PlayCloseParentheses1.gameObject.SetActive(true);
         PlayOpenParentheses2.gameObject.SetActive(true); ;
         PlayCloseParentheses2.gameObject.SetActive(true); ;
-        PlayOpenParentheses1.SetParent(ParenthesesRester,false);
+        PlayOpenParentheses1.SetParent(ParenthesesRester, false);
         PlayCloseParentheses1.SetParent(ParenthesesRester, false);
         PlayOpenParentheses2.SetParent(ParenthesesRester, false);
         PlayCloseParentheses2.SetParent(ParenthesesRester, false);

@@ -20,7 +20,7 @@ public class ModifierSO : ScriptableObject
     [field: SerializeField] public double EffectValue { get; private set; }
     [field: SerializeField] public double Chance { get; private set; }
 
-    [Header ("Consumable/effect")]
+    [Header("Consumable/effect")]
     [field: SerializeField] public int Duration { get; private set; }
 
     [Header("Card Condition")]

@@ -313,13 +313,14 @@ public static class PlayCardCalculation
         if (isPositiveOnly)
         {
             filtered.RemoveAll(n => n.Key <= 0);
-        } else
+        }
+        else
         {
             filtered.RemoveAll(n => n.Key <= -maxAnswerRange);
         }
 
-            // Determine target index from percentile
-            int index = (int)Math.Round(difficulty * (filtered.Count - 1));
+        // Determine target index from percentile
+        int index = (int)Math.Round(difficulty * (filtered.Count - 1));
         int targetCount = filtered[index].Value.Count();
 
         // Get all entries with the same count as target
@@ -344,7 +345,7 @@ public static class PlayCardCalculation
     #region hand Validation
     public static int ValidationHand(List<GameObject> cards)
     {
-        
+
 
         int numberCount = 0;
         // Validation check if first and last Gameobject have Card component

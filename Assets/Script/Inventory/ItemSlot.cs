@@ -9,7 +9,7 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if(!(TypeOfSlot == SlotType.Shop || TypeOfSlot == SlotType.Display) && transform.childCount >= 0)
+        if (!(TypeOfSlot == SlotType.Shop || TypeOfSlot == SlotType.Display) && transform.childCount >= 0)
         {
             EquipmentInventory.current.SetInventorySelectItem(transform.GetChild(0).gameObject);
         }
@@ -17,14 +17,14 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
 
     private void OnTransformChildrenChanged()
     {
-        if(transform.childCount > 1)
+        if (transform.childCount > 1)
         {
             Debug.LogWarning("there are more than 1 items in " + transform.name + " slot");
         }
 
         if (transform.childCount == 1)
         {
-            if(transform.GetChild(0).GetComponent<Item>() == null)
+            if (transform.GetChild(0).GetComponent<Item>() == null)
             {
                 Debug.LogWarning("item on " + transform.name + " dont have item data");
             }

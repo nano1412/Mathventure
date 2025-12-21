@@ -58,7 +58,7 @@ public class ActionGameController : MonoBehaviour
         if (current == this) current = null;
     }
 
-    public void AllCharecterAttack(Action onCompleteAttack,Action onWin)
+    public void AllCharecterAttack(Action onCompleteAttack, Action onWin)
     {
         onCompleteAttackCallback = onCompleteAttack;
         onWinCallback = onWin;
@@ -152,9 +152,9 @@ public class ActionGameController : MonoBehaviour
 
     private bool IsEnemyRemain()
     {
-        foreach(Transform enemySlot in EnemySlotsHolder.transform)
+        foreach (Transform enemySlot in EnemySlotsHolder.transform)
         {
-            if(enemySlot.childCount >= 1)
+            if (enemySlot.childCount >= 1)
             {
                 return true;
             }
@@ -199,11 +199,13 @@ public class ActionGameController : MonoBehaviour
     {
         if (!GameController.current.IsEndless && GameController.current.Wave <= 3)
         {
-            EnemySlotsHolder.SpawnCharacters(GameController.current.LevelDatas[GameController.current.Level-1].Waves[GameController.current.Wave-1].Enemies.ToList());
-        } else if(GameController.current.IsEndless)
+            EnemySlotsHolder.SpawnCharacters(GameController.current.LevelDatas[GameController.current.Level - 1].Waves[GameController.current.Wave - 1].Enemies.ToList());
+        }
+        else if (GameController.current.IsEndless)
         {
             EnemySlotsHolder.SpawnCharacters(GameController.current.EndlessWaveDatas[Random.Range(0, GameController.current.EndlessWaveDatas.Count())].Enemies.ToList());
-        } else
+        }
+        else
         {
             EnemySlotsHolder.SpawnCharacters(new List<GameObject>());
         }

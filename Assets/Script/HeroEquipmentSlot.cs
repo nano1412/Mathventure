@@ -26,12 +26,12 @@ public class HeroEquipmentSlot : MonoBehaviour
     private void Awake()
     {
         EquipmentInventory.current.OnEquipmentSelectedItemChange += CheckIsSelectedEquipmentWearable;
-        
+
     }
 
     void CheckIsSelectedEquipmentWearable(GameObject equipment)
     {
-        if(equipment == null)
+        if (equipment == null)
         {
             EquipBtn.interactable = false;
             return;
@@ -42,7 +42,8 @@ public class HeroEquipmentSlot : MonoBehaviour
             SetButton(UnequipItem, "Unequip");
             EquipBtn.interactable = true;
             return;
-        } else
+        }
+        else
         {
             SetButton(EquipItem, "Equip");
         }
@@ -69,7 +70,7 @@ public class HeroEquipmentSlot : MonoBehaviour
                 return;
 
         }
-        
+
     }
 
     public void EquipItem()
@@ -99,13 +100,13 @@ public class HeroEquipmentSlot : MonoBehaviour
 
         }
 
-        if(equipmentSlot.transform.childCount >= 1)
+        if (equipmentSlot.transform.childCount >= 1)
         {
             Debug.Log(HeroTypeOwner + " already have equipment on " + equipmentSlot.name);
             return;
         }
 
-        equipment.transform.SetParent(equipmentSlot.transform,false);
+        equipment.transform.SetParent(equipmentSlot.transform, false);
         EquipmentInventory.current.EquipmentSelectedItem = null;
     }
 

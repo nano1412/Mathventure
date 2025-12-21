@@ -58,9 +58,9 @@ public static class Utils
 
     public enum CardType { Number, Operator }
 
-    public enum ItemType { Weapon, Armor, Equipment,Consumable, General_Item}
+    public enum ItemType { Weapon, Armor, Equipment, Consumable, General_Item }
 
-    public enum SlotType { Weapon, Armor, Equipment, Consumable, Shop ,Display}
+    public enum SlotType { Weapon, Armor, Equipment, Consumable, Shop, Display }
 
     public enum CharacterType { Hero_Plus, Hero_Minus, Hero_Multiply, Hero_Divide, Hero_Buff, Enemy }
 

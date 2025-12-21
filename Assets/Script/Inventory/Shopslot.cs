@@ -12,13 +12,13 @@ public class Shopslot : MonoBehaviour, IPointerClickHandler
 
     public void UpdateText()
     {
-        if(itemslot.transform.childCount > 0)
+        if (itemslot.transform.childCount > 0)
         {
             price.text = itemslot.transform.GetChild(0).GetComponent<Item>().Price.ToString();
             shortDiscription.text = itemslot.transform.GetChild(0).GetComponent<Item>().ShortDescription;
             displayItemname.text = itemslot.transform.GetChild(0).GetComponent<Item>().ItemName;
         }
-        
+
     }
 
     public GameObject GetItem()

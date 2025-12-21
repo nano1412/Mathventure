@@ -9,9 +9,9 @@ public class CharacterSlotsHolder : MonoBehaviour
 
     private void Start()
     {
-        foreach(Transform characterSlot in CharacterSlots)
+        foreach (Transform characterSlot in CharacterSlots)
         {
-            if(characterSlot.childCount > 0)
+            if (characterSlot.childCount > 0)
             {
                 this.characters.Add(characterSlot.GetChild(0).gameObject);
             }

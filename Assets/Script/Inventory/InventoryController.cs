@@ -31,7 +31,7 @@ public class InventoryController : MonoBehaviour
 
     public void AddCoin(int amount)
     {
-        if(amount <= 0)
+        if (amount <= 0)
         {
             Debug.LogWarning("amount is negative, use SpendCoin() instead");
         }
@@ -63,8 +63,8 @@ public class InventoryController : MonoBehaviour
 
     public bool AddItem(GameObject item)
     {
-        
-        if(item.GetComponent<Item>() == null)
+
+        if (item.GetComponent<Item>() == null)
         {
             Debug.LogWarning(item + " is not Item");
             return false;
@@ -85,11 +85,11 @@ public class InventoryController : MonoBehaviour
 
     private bool AddItemToInventory(List<GameObject> slotList, GameObject item)
     {
-        foreach(GameObject slot in slotList)
+        foreach (GameObject slot in slotList)
         {
-            if(slot.transform.childCount <= 0)
+            if (slot.transform.childCount <= 0)
             {
-                item.transform.SetParent(slot.transform,false);
+                item.transform.SetParent(slot.transform, false);
                 return true;
             }
         }

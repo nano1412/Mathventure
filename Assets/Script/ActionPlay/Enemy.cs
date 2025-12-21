@@ -7,7 +7,7 @@ public class Enemy : Character
     {
         targets = GetTargetByMove();
 
-        foreach(GameObject target in targets)
+        foreach (GameObject target in targets)
         {
             Debug.Log(transform.name + " is attacking " + target.name);
 

@@ -6,7 +6,7 @@ public class PlayedCardHolder : MonoBehaviour
     private void Start()
     {
         GameController.current.OnGameStateChange += HandleGameStateChange;
-        
+
     }
 
     private void HandleGameStateChange(GameState gameState)

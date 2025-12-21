@@ -63,7 +63,7 @@ public class Shop : MonoBehaviour
 
     private void OnEnable()
     {
-        
+
         ResetShop();
         LevelCreator.current.OnGameStart += UpdatdPossibleShopItem;
     }
@@ -85,10 +85,11 @@ public class Shop : MonoBehaviour
 
     private void HandleGameStateChange(GameState gameState)
     {
-        if(gameState != GameState.Shop)
+        if (gameState != GameState.Shop)
         {
             gameObject.SetActive(false);
-        } else
+        }
+        else
         {
             gameObject.SetActive(true);
         }
@@ -114,7 +115,7 @@ public class Shop : MonoBehaviour
         if (SpawnItem(CurrentRerollPrice))
         {
             Debug.Log("rerolled shop item");
-            
+
             CurrentRerollPrice += RerollInflation;
 
         }
@@ -122,7 +123,7 @@ public class Shop : MonoBehaviour
 
     public void BuyItem()
     {
-        if(ShopSelectedItem == null)
+        if (ShopSelectedItem == null)
         {
             Debug.Log("No item selected");
             return;
@@ -135,21 +136,22 @@ public class Shop : MonoBehaviour
         }
 
 
-            if (InventoryController.current.AddItem(ShopSelectedItem.gameObject))
-            {
-                Debug.Log("buy successfully");
-                ShopSelectItem(null);
-            }
+        if (InventoryController.current.AddItem(ShopSelectedItem.gameObject))
+        {
+            Debug.Log("buy successfully");
+            ShopSelectItem(null);
+        }
     }
 
     public void ShopSelectItem(GameObject item)
     {
-        if(item == null)
+        if (item == null)
         {
             ShopSelectedItem = null;
             ShopSelectedItemImagePreview.sprite = DefaultShopImgPreview;
             DescriptionPreview.text = "";
-        } else
+        }
+        else
         {
             ShopSelectedItem = item.GetComponent<Item>();
             ShopSelectedItemImagePreview.sprite = item.GetComponent<Image>().sprite;
@@ -162,7 +164,7 @@ public class Shop : MonoBehaviour
 
     bool SpawnItem(int CoinSpend)
     {
-        if(!InventoryController.current.SpendCoin(CoinSpend))
+        if (!InventoryController.current.SpendCoin(CoinSpend))
         {
             Debug.Log("spawn item not sucessful");
             return false;
@@ -172,7 +174,7 @@ public class Shop : MonoBehaviour
 
         foreach (GameObject shopslot in ShopSlots)
         {
-            if(shopslot.transform.Find("itemSlot").childCount > 0)
+            if (shopslot.transform.Find("itemSlot").childCount > 0)
             {
                 Destroy(shopslot.transform.Find("itemSlot").GetChild(0).gameObject);
             }
@@ -186,7 +188,7 @@ public class Shop : MonoBehaviour
 
     void UpdateBtn(int coin)
     {
-        if(ShopSelectedItem != null)
+        if (ShopSelectedItem != null)
         {
             int itemprice = ShopSelectedItem.GetComponent<Item>().Price;
             BuyPriceText.text = "buy (" + itemprice + "G)";
@@ -197,5 +199,5 @@ public class Shop : MonoBehaviour
         RerollBtn.interactable = CurrentRerollPrice <= coin;
     }
 
-    
+
 }

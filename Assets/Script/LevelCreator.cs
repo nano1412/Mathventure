@@ -26,10 +26,10 @@ public class LevelCreator : MonoBehaviour
     [field: Header("wave data"), SerializeField]
     public List<LevelData> LevelDatas { get; private set; }
 
-    [field:SerializeField]
+    [field: SerializeField]
     public List<WaveData> EndlessWaveDatas { get; private set; }
 
-    [field:Header("Shop Data"), SerializeField]
+    [field: Header("Shop Data"), SerializeField]
     public List<GameObject> SpawnableItems { get; private set; }
 
     private void Awake()
@@ -46,7 +46,7 @@ public class LevelCreator : MonoBehaviour
         // Persist across scenes
         DontDestroyOnLoad(gameObject);
     }
-    
+
     public void SetLevel(int level)
     {
         this.Level = level;
@@ -54,7 +54,7 @@ public class LevelCreator : MonoBehaviour
 
     public void ToGameSceneBtn()
     {
-        SceneManager.LoadScene(GameSceneName); 
+        SceneManager.LoadScene(GameSceneName);
     }
 
     public void GameSceneReady()

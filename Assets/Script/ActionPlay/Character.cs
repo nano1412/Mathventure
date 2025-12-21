@@ -8,7 +8,7 @@ public abstract class Character : MonoBehaviour
     [field: Header("Character"), SerializeField] public CharacterType CharacterType { get; private set; }
     [field: SerializeField] protected Animator animator;
 
-    [field: Header("Hp and status"),SerializeField] public double MaxHp { get; private set; }
+    [field: Header("Hp and status"), SerializeField] public double MaxHp { get; private set; }
     [field: SerializeField] public double Hp { get; private set; }
     [field: SerializeField] public double Shield { get; private set; }
     [field: SerializeField] public bool IsStuned { get; private set; }
@@ -51,7 +51,7 @@ public abstract class Character : MonoBehaviour
 
     public virtual void CheckDead()
     {
-        if(Hp < 0)
+        if (Hp < 0)
         {
             Debug.Log(transform.name + "is dead");
             Dead();
@@ -103,11 +103,11 @@ public abstract class Character : MonoBehaviour
 
 
         statusEffect.duration--;
-        if(statusEffect.duration <= 0)
+        if (statusEffect.duration <= 0)
         {
             Debug.Log(statusEffect.name + " has been resolve");
 
-            if(statusEffect.effectType == EffectType.Stun)
+            if (statusEffect.effectType == EffectType.Stun)
             {
                 IsStuned = false;
                 Debug.Log(transform.name + " regain consciousness");
@@ -145,34 +145,35 @@ public abstract class Character : MonoBehaviour
         CharacterSlotsHolder ally;
         CharacterSlotsHolder opponent;
 
-        if(CharacterType == CharacterType.Enemy)
+        if (CharacterType == CharacterType.Enemy)
         {
             ally = ActionGameController.current.EnemySlotsHolder;
             opponent = ActionGameController.current.HeroSlotsHolder;
-        } else
+        }
+        else
         {
             ally = ActionGameController.current.HeroSlotsHolder;
             opponent = ActionGameController.current.EnemySlotsHolder;
         }
 
-            switch (DefaultMove.TargetType)
-            {
-                case TargetType.front:
+        switch (DefaultMove.TargetType)
+        {
+            case TargetType.front:
                 return opponent.GetFirstCharacterAsList();
 
-                case TargetType.firstTwo:
+            case TargetType.firstTwo:
                 return opponent.GetFirstTwoCharactersAsList();
 
-                case TargetType.back:
+            case TargetType.back:
                 return opponent.GetLastCharacterAsList();
 
-                case TargetType.all:
+            case TargetType.all:
                 return opponent.GetAllCharactersAsList();
 
-                case TargetType.allFriendly:
+            case TargetType.allFriendly:
                 return ally.GetAllCharactersAsList();
 
-            }
+        }
 
         return new List<GameObject>();
     }

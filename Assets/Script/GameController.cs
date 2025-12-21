@@ -16,7 +16,7 @@ public class GameController : MonoBehaviour
 
     [field: SerializeField]
     public bool IsEndless { get; private set; }
-    
+
     [field: SerializeField]
     public int Level { get; private set; }
 
@@ -35,10 +35,14 @@ public class GameController : MonoBehaviour
 
     [field: SerializeField]
     private GameState gameState;
-    public GameState GameState { get => gameState; private set {
+    public GameState GameState
+    {
+        get => gameState; private set
+        {
             gameState = value;
             OnGameStateChange?.Invoke(gameState);
-        } }
+        }
+    }
 
     [field: SerializeField]
     public Deck TemplateDeck { get; private set; }
@@ -50,7 +54,7 @@ public class GameController : MonoBehaviour
     private void Awake()
     {
         current = this;
-        
+
     }
 
     private void OnEnable()
@@ -64,8 +68,8 @@ public class GameController : MonoBehaviour
     }
 
     private void OnDestroy()
-    { 
-      if (current == this) current = null; 
+    {
+        if (current == this) current = null;
     }
 
     private void GameSetup(int i)
@@ -123,21 +127,21 @@ public class GameController : MonoBehaviour
 
     public void PlayCardButton()
     {
-        CardPlayGameController.current.SummitEquation(OnEquationSummitionSucess); 
+        CardPlayGameController.current.SummitEquation(OnEquationSummitionSucess);
     }
 
     void OnEquationSummitionSucess()
     {
-        ActionGameController.current.AllCharecterAttack(CleanupFornextRound,RounndWin);
+        ActionGameController.current.AllCharecterAttack(CleanupFornextRound, RounndWin);
 
-        
+
     }
 
     public void CleanupFornextRound()
     {
         foreach (GameObject cardAlreadyPlayed in CardPlayGameController.current.PlayCardSlotList)
         {
-            if(cardAlreadyPlayed.transform.childCount > 0)
+            if (cardAlreadyPlayed.transform.childCount > 0)
             {
                 Destroy(cardAlreadyPlayed.transform.GetChild(0).gameObject);
             }
@@ -149,11 +153,12 @@ public class GameController : MonoBehaviour
     public void RounndWin()
     {
         //to round victory screen or check win
-        if(!IsEndless && Wave >= 3)
+        if (!IsEndless && Wave >= 3)
         {
             this.SetGamestate(GameState.Win);
             //show sumary of this run
-        } else
+        }
+        else
         {
             //this.SetGamestate(GameState.RoundVictory);
             Wave++;

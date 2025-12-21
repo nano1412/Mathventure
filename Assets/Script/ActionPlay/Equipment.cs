@@ -10,6 +10,6 @@ public class Equipment : Item
     public override bool UseItem()
     {
         Debug.Log("you cant use equipmemt");
-            return false;
+        return false;
     }
 }

@@ -10,7 +10,7 @@ public class Hero : Character
 
         foreach (GameObject target in targets)
         {
-            Debug.Log(transform.name + " is attacking " + target.name  +  " with Lcard:" + leftAtkValue + " Rcard:" + RightAtkValue + " multiplier:" + mul);
+            Debug.Log(transform.name + " is attacking " + target.name + " with Lcard:" + leftAtkValue + " Rcard:" + RightAtkValue + " multiplier:" + mul);
         }
 
         animator.SetTrigger("Attack");

@@ -68,7 +68,7 @@ public class EquipmentInventory : MonoBehaviour
 
     public void SetInventorySelectItem(GameObject item)
     {
-        if(item.GetComponent<Item>() == null)
+        if (item.GetComponent<Item>() == null)
         {
             Debug.Log(item + " dont have item data in it");
             return;
@@ -80,7 +80,7 @@ public class EquipmentInventory : MonoBehaviour
     {
         isActive = !isActive;
 
-        if(GameController.current.GameState == Utils.GameState.Shop)
+        if (GameController.current.GameState == Utils.GameState.Shop)
         {
             gameObject.SetActive(true);
             HeroEquipmentMenu.SetActive(false);

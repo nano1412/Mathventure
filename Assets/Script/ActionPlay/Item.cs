@@ -47,7 +47,7 @@ public abstract class Item : MonoBehaviour
             ItemRelation = transform.parent.GetComponent<ItemSlot>().TypeOfSlot;
         }
 
-        if(ItemRelation == SlotType.Shop)
+        if (ItemRelation == SlotType.Shop)
         {
             image.raycastTarget = false;
         }
@@ -55,7 +55,7 @@ public abstract class Item : MonoBehaviour
         {
             image.raycastTarget = true;
         }
-        
+
     }
 
     public abstract bool UseItem();
