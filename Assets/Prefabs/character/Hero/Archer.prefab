@@ -95,9 +95,9 @@ GameObject:
   - component: {fileID: 4510749128764394264}
   - component: {fileID: 7591867148556942136}
   - component: {fileID: 5687510040163902897}
-  - component: {fileID: 4327969839328437963}
+  - component: {fileID: 5734037114741494206}
   m_Layer: 6
-  m_Name: Swordman_Sprite
+  m_Name: Archer_Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -167,7 +167,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -831012828, guid: 603b802679d808c45b9c6a9f0c406f0a, type: 3}
+  m_Sprite: {fileID: 1080334134, guid: 9198118bde9e1b242921428316504210, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -200,7 +200,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &4327969839328437963
+--- !u!114 &5734037114741494206
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -211,7 +211,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16e093f35dae14c49b28f332f87dead2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CharacterSpriteRelay
+  m_EditorClassIdentifier: '::'
 --- !u!1 &4924489813505689261
 GameObject:
   m_ObjectHideFlags: 0
@@ -393,7 +393,7 @@ GameObject:
   - component: {fileID: -1104955617905091999}
   - component: {fileID: 8424773630750803500}
   m_Layer: 0
-  m_Name: Swordman
+  m_Name: Archer
   m_TagString: Character
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -427,7 +427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe5b03e888085154aa9738e604fd9fe6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Hero
-  <CharacterType>k__BackingField: 0
+  <CharacterType>k__BackingField: 3
   <Animator>k__BackingField: {fileID: 0}
   <MaxHp>k__BackingField: 0
   <Hp>k__BackingField: 0

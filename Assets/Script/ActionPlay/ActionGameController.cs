@@ -34,9 +34,22 @@ public class ActionGameController : MonoBehaviour
 
 
     private Hero attackerHero;
+    private Queue<HeroAttackData> heroAttackQueue = new();
+    private HeroAttackData currentHeroAttack;
+
+    private Queue<Enemy> enemiesAttackQueue = new();
+    private Enemy currentEnemyAttack;
+
+    private Action onCompleteAttackCallback;
+    private Action onWinCallback;
 
     private void Awake()
     {
+        if (current != null && current != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
         current = this;
     }
 
@@ -47,18 +60,10 @@ public class ActionGameController : MonoBehaviour
 
     public void AllCharecterAttack(Action onCompleteAttack,Action onWin)
     {
+        onCompleteAttackCallback = onCompleteAttack;
+        onWinCallback = onWin;
+
         HeroAttack();
-
-        if (IsEnemyRemain())
-        {
-            EmenyAttack(GetEnemyAttackQueue());
-
-            onCompleteAttack?.Invoke();
-        } 
-        else
-        {
-            onWin?.Invoke();
-        }
     }
 
     private void HeroAttack()
@@ -67,35 +72,79 @@ public class ActionGameController : MonoBehaviour
 
         double multiplier = CardPlayGameController.current.Multiplier;
         List<int> operatorOrders = CardPlayGameController.current.OperatorOrders;
-        List<SimplifiedCard> simplifiedCardData = PlayCardCalculation.simplified;
 
+        heroAttackQueue.Clear();
 
         for (int i = 0; i < 3; i++)
         {
-            OperationEnum heroType = CardPlayGameController.current.PlayCardSlotList[operatorOrders[i]].transform.GetChild(0).GetComponent<Operatorcard>().operation;
+            OperationEnum heroType =
+                CardPlayGameController.current
+                    .PlayCardSlotList[operatorOrders[i]]
+                    .transform.GetChild(0)
+                    .GetComponent<Operatorcard>()
+                    .operation;
 
-            double leftNumberCardEffectValue = CardPlayGameController.current.PlayCardSlotList[operatorOrders[i] - 1].transform.GetChild(0).GetComponent<Card>().GetEffectValue();
-            double rightNumberCardEffectValue = CardPlayGameController.current.PlayCardSlotList[operatorOrders[i] + 1].transform.GetChild(0).GetComponent<Card>().GetEffectValue();
+            double leftValue =
+                CardPlayGameController.current
+                    .PlayCardSlotList[operatorOrders[i] - 1]
+                    .transform.GetChild(0)
+                    .GetComponent<Card>()
+                    .GetEffectValue();
 
-            switch (heroType)
+            double rightValue =
+                CardPlayGameController.current
+                    .PlayCardSlotList[operatorOrders[i] + 1]
+                    .transform.GetChild(0)
+                    .GetComponent<Card>()
+                    .GetEffectValue();
+
+            Hero hero = GetHeroByOperation(heroType);
+
+            heroAttackQueue.Enqueue(new HeroAttackData
             {
-                case OperationEnum.Plus:
-                    attackerHero = PlusHero.transform.GetChild(0).GetComponent<Hero>();
-                break;
-                case OperationEnum.Minus:
-                    attackerHero = MinusHero.transform.GetChild(0).GetComponent<Hero>();
-                break;
-                case OperationEnum.Multiply:
-                    attackerHero = MultiplyHero.transform.GetChild(0).GetComponent<Hero>();
-                break;
-                case OperationEnum.Divide:
-                    attackerHero = DivideHero.transform.GetChild(0).GetComponent<Hero>();
-                break;
-            }
+                hero = hero,
+                multiplier = multiplier,
+                left = leftValue,
+                right = rightValue
+            });
+        }
 
-            
+        StartNextHeroAttack();
+    }
 
-            attackerHero.Attack(multiplier, leftNumberCardEffectValue, rightNumberCardEffectValue);
+    private void StartNextHeroAttack()
+    {
+        while (heroAttackQueue.Count > 0)
+        {
+            currentHeroAttack = heroAttackQueue.Dequeue();
+
+            if (currentHeroAttack.hero == null)
+                continue;
+
+            if (currentHeroAttack.hero.Hp <= 0)
+                continue;
+
+            currentHeroAttack.hero.Attack(
+                currentHeroAttack.multiplier,
+                currentHeroAttack.left,
+                currentHeroAttack.right
+            );
+            return;
+        }
+
+        OnAllHeroesFinished();
+    }
+
+    private void OnAllHeroesFinished()
+    {
+        if (IsEnemyRemain())
+        {
+            enemiesAttackQueue = GetEnemyAttackQueue();
+            StartNextEnemyAttack();
+        }
+        else
+        {
+            onWinCallback?.Invoke();
         }
     }
 
@@ -112,29 +161,36 @@ public class ActionGameController : MonoBehaviour
         return false;
     }
 
-    private List<Enemy> GetEnemyAttackQueue()
+    private Queue<Enemy> GetEnemyAttackQueue()
     {
-        List<Enemy> enemyQueue = new List<Enemy>();
+        Queue<Enemy> enemyQueue = new Queue<Enemy>();
 
         foreach (Transform enemyslot in EnemySlotsHolder.transform)
         {
             if (enemyslot.childCount != 0)
             {
-                enemyQueue.Add(enemyslot.GetChild(0).GetComponent<Enemy>());
+                enemyQueue.Enqueue(enemyslot.GetChild(0).GetComponent<Enemy>());
             }
         }
 
         return enemyQueue;
     }
 
-    private void EmenyAttack(List<Enemy> enemyQueue)
+    private void StartNextEnemyAttack()
     {
-        GameController.current.SetGamestate(GameState.EnemyAttack);
-
-        foreach(Enemy enemy in enemyQueue)
+        if (enemiesAttackQueue.Count == 0)
         {
-            enemy.Attack();
+            OnAllEnemiesFinished();
+            return;
         }
+
+        currentEnemyAttack = enemiesAttackQueue.Dequeue();
+        currentEnemyAttack.Attack();
+    }
+
+    private void OnAllEnemiesFinished()
+    {
+        onCompleteAttackCallback?.Invoke();
     }
 
     public void SpawnNextWave()
@@ -153,54 +209,71 @@ public class ActionGameController : MonoBehaviour
 
     public void Debug_ForceAttack()
     {
-        Action onCompleteAttack = GameController.current.CleanupFornextRound;
-        Action onWin = GameController.current.RounndWin;
+        onCompleteAttackCallback = GameController.current.CleanupFornextRound;
+        onWinCallback = GameController.current.RounndWin;
 
-        //formerly heroattack();
         GameController.current.SetGamestate(GameState.HeroAttack);
 
         double multiplier = 1;
-        List<int> operatorOrders = CardPlayGameController.current.OperatorOrders;
-        List<SimplifiedCard> simplifiedCardData = PlayCardCalculation.simplified;
+        double leftValue = 5;
+        double rightValue = 5;
 
-        List<OperationEnum> heroTypes = new List<OperationEnum> { OperationEnum.Plus, OperationEnum.Minus, OperationEnum.Multiply };
-        for (int i = 0; i < 3; i++)
+        List<OperationEnum> heroTypes = new()
+    {
+        OperationEnum.Plus,
+        OperationEnum.Minus,
+        OperationEnum.Multiply
+    };
+
+        heroAttackQueue.Clear();
+
+        foreach (OperationEnum heroType in heroTypes)
         {
-            OperationEnum heroType = heroTypes[i];
+            Hero hero = GetHeroByOperation(heroType);
 
-            double leftNumberCardEffectValue = 5;
-            double rightNumberCardEffectValue = 5;
+            if (hero == null)
+                continue;
 
-            switch (heroType)
+            heroAttackQueue.Enqueue(new HeroAttackData
             {
-                case OperationEnum.Plus:
-                    attackerHero = PlusHero.transform.GetChild(0).GetComponent<Hero>();
-                    break;
-                case OperationEnum.Minus:
-                    attackerHero = MinusHero.transform.GetChild(0).GetComponent<Hero>();
-                    break;
-                case OperationEnum.Multiply:
-                    attackerHero = MultiplyHero.transform.GetChild(0).GetComponent<Hero>();
-                    break;
-                case OperationEnum.Divide:
-                    attackerHero = DivideHero.transform.GetChild(0).GetComponent<Hero>();
-                    break;
-            }
-
-
-
-            attackerHero.Attack(multiplier, leftNumberCardEffectValue, rightNumberCardEffectValue);
+                hero = hero,
+                multiplier = multiplier,
+                left = leftValue,
+                right = rightValue
+            });
         }
 
-        if (IsEnemyRemain())
+        StartNextHeroAttack();
+    }
+
+
+    private Hero GetHeroByOperation(OperationEnum heroType)
+    {
+        return heroType switch
         {
-            EmenyAttack(GetEnemyAttackQueue());
+            OperationEnum.Plus => PlusHero.transform.GetChild(0).GetComponent<Hero>(),
+            OperationEnum.Minus => MinusHero.transform.GetChild(0).GetComponent<Hero>(),
+            OperationEnum.Multiply => MultiplyHero.transform.GetChild(0).GetComponent<Hero>(),
+            OperationEnum.Divide => DivideHero.transform.GetChild(0).GetComponent<Hero>(),
+            _ => null
+        };
+    }
 
-            onCompleteAttack?.Invoke();
-        }
-        else
-        {
-            onWin?.Invoke();
-        }
+    private struct HeroAttackData
+    {
+        public Hero hero;
+        public double multiplier;
+        public double left;
+        public double right;
+    }
+
+    public void OnHeroAnimationFinished()
+    {
+        StartNextHeroAttack();
+    }
+
+    public void OnEnemyAnimationFinished()
+    {
+        StartNextEnemyAttack();
     }
 }

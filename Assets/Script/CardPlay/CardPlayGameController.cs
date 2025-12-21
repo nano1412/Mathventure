@@ -144,6 +144,11 @@ public class CardPlayGameController : MonoBehaviour
 
     private void Awake()
     {
+        if (current != null && current != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
         current = this;
     }
 

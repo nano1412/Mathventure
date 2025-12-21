@@ -137,6 +137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Hero
   <CharacterType>k__BackingField: 1
+  <Animator>k__BackingField: {fileID: 0}
   <MaxHp>k__BackingField: 0
   <Hp>k__BackingField: 0
   <Shield>k__BackingField: 0
@@ -168,6 +169,7 @@ GameObject:
   - component: {fileID: 4032930780281048695}
   - component: {fileID: 819523181206534517}
   - component: {fileID: 5491275845360244238}
+  - component: {fileID: 7835249109063069671}
   m_Layer: 0
   m_Name: Guild_Sprite
   m_TagString: Untagged
@@ -272,6 +274,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7835249109063069671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2246979080626507038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16e093f35dae14c49b28f332f87dead2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterSpriteRelay
 --- !u!1 &8752262434936344282
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,29 +3,16 @@ using UnityEngine;
 
 public class Hero : Character
 {
-    
-
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void Attack(double mul, double leftAtkValue, double RightAtkValue)
     {
-        List<GameObject> targets = GetTargetByMove();
+        targets = GetTargetByMove();
 
         foreach (GameObject target in targets)
         {
             Debug.Log(transform.name + " is attacking " + target.name  +  " with Lcard:" + leftAtkValue + " Rcard:" + RightAtkValue + " multiplier:" + mul);
         }
+
+        animator.SetTrigger("Attack");
 
     }
 

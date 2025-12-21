@@ -6,6 +6,7 @@ using static Utils;
 public abstract class Character : MonoBehaviour
 {
     [field: Header("Character"), SerializeField] public CharacterType CharacterType { get; private set; }
+    [field: SerializeField] protected Animator animator;
 
     [field: Header("Hp and status"),SerializeField] public double MaxHp { get; private set; }
     [field: SerializeField] public double Hp { get; private set; }
@@ -16,6 +17,7 @@ public abstract class Character : MonoBehaviour
 
     [field: Header("Attack data"), SerializeField] public Move DefaultMove { get; private set; }
     [field: SerializeField] public Vector2 FacingDirection { get; private set; }
+    protected List<GameObject> targets = new();
 
     public void TakeDamage(double damage, string attacker)
     {
@@ -107,6 +109,30 @@ public abstract class Character : MonoBehaviour
             StatusEffects.RemoveAt(index);
         }
     }
+
+    public void ResolveAttack()
+    {
+        foreach (GameObject target in targets)
+        {
+            if (target.GetComponent<Character>())
+            {
+                target.GetComponent<Character>().TakeDamage(DefaultMove.Value, transform.name);
+            }
+        }
+    }
+
+    public void SendHeal()
+    {
+        foreach (GameObject target in targets)
+        {
+            if (target.GetComponent<Character>())
+            {
+                target.GetComponent<Character>().Heal(DefaultMove.Value, transform.name);
+            }
+        }
+    }
+
+
 
     protected List<GameObject> GetTargetByMove()
     {
