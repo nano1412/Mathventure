@@ -46,8 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   <CharacterType>k__BackingField: 5
-  <Animator>k__BackingField: {fileID: 0}
-  <MaxHp>k__BackingField: 0
+  animator: {fileID: 3514383640638995766}
+  <MaxHp>k__BackingField: 20
   <Hp>k__BackingField: 0
   <Shield>k__BackingField: 0
   <IsStuned>k__BackingField: 0
@@ -434,3 +434,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16e093f35dae14c49b28f332f87dead2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterSpriteRelay
+  character: {fileID: -5538919993884444015}

@@ -116,7 +116,9 @@ public class ActionGameController : MonoBehaviour
     {
         while (heroAttackQueue.Count > 0)
         {
+            Debug.Log(heroAttackQueue.Count);
             currentHeroAttack = heroAttackQueue.Dequeue();
+            Debug.Log(currentHeroAttack.hero.name);
 
             if (currentHeroAttack.hero == null)
                 continue;

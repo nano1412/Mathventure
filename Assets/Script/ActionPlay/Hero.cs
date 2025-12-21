@@ -5,6 +5,7 @@ public class Hero : Character
 {
     public void Attack(double mul, double leftAtkValue, double RightAtkValue)
     {
+        Debug.Log("hero attack is called");
         targets = GetTargetByMove();
 
         foreach (GameObject target in targets)

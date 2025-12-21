@@ -19,6 +19,11 @@ public abstract class Character : MonoBehaviour
     [field: SerializeField] public Vector2 FacingDirection { get; private set; }
     protected List<GameObject> targets = new();
 
+    private void Start()
+    {
+        Hp = MaxHp;
+    }
+
     public void TakeDamage(double damage, string attacker)
     {
         if (damage < 0)
@@ -27,6 +32,7 @@ public abstract class Character : MonoBehaviour
             return;
         }
 
+        animator.SetTrigger("Damaged");
         Hp -= damage - Shield;
         Debug.Log(transform.name + " take " + damage + " damages from " + attacker);
     }

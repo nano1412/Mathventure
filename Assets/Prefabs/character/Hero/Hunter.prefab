@@ -188,7 +188,7 @@ Animator:
   m_GameObject: {fileID: 4676256282529668309}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 790f1e0abbc979b408ef9d90ba564888, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2e5433e8fa5529748bdf17d785f53ee4, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -212,6 +212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16e093f35dae14c49b28f332f87dead2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterSpriteRelay
+  character: {fileID: -1104955617905091999}
 --- !u!1 &4924489813505689261
 GameObject:
   m_ObjectHideFlags: 0
@@ -428,8 +429,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Hero
   <CharacterType>k__BackingField: 2
-  <Animator>k__BackingField: {fileID: 0}
-  <MaxHp>k__BackingField: 0
+  animator: {fileID: 5687510040163902897}
+  <MaxHp>k__BackingField: 20
   <Hp>k__BackingField: 0
   <Shield>k__BackingField: 0
   <IsStuned>k__BackingField: 0
