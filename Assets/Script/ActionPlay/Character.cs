@@ -185,5 +185,10 @@ public abstract class Character : MonoBehaviour
 
         return new List<GameObject>();
     }
+
+    public void ResetHP()
+    {
+        Hp = MaxHp;
+    }
 }
 

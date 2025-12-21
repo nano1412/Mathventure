@@ -35,6 +35,24 @@ MonoBehaviour:
     EffectValue: 1
     Effect: 0
   - FaceValue: 15
-    EffectValue: 0
+    EffectValue: 2
+    Effect: 0
+  - FaceValue: 15
+    EffectValue: 2
+    Effect: 0
+  - FaceValue: 10
+    EffectValue: 2
+    Effect: 0
+  - FaceValue: 9
+    EffectValue: 2
+    Effect: 0
+  - FaceValue: 8
+    EffectValue: 2
+    Effect: 0
+  - FaceValue: 8
+    EffectValue: 2
+    Effect: 0
+  - FaceValue: 8
+    EffectValue: 2
     Effect: 0
   backCard: {fileID: 0}

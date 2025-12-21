@@ -18,19 +18,19 @@ public class ActionGameController : MonoBehaviour
     public CharacterSlotsHolder EnemySlotsHolder { get; private set; }
 
     [field: SerializeField]
-    public GameObject PlusHero { get; private set; }
+    public GameObject PlusHeroSlot { get; private set; }
 
     [field: SerializeField]
-    public GameObject MinusHero { get; private set; }
+    public GameObject MinusHeroSlot { get; private set; }
 
     [field: SerializeField]
-    public GameObject MultiplyHero { get; private set; }
+    public GameObject MultiplyHeroSlot { get; private set; }
 
     [field: SerializeField]
-    public GameObject DivideHero { get; private set; }
+    public GameObject DivideHeroSlot { get; private set; }
 
     [field: SerializeField]
-    public GameObject BuffHero { get; private set; }
+    public GameObject BuffHeroSlot { get; private set; }
 
 
     private Hero attackerHero;
@@ -150,7 +150,7 @@ public class ActionGameController : MonoBehaviour
         }
     }
 
-    private bool IsEnemyRemain()
+    public bool IsEnemyRemain()
     {
         foreach (Transform enemySlot in EnemySlotsHolder.transform)
         {
@@ -211,6 +211,15 @@ public class ActionGameController : MonoBehaviour
         }
     }
 
+    public void ResetHerosHP()
+    {
+        PlusHeroSlot.transform.GetChild(0).GetComponent<Hero>().ResetHP();
+        MinusHeroSlot.transform.GetChild(0).GetComponent<Hero>().ResetHP();
+        MultiplyHeroSlot.transform.GetChild(0).GetComponent<Hero>().ResetHP();
+        DivideHeroSlot.transform.GetChild(0).GetComponent<Hero>().ResetHP();
+        BuffHeroSlot.transform.GetChild(0).GetComponent<Hero>().ResetHP();
+    }
+
     public void Debug_ForceAttack()
     {
         onCompleteAttackCallback = GameController.current.CleanupFornextRound;
@@ -255,10 +264,10 @@ public class ActionGameController : MonoBehaviour
     {
         return heroType switch
         {
-            OperationEnum.Plus => PlusHero.transform.GetChild(0).GetComponent<Hero>(),
-            OperationEnum.Minus => MinusHero.transform.GetChild(0).GetComponent<Hero>(),
-            OperationEnum.Multiply => MultiplyHero.transform.GetChild(0).GetComponent<Hero>(),
-            OperationEnum.Divide => DivideHero.transform.GetChild(0).GetComponent<Hero>(),
+            OperationEnum.Plus => PlusHeroSlot.transform.GetChild(0).GetComponent<Hero>(),
+            OperationEnum.Minus => MinusHeroSlot.transform.GetChild(0).GetComponent<Hero>(),
+            OperationEnum.Multiply => MultiplyHeroSlot.transform.GetChild(0).GetComponent<Hero>(),
+            OperationEnum.Divide => DivideHeroSlot.transform.GetChild(0).GetComponent<Hero>(),
             _ => null
         };
     }

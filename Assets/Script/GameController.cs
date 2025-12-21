@@ -112,10 +112,18 @@ public class GameController : MonoBehaviour
         CardPlayGameController.current.PlayerHand.GetComponent<HorizontalCardHolder>().SetUpPlayerSlot(NextRoundStart);
     }
 
-    public void NextRoundStart()
+    public void OnNextWaveStart()
     {
         Debug.LogWarning("imprement ememy data reader and reset deck here");
         ActionGameController.current.SpawnNextWave();
+        ActionGameController.current.ResetHerosHP();
+        CardPlayGameController.current.SetRoundDeck(CardPlayGameController.current.PersistentDeck);
+
+        NextRoundStart();
+    }
+
+    public void NextRoundStart()
+    {
 
 
         this.SetGamestate(GameState.PlayerInput);
@@ -152,6 +160,7 @@ public class GameController : MonoBehaviour
 
     public void RounndWin()
     {
+
         //to round victory screen or check win
         if (!IsEndless && Wave >= 3)
         {

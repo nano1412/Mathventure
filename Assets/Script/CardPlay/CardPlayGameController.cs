@@ -486,5 +486,10 @@ public class CardPlayGameController : MonoBehaviour
         return cards;
     }
 
+    public void SetRoundDeck(Deck deck)
+    {
+        RoundDeck = deck;
+    }
+
     #endregion
 }
