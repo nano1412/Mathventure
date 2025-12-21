@@ -1,12 +1,14 @@
 using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using static Utils;
 
 public abstract class Character : MonoBehaviour
 {
     [field: Header("Character"), SerializeField] public CharacterType CharacterType { get; private set; }
     [field: SerializeField] protected Animator animator;
+    [field: SerializeField] protected Slider HPbar;
 
     [field: Header("Hp and status"), SerializeField] public double MaxHp { get; private set; }
     [field: SerializeField] public double Hp { get; private set; }
@@ -22,6 +24,12 @@ public abstract class Character : MonoBehaviour
     private void Start()
     {
         Hp = MaxHp;
+    }
+
+    void Update()
+    {
+        HPbar.value = (float)Hp;
+        HPbar.maxValue = (float)MaxHp;
     }
 
     public void TakeDamage(double damage, string attacker)
