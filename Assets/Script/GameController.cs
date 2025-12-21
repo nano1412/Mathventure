@@ -40,6 +40,7 @@ public class GameController : MonoBehaviour
         get => gameState; private set
         {
             gameState = value;
+            FullScreenPopUp();
             OnGameStateChange?.Invoke(gameState);
         }
     }
@@ -47,9 +48,9 @@ public class GameController : MonoBehaviour
     [field: SerializeField]
     public Deck TemplateDeck { get; private set; }
 
-
-
-    //charector that player pick
+    [field: Header("GameScreen"), SerializeField] private GameObject WinScreen;
+    [field: SerializeField] private GameObject LoseScreen;
+    [field: SerializeField] private GameObject PauseScreen; // not imprement yet
 
     private void Awake()
     {
@@ -186,5 +187,26 @@ public class GameController : MonoBehaviour
     public void SetGamestate(GameState GS)
     {
         GameState = GS;
+    }
+
+    private void FullScreenPopUp()
+    {
+        WinScreen.SetActive(false);
+        LoseScreen.SetActive(false);
+        PauseScreen.SetActive(false);
+
+        switch (GameState)
+        {
+            case GameState.Win:
+                WinScreen.SetActive(true);
+                break;
+            case GameState.Lose:
+                LoseScreen.SetActive(true);
+                break;
+            case GameState.Pause:
+                PauseScreen.SetActive(true);
+                break;
+
+        }
     }
 }
