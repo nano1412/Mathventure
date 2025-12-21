@@ -15,4 +15,13 @@ public class Enemy : Character
 
         animator.SetTrigger("Attack");
     }
+
+    public override void CheckDead()
+    {
+        if (Hp <= 0)
+        {
+            Debug.Log(transform.name + "is dead");
+            Dead();
+        }
+    }
 }

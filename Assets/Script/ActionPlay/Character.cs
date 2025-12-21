@@ -43,6 +43,7 @@ public abstract class Character : MonoBehaviour
         animator.SetTrigger("Damaged");
         Hp -= damage - Shield;
         Debug.Log(transform.name + " take " + damage + " damages from " + attacker);
+        CheckDead();
     }
 
     public void Heal(double heal, string healer)
@@ -59,7 +60,7 @@ public abstract class Character : MonoBehaviour
 
     public virtual void CheckDead()
     {
-        if (Hp < 0)
+        if (Hp <= 0)
         {
             Debug.Log(transform.name + "is dead");
             Dead();
@@ -68,6 +69,11 @@ public abstract class Character : MonoBehaviour
 
     protected void Dead()
     {
+        if(CharacterType == CharacterType.Enemy)
+        {
+            ActionGameController.current.EnemySlotsHolder.characters.Remove(gameObject);
+            ActionGameController.current.EnemySlotsHolder.UpdateCharactersPosition();
+        }
         Destroy(gameObject);
     }
 
@@ -124,7 +130,7 @@ public abstract class Character : MonoBehaviour
         }
     }
 
-    public void ResolveAttack()
+    public virtual void ResolveAttack()
     {
         foreach (GameObject target in targets)
         {

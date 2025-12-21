@@ -152,6 +152,16 @@ public class CardPlayGameController : MonoBehaviour
         current = this;
     }
 
+    private void OnEnable()
+    {
+        GameController.current.OnGameStateChange += RemoveAllCardInPlayedHand;
+    }
+
+    private void OnDisable()
+    {
+        GameController.current.OnGameStateChange -= RemoveAllCardInPlayedHand;
+    }
+
     private void OnDestroy()
     {
         if (current == this) current = null;
@@ -451,6 +461,19 @@ public class CardPlayGameController : MonoBehaviour
                 PlayOpenParentheses2.SetSiblingIndex(numberSiblingIndex3 + increment++);
                 PlayCloseParentheses2.SetSiblingIndex(numberSiblingIndex4 + 1 + increment++);
                 break;
+        }
+    }
+
+    public void RemoveAllCardInPlayedHand(GameState gameState)
+    {
+        if (gameState == GameState.RoundVictory || gameState == GameState.Lose || gameState == GameState.Shop || gameState == GameState.Win)
+        {
+            while(PlayCardList.Count > 0)
+            {
+                Destroy(PlayCardList[0]);
+                PlayCardList.RemoveAt(0);
+            }
+
         }
     }
 

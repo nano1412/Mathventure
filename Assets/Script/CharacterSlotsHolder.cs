@@ -4,8 +4,7 @@ using UnityEngine;
 public class CharacterSlotsHolder : MonoBehaviour
 {
     [field: SerializeField] public List<Transform> CharacterSlots { get; private set; }
-    private List<GameObject> characters = new();
-    public IReadOnlyList<GameObject> Characters => characters;
+    [field: SerializeField] public List<GameObject> characters = new();
 
     private void Start()
     {
@@ -56,7 +55,9 @@ public class CharacterSlotsHolder : MonoBehaviour
         foreach (var slot in CharacterSlots)
         {
             if (slot.transform.childCount > 0)
+            {
                 slot.transform.GetChild(0).SetParent(null);
+            }
         }
 
 
@@ -64,6 +65,7 @@ public class CharacterSlotsHolder : MonoBehaviour
         for (int i = 0; i < characters.Count; i++)
         {
             characters[i].transform.SetParent(CharacterSlots[i], false);
+            characters[i].transform.localPosition = new Vector3(0, 0, 0);
         }
     }
 
