@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class Enemy : Character
 {
+    [field:SerializeField]public int CoinOnKill { get; private set; }
     public void Attack()
     {
         targets = GetTargetByMove();
@@ -21,6 +22,7 @@ public class Enemy : Character
         if (Hp <= 0)
         {
             Debug.Log(transform.name + "is dead");
+            InventoryController.current.AddCoin(CoinOnKill);
             Dead();
         }
     }

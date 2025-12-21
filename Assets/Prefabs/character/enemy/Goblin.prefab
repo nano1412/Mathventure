@@ -55,6 +55,7 @@ MonoBehaviour:
   <IsStuned>k__BackingField: 0
   <DefaultMove>k__BackingField: {fileID: 11400000, guid: c8343813d3592cd44a8779d69f00136a, type: 2}
   <FacingDirection>k__BackingField: {x: 0, y: 0}
+  <CoinOnKill>k__BackingField: 10
 --- !u!1 &6444919316157576528
 GameObject:
   m_ObjectHideFlags: 0
