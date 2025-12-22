@@ -17,64 +17,37 @@ public class CharacterSlotsHolder : MonoBehaviour
         }
     }
 
-    public void SpawnCharacters(List<GameObject> characters)
+    public void SpawnCharacters(List<GameObject> prefabs)
     {
-        int spawnCount = Mathf.Min(characters.Count, CharacterSlots.Count);
-        this.characters.Clear();
+        characters.Clear();
 
-        if (characters.Count > CharacterSlots.Count)
-        {
-            Debug.LogWarning(
-                $"characters count ({characters.Count}) is more than CharacterSlots ({CharacterSlots.Count}). Only spawning {spawnCount}."
-            );
-        }
+        int spawnCount = Mathf.Min(prefabs.Count, CharacterSlots.Count);
 
         for (int i = 0; i < spawnCount; i++)
         {
             Transform slot = CharacterSlots[i];
 
-            for (int j = slot.childCount - 1; j >= 0; j--)
+            // Destroy old children safely
+            foreach (Transform child in slot)
             {
-                Destroy(slot.GetChild(j).gameObject);
+                Destroy(child.gameObject);
             }
 
-            if (characters[i] == null)
-            {
-                continue;
-            }
+            if (prefabs[i] == null) continue;
 
-            GameObject instance = Instantiate(characters[i], slot, false);
-            this.characters.Add(instance);
+            GameObject instance = Instantiate(prefabs[i], slot, false);
+            characters.Add(instance);
         }
 
-        characters = new();
-        foreach (Transform characterSlot in CharacterSlots)
-        {
-            if (characterSlot.childCount > 0)
-            {
-                this.characters.Add(characterSlot.GetChild(0).gameObject);
-            }
-        }
+        UpdateCharacters();
     }
 
-    public void UpdateCharactersPosition()
+    public void UpdateCharacters()
     {
-        characters.RemoveAll(c => c == null);
-        // Clear slots
-        foreach (var slot in CharacterSlots)
-        {
-            if (slot.transform.childCount > 0)
-            {
-                slot.transform.GetChild(0).SetParent(null);
-            }
-        }
-
-
-        // Reassign based on characters list
         for (int i = 0; i < characters.Count; i++)
         {
             characters[i].transform.SetParent(CharacterSlots[i], false);
-            characters[i].transform.localPosition = new Vector3(0, 0, 0);
+            characters[i].transform.localPosition = Vector3.zero;
         }
     }
 
@@ -87,9 +60,15 @@ public class CharacterSlotsHolder : MonoBehaviour
 
     public List<GameObject> GetFirstTwoCharactersAsList()
     {
-        return characters.Count >= 2
-        ? new List<GameObject> { characters[0], characters[1] }
-        : new List<GameObject>();
+        switch (characters.Count)
+        {
+            case 0:
+                return new List<GameObject>(); ;
+            case 1:
+                return new List<GameObject> { characters[0] };
+            default: //more than 2 characters left
+                return new List<GameObject> { characters[0], characters[1] };
+        }
     }
 
     public List<GameObject> GetLastCharacterAsList()

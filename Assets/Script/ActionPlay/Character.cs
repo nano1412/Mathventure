@@ -19,7 +19,7 @@ public abstract class Character : MonoBehaviour
 
     [field: Header("Attack data"), SerializeField] public Move DefaultMove { get; private set; }
     [field: SerializeField] public Vector2 FacingDirection { get; private set; }
-    protected List<GameObject> targets = new();
+    [field: SerializeField] protected List<GameObject> targets = new();
 
     private void Start()
     {
@@ -72,7 +72,7 @@ public abstract class Character : MonoBehaviour
         if(CharacterType == CharacterType.Enemy)
         {
             ActionGameController.current.EnemySlotsHolder.characters.Remove(gameObject);
-            ActionGameController.current.EnemySlotsHolder.UpdateCharactersPosition();
+            ActionGameController.current.EnemySlotsHolder.UpdateCharacters();
         }
         Destroy(gameObject);
     }
