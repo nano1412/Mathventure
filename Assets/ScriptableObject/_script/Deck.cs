@@ -13,25 +13,32 @@ public class Deck : ScriptableObject
     public Sprite backCard;
     //DeckObject effect
 
-    public CardData GetRandomCard()
+    public Deck CloneDeck()
     {
-        if (cardDatas.Count <= 0)
+        Deck clone = Instantiate(this);
+        clone.cardDatas = new List<CardData>(cardDatas);
+        return clone;
+    }
+
+    public bool TryDrawCard(out CardData card)
+    {
+        if (cardDatas.Count == 0)
         {
-            Debug.Log("run out of card in deck");
-            return new CardData(0, 0, EffectType.Empty);
+            card = default;
+            return false;
         }
 
         int index = Random.Range(0, cardDatas.Count);
-        CardData randomCardData = cardDatas[index];
+        card = cardDatas[index];
         cardDatas.RemoveAt(index);
-        return randomCardData;
+        return true;
     }
 
     public void ChangeCard(CardData target, CardData newCardData)
     {
         for (int i = 0; i < cardDatas.Count; i++)
         {
-            if (cardDatas[i] == target)
+            if (cardDatas[i].Equals(target))
             {
                 cardDatas[i] = newCardData;
                 break; // Only change once
@@ -41,21 +48,14 @@ public class Deck : ScriptableObject
 
     public void AddCardData(CardData newCardData)
     {
-        cardDatas.Append(newCardData);
+        cardDatas.Add(newCardData);
     }
 }
 
 [System.Serializable]
-public class CardData
+public struct CardData
 {
     public double FaceValue;
     public double EffectValue;
     public EffectType Effect;
-
-    public CardData(double faceValue, double effectValue, EffectType effect)
-    {
-        FaceValue = faceValue;
-        EffectValue = effectValue;
-        Effect = effect;
-    }
 }

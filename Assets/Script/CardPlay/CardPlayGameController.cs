@@ -9,6 +9,7 @@ using System;
 using static UnityEngine.Rendering.DebugUI;
 using UnityEditor;
 using UnityEngine.Serialization;
+using Unity.VisualScripting;
 
 public class CardPlayGameController : MonoBehaviour
 {
@@ -169,8 +170,8 @@ public class CardPlayGameController : MonoBehaviour
 
     public void SetupCardContoller()
     {
-        PersistentDeck = Instantiate(GameController.current.TemplateDeck);
-        RoundDeck = Instantiate(PersistentDeck);
+        PersistentDeck = GameController.current.TemplateDeck.CloneDeck();
+        RoundDeck = PersistentDeck.CloneDeck();
         PossibleOperators = GameController.current.PossibleOperators;
         IsPositiveOnly = GameController.current.Level < 2;
 
@@ -355,10 +356,10 @@ public class CardPlayGameController : MonoBehaviour
 
     public void AddCardButton()
     {
-        AddCard(1);
+        AddCardTohand(1);
     }
 
-    public void AddCard(int amount)
+    public void AddCardTohand(int amount)
     {
         for (int i = 0; i < amount; i++)
         {
@@ -378,9 +379,11 @@ public class CardPlayGameController : MonoBehaviour
 
             if (isHandHaveSpace)
             {
-                CardData SelectedCarddata = RoundDeck.GetRandomCard();
-                if (SelectedCarddata.Effect == EffectType.Empty)
+
+
+                if (!RoundDeck.TryDrawCard(out CardData SelectedCarddata))
                 {
+                    Debug.Log("Deck empty");
                     return;
                 }
 
@@ -468,11 +471,11 @@ public class CardPlayGameController : MonoBehaviour
     {
         if (gameState == GameState.RoundVictory || gameState == GameState.Lose || gameState == GameState.Shop || gameState == GameState.Win)
         {
-            while(PlayCardList.Count > 0)
+            foreach (var card in PlayCardList)
             {
-                Destroy(PlayCardList[0]);
-                PlayCardList.RemoveAt(0);
+                Destroy(card);
             }
+            PlayCardList.Clear();
 
         }
     }
@@ -509,9 +512,9 @@ public class CardPlayGameController : MonoBehaviour
         return cards;
     }
 
-    public void SetRoundDeck(Deck deck)
+    public void ResetRoundDeck()
     {
-        RoundDeck = deck;
+        RoundDeck = PersistentDeck.CloneDeck();
     }
 
     #endregion

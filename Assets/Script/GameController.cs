@@ -118,7 +118,7 @@ public class GameController : MonoBehaviour
         Debug.LogWarning("imprement ememy data reader and reset deck here");
         ActionGameController.current.SpawnNextWave();
         ActionGameController.current.ResetHerosHP();
-        CardPlayGameController.current.SetRoundDeck(CardPlayGameController.current.PersistentDeck);
+        CardPlayGameController.current.ResetRoundDeck();
 
         NextRoundStart();
     }
@@ -128,7 +128,7 @@ public class GameController : MonoBehaviour
 
 
         this.SetGamestate(GameState.PlayerInput);
-        CardPlayGameController.current.AddCard(MaxCardInHand);
+        CardPlayGameController.current.AddCardTohand(MaxCardInHand);
 
         CardPlayGameController.current.GetAllPossibleEquation();
         CardPlayGameController.current.GetTargetNumber();
