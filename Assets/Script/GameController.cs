@@ -115,7 +115,6 @@ public class GameController : MonoBehaviour
 
     public void OnNextWaveStart()
     {
-        Debug.LogWarning("imprement ememy data reader and reset deck here");
         ActionGameController.current.SpawnNextWave();
         ActionGameController.current.ResetHerosHP();
         CardPlayGameController.current.ResetRoundDeck();
