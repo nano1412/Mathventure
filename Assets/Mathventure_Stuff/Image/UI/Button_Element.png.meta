@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 72f43bcb27c31cf47bc0c45de2bc89d9
+guid: 315a80dcb84ca0e40ad331e7a2b8059b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -49,7 +49,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 413, y: 477, z: 435, w: 408}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -97,23 +97,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mathventure_Logo_Pixel_0
+      name: Button_Element_0
       rect:
         serializedVersion: 2
-        x: 420
-        y: 509
-        width: 1178
-        height: 598
+        x: 0
+        y: 295
+        width: 609
+        height: 178
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 81, y: 18, z: 84, w: 21}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b05b932a1dc8a014b9ebf20740b5e913
-      internalID: -2012619331
+      spriteID: d48b3ee89fa88a5488949b7ab4732340
+      internalID: 824136883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button_Element_1
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 274
+        width: 651
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 101, y: 22, z: 99, w: 23}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec129d3a92576184980969b1058b645f
+      internalID: 619037250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button_Element_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 21
+        width: 609
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 21, y: 17, z: 20, w: 17}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6748dc5579076148bd40d8f358bb552
+      internalID: 1843141373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button_Element_3
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 0
+        width: 651
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 40, y: 36, z: 42, w: 39}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fe9da1a923ef294a86a47f0e6b52693
+      internalID: -1209725693
       vertices: []
       indices: 
       edges: []
@@ -122,8 +188,8 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    spriteID: bac9f93b202a74242b439e08806cdabf
+    internalID: 0
     vertices: []
     indices: 
     edges: []
@@ -132,9 +198,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":2.0,"y":2.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Mathventure_Logo_Pixel_0: -2012619331
+      Button_Element_0: 824136883
+      Button_Element_1: 619037250
+      Button_Element_2: 1843141373
+      Button_Element_3: -1209725693
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
