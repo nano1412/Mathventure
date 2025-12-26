@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a88fb5c2e9d64741b31f7765b71f852, type: 3}
   m_Name: IronSwordModifier
   m_EditorClassIdentifier: Assembly-CSharp::ModifierSO
-  modifierName: Iron sword
-  discription: +5 ATK
-  modifierTarget: 1
-  modifierCondition: 12
-  modifierMethod: 0
-  modifierMethodValue: 5
-  effectName: 
-  effectType: 0
-  effectValue: 0
-  Duration: 0
-  modifierConditionthreshold: 0
+  <ModifierName>k__BackingField: Iron Sword Modifier
+  <Discription>k__BackingField: +5 atk
+  <ModifierTarget>k__BackingField: 0
+  <ModifierCondition>k__BackingField: 0
+  <ModifierMethod>k__BackingField: 0
+  <ModifierMethodValue>k__BackingField: 0
+  <EffectName>k__BackingField: 
+  <EffectType>k__BackingField: 0
+  <EffectValue>k__BackingField: 0
+  <Duration>k__BackingField: 0
+  <ModifierConditionthreshold>k__BackingField: 0

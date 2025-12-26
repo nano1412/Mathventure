@@ -18,7 +18,6 @@ public class ModifierSO : ScriptableObject
     [field: SerializeField] public string EffectName { get; private set; }
     [field: SerializeField] public EffectType EffectType { get; private set; }
     [field: SerializeField] public double EffectValue { get; private set; }
-    [field: SerializeField] public double Chance { get; private set; }
 
     [Header("Consumable/effect")]
     [field: SerializeField] public int Duration { get; private set; }

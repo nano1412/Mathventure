@@ -80,12 +80,13 @@ public static class Utils
         Hero_Multiply,
         Hero_Divide,
         Hero_OnlyEquiper,
+        Hero_OnlySelected,
 
         Enemy_All,
         Enemy_Front,
         Enemy_Back,
         Enemy_FirstTwo,
-        Enemy_RecriveAttack
+        Enemy_OnlySelected
     }
 
     public enum ModifierMethod
@@ -102,7 +103,7 @@ public static class Utils
     {
         HP,
         ATK,
-        DEF
+        Card_Value
     }
 
     public class StatusEffect
