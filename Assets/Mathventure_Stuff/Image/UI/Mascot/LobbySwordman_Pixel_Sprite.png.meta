@@ -1,0 +1,1499 @@
+fileFormatVersion: 2
+guid: 173d65768c789da49a37e5c39ace0d7c
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3920
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e2dfbf54e1c2ce40b8ccd8623d5042c
+      internalID: -197834484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_1
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 3920
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 257da2361b73ba7478a3c496d5645cab
+      internalID: 2063926181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_2
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 3920
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed33911a30ff52347af03411463a2779
+      internalID: 1506182666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_3
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 3920
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be6136c65b4683a4cbf9967e7491be4d
+      internalID: -472252015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_4
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 3920
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f309890998cffb49a3f819315065f75
+      internalID: -1403101898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_5
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 3920
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c57719303dbc74c449cb605f288ef3b8
+      internalID: 1926799673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_6
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 3920
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b4ea4f6043fa044e855dd6a38295041
+      internalID: -276631983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_7
+      rect:
+        serializedVersion: 2
+        x: 5376
+        y: 3920
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 886a1e6e0ac9f7649b84c78d9179ca8b
+      internalID: -1772042684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3360
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 514f488bca8f7f04387e9f1376bf036a
+      internalID: -1137481163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_9
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 3360
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b884da60eaa0adf42a578cb4c7e1e740
+      internalID: 1607918783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_10
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 3360
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdc9170fc499dc64baf15d97c2a3d75d
+      internalID: -968644160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_11
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 3360
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f5869fc903dda04dbb6b557ae62a3eb
+      internalID: -1079246161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_12
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 3360
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be95252b8cb72f54c9531e4a93b6ca7d
+      internalID: 133789570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_13
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 3360
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0705948866a347246bea7a266605bf6d
+      internalID: 126507310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_14
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 3360
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db12e3235d74ee543957874d3a7b1ee8
+      internalID: -1151979872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_15
+      rect:
+        serializedVersion: 2
+        x: 5376
+        y: 3360
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7134f72a0ca54864ca75d56da971562a
+      internalID: -802294147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2800
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be908d243d5e3fd44abdffa1a1526f86
+      internalID: -1199636718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_17
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 2800
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07fcea4d36e2f824cb60e466d7c70548
+      internalID: 981818098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_18
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 2800
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f82a9c7c218ad684e82488216dd8e369
+      internalID: -1003316959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_19
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 2800
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06fb25e8bceaec24887aadc300f497a9
+      internalID: 2090558331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_20
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 2800
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99c13d7d811a37640b186a91265cbb7d
+      internalID: -324391913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_21
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 2800
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2a7aa7cc1f5f6f4ab1ac60d6264dc0d
+      internalID: 499885428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_22
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 2800
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c94e86208a17bb24e8f53e15f3d21d4a
+      internalID: -984170355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_23
+      rect:
+        serializedVersion: 2
+        x: 5376
+        y: 2800
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daaa30107ca94e746a576a60778e2970
+      internalID: 1985493031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2240
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b10f41f3b2bff1f4fb54904c69e2ad43
+      internalID: -456704503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_25
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 2240
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db720bb1f7a07e0499e05eb06a6aa051
+      internalID: 702003053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_26
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 2240
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edee1b8c6a357af44886b6df3f2a424f
+      internalID: 1229713255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_27
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 2240
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58c3eec0bb6dbde4fa835463455e2fec
+      internalID: -952941907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_28
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 2240
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b922aae51e4cd241ad6f05dec576502
+      internalID: 1342970488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_29
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 2240
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b833cc7baa4f034c9dd855720b6940f
+      internalID: 1137973581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_30
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 2240
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 292990ac697a76842af075c1c01d777c
+      internalID: -1627877990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_31
+      rect:
+        serializedVersion: 2
+        x: 5376
+        y: 2240
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ecd5714307bbe04f9ddc95b70c15f06
+      internalID: -1894986724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1680
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cd714b1025181d4081c47c27014bc87
+      internalID: 889925234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_33
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1680
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31be26ffa21875c49a897c5279a08352
+      internalID: 1143604935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_34
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1680
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32cb090c9736ce44c820af09c08748de
+      internalID: 2049389230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_35
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 1680
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9ddd6ebbbb2a194197bb9cb25b4ba84
+      internalID: -200353184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_36
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1680
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3cacec856cf75b40bc3a7916da10e89
+      internalID: 2118726298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_37
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 1680
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff011e1e0b3cdfb4fa2576bdc306542f
+      internalID: 930626068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_38
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 1680
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0514703228bd14409e9f32132c6563d
+      internalID: -1851124048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_39
+      rect:
+        serializedVersion: 2
+        x: 5376
+        y: 1680
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e30713fa4136db4d99b3cc5d7f29e3f
+      internalID: -447674697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1120
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c63e380889590c047bb82b7c385c6c31
+      internalID: 149020868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_41
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1120
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daaf01fff5e7a1c4f8905fa7780e0380
+      internalID: -1921011878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_42
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1120
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19c3b1dc640781841bf34af17bb8c795
+      internalID: 405271457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_43
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 1120
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68a00c4364577d24291d9877866a8956
+      internalID: -1324093862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_44
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1120
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75321613ca8a90641a0eb109de8792e0
+      internalID: -529613921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_45
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 1120
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9319167d91899ef44ac2ba9162e3f3ca
+      internalID: 1295972078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_46
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 1120
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37663da57f5ff0146abfe4c82bb324d4
+      internalID: -574053764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_47
+      rect:
+        serializedVersion: 2
+        x: 5376
+        y: 1120
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b96577a7d4a58034088f20d19bd0cd17
+      internalID: -1932995877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 560
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e686987874677b46bfb82ea87b117a5
+      internalID: 1557578318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_49
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 560
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfde6af6ca7c47d47a59120aac4f18c5
+      internalID: -281675823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_50
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 560
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10f57ae2e19b63f43b08801d6125d47a
+      internalID: 325269346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_51
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 560
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1623982d9dc9a34bb7aef6214f7c491
+      internalID: 1219260431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_52
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 560
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cf0c6763e4484b489456e70c5583647
+      internalID: 379731599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_53
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 560
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 932c2052653015845bec5c77d770cb1a
+      internalID: 1569821255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_54
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 560
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f1e3014124fc754b95c6059de10f62e
+      internalID: 875854694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_55
+      rect:
+        serializedVersion: 2
+        x: 5376
+        y: 560
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87010c6463c0f26418dc818819c0715e
+      internalID: -122074630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af14f8638debd444f824df8a3dbf6b81
+      internalID: -550699942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_57
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97beddbc7a0ae454f8c4e415373b8949
+      internalID: -249909406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_58
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e832b90f87f34ff46b4de1d9e25006d5
+      internalID: 346674798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbySwordman_Pixel_Sprite_59
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 0
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03097445b2b5ee34a87a776658fc873b
+      internalID: 994185108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: acd3036c95bdeda40b94c4677c097ca7
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":8.0,"y":8.0},"gridSpriteSize":{"x":768.0,"y":560.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      LobbySwordman_Pixel_Sprite_0: -197834484
+      LobbySwordman_Pixel_Sprite_1: 2063926181
+      LobbySwordman_Pixel_Sprite_10: -968644160
+      LobbySwordman_Pixel_Sprite_11: -1079246161
+      LobbySwordman_Pixel_Sprite_12: 133789570
+      LobbySwordman_Pixel_Sprite_13: 126507310
+      LobbySwordman_Pixel_Sprite_14: -1151979872
+      LobbySwordman_Pixel_Sprite_15: -802294147
+      LobbySwordman_Pixel_Sprite_16: -1199636718
+      LobbySwordman_Pixel_Sprite_17: 981818098
+      LobbySwordman_Pixel_Sprite_18: -1003316959
+      LobbySwordman_Pixel_Sprite_19: 2090558331
+      LobbySwordman_Pixel_Sprite_2: 1506182666
+      LobbySwordman_Pixel_Sprite_20: -324391913
+      LobbySwordman_Pixel_Sprite_21: 499885428
+      LobbySwordman_Pixel_Sprite_22: -984170355
+      LobbySwordman_Pixel_Sprite_23: 1985493031
+      LobbySwordman_Pixel_Sprite_24: -456704503
+      LobbySwordman_Pixel_Sprite_25: 702003053
+      LobbySwordman_Pixel_Sprite_26: 1229713255
+      LobbySwordman_Pixel_Sprite_27: -952941907
+      LobbySwordman_Pixel_Sprite_28: 1342970488
+      LobbySwordman_Pixel_Sprite_29: 1137973581
+      LobbySwordman_Pixel_Sprite_3: -472252015
+      LobbySwordman_Pixel_Sprite_30: -1627877990
+      LobbySwordman_Pixel_Sprite_31: -1894986724
+      LobbySwordman_Pixel_Sprite_32: 889925234
+      LobbySwordman_Pixel_Sprite_33: 1143604935
+      LobbySwordman_Pixel_Sprite_34: 2049389230
+      LobbySwordman_Pixel_Sprite_35: -200353184
+      LobbySwordman_Pixel_Sprite_36: 2118726298
+      LobbySwordman_Pixel_Sprite_37: 930626068
+      LobbySwordman_Pixel_Sprite_38: -1851124048
+      LobbySwordman_Pixel_Sprite_39: -447674697
+      LobbySwordman_Pixel_Sprite_4: -1403101898
+      LobbySwordman_Pixel_Sprite_40: 149020868
+      LobbySwordman_Pixel_Sprite_41: -1921011878
+      LobbySwordman_Pixel_Sprite_42: 405271457
+      LobbySwordman_Pixel_Sprite_43: -1324093862
+      LobbySwordman_Pixel_Sprite_44: -529613921
+      LobbySwordman_Pixel_Sprite_45: 1295972078
+      LobbySwordman_Pixel_Sprite_46: -574053764
+      LobbySwordman_Pixel_Sprite_47: -1932995877
+      LobbySwordman_Pixel_Sprite_48: 1557578318
+      LobbySwordman_Pixel_Sprite_49: -281675823
+      LobbySwordman_Pixel_Sprite_5: 1926799673
+      LobbySwordman_Pixel_Sprite_50: 325269346
+      LobbySwordman_Pixel_Sprite_51: 1219260431
+      LobbySwordman_Pixel_Sprite_52: 379731599
+      LobbySwordman_Pixel_Sprite_53: 1569821255
+      LobbySwordman_Pixel_Sprite_54: 875854694
+      LobbySwordman_Pixel_Sprite_55: -122074630
+      LobbySwordman_Pixel_Sprite_56: -550699942
+      LobbySwordman_Pixel_Sprite_57: -249909406
+      LobbySwordman_Pixel_Sprite_58: 346674798
+      LobbySwordman_Pixel_Sprite_59: 994185108
+      LobbySwordman_Pixel_Sprite_6: -276631983
+      LobbySwordman_Pixel_Sprite_7: -1772042684
+      LobbySwordman_Pixel_Sprite_8: -1137481163
+      LobbySwordman_Pixel_Sprite_9: 1607918783
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
