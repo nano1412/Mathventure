@@ -140,7 +140,6 @@ public static class Utils
         RoundVictory,
         Lose,
         Shop,
-        Pause,
         Menu
 
     }
