@@ -110,8 +110,16 @@ public static class Utils
     {
         public string name;
         public EffectType effectType;
-        public int value;
+        public double value;
         public int duration;
+
+        public StatusEffect(string name, EffectType effectType, double value, int duration)
+        {
+            this.name = name;
+            this.effectType = effectType;
+            this.value = value;
+            this.duration = duration;
+        }
     }
 
     public enum ParenthesesMode

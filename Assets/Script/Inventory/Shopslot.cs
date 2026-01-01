@@ -2,6 +2,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using static UnityEditor.Timeline.Actions.MenuPriority;
 
 public class Shopslot : MonoBehaviour, IPointerClickHandler
 {
@@ -14,9 +15,9 @@ public class Shopslot : MonoBehaviour, IPointerClickHandler
     {
         if (itemslot.transform.childCount > 0)
         {
-            price.text = itemslot.transform.GetChild(0).GetComponent<Item>().Price.ToString();
-            shortDiscription.text = itemslot.transform.GetChild(0).GetComponent<Item>().ShortDescription;
-            displayItemname.text = itemslot.transform.GetChild(0).GetComponent<Item>().ItemName;
+            price.text = itemslot.transform.GetChild(0).GetComponent<oldItem>().Price.ToString();
+            shortDiscription.text = itemslot.transform.GetChild(0).GetComponent<oldItem>().ShortDescription;
+            displayItemname.text = itemslot.transform.GetChild(0).GetComponent<oldItem>().ItemName;
         }
 
     }
@@ -36,7 +37,7 @@ public class Shopslot : MonoBehaviour, IPointerClickHandler
     {
         Debug.Log(this.displayItemname + " clicked");
         GameObject item = GetItem();
-        Debug.Log(item.GetComponent<Item>().ItemName);
+        Debug.Log(item.GetComponent<oldItem>().ItemName);
         Shop.current.ShopSelectItem(item);
     }
 }

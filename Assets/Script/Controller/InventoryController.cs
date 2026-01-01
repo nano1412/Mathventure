@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
+using static UnityEditor.Timeline.Actions.MenuPriority;
 
 public class InventoryController : MonoBehaviour
 {
@@ -64,17 +65,17 @@ public class InventoryController : MonoBehaviour
     public bool AddItem(GameObject item)
     {
 
-        if (item.GetComponent<Item>() == null)
+        if (item.GetComponent<oldItem>() == null)
         {
             Debug.LogWarning(item + " is not Item");
             return false;
         }
 
-        if (item.GetComponent<Item>() is Equipment equipment)
+        if (item.GetComponent<oldItem>() is oldEquipment equipment)
         {
             return AddItemToInventory(EquipmentInventorySlots, item);
         }
-        else if (item.GetComponent<Item>() is Consumable consumable)
+        else if (item.GetComponent<oldItem>() is oldConsumable consumable)
         {
             return AddItemToInventory(ConsumableInventorySlots, item);
         }

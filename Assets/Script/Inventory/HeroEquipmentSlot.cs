@@ -2,6 +2,7 @@ using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEditor.Timeline.Actions.MenuPriority;
 using static Utils;
 
 public class HeroEquipmentSlot : MonoBehaviour
@@ -48,7 +49,7 @@ public class HeroEquipmentSlot : MonoBehaviour
             SetButton(EquipItem, "Equip");
         }
 
-        Item item = equipment.GetComponent<Item>();
+        oldItem item = equipment.GetComponent<oldItem>();
         if (!item.UsableCharacter.Contains(HeroTypeOwner))
         {
             EquipBtn.interactable = false;
@@ -81,7 +82,7 @@ public class HeroEquipmentSlot : MonoBehaviour
         }
         GameObject equipment = EquipmentInventory.current.EquipmentSelectedItem;
 
-        Item item = equipment.GetComponent<Item>();
+        oldItem item = equipment.GetComponent<oldItem>();
 
         GameObject equipmentSlot;
 

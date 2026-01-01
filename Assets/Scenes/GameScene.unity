@@ -5489,6 +5489,7 @@ GameObject:
   m_Component:
   - component: {fileID: 668068788}
   - component: {fileID: 668068789}
+  - component: {fileID: 668068790}
   m_Layer: 0
   m_Name: InventoryController
   m_TagString: Untagged
@@ -5534,6 +5535,20 @@ MonoBehaviour:
   - {fileID: 648893735}
   - {fileID: 452168326}
   - {fileID: 557602712}
+--- !u!114 &668068790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668068787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0c7cca9a2972b543a179f54fcef917a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  <SelectedCharacter>k__BackingField: {fileID: 0}
+  <SelectedConsumable>k__BackingField: {fileID: 0}
 --- !u!1001 &690720904
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7883,7 +7898,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1004225171
 RectTransform:
   m_ObjectHideFlags: 0

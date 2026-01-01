@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
+using static UnityEditor.Timeline.Actions.MenuPriority;
 using static Utils;
 
 public class Shop : MonoBehaviour
@@ -19,7 +20,7 @@ public class Shop : MonoBehaviour
     public TMP_Text DescriptionPreview { get; private set; }
 
     [field: SerializeField]
-    public Item ShopSelectedItem { get; private set; }
+    public oldItem ShopSelectedItem { get; private set; }
 
     [field: SerializeField]
     public Image ShopSelectedItemImagePreview { get; private set; }
@@ -153,7 +154,7 @@ public class Shop : MonoBehaviour
         }
         else
         {
-            ShopSelectedItem = item.GetComponent<Item>();
+            ShopSelectedItem = item.GetComponent<oldItem>();
             ShopSelectedItemImagePreview.sprite = item.GetComponent<Image>().sprite;
             DescriptionPreview.text = ShopSelectedItem.Description;
 
@@ -190,7 +191,7 @@ public class Shop : MonoBehaviour
     {
         if (ShopSelectedItem != null)
         {
-            int itemprice = ShopSelectedItem.GetComponent<Item>().Price;
+            int itemprice = ShopSelectedItem.GetComponent<oldItem>().Price;
             BuyPriceText.text = "buy (" + itemprice + "G)";
             BuyBtn.interactable = itemprice <= coin;
         }

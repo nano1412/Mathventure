@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using static UnityEditor.Timeline.Actions.MenuPriority;
 using static Utils;
 
 public class EquipmentInventory : MonoBehaviour
@@ -59,7 +60,7 @@ public class EquipmentInventory : MonoBehaviour
             return;
         }
 
-        Item item = equipmentSelectedItem.GetComponent<Item>();
+        oldItem item = equipmentSelectedItem.GetComponent<oldItem>();
 
         EquipmentSelectedItemNameText.text = item.ItemName;
         EquipmentSelectedItemNameShortdescriptionText.text = item.ShortDescription;
@@ -68,7 +69,7 @@ public class EquipmentInventory : MonoBehaviour
 
     public void SetInventorySelectItem(GameObject item)
     {
-        if (item.GetComponent<Item>() == null)
+        if (item.GetComponent<oldItem>() == null)
         {
             Debug.Log(item + " dont have item data in it");
             return;

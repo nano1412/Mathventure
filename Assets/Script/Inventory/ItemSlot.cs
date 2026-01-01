@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using static UnityEditor.Timeline.Actions.MenuPriority;
 using static Utils;
 
 public class ItemSlot : MonoBehaviour, IPointerClickHandler
@@ -24,7 +25,7 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
 
         if (transform.childCount == 1)
         {
-            if (transform.GetChild(0).GetComponent<Item>() == null)
+            if (transform.GetChild(0).GetComponent<oldItem>() == null)
             {
                 Debug.LogWarning("item on " + transform.name + " dont have item data");
             }
