@@ -20,7 +20,7 @@ public class Shop : MonoBehaviour
     public TMP_Text DescriptionPreview { get; private set; }
 
     [field: SerializeField]
-    public oldItem ShopSelectedItem { get; private set; }
+    public ItemData ShopSelectedItemData { get; private set; }
 
     [field: SerializeField]
     public Image ShopSelectedItemImagePreview { get; private set; }
@@ -124,20 +124,20 @@ public class Shop : MonoBehaviour
 
     public void BuyItem()
     {
-        if (ShopSelectedItem == null)
+        if (ShopSelectedItemData == null)
         {
             Debug.Log("No item selected");
             return;
         }
 
-        if (!InventoryController.current.SpendCoin(ShopSelectedItem.Price))
+        if (!InventoryController.current.SpendCoin(ShopSelectedItemData.Price))
         {
             Debug.Log("can't buy");
 
         }
 
 
-        if (InventoryController.current.AddItem(ShopSelectedItem.gameObject))
+        if (InventoryController.current.AddItem(ShopSelectedItemData.gameObject))
         {
             Debug.Log("buy successfully");
             ShopSelectItem(null);
@@ -148,15 +148,15 @@ public class Shop : MonoBehaviour
     {
         if (item == null)
         {
-            ShopSelectedItem = null;
+            ShopSelectedItemData = null;
             ShopSelectedItemImagePreview.sprite = DefaultShopImgPreview;
             DescriptionPreview.text = "";
         }
         else
         {
-            ShopSelectedItem = item.GetComponent<oldItem>();
+            ShopSelectedItemData = item.GetComponent<ItemData>();
             ShopSelectedItemImagePreview.sprite = item.GetComponent<Image>().sprite;
-            DescriptionPreview.text = ShopSelectedItem.Description;
+            DescriptionPreview.text = ShopSelectedItemData.Description;
 
         }
 
@@ -189,9 +189,9 @@ public class Shop : MonoBehaviour
 
     void UpdateBtn(int coin)
     {
-        if (ShopSelectedItem != null)
+        if (ShopSelectedItemData != null)
         {
-            int itemprice = ShopSelectedItem.GetComponent<oldItem>().Price;
+            int itemprice = ShopSelectedItemData.GetComponent<ItemData>().Price;
             BuyPriceText.text = "buy (" + itemprice + "G)";
             BuyBtn.interactable = itemprice <= coin;
         }

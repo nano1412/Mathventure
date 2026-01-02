@@ -49,20 +49,20 @@ public class HeroEquipmentSlot : MonoBehaviour
             SetButton(EquipItem, "Equip");
         }
 
-        oldItem item = equipment.GetComponent<oldItem>();
-        if (!item.UsableCharacter.Contains(HeroTypeOwner))
+        EquipmentData equipmentData = equipment.GetComponent<EquipmentData>();
+        if (!equipmentData.UsableHero.Contains(HeroTypeOwner))
         {
             EquipBtn.interactable = false;
             return;
         }
 
-        switch (item.ItemType)
+        switch (equipmentData.EquipmentType)
         {
-            case ItemType.Weapon:
+            case EquipmentType.Weapon:
                 EquipBtn.interactable = WeaponSlot.transform.childCount <= 0;
                 break;
 
-            case ItemType.Armor:
+            case EquipmentType.Armor:
                 EquipBtn.interactable = ArmorSlot.transform.childCount <= 0;
                 break;
 
@@ -82,17 +82,17 @@ public class HeroEquipmentSlot : MonoBehaviour
         }
         GameObject equipment = EquipmentInventory.current.EquipmentSelectedItem;
 
-        oldItem item = equipment.GetComponent<oldItem>();
+        EquipmentData equipmentData = equipment.GetComponent<EquipmentData>();
 
         GameObject equipmentSlot;
 
-        switch (item.ItemType)
+        switch (equipmentData.EquipmentType)
         {
-            case ItemType.Weapon:
+            case EquipmentType.Weapon:
                 equipmentSlot = WeaponSlot;
                 break;
 
-            case ItemType.Armor:
+            case EquipmentType.Armor:
                 equipmentSlot = ArmorSlot;
                 break;
 

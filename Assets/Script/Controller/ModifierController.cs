@@ -20,12 +20,4 @@ public class ModifierController : MonoBehaviour
             SelectedCharacter = character;
         }
     }
-
-    public void SetConsumable(GameObject consumable)
-    {
-        if (consumable.GetComponent<oldConsumable>())
-        {
-            SelectedCharacter = consumable;
-        }
-    }
 }

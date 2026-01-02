@@ -25,7 +25,7 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
 
         if (transform.childCount == 1)
         {
-            if (transform.GetChild(0).GetComponent<oldItem>() == null)
+            if (transform.GetChild(0).GetComponent<ItemData>() == null)
             {
                 Debug.LogWarning("item on " + transform.name + " dont have item data");
             }

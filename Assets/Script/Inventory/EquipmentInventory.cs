@@ -60,7 +60,7 @@ public class EquipmentInventory : MonoBehaviour
             return;
         }
 
-        oldItem item = equipmentSelectedItem.GetComponent<oldItem>();
+        ItemData item = equipmentSelectedItem.GetComponent<ItemData>();
 
         EquipmentSelectedItemNameText.text = item.ItemName;
         EquipmentSelectedItemNameShortdescriptionText.text = item.ShortDescription;
@@ -69,7 +69,7 @@ public class EquipmentInventory : MonoBehaviour
 
     public void SetInventorySelectItem(GameObject item)
     {
-        if (item.GetComponent<oldItem>() == null)
+        if (item.GetComponent<ItemData>() == null)
         {
             Debug.Log(item + " dont have item data in it");
             return;

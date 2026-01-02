@@ -65,20 +65,22 @@ public class InventoryController : MonoBehaviour
     public bool AddItem(GameObject item)
     {
 
-        if (item.GetComponent<oldItem>() == null)
+        if (item.GetComponent<ItemData>() == null)
         {
             Debug.LogWarning(item + " is not Item");
             return false;
         }
 
-        if (item.GetComponent<oldItem>() is oldEquipment equipment)
+        if (item.GetComponent<EquipmentData>() != null)
         {
             return AddItemToInventory(EquipmentInventorySlots, item);
         }
-        else if (item.GetComponent<oldItem>() is oldConsumable consumable)
+        else if (item.GetComponent<ConsumableData>() != null)
         {
             return AddItemToInventory(ConsumableInventorySlots, item);
         }
+
+        // add card in shop item here
 
         Debug.Log(item + "is item but its type is not imprement yet");
         return false;

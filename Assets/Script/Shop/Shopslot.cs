@@ -15,9 +15,9 @@ public class Shopslot : MonoBehaviour, IPointerClickHandler
     {
         if (itemslot.transform.childCount > 0)
         {
-            price.text = itemslot.transform.GetChild(0).GetComponent<oldItem>().Price.ToString();
-            shortDiscription.text = itemslot.transform.GetChild(0).GetComponent<oldItem>().ShortDescription;
-            displayItemname.text = itemslot.transform.GetChild(0).GetComponent<oldItem>().ItemName;
+            price.text = itemslot.transform.GetChild(0).GetComponent<ItemData>().Price.ToString();
+            shortDiscription.text = itemslot.transform.GetChild(0).GetComponent<ItemData>().ShortDescription;
+            displayItemname.text = itemslot.transform.GetChild(0).GetComponent<ItemData>().ItemName;
         }
 
     }
@@ -37,7 +37,7 @@ public class Shopslot : MonoBehaviour, IPointerClickHandler
     {
         Debug.Log(this.displayItemname + " clicked");
         GameObject item = GetItem();
-        Debug.Log(item.GetComponent<oldItem>().ItemName);
+        Debug.Log(item.GetComponent<ItemData>().ItemName);
         Shop.current.ShopSelectItem(item);
     }
 }
