@@ -66,12 +66,12 @@ public class Shop : MonoBehaviour
     {
 
         ResetShop();
-        LevelCreator.current.OnGameStart += UpdatdPossibleShopItem;
+        //LevelCreator.current.OnGameStart += UpdatdPossibleShopItem;
     }
 
     private void OnDisable()
     {
-        LevelCreator.current.OnGameStart -= UpdatdPossibleShopItem;
+        //LevelCreator.current.OnGameStart -= UpdatdPossibleShopItem;
     }
 
     private void OnDestroy()
@@ -165,6 +165,8 @@ public class Shop : MonoBehaviour
 
     bool SpawnItem(int CoinSpend)
     {
+        SpawnableItems = LevelCreator.current.SpawnableItems;
+
         if (!InventoryController.current.SpendCoin(CoinSpend))
         {
             Debug.Log("spawn item not sucessful");
