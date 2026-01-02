@@ -32,7 +32,7 @@ public class HeroEquipmentSlot : MonoBehaviour
 
     void CheckIsSelectedEquipmentWearable(GameObject equipment)
     {
-        if (equipment == null)
+        if (equipment == null || equipment.GetComponent<EquipmentData>() == null)
         {
             EquipBtn.interactable = false;
             return;
@@ -77,6 +77,10 @@ public class HeroEquipmentSlot : MonoBehaviour
     public void EquipItem()
     {
         if (EquipmentInventory.current.EquipmentSelectedItem == null)
+        {
+            return;
+        }
+        if (EquipmentInventory.current.EquipmentSelectedItem.GetComponent<EquipmentData>() == null)
         {
             return;
         }

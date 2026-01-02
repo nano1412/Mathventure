@@ -57,5 +57,10 @@ public struct CardData
 {
     public double FaceValue;
     public double EffectValue;
-    public EffectType Effect;
+
+    public CardData(double faceValue, double effectValue)
+    {
+        FaceValue = faceValue;
+        EffectValue = effectValue;
+    }
 }

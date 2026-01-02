@@ -480,6 +480,21 @@ public class CardPlayGameController : MonoBehaviour
         }
     }
 
+    public bool AddCardToPersistentDeck(GameObject item)
+    {
+        if(item.GetComponent<CardInShopData>() == null) { return false; }
+
+        CardInShopData cardInShopData = item.GetComponent<CardInShopData>();
+
+        CardData cardData = new CardData(cardInShopData.FaceValue, cardInShopData.EffectValue);
+
+        PersistentDeck.AddCardData(cardData);
+
+        return true;
+
+
+    }
+
     #region Get Set boi
 
     public List<OperatorOrder> GetOperatorOrdersAsEnum()

@@ -291,6 +291,5 @@ public class Card : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
     {
         faceValue = cardData.FaceValue;
         effectValue = cardData.EffectValue;
-        effect = cardData.Effect;
     }
 }

@@ -80,6 +80,18 @@ public class InventoryController : MonoBehaviour
             return AddItemToInventory(ConsumableInventorySlots, item);
         }
 
+        else if (item.GetComponent<CardInShopData>() != null)
+        {
+            bool result = CardPlayGameController.current.AddCardToPersistentDeck(item);
+
+            if (result)
+            {
+                Destroy(item);
+                return true;
+            }
+            return false;
+        }
+
         // add card in shop item here
 
         Debug.Log(item + "is item but its type is not imprement yet");
