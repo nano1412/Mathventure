@@ -27,7 +27,7 @@ public class CardPlayGameController : MonoBehaviour
     [field: SerializeField] public Transform ParenthesesRester { get; private set; }
 
 
-    [field: Header("Play Card Slot"), SerializeField]
+    [field: Header("Play CardEntity Slot"), SerializeField]
     public List<GameObject> PlayCardSlotList { get; private set; }
     [field: SerializeField]
     public List<GameObject> PlayCardList { get; private set; }
@@ -59,7 +59,7 @@ public class CardPlayGameController : MonoBehaviour
     public List<int> OperatorOrders { get; private set; }
 
 
-    [field: Header("Card and Deck"), SerializeField]
+    [field: Header("CardEntity and Deck"), SerializeField]
     public GameObject CardPrefab { get; private set; }
 
     [field: SerializeField]
@@ -294,7 +294,7 @@ public class CardPlayGameController : MonoBehaviour
 
     public void GetAllPossibleEquation()
     {
-        // get faceValue of card on hand
+        // get FaceValue of card on hand
         int cardInHandCount = 0;
         List<double> numbers = new List<double>();
 
@@ -303,10 +303,10 @@ public class CardPlayGameController : MonoBehaviour
         {
             if (cardInHand.childCount == 1)
             {
-                if (cardInHand.GetChild(0).GetComponent<Card>() != null)
+                if (cardInHand.GetChild(0).GetComponent<CardData>() != null)
                 {
                     cardInHandCount++;
-                    numbers.Add(cardInHand.GetChild(0).GetComponent<Card>().GetFaceValue());
+                    numbers.Add(cardInHand.GetChild(0).GetComponent<CardData>().FaceValue);
                 }
             }
         }
@@ -381,7 +381,7 @@ public class CardPlayGameController : MonoBehaviour
             {
 
 
-                if (!RoundDeck.TryDrawCard(out CardData SelectedCarddata))
+                if (!RoundDeck.TryDrawCard(out CardInDeckData SelectedCarddata))
                 {
                     Debug.Log("Deck empty");
                     return;
@@ -389,9 +389,9 @@ public class CardPlayGameController : MonoBehaviour
 
 
                 GameObject newCard = Instantiate(CardPrefab, DeckObject.position, new Quaternion(), currentCardSlot);
-                Card newCardScript = newCard.GetComponent<Card>();
+                CardEntity newCardScript = newCard.GetComponent<CardEntity>();
                 newCardScript.deckPosition = DeckObject.position;
-                newCardScript.SetCardData(SelectedCarddata);
+                newCardScript.GetComponent<CardData>().SetCardData(SelectedCarddata);
 
                 currentCardSlot.gameObject.SetActive(true);
             }
@@ -486,7 +486,7 @@ public class CardPlayGameController : MonoBehaviour
 
         CardInShopData cardInShopData = item.GetComponent<CardInShopData>();
 
-        CardData cardData = new CardData(cardInShopData.FaceValue, cardInShopData.EffectValue);
+        CardInDeckData cardData = new CardInDeckData(cardInShopData.FaceValue, cardInShopData.EffectValue);
 
         PersistentDeck.AddCardData(cardData);
 

@@ -10,5 +10,5 @@ public class Move : ScriptableObject
     [field: SerializeField] public MoveType MoveType { get; private set; }
     [field: SerializeField] public AnimationType AnimationType { get; private set; }
 
-    [field: SerializeField] public List<ModifierSO> ApplyStatusViaAttack { get; private set; } = new List<ModifierSO>();
+    [field: SerializeField] public List<CharacterBuff> ApplyStatusViaAttack { get; private set; } = new List<CharacterBuff>();
 }

@@ -66,7 +66,7 @@ public static class Utils
 
     public enum CharacterType { Hero_Plus, Hero_Minus, Hero_Multiply, Hero_Divide, Hero_Buff, Enemy }
 
-    public enum ModifierCondition
+    public enum CardBuffCondition
     {
         Card_All,
         Card_IsEven,
@@ -76,6 +76,11 @@ public static class Utils
         Card_Lessthan,
         Card_Equal,
 
+        
+    }
+
+    public enum CharacterBuffCondition
+    {
         Hero_All,
         Hero_Plus,
         Hero_Minus,
@@ -91,21 +96,16 @@ public static class Utils
         Enemy_OnlySelected
     }
 
-    public enum ModifierMethod
+    public enum BuffMethod
     {
         AddValue,
-        TemporaryAddValue,
         MultiplyValue,
-        TemporaryMultiplyValue,
-        AddEffect,
-        RemoveEffect
     }
 
-    public enum ModifierTarget
+    public enum CharacterBuffTargetValue
     {
         HP,
         ATK,
-        Card_Value
     }
 
     public class StatusEffect
