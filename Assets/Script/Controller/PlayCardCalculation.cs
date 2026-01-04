@@ -73,7 +73,7 @@ public static class PlayCardCalculation
         for (int i = 0; i < handEquation.Count; i++)
         {
             SimplifiedCard sCard = new SimplifiedCard(
-                handEquation[i].GetComponent<Card>() != null ? handEquation[i].GetComponent<Card>().GetFaceValue() : 0,
+                handEquation[i].GetComponent<CardEntity>() != null ? handEquation[i].GetComponent<CardData>().FaceValue : 0,
                 handEquation[i].GetComponent<Operatorcard>() != null ? handEquation[i].GetComponent<Operatorcard>().GetOperator() : null,
                 i);
 
@@ -348,8 +348,8 @@ public static class PlayCardCalculation
 
 
         int numberCount = 0;
-        // Validation check if first and last Gameobject have Card component
-        if (cards.Count % 2 == 0 || cards[0].GetComponent<Card>() == null || cards[^1].GetComponent<Card>() == null)
+        // Validation check if first and last Gameobject have CardEntity component
+        if (cards.Count % 2 == 0 || cards[0].GetComponent<CardEntity>() == null || cards[^1].GetComponent<CardEntity>() == null)
         {
             //wrong order, the number must come first and last
             return -1;
@@ -358,14 +358,14 @@ public static class PlayCardCalculation
         // Validation check if the list got the number and operator zip in together
         for (int i = 0; i < cards.Count; i++)
         {
-            if (i % 2 == 0 && cards[i].GetComponent<Card>() == null ||
+            if (i % 2 == 0 && cards[i].GetComponent<CardEntity>() == null ||
                 i % 2 == 1 && cards[i].GetComponent<Operatorcard>() == null)
             {
                 //wrong order, operator and number must be zipped between each other
                 return -2;
             }
 
-            if (i % 2 == 0 && cards[i].GetComponent<Card>() != null)
+            if (i % 2 == 0 && cards[i].GetComponent<CardEntity>() != null)
             {
                 numberCount++;
             }

@@ -9,15 +9,15 @@ using static Utils;
 
 public class HorizontalCardHolder : MonoBehaviour
 {
-    [SerializeField] private Card selectedCard;
-    [SerializeReference] private Card hoveredCard;
+    [SerializeField] private CardEntity selectedCard;
+    [SerializeReference] private CardEntity hoveredCard;
 
     [SerializeField] private GameObject slotPrefab;
 
     private RectTransform rect;
 
     [Header("Spawn Settings")]
-    public List<Card> cards;
+    public List<CardEntity> cards;
 
     bool isCrossing = false;
     [SerializeField] private bool tweenCardReturn = true;
@@ -37,13 +37,13 @@ public class HorizontalCardHolder : MonoBehaviour
 
     }
 
-    private void BeginDrag(Card card)
+    private void BeginDrag(CardEntity card)
     {
         selectedCard = card;
     }
 
 
-    void EndDrag(Card card)
+    void EndDrag(CardEntity card)
     {
         if (selectedCard == null)
             return;
@@ -57,23 +57,23 @@ public class HorizontalCardHolder : MonoBehaviour
 
     }
 
-    void CardPointerEnter(Card card)
+    void CardPointerEnter(CardEntity card)
     {
         hoveredCard = card;
     }
 
-    void CardPointerExit(Card card)
+    void CardPointerExit(CardEntity card)
     {
         hoveredCard = null;
     }
 
     void Update()
     {
-        cards = GetComponentsInChildren<Card>().ToList();
+        cards = GetComponentsInChildren<CardEntity>().ToList();
 
         int cardCount = 0;
 
-        foreach (Card card in cards)
+        foreach (CardEntity card in cards)
         {
             card.PointerEnterEvent.AddListener(CardPointerEnter);
             card.PointerExitEvent.AddListener(CardPointerExit);
@@ -107,7 +107,7 @@ public class HorizontalCardHolder : MonoBehaviour
 
         if (Input.GetMouseButtonDown(1))
         {
-            foreach (Card card in cards)
+            foreach (CardEntity card in cards)
             {
                 card.Deselect();
             }
@@ -162,7 +162,7 @@ public class HorizontalCardHolder : MonoBehaviour
         cards[index].cardVisual.Swap(swapIsRight ? -1 : 1);
 
         //Updated Visual Indexes
-        foreach (Card card in cards)
+        foreach (CardEntity card in cards)
         {
             card.cardVisual.UpdateIndex(transform.childCount);
         }

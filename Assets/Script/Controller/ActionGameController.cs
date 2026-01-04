@@ -88,15 +88,15 @@ public class ActionGameController : MonoBehaviour
                 CardPlayGameController.current
                     .PlayCardSlotList[operatorOrders[i] - 1]
                     .transform.GetChild(0)
-                    .GetComponent<Card>()
-                    .GetEffectValue();
+                    .GetComponent<CardData>()
+                    .EffectiveValue;
 
             double rightValue =
                 CardPlayGameController.current
                     .PlayCardSlotList[operatorOrders[i] + 1]
                     .transform.GetChild(0)
-                    .GetComponent<Card>()
-                    .GetEffectValue();
+                    .GetComponent<CardData>()
+                    .EffectiveValue;
 
             Hero hero = GetHeroByOperation(heroType);
 

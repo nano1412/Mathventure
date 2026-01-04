@@ -10,10 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6964580406683806308}
   - component: {fileID: 3479498278798631746}
-  - component: {fileID: 133173175211647385}
   - component: {fileID: 7486306067316991545}
   - component: {fileID: 8562604021319485591}
   - component: {fileID: -3148967189081000219}
+  - component: {fileID: 1096188522344759779}
+  - component: {fileID: -949859278236215045}
   m_Layer: 5
   m_Name: Card
   m_TagString: Untagged
@@ -48,52 +49,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8994356602663114153}
   m_CullTransparentMesh: 1
---- !u!114 &133173175211647385
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8994356602663114153}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72d103f73c46c407db068681e2811968, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  faceValue: 0
-  effectValue: 0
-  effect: 0
-  deckPosition: {x: 0, y: 0, z: 0}
-  instantiateVisual: 1
-  moveSpeedLimit: 50
-  selected: 0
-  selectionOffset: 25
-  cardVisualPrefab: {fileID: 7310339964073049012, guid: bddd0263814164da396aa8d1438dd810, type: 3}
-  cardVisual: {fileID: 0}
-  isHovering: 0
-  isDragging: 0
-  wasDragged: 0
-  PointerEnterEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  PointerExitEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  PointerUpEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  PointerDownEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  BeginDragEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  EndDragEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  SelectEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &7486306067316991545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,3 +135,60 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
   m_EffectDistance: {x: 8, y: 8}
   m_UseGraphicAlpha: 1
+--- !u!114 &1096188522344759779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8994356602663114153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12d3ad409df040244a554881740c8756, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CardEntity
+  deckPosition: {x: 0, y: 0, z: 0}
+  instantiateVisual: 1
+  moveSpeedLimit: 50
+  selected: 0
+  selectionOffset: 50
+  cardVisualPrefab: {fileID: 7310339964073049012, guid: bddd0263814164da396aa8d1438dd810, type: 3}
+  cardVisual: {fileID: 0}
+  isHovering: 0
+  isDragging: 0
+  wasDragged: 0
+  PointerEnterEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  PointerExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  PointerUpEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  PointerDownEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  BeginDragEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  EndDragEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  SelectEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &-949859278236215045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8994356602663114153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 215af24dd931e5549a6fc01a82d4f15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  <FaceValue>k__BackingField: 0
+  <CardType>k__BackingField: 0

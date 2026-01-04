@@ -6,21 +6,21 @@ using UnityEditorInternal;
 using UnityEngine;
 using static Utils;
 
-[CreateAssetMenu(fileName = "deck", menuName = "Scriptable Objects/Card/deck")]
+[CreateAssetMenu(fileName = "deck", menuName = "Scriptable Objects/CardEntity/deck")]
 public class Deck : ScriptableObject
 {
-    public List<CardData> cardDatas;
+    public List<CardInDeckData> cardDatas;
     public Sprite backCard;
     //DeckObject effect
 
     public Deck CloneDeck()
     {
         Deck clone = Instantiate(this);
-        clone.cardDatas = new List<CardData>(cardDatas);
+        clone.cardDatas = new List<CardInDeckData>(cardDatas);
         return clone;
     }
 
-    public bool TryDrawCard(out CardData card)
+    public bool TryDrawCard(out CardInDeckData card)
     {
         if (cardDatas.Count == 0)
         {
@@ -34,7 +34,7 @@ public class Deck : ScriptableObject
         return true;
     }
 
-    public void ChangeCard(CardData target, CardData newCardData)
+    public void ChangeCard(CardInDeckData target, CardInDeckData newCardData)
     {
         for (int i = 0; i < cardDatas.Count; i++)
         {
@@ -46,19 +46,19 @@ public class Deck : ScriptableObject
         }
     }
 
-    public void AddCardData(CardData newCardData)
+    public void AddCardData(CardInDeckData newCardData)
     {
         cardDatas.Add(newCardData);
     }
 }
 
 [System.Serializable]
-public struct CardData
+public struct CardInDeckData
 {
     public double FaceValue;
     public double EffectValue;
 
-    public CardData(double faceValue, double effectValue)
+    public CardInDeckData(double faceValue, double effectValue)
     {
         FaceValue = faceValue;
         EffectValue = effectValue;

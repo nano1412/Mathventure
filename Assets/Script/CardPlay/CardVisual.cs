@@ -12,8 +12,8 @@ public class CardVisual : MonoBehaviour
 {
     private bool initalize = false;
 
-    [Header("Card")]
-    public Card parentCard;
+    [Header("CardEntity")]
+    public CardEntity parentCard;
     private Transform cardTransform;
     private Vector3 rotationDelta;
     private int savedIndex;
@@ -73,15 +73,15 @@ public class CardVisual : MonoBehaviour
         shadowDistance = visualShadow.localPosition;
     }
 
-    public void Initialize(Card target, int index = 0)
+    public void Initialize(CardEntity target, int index = 0)
     {
         //Declarations
         parentCard = target;
         cardTransform = target.transform;
         canvas = GetComponent<Canvas>();
         shadowCanvas = visualShadow.GetComponent<Canvas>();
-        faceValueText.text = parentCard.GetFaceValue().ToString();
-        effectValueText.text = parentCard.GetEffectValue().ToString();
+        faceValueText.text = parentCard.GetComponent<CardData>().FaceValue.ToString();
+        effectValueText.text = parentCard.GetComponent<CardData>().EffectiveValue.ToString();
 
         //Event Listening
         parentCard.PointerEnterEvent.AddListener(PointerEnter);
@@ -154,7 +154,7 @@ public class CardVisual : MonoBehaviour
         tiltParent.eulerAngles = new Vector3(lerpX, lerpY, lerpZ);
     }
 
-    private void Select(Card card, bool state)
+    private void Select(CardEntity card, bool state)
     {
         //DOTween.Kill(2, true);
         //float dir = state ? 1 : 0;
@@ -175,7 +175,7 @@ public class CardVisual : MonoBehaviour
         shakeParent.DOPunchRotation((Vector3.forward * swapRotationAngle) * dir, swapTransition, swapVibrato, 1).SetId(3);
     }
 
-    private void BeginDrag(Card card)
+    private void BeginDrag(CardEntity card)
     {
         if (scaleAnimations)
             transform.DOScale(scaleOnSelect, scaleTransition).SetEase(scaleEase);
@@ -183,13 +183,13 @@ public class CardVisual : MonoBehaviour
         canvas.overrideSorting = true;
     }
 
-    private void EndDrag(Card card)
+    private void EndDrag(CardEntity card)
     {
         canvas.overrideSorting = false;
         transform.DOScale(1, scaleTransition).SetEase(scaleEase);
     }
 
-    private void PointerEnter(Card card)
+    private void PointerEnter(CardEntity card)
     {
         if (scaleAnimations)
             transform.DOScale(scaleOnHover, scaleTransition).SetEase(scaleEase);
@@ -198,13 +198,13 @@ public class CardVisual : MonoBehaviour
         shakeParent.DOPunchRotation(Vector3.forward * hoverPunchAngle, hoverTransition, 20, 1).SetId(2);
     }
 
-    private void PointerExit(Card card)
+    private void PointerExit(CardEntity card)
     {
         if (!parentCard.wasDragged)
             transform.DOScale(1, scaleTransition).SetEase(scaleEase);
     }
 
-    private void PointerUp(Card card, bool longPress)
+    private void PointerUp(CardEntity card, bool longPress)
     {
         if (scaleAnimations)
             transform.DOScale(longPress ? scaleOnHover : scaleOnSelect, scaleTransition).SetEase(scaleEase);
@@ -214,7 +214,7 @@ public class CardVisual : MonoBehaviour
         shadowCanvas.overrideSorting = true;
     }
 
-    private void PointerDown(Card card)
+    private void PointerDown(CardEntity card)
     {
         if (scaleAnimations)
             transform.DOScale(scaleOnSelect, scaleTransition).SetEase(scaleEase);

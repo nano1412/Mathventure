@@ -2,7 +2,7 @@ using UnityEditor;
 using UnityEditorInternal;
 using UnityEngine;
 
-[CustomEditor(typeof(CardData))]
+[CustomEditor(typeof(CardInDeckData))]
 public class CardDataEditor : Editor
 {
     public override void OnInspectorGUI()
