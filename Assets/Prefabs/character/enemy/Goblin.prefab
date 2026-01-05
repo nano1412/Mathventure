@@ -55,6 +55,7 @@ MonoBehaviour:
   <IsStuned>k__BackingField: 0
   <DefaultMove>k__BackingField: {fileID: 11400000, guid: c8343813d3592cd44a8779d69f00136a, type: 2}
   <FacingDirection>k__BackingField: {x: 0, y: 0}
+  targets: []
   <CoinOnKill>k__BackingField: 10
 --- !u!1 &6444919316157576528
 GameObject:
@@ -392,7 +393,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -969334989, guid: 433719b32aba83f42bec9096ba5ce1b2, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -400,7 +401,7 @@ SpriteRenderer:
   m_Size: {x: 4.801072, y: 3.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &3514383640638995766

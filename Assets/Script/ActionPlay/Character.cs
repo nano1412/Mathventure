@@ -196,5 +196,11 @@ public abstract class Character : MonoBehaviour
     {
         Hp = MaxHp;
     }
+
+    public void SelectedCharacter()
+    {
+        Debug.Log(this.name + " clicked");
+        BuffController.current.SelectedCharacter = this.gameObject;
+    }
 }
 

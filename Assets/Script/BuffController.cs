@@ -6,8 +6,40 @@ public class BuffController : MonoBehaviour
 {
     public static BuffController current;
 
-    public List<CharacterBuff> CurrentCharacterBuff { get; private set; }
-    public List<CardBuff> CurrentCardBuff { get; private set; }
+    [field:SerializeField] public List<CharacterBuff> CurrentCharacterBuff { get; private set; }
+    [field: SerializeField] public List<CardBuff> CurrentCardBuff { get; private set; }
+
+    [field: SerializeField] private GameObject selectedCharacter;
+    public GameObject SelectedCharacter
+    {
+        get
+        {
+            return selectedCharacter;
+        }
+        set
+        {
+            if(SelectedConsumable != null && value.GetComponent<Character>() != null)
+            {
+                selectedCharacter = value;
+            }
+        }
+    }
+
+    [field: SerializeField] private GameObject selectedConsumable;
+    public GameObject SelectedConsumable
+    {
+        get
+        {
+            return selectedConsumable;
+        }
+        set
+        {
+            if(value.GetComponent<ConsumableData>() != null)
+            {
+                selectedConsumable = value;
+            }
+        }
+    }
 
     private void Awake()
     {

@@ -10,9 +10,15 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        
         if (!(TypeOfSlot == SlotType.Shop || TypeOfSlot == SlotType.Display) && transform.childCount >= 0)
         {
             EquipmentInventory.current.SetInventorySelectItem(transform.GetChild(0).gameObject);
+
+            if(transform.GetChild(0).gameObject.GetComponent<ConsumableData>()!= null)
+            {
+                BuffController.current.SelectedConsumable = transform.GetChild(0).gameObject;
+            }
         }
     }
 }
