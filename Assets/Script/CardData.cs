@@ -1,3 +1,6 @@
+using NUnit.Framework;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using static Utils;
 
@@ -16,7 +19,7 @@ public class CardData : MonoBehaviour
             effectiveValue = value;
         }
     }
-    [field: SerializeField] public CardBuffCondition CardType { get; private set; }
+    [field: SerializeField] public List<CardBuffCondition> CardType { get; private set; }
 
     private void Start()
     {
@@ -27,7 +30,15 @@ public class CardData : MonoBehaviour
     {
         if (FaceValue % 2 == 0)
         {
+            CardType.Add(CardBuffCondition.Card_IsEven);
+        } else
+        {
+            CardType.Add(CardBuffCondition.Card_IsOdd);
+        }
 
+        if (Utils.IsPrimeFromDouble(FaceValue))
+        {
+            CardType.Add(CardBuffCondition.Card_IsPrime);
         }
     }
 
@@ -50,13 +61,47 @@ public class CardData : MonoBehaviour
     public double GetEffectiveValueWithBuff()
     {
         double temp = effectiveValue;
-
         foreach (CardBuff cardBuff in BuffController.current.CurrentCardBuff)
         {
-            bool isApplyBuffToThisCard = false;
+            //check condition
+            bool isApplyBuffToThisCard = cardBuff.CardBuffCondition.Contains(CardBuffCondition.Card_All);
 
+            if (cardBuff.CardBuffCondition.Intersect(CardType).Any())
+            {
+                isApplyBuffToThisCard = true;
+                break;
+            }
 
+            if (cardBuff.CardBuffCondition.Contains(CardBuffCondition.Card_Equal))
+            {
+                isApplyBuffToThisCard = FaceValue == cardBuff.ThresholdValue;
+            } else if (cardBuff.CardBuffCondition.Contains(CardBuffCondition.Card_Lessthan))
+            {
+                isApplyBuffToThisCard = FaceValue <= cardBuff.ThresholdValue;
+            }
+            else if (cardBuff.CardBuffCondition.Contains(CardBuffCondition.Card_Morethan))
+            {
+                isApplyBuffToThisCard = FaceValue >= cardBuff.ThresholdValue;
+            }
+
+            // apply buff
+            if (isApplyBuffToThisCard)
+            {
+                switch (cardBuff.buffMethod)
+                {
+                    case BuffMethod.AddValue:
+                        temp += cardBuff.Value;
+
+                        break;
+                    case BuffMethod.MultiplyValue:
+                        temp *= cardBuff.Value;
+
+                        break;
+
+                }
+            }
         }
+
 
         return temp;
     }

@@ -181,4 +181,32 @@ public static class Utils
     }
 
     public static Random rnd = new Random();
+
+    public static bool IsPrimeFromDouble(double value)
+    {
+        // Round the value
+        long n = (long)Math.Round(value);
+
+        // Prime numbers must be > 1
+        if (n <= 1)
+            return false;
+
+        // 2 is the only even prime
+        if (n == 2)
+            return true;
+
+        // Eliminate even numbers
+        if (n % 2 == 0)
+            return false;
+
+        long limit = (long)Math.Sqrt(n);
+
+        for (long i = 3; i <= limit; i += 2)
+        {
+            if (n % i == 0)
+                return false;
+        }
+
+        return true;
+    }
 }
