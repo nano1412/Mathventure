@@ -172,19 +172,19 @@ public abstract class Character : MonoBehaviour
 
         switch (DefaultMove.TargetType)
         {
-            case TargetType.front:
+            case AttackTargetType.front:
                 return opponent.GetFirstCharacterAsList();
 
-            case TargetType.firstTwo:
+            case AttackTargetType.firstTwo:
                 return opponent.GetFirstTwoCharactersAsList();
 
-            case TargetType.back:
+            case AttackTargetType.back:
                 return opponent.GetLastCharacterAsList();
 
-            case TargetType.all:
+            case AttackTargetType.all:
                 return opponent.GetAllCharactersAsList();
 
-            case TargetType.allFriendly:
+            case AttackTargetType.allFriendly:
                 return ally.GetAllCharactersAsList();
 
         }

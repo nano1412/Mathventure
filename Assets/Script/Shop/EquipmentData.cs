@@ -9,6 +9,12 @@ public class EquipmentData : MonoBehaviour
 
     [field: SerializeField] public EquipmentType EquipmentType { get; private set; }
 
+    [field: SerializeField] public double IncreaseMaxHP { get; private set; }
+
+    [field: SerializeField] public double IncreaseATK { get; private set; }
+
+    [field: SerializeField] public CharacterBuff CharacterBuffInflictOnAttack { get; private set; }
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

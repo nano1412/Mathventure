@@ -12,7 +12,7 @@ public static class Utils
         Divide
     }
 
-    public enum TargetType
+    public enum AttackTargetType
     {
         front,
         back,
@@ -64,7 +64,7 @@ public static class Utils
 
     public enum SlotType { Weapon, Armor, Equipment, Consumable, Shop, Display }
 
-    public enum CharacterType { Hero_Plus, Hero_Minus, Hero_Multiply, Hero_Divide, Hero_Buff, Enemy }
+    public enum CharacterType { Hero_Plus, Hero_Minus, Hero_Multiply, Hero_Divide, Hero_Buff, Enemy, Card }
 
     public enum CardBuffCondition
     {

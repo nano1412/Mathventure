@@ -9,4 +9,5 @@ public class CardBuff : ScriptableObject
     [field: SerializeField] public BuffMethod buffMethod { get; private set; }
     [field: SerializeField] public List<CardBuffCondition> CardBuffCondition { get; private set; }
     [field: SerializeField] public double ThresholdValue { get; private set; }
+    [field: SerializeField] public int Duration { get; private set; } = 1;
 }

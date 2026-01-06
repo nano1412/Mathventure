@@ -6,7 +6,7 @@ using static Utils;
 public class Move : ScriptableObject
 {
     [field: SerializeField] public double Value { get; private set; }
-    [field: SerializeField] public TargetType TargetType { get; private set; }
+    [field: SerializeField] public AttackTargetType TargetType { get; private set; }
     [field: SerializeField] public MoveType MoveType { get; private set; }
     [field: SerializeField] public AnimationType AnimationType { get; private set; }
 
