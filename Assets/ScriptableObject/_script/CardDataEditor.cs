@@ -9,7 +9,7 @@ public class CardDataEditor : Editor
     {
         serializedObject.Update();
         EditorGUILayout.PropertyField(serializedObject.FindProperty("FaceValue"), true);
-        EditorGUILayout.PropertyField(serializedObject.FindProperty("EffectValue"), true);
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("EffectiveValue"), true);
         EditorGUILayout.PropertyField(serializedObject.FindProperty("Effect"), true);
         serializedObject.ApplyModifiedProperties();
     }

@@ -486,7 +486,7 @@ public class CardPlayGameController : MonoBehaviour
 
         CardInShopData cardInShopData = item.GetComponent<CardInShopData>();
 
-        CardInDeckData cardData = new CardInDeckData(cardInShopData.FaceValue, cardInShopData.EffectValue);
+        CardInDeckData cardData = new CardInDeckData(cardInShopData.FaceValue, cardInShopData.EffectiveValue);
 
         PersistentDeck.AddCardData(cardData);
 
