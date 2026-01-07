@@ -7134,8 +7134,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d6f491eab7fe0b4795736527601570d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  <CurrentCharacterBuff>k__BackingField: []
-  <CurrentCardBuff>k__BackingField: []
+  <CurrentCharacterBuffs>k__BackingField:
+  - {fileID: 11400000, guid: e7c1150671a18694cb730085b9db8d5a, type: 2}
+  <CurrentCardBuffs>k__BackingField:
+  - {fileID: 11400000, guid: e38505e73a196e840972210efe617ff6, type: 2}
   selectedCharacter: {fileID: 0}
   selectedConsumable: {fileID: 0}
 --- !u!4 &907558308 stripped

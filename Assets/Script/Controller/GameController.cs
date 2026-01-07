@@ -151,12 +151,14 @@ public class GameController : MonoBehaviour
                 Destroy(cardAlreadyPlayed.transform.GetChild(0).gameObject);
             }
         }
+        BuffController.current.ReduceAllCurrentBuffDuration();
 
         NextRoundStart();
     }
 
     public void RounndWin()
     {
+        BuffController.current.RemoveAllBuff();
 
         //to round victory screen or check win
         if (!IsEndless && Wave >= 3)

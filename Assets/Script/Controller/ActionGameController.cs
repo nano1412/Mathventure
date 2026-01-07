@@ -226,11 +226,11 @@ public class ActionGameController : MonoBehaviour
         double multiplier = 1;
         CardData leftValue = new CardData();
         leftValue.SetFaceValue(5);
-        leftValue.SetEffectValue(5);
+        leftValue.SetEffectValue(1);
 
         CardData rightValue = new CardData();
         rightValue.SetFaceValue(2);
-        rightValue.SetEffectValue(5);
+        rightValue.SetEffectValue(1);
 
         List<OperationEnum> heroTypes = new()
     {

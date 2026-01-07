@@ -6,8 +6,8 @@ public class BuffController : MonoBehaviour
 {
     public static BuffController current;
 
-    [field:SerializeField] public List<CharacterBuff> CurrentCharacterBuff { get; private set; }
-    [field: SerializeField] public List<CardBuff> CurrentCardBuff { get; private set; }
+    [field:SerializeField] public List<CharacterBuff> CurrentCharacterBuffs { get; private set; }
+    [field: SerializeField] public List<CardBuff> CurrentCardBuffs { get; private set; }
 
     [field: SerializeField] private GameObject selectedCharacter;
     public GameObject SelectedCharacter
@@ -48,16 +48,24 @@ public class BuffController : MonoBehaviour
 
     public void ReduceAllCurrentBuffDuration()
     {
-        foreach(CharacterBuff characterBuff in CurrentCharacterBuff)
+        Debug.Log("reduce all buff duration");
+        foreach (CharacterBuff characterBuff in CurrentCharacterBuffs)
         {
             characterBuff.ReduceDuration();
         }
-        CurrentCharacterBuff.RemoveAll(characterBuff => characterBuff.Duration <= 0);
+        CurrentCharacterBuffs.RemoveAll(characterBuff => characterBuff.Duration <= 0);
 
-        foreach (CardBuff cardBuff in CurrentCardBuff)
+        foreach (CardBuff cardBuff in CurrentCardBuffs)
         {
             cardBuff.ReduceDuration();
         }
-        CurrentCardBuff.RemoveAll(cardBuff => cardBuff.Duration <= 0);
+        CurrentCardBuffs.RemoveAll(cardBuff => cardBuff.Duration <= 0);
+    }
+
+    public void RemoveAllBuff()
+    {
+        Debug.Log("remove all buff!");
+        CurrentCharacterBuffs.Clear();
+        CurrentCardBuffs.Clear();
     }
 }

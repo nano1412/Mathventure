@@ -72,7 +72,7 @@ public class CardData : MonoBehaviour
             //}
             //end debug
 
-        foreach (CardBuff cardBuff in BuffController.current.CurrentCardBuff)
+        foreach (CardBuff cardBuff in BuffController.current.CurrentCardBuffs)
         {
             //debug
             //Debug.Log("this buff condition:");

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38dc8e737b3a2ef4ab01b1ede5e0595e, type: 3}
   m_Name: TestCardBuff1
   m_EditorClassIdentifier: Assembly-CSharp::CardBuff
-  <Value>k__BackingField: 5
+  <Value>k__BackingField: 1
   <buffMethod>k__BackingField: 0
-  <CardBuffCondition>k__BackingField: 00000000
+  <CardBuffConditions>k__BackingField: 02000000
   <ThresholdValue>k__BackingField: 0
-  <Duration>k__BackingField: 1
+  <Duration>k__BackingField: 0
