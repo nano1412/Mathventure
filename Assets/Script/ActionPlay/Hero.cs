@@ -7,7 +7,7 @@ public class Hero : Character
     private double leftcardValue = 0;
     private double rightcardValue = 0;
 
-    public void Attack(double mul, double leftAtkValue, double RightAtkValue)
+    public void Attack(double mul, CardData leftAtkValue, CardData rightAtkValue)
     {
         Debug.Log("hero attack is called");
         targets = GetTargetByMove();
@@ -16,14 +16,17 @@ public class Hero : Character
         {
             if (target != null)
             {
-                Debug.Log(transform.name + " is attacking " + target.name + " with Lcard:" + leftAtkValue + " Rcard:" + RightAtkValue + " multiplier:" + mul);
+                Debug.Log(transform.name + " is attacking " + target.name + 
+                    " with Lcard:Base(" + leftAtkValue.EffectiveValue + ") w/Buff(" + leftAtkValue.GetEffectiveValueWithBuff() +
+                    ") Rcard:Base(" + rightAtkValue.EffectiveValue + ") w/Buff(" + rightAtkValue.GetEffectiveValueWithBuff() +
+                    ") multiplier:" + mul);
 
             }
         }
 
         multiplier = mul;
-        leftcardValue = leftAtkValue;
-        rightcardValue = RightAtkValue;
+        leftcardValue = leftAtkValue.GetEffectiveValueWithBuff();
+        rightcardValue = rightAtkValue.GetEffectiveValueWithBuff();
 
     animator.SetTrigger("Attack");
 

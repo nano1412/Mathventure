@@ -86,14 +86,13 @@ public static class Utils
         Hero_Minus,
         Hero_Multiply,
         Hero_Divide,
-        Hero_OnlyEquiper,
-        Hero_OnlySelected,
 
         Enemy_All,
         Enemy_Front,
         Enemy_Back,
         Enemy_FirstTwo,
-        Enemy_OnlySelected
+
+        Character_OnlySelected
     }
 
     public enum BuffMethod
@@ -105,6 +104,7 @@ public static class Utils
     public enum CharacterBuffTargetValue
     {
         HP,
+        MaxHP,
         ATK,
     }
 

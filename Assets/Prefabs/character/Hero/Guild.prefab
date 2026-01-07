@@ -140,12 +140,13 @@ MonoBehaviour:
   <CharacterType>k__BackingField: 1
   animator: {fileID: 5491275845360244238}
   HPbar: {fileID: 8551539945059949247}
-  <MaxHp>k__BackingField: 20
+  <BaseMaxHp>k__BackingField: 20
   <Hp>k__BackingField: 0
   <Shield>k__BackingField: 0
   <IsStuned>k__BackingField: 0
   <DefaultMove>k__BackingField: {fileID: 11400000, guid: 4c99e65115e82de4a82740bcd4ffd1b4, type: 2}
   <FacingDirection>k__BackingField: {x: 0, y: 0}
+  targets: []
 --- !u!114 &-3746205287628266338
 MonoBehaviour:
   m_ObjectHideFlags: 0

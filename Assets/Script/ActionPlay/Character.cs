@@ -10,7 +10,7 @@ public abstract class Character : MonoBehaviour
     [field: SerializeField] protected Animator animator;
     [field: SerializeField] protected Slider HPbar;
 
-    [field: Header("Hp and status"), SerializeField] public double MaxHp { get; private set; }
+    [field: Header("Hp and status"), SerializeField] public double BaseMaxHp { get; private set; }
     [field: SerializeField] public double Hp { get; private set; }
     [field: SerializeField] public double Shield { get; private set; }
     [field: SerializeField] public bool IsStuned { get; private set; }
@@ -23,13 +23,13 @@ public abstract class Character : MonoBehaviour
 
     private void Start()
     {
-        Hp = MaxHp;
+        Hp = BaseMaxHp;
     }
 
     void Update()
     {
         HPbar.value = (float)Hp;
-        HPbar.maxValue = (float)MaxHp;
+        HPbar.maxValue = (float)BaseMaxHp;
     }
 
     public void TakeDamage(double damage, string attacker)
@@ -194,7 +194,7 @@ public abstract class Character : MonoBehaviour
 
     public void ResetHP()
     {
-        Hp = MaxHp;
+        Hp = BaseMaxHp;
     }
 
     public void SelectedCharacter()

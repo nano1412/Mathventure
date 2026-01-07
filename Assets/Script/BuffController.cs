@@ -45,4 +45,19 @@ public class BuffController : MonoBehaviour
     {
         current = this;
     }
+
+    public void ReduceAllCurrentBuffDuration()
+    {
+        foreach(CharacterBuff characterBuff in CurrentCharacterBuff)
+        {
+            characterBuff.ReduceDuration();
+        }
+        CurrentCharacterBuff.RemoveAll(characterBuff => characterBuff.Duration <= 0);
+
+        foreach (CardBuff cardBuff in CurrentCardBuff)
+        {
+            cardBuff.ReduceDuration();
+        }
+        CurrentCardBuff.RemoveAll(cardBuff => cardBuff.Duration <= 0);
+    }
 }

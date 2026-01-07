@@ -84,19 +84,17 @@ public class ActionGameController : MonoBehaviour
                     .GetComponent<Operatorcard>()
                     .operation;
 
-            double leftValue =
+            CardData leftCardData =
                 CardPlayGameController.current
                     .PlayCardSlotList[operatorOrders[i] - 1]
                     .transform.GetChild(0)
-                    .GetComponent<CardData>()
-                    .EffectiveValue;
+                    .GetComponent<CardData>();
 
-            double rightValue =
+            CardData rightCardData =
                 CardPlayGameController.current
                     .PlayCardSlotList[operatorOrders[i] + 1]
                     .transform.GetChild(0)
-                    .GetComponent<CardData>()
-                    .EffectiveValue;
+                    .GetComponent<CardData>();
 
             Hero hero = GetHeroByOperation(heroType);
 
@@ -104,8 +102,8 @@ public class ActionGameController : MonoBehaviour
             {
                 hero = hero,
                 multiplier = multiplier,
-                left = leftValue,
-                right = rightValue
+                left = leftCardData,
+                right = rightCardData
             });
         }
 
@@ -226,8 +224,13 @@ public class ActionGameController : MonoBehaviour
         GameController.current.SetGamestate(GameState.HeroAttack);
 
         double multiplier = 1;
-        double leftValue = 5;
-        double rightValue = 5;
+        CardData leftValue = new CardData();
+        leftValue.SetFaceValue(5);
+        leftValue.SetEffectValue(5);
+
+        CardData rightValue = new CardData();
+        rightValue.SetFaceValue(2);
+        rightValue.SetEffectValue(5);
 
         List<OperationEnum> heroTypes = new()
     {
@@ -274,8 +277,8 @@ public class ActionGameController : MonoBehaviour
     {
         public Hero hero;
         public double multiplier;
-        public double left;
-        public double right;
+        public CardData left;
+        public CardData right;
     }
 
     public void OnHeroAnimationFinished()

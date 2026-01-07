@@ -49,7 +49,7 @@ MonoBehaviour:
   <CharacterType>k__BackingField: 5
   animator: {fileID: 3514383640638995766}
   HPbar: {fileID: 4200013741567810547}
-  <MaxHp>k__BackingField: 20
+  <BaseMaxHp>k__BackingField: 20
   <Hp>k__BackingField: 0
   <Shield>k__BackingField: 0
   <IsStuned>k__BackingField: 0
