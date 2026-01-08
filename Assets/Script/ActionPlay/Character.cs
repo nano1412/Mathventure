@@ -15,7 +15,7 @@ public abstract class Character : MonoBehaviour
     [field: SerializeField] public double Shield { get; private set; }
     [field: SerializeField] public bool IsStuned { get; private set; }
 
-    [field: SerializeField] public List<StatusEffect> StatusEffects { get; private set; } = new List<StatusEffect>();
+    [field: SerializeField] public List<CharacterBuff> CharacterBuffs { get; private set; } = new List<CharacterBuff>();
 
     [field: Header("Attack data"), SerializeField] public Move DefaultMove { get; private set; }
     [field: SerializeField] public Vector2 FacingDirection { get; private set; }
@@ -24,6 +24,12 @@ public abstract class Character : MonoBehaviour
     private void Start()
     {
         Hp = BaseMaxHp;
+        BuffController.current.OnReduceDurationEvent += ReduceBuffDuration;
+    }
+
+    private void OnDestroy()
+    {
+        BuffController.current.OnReduceDurationEvent -= ReduceBuffDuration;
     }
 
     void Update()
@@ -75,59 +81,6 @@ public abstract class Character : MonoBehaviour
             ActionGameController.current.EnemySlotsHolder.UpdateCharacters();
         }
         Destroy(gameObject);
-    }
-
-
-    public void EndTurnUpdate()
-    {
-        if (Hp <= 0)
-        {
-            Debug.Log(transform.name + "is dead");
-            //play ded animation here
-        }
-
-        for (int i = StatusEffects.Count - 1; i >= 0; i--)
-        {
-            StatusEffect statusEffect = StatusEffects[i];
-            UpdateStatusEffect(statusEffect, i);
-        }
-
-    }
-
-    private void UpdateStatusEffect(StatusEffect statusEffect, int index)
-    {
-        //do the effect
-        switch (statusEffect.effectType)
-        {
-            case EffectType.HealOvertime:
-                Heal(statusEffect.value, statusEffect.name);
-
-                break;
-
-            case EffectType.DamageOveertime:
-                TakeDamage(statusEffect.value, statusEffect.name);
-
-                break;
-
-            case EffectType.Stun:
-                IsStuned = true;
-                break;
-
-        }
-
-
-        statusEffect.duration--;
-        if (statusEffect.duration <= 0)
-        {
-            Debug.Log(statusEffect.name + " has been resolve");
-
-            if (statusEffect.effectType == EffectType.Stun)
-            {
-                IsStuned = false;
-                Debug.Log(transform.name + " regain consciousness");
-            }
-            StatusEffects.RemoveAt(index);
-        }
     }
 
     public virtual void ResolveAttack()
@@ -201,6 +154,26 @@ public abstract class Character : MonoBehaviour
     {
         Debug.Log(this.name + " clicked");
         BuffController.current.SelectedCharacter = this.gameObject;
+    }
+
+    void ReduceBuffDuration(int i)
+    {
+        if(i == -1)
+        {
+            CharacterBuffs.Clear();
+            return;
+        }
+
+        foreach(CharacterBuff characterBuff in CharacterBuffs)
+        {
+            characterBuff.ReduceDuration();
+        }
+        CharacterBuffs.RemoveAll(characterBuff => characterBuff.Duration <= 0);
+    }
+
+    public void AddCharacterBuffs(List<CharacterBuff> characterBuffs)
+    {
+        CharacterBuffs.AddRange(characterBuffs);
     }
 }
 
