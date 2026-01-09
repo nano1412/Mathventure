@@ -56,21 +56,21 @@ public class HeroEquipmentSlot : MonoBehaviour
             return;
         }
 
-        switch (equipmentData.EquipmentType)
-        {
-            case EquipmentType.Weapon:
-                EquipBtn.interactable = WeaponSlot.transform.childCount <= 0;
-                break;
+            switch (equipmentData.EquipmentType)
+            {
+                case EquipmentType.Weapon:
+                    EquipBtn.interactable = WeaponSlot.transform.GetComponentInChildren<EquipmentData>() == null;
+                    break;
 
-            case EquipmentType.Armor:
-                EquipBtn.interactable = ArmorSlot.transform.childCount <= 0;
-                break;
+                case EquipmentType.Armor:
+                    EquipBtn.interactable = ArmorSlot.transform.GetComponentInChildren<EquipmentData>() == null;
+                    break;
 
-            default:
-                EquipBtn.interactable = false;
-                return;
+                default:
+                    EquipBtn.interactable = false;
+                    return;
 
-        }
+            }
 
     }
 
@@ -105,7 +105,7 @@ public class HeroEquipmentSlot : MonoBehaviour
 
         }
 
-        if (equipmentSlot.transform.childCount >= 1)
+        if (equipmentSlot.transform.GetComponentInChildren<EquipmentData>() != null)
         {
             Debug.Log(HeroTypeOwner + " already have equipment on " + equipmentSlot.name);
             return;

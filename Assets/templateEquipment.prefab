@@ -106,5 +106,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 633994baef9f1f140ad271cb54622e52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  <UsableHero>k__BackingField: 0000000001000000
+  <UsableHero>k__BackingField: 0200000001000000
   <EquipmentType>k__BackingField: 0
+  <IncreaseMaxHP>k__BackingField: 0
+  <IncreaseATK>k__BackingField: 0
+  <CharacterBuffInflictOnAttack>k__BackingField: {fileID: 0}

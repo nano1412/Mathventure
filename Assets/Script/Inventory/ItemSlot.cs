@@ -11,13 +11,13 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
         
-        if (!(TypeOfSlot == SlotType.Shop || TypeOfSlot == SlotType.Display) && transform.childCount >= 0)
+        if (!(TypeOfSlot == SlotType.Shop || TypeOfSlot == SlotType.Display) && transform.GetComponentInChildren<ItemData>() != null)
         {
-            EquipmentInventory.current.SetInventorySelectItem(transform.GetChild(0).gameObject);
+            EquipmentInventory.current.SetInventorySelectItem(transform.GetComponentInChildren<ItemData>().gameObject);
 
-            if(transform.GetChild(0).gameObject.GetComponent<ConsumableData>()!= null)
+            if(transform.GetComponentInChildren<ConsumableData>() != null)
             {
-                BuffController.current.SelectedConsumable = transform.GetChild(0).gameObject;
+                BuffController.current.SelectedConsumable = transform.GetComponentInChildren<ConsumableData>().gameObject;
             }
         }
     }
