@@ -7540,6 +7540,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 932754472}
   m_CullTransparentMesh: 1
+--- !u!1 &972315300 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5486393584995862360, guid: 19fbde6027d691b42a215fa3942e41f6, type: 3}
+  m_PrefabInstance: {fileID: 838335991}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &973950028
 GameObject:
   m_ObjectHideFlags: 0
@@ -15623,6 +15628,10 @@ PrefabInstance:
       propertyPath: <TypeOfSlot>k__BackingField
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: -8004468677049927592, guid: cc21086bbfe8cbf48b603b057a2e9a52, type: 3}
+      propertyPath: <ItemInThisSlot>k__BackingField
+      value: 
+      objectReference: {fileID: 972315300}
     - target: {fileID: -8004468677049927592, guid: cc21086bbfe8cbf48b603b057a2e9a52, type: 3}
       propertyPath: <AcceptableItemType>k__BackingField
       value: 3

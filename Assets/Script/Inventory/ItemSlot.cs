@@ -11,6 +11,7 @@ public class ItemSlot : MonoBehaviour
     [field: SerializeField] public ItemType AcceptableItemType { get; private set; }
     [field: SerializeField] public SlotType TypeOfSlot { get; private set; }
 
+    [field: SerializeField] public GameObject ItemInThisSlot { get; private set; }
     [field: SerializeField] public GameObject MiniItemDetail { get; private set; }
     [field: SerializeField] public TMP_Text ItemName { get; private set; }
     [field: SerializeField] public TMP_Text ItemShortDescription { get; private set; }
@@ -18,6 +19,7 @@ public class ItemSlot : MonoBehaviour
     private void Start()
     {
         BuffController.current.OnSelectedConsumableUpdate += OnComsumableSelectionChange;
+        OnTransformChildrenChanged();
     }
 
     private void OnDestroy()
@@ -28,23 +30,16 @@ public class ItemSlot : MonoBehaviour
 
     void OnComsumableSelectionChange(GameObject itemGO)
     {
-        Debug.Log("1");
-        if(itemGO == null)
+        if (itemGO != null&& ItemInThisSlot == itemGO)
         {
-            Debug.Log("2");
-            MiniItemDetail.SetActive(false);
-            Debug.Log("3");
-            transform.GetComponentInChildren<ItemData>().gameObject.GetComponent<Outline>().enabled = false;
-            Debug.Log("4");
-            return;
-        }
-        
-        if (transform.GetComponentInChildren<ItemData>() == itemGO.GetComponent<ItemData>())
-        {
-            
+
             MiniItemDetail.SetActive(true);
             transform.GetComponentInChildren<ItemData>().gameObject.GetComponent<Outline>().enabled = true;
-        }
+        } else if(ItemInThisSlot != null)
+        {
+            MiniItemDetail.SetActive(false);
+            ItemInThisSlot.GetComponent<Outline>().enabled = false;
+        }     
     }
 
     private void OnTransformChildrenChanged()
@@ -53,6 +48,12 @@ public class ItemSlot : MonoBehaviour
         {
             ItemName.text = transform.GetComponentInChildren<ItemData>().ItemName;
             ItemShortDescription.text = transform.GetComponentInChildren<ItemData>().ShortDescription;
+            ItemInThisSlot = transform.GetComponentInChildren<ItemData>().gameObject;
+        } else
+        {
+            ItemName.text = "";
+            ItemShortDescription.text = "";
+            ItemInThisSlot =null;
         }
     }
 }
