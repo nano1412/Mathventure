@@ -431,11 +431,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Hero
   <CharacterType>k__BackingField: 2
   animator: {fileID: 5687510040163902897}
-  HPbar: {fileID: 5615613680544825001}
+  HPbar: {fileID: 1034112453254479728}
   <BaseMaxHp>k__BackingField: 20
   <Hp>k__BackingField: 0
   <Shield>k__BackingField: 0
   <IsStuned>k__BackingField: 0
+  <CharacterBuffs>k__BackingField: []
   <DefaultMove>k__BackingField: {fileID: 11400000, guid: cfccbbd814f09574989235ccde3ab89f, type: 2}
   <FacingDirection>k__BackingField: {x: 0, y: 0}
   targets: []
@@ -562,9 +563,9 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d55277f1cfb9671498036a78853b149b, type: 3}
---- !u!114 &5615613680544825001 stripped
+--- !u!114 &1034112453254479728 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 427893479501933362, guid: d55277f1cfb9671498036a78853b149b, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5064126213775420139, guid: d55277f1cfb9671498036a78853b149b, type: 3}
   m_PrefabInstance: {fileID: 5196736404672583067}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -572,7 +573,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Slider
 --- !u!224 &8748816146967052754 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3563629160972014665, guid: d55277f1cfb9671498036a78853b149b, type: 3}
