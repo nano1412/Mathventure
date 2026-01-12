@@ -15,20 +15,23 @@ public class ItemSlot : MonoBehaviour
     [field: SerializeField] public GameObject MiniItemDetail { get; private set; }
     [field: SerializeField] public TMP_Text ItemName { get; private set; }
     [field: SerializeField] public TMP_Text ItemShortDescription { get; private set; }
+    [field: SerializeField] public Button UseConsumableBtn { get; private set; }
 
     private void Start()
     {
-        BuffController.current.OnSelectedConsumableUpdate += OnComsumableSelectionChange;
+        BuffController.current.OnSelectedConsumableUpdate += OnSelectedConsumableUpdate;
+        BuffController.current.OnSelectedCharacterUpdate += OnSelectedCharacterUpdate;
         OnTransformChildrenChanged();
     }
 
     private void OnDestroy()
     {
-        BuffController.current.OnSelectedConsumableUpdate -= OnComsumableSelectionChange;
+        BuffController.current.OnSelectedConsumableUpdate -= OnSelectedConsumableUpdate;
+        BuffController.current.OnSelectedCharacterUpdate -= OnSelectedCharacterUpdate;
     }
 
 
-    void OnComsumableSelectionChange(GameObject itemGO)
+    void OnSelectedConsumableUpdate(GameObject itemGO)
     {
         if (itemGO != null&& ItemInThisSlot == itemGO)
         {
@@ -40,6 +43,22 @@ public class ItemSlot : MonoBehaviour
             MiniItemDetail.SetActive(false);
             ItemInThisSlot.GetComponent<Outline>().enabled = false;
         }     
+    }
+
+    void OnSelectedCharacterUpdate(GameObject characterGO)
+    {
+        if(characterGO != null)
+        {
+            UseConsumableBtn.interactable = true;
+        } else
+        {
+            UseConsumableBtn.interactable = false;
+        }
+    }
+
+    public void UseConsumableProxy()
+    {
+        BuffController.current.UseConsumable();
     }
 
     private void OnTransformChildrenChanged()

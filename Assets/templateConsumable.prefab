@@ -108,8 +108,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   <UsableOn>k__BackingField: 00000000
-  <CharacterBuffOnUse>k__BackingField: []
-  <CardBuffOnUse>k__BackingField: []
+  <CharacterBuffOnUse>k__BackingField:
+  - {fileID: 11400000, guid: e7c1150671a18694cb730085b9db8d5a, type: 2}
+  - {fileID: 11400000, guid: e7c1150671a18694cb730085b9db8d5a, type: 2}
+  - {fileID: 11400000, guid: e7c1150671a18694cb730085b9db8d5a, type: 2}
+  - {fileID: 11400000, guid: e7c1150671a18694cb730085b9db8d5a, type: 2}
+  <CardBuffOnUse>k__BackingField:
+  - {fileID: 0}
 --- !u!114 &3490566777633372947
 MonoBehaviour:
   m_ObjectHideFlags: 0

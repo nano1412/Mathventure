@@ -10,6 +10,7 @@ public class BuffController : MonoBehaviour
     public static BuffController current;
 
     public event Action<int> OnReduceDurationEvent; // positive number for amount of reduction, -1 for remove all buff instantly
+    public event Action<GameObject> OnSelectedCharacterUpdate;
     public event Action<GameObject> OnSelectedConsumableUpdate;
 
     [field: SerializeField] public List<CardBuff> CurrentCardBuffs { get; private set; }
@@ -26,6 +27,7 @@ public class BuffController : MonoBehaviour
             if (SelectedConsumable != null && value.GetComponent<Character>() != null)
             {
                 selectedCharacter = value;
+                OnSelectedCharacterUpdate?.Invoke(selectedCharacter);
             }
         }
     }
@@ -61,7 +63,7 @@ public class BuffController : MonoBehaviour
     public bool UseConsumable()
     {
         ConsumableData consumableData = selectedConsumable.GetComponent<ConsumableData>();
-        if(consumableData = null)
+        if(consumableData == null)
         {
             Debug.Log("no consumable on consumableData");
             return false;
@@ -69,7 +71,7 @@ public class BuffController : MonoBehaviour
 
         if (consumableData.UsableOn.Contains(CharacterType.CardSlot))
         {
-            //use only card buff
+            Debug.LogWarning("UseCardbuff");
             return SendBuffToCardSlot(consumableData.CardBuffOnUse);
         }
 
@@ -83,6 +85,10 @@ public class BuffController : MonoBehaviour
             if (selectedCharacter != null)
             {
                 characters.Add(selectedCharacter.GetComponent<Character>());
+            } else
+            {
+                Debug.LogWarning("no selectedCharacter");
+                return false;
             }
         }
 
@@ -147,9 +153,9 @@ public class BuffController : MonoBehaviour
     
         foreach(GameObject characterslot in characterSlots)
         {
-            if(characterslot.transform.childCount >= 1)
+            if(characterslot.transform.GetComponentInChildren<Character>() != null)
             {
-                characters.Add(characterslot.transform.GetChild(0).GetComponent<Character>());
+                characters.Add(characterslot.transform.GetComponentInChildren<Character>());
             }
         }
 
@@ -178,7 +184,6 @@ public class BuffController : MonoBehaviour
         {
 
             List<CharacterBuff> copiedCharacterBuffs = new List<CharacterBuff>();
-
             foreach (CharacterBuff buff in characterBuffs)
             {
                 CharacterBuff buffCopy = ScriptableObject.Instantiate(buff);

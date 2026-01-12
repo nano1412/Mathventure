@@ -6826,6 +6826,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: templateConsumable
       objectReference: {fileID: 0}
+    - target: {fileID: 6343283267850031433, guid: 19fbde6027d691b42a215fa3942e41f6, type: 3}
+      propertyPath: <UsableOn>k__BackingField.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6343283267850031433, guid: 19fbde6027d691b42a215fa3942e41f6, type: 3}
+      propertyPath: '<UsableOn>k__BackingField.Array.data[0]'
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6343283267850031433, guid: 19fbde6027d691b42a215fa3942e41f6, type: 3}
+      propertyPath: '<UsableOn>k__BackingField.Array.data[1]'
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6343283267850031433, guid: 19fbde6027d691b42a215fa3942e41f6, type: 3}
+      propertyPath: '<UsableOn>k__BackingField.Array.data[2]'
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6343283267850031433, guid: 19fbde6027d691b42a215fa3942e41f6, type: 3}
+      propertyPath: <CardBuffOnUse>k__BackingField.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6343283267850031433, guid: 19fbde6027d691b42a215fa3942e41f6, type: 3}
+      propertyPath: <CharacterBuffOnUse>k__BackingField.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12107,6 +12131,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9005111994108687958}
     m_Modifications:
+    - target: {fileID: -1104955617905091999, guid: 923e9b02afcd8ac46af96c6a151f6805, type: 3}
+      propertyPath: <CharacterBuffs>k__BackingField.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1263084055307201280, guid: 923e9b02afcd8ac46af96c6a151f6805, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
