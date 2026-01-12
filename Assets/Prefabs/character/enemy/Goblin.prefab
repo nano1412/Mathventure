@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edb30923980eb194a8ee4b1a55618bfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  <CharacterType>k__BackingField: 5
+  <CharacterType>k__BackingField: 7
   animator: {fileID: 3514383640638995766}
   HPbar: {fileID: 4200013741567810547}
   <BaseMaxHp>k__BackingField: 100

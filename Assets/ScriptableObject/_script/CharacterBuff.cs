@@ -9,7 +9,7 @@ public class CharacterBuff : ScriptableObject
     [field: SerializeField] public int Value { get; private set; }
     [field: SerializeField] public BuffMethod BuffMethod { get; private set; }
     [field: SerializeField] public CharacterBuffTargetValue CharacterBuffTargetValue { get; private set; }
-    [field: SerializeField] public List<CharacterBuffCondition> CharacterBuffCondition { get; private set; }
+    
     [field: SerializeField] public int Duration { get; private set; } = 1;
 
     public void ReduceDuration()
