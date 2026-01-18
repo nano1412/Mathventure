@@ -12157,8 +12157,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -1104955617905091999, guid: 923e9b02afcd8ac46af96c6a151f6805, type: 3}
       propertyPath: <CharacterBuffs>k__BackingField.Array.size
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: -1104955617905091999, guid: 923e9b02afcd8ac46af96c6a151f6805, type: 3}
+      propertyPath: '<CharacterBuffs>k__BackingField.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: e7c1150671a18694cb730085b9db8d5a, type: 2}
+    - target: {fileID: -1104955617905091999, guid: 923e9b02afcd8ac46af96c6a151f6805, type: 3}
+      propertyPath: '<CharacterBuffs>k__BackingField.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 8066d2315f3115a4ca296bdd74ff7e30, type: 2}
     - target: {fileID: 1263084055307201280, guid: 923e9b02afcd8ac46af96c6a151f6805, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
