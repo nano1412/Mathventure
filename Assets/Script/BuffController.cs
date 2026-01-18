@@ -9,7 +9,7 @@ public class BuffController : MonoBehaviour
 {
     public static BuffController current;
 
-    public event Action<int> OnReduceDurationEvent; // positive number for amount of reduction, -1 for remove all buff instantly
+    public event Action<int> OnBuffTakeEffect; // positive number for amount of reduction, -1 for remove all buff instantly
     public event Action<GameObject> OnSelectedCharacterUpdate;
     public event Action<GameObject> OnSelectedConsumableUpdate;
 
@@ -195,9 +195,9 @@ public class BuffController : MonoBehaviour
         return true;
     }
 
-    public void ReduceAllCurrentBuffDuration()
+    public void AllCharactersTakeBuffsEffect()
     {
-        OnReduceDurationEvent?.Invoke(1);
+        OnBuffTakeEffect?.Invoke(1);
 
 
         foreach (CardBuff cardBuff in CurrentCardBuffs)
@@ -210,7 +210,7 @@ public class BuffController : MonoBehaviour
     public void RemoveAllBuff()
     {
         Debug.Log("remove all buff!");
-        OnReduceDurationEvent?.Invoke(-1);
+        OnBuffTakeEffect?.Invoke(-1);
         CurrentCardBuffs.Clear();
     }
 }

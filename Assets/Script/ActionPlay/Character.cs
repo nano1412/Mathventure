@@ -24,12 +24,12 @@ public abstract class Character : MonoBehaviour
     private void Start()
     {
         Hp = BaseMaxHp;
-        BuffController.current.OnReduceDurationEvent += ReduceBuffDuration;
+        BuffController.current.OnBuffTakeEffect += TakeBuffsEffect;
     }
 
     private void OnDestroy()
     {
-        BuffController.current.OnReduceDurationEvent -= ReduceBuffDuration;
+        BuffController.current.OnBuffTakeEffect -= TakeBuffsEffect;
     }
 
     void Update()
@@ -156,17 +156,28 @@ public abstract class Character : MonoBehaviour
         BuffController.current.SelectedCharacter = this.gameObject;
     }
 
-    void ReduceBuffDuration(int i)
+    void TakeBuffsEffect(int duration)
     {
-        if(i == -1)
+        Debug.Log(gameObject.name + " take buff!");
+        foreach (CharacterBuff characterBuff in CharacterBuffs)
+        {
+            //take effect
+        }
+
+        ReduceBuffsDuration(duration);
+    }
+
+    public void ReduceBuffsDuration(int duration)
+    {
+        if (duration == -1)
         {
             CharacterBuffs.Clear();
             return;
         }
 
-        foreach(CharacterBuff characterBuff in CharacterBuffs)
+        foreach (CharacterBuff characterBuff in CharacterBuffs)
         {
-            characterBuff.ReduceDuration();
+            characterBuff.ReduceDuration(duration);
         }
         CharacterBuffs.RemoveAll(characterBuff => characterBuff.Duration <= 0);
     }

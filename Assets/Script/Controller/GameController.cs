@@ -148,7 +148,7 @@ public class GameController : MonoBehaviour
         {
             Destroy(cardAlreadyPlayed);
         }
-        BuffController.current.ReduceAllCurrentBuffDuration();
+        BuffController.current.AllCharactersTakeBuffsEffect();
 
         NextRoundStart();
     }

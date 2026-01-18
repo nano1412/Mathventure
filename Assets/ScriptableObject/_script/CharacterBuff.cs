@@ -12,8 +12,8 @@ public class CharacterBuff : ScriptableObject
     
     [field: SerializeField] public int Duration { get; private set; } = 1;
 
-    public void ReduceDuration()
+    public void ReduceDuration(int duration)
     {
-        Duration -= 1;
+        Duration -= duration;
     }
 }
