@@ -58,7 +58,12 @@ public class ItemSlot : MonoBehaviour
 
     public void UseConsumableProxy()
     {
-        BuffController.current.UseConsumable();
+        if (BuffController.current.UseConsumable())
+        {
+            Destroy(transform.GetComponentInChildren<ItemData>().gameObject);
+            BuffController.current.SelectedConsumable = null;
+        }
+        
     }
 
     private void OnTransformChildrenChanged()

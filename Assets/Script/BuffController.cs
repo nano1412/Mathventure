@@ -42,7 +42,7 @@ public class BuffController : MonoBehaviour
         set
         {
             //for toggle selected
-            if (selectedConsumable != null)
+            if (selectedConsumable != null || value == null)
             {
                 selectedConsumable = null;
             }
