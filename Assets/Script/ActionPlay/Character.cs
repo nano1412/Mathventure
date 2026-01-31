@@ -11,11 +11,12 @@ public abstract class Character : MonoBehaviour
     [field: SerializeField] protected Slider HPbar;
 
     [field: Header("Hp and status"), SerializeField] public double BaseMaxHp { get; private set; }
+    [field: SerializeField] public double EffectiveMaxHp { get; private set; }
     [field: SerializeField] public double Hp { get; private set; }
     [field: SerializeField] public double Shield { get; private set; }
     [field: SerializeField] public bool IsStuned { get; private set; }
 
-    [field: SerializeField] public List<CharacterBuff> CharacterBuffs { get; private set; } = new List<CharacterBuff>();
+    [field: SerializeField] public List<CharacterBuff> CharacterBuffs { get; private set; }
 
     [field: Header("Attack data"), SerializeField] public Move DefaultMove { get; private set; }
     [field: SerializeField] public Vector2 FacingDirection { get; private set; }
@@ -23,7 +24,9 @@ public abstract class Character : MonoBehaviour
 
     private void Start()
     {
-        Hp = BaseMaxHp;
+        CharacterBuffs = new List<CharacterBuff>();
+        EffectiveMaxHp = BaseMaxHp;
+        Hp = EffectiveMaxHp;
         BuffController.current.OnBuffTakeEffect += TakeBuffsEffect;
     }
 
@@ -158,11 +161,23 @@ public abstract class Character : MonoBehaviour
 
     void TakeBuffsEffect(int duration)
     {
+        double tempMaxHp = BaseMaxHp;
         Debug.Log(gameObject.name + " take buff!");
         foreach (CharacterBuff characterBuff in CharacterBuffs)
         {
-            //take effect
+            switch (characterBuff.CharacterBuffTargetValue)
+            {
+                case CharacterBuffTargetValue.ATK:
+                    continue;
+                case CharacterBuffTargetValue.HP:
+                    Hp += characterBuff.BuffMethodCalculation(Hp);
+                    break;
+                case CharacterBuffTargetValue.MaxHP:
+                    tempMaxHp += characterBuff.BuffMethodCalculation(tempMaxHp);
+                    break;
+            }
         }
+        EffectiveMaxHp = tempMaxHp;
 
         ReduceBuffsDuration(duration);
     }
@@ -184,7 +199,17 @@ public abstract class Character : MonoBehaviour
 
     public void AddCharacterBuffs(List<CharacterBuff> characterBuffs)
     {
-        CharacterBuffs.AddRange(characterBuffs);
+        foreach(CharacterBuff characterBuff in characterBuffs)
+        {
+            if (characterBuff.IsEffectInstant && characterBuff.CharacterBuffTargetValue == CharacterBuffTargetValue.HP)
+            {
+                Hp += characterBuff.BuffMethodCalculation(Hp);
+            }
+            else
+            {
+                CharacterBuffs.Add(characterBuff);
+            }
+        }
     }
 }
 

@@ -16,9 +16,9 @@ public class HeroEquipmentSlot : MonoBehaviour
     [field: SerializeField]
     public Sprite HeroSprite { get; private set; }
     [field: SerializeField]
-    public GameObject WeaponSlot { get; private set; }
+    public ItemSlot WeaponSlot { get; private set; }
     [field: SerializeField]
-    public GameObject ArmorSlot { get; private set; }
+    public ItemSlot ArmorSlot { get; private set; }
     [field: SerializeField]
     public Button EquipBtn { get; private set; }
     [field: SerializeField]
@@ -88,7 +88,7 @@ public class HeroEquipmentSlot : MonoBehaviour
 
         EquipmentData equipmentData = equipment.GetComponent<EquipmentData>();
 
-        GameObject equipmentSlot;
+        ItemSlot equipmentSlot;
 
         switch (equipmentData.EquipmentType)
         {

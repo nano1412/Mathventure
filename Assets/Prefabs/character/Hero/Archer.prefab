@@ -392,7 +392,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1263084055307201280}
   - component: {fileID: -1104955617905091999}
-  - component: {fileID: 8424773630750803500}
   m_Layer: 0
   m_Name: Archer
   m_TagString: Character
@@ -433,27 +432,15 @@ MonoBehaviour:
   animator: {fileID: 5687510040163902897}
   HPbar: {fileID: 2783770532597058082}
   <BaseMaxHp>k__BackingField: 20
+  <EffectiveMaxHp>k__BackingField: 0
   <Hp>k__BackingField: 0
   <Shield>k__BackingField: 0
   <IsStuned>k__BackingField: 0
-  <CharacterBuffs>k__BackingField: []
   <DefaultMove>k__BackingField: {fileID: 11400000, guid: cfccbbd814f09574989235ccde3ab89f, type: 2}
   <FacingDirection>k__BackingField: {x: 0, y: 0}
   targets: []
---- !u!114 &8424773630750803500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6687903444630188797}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b18c1f9fbd2a544db5842902226c0a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EquipmentSlot
-  weapon: {fileID: 0}
-  armor: {fileID: 0}
+  <Weapon>k__BackingField: {fileID: 0}
+  <Armor>k__BackingField: {fileID: 0}
 --- !u!1001 &6982430420293263561
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -548,6 +535,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3563629160972014665, guid: d55277f1cfb9671498036a78853b149b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6006114932637347368, guid: d55277f1cfb9671498036a78853b149b, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6006114932637347368, guid: d55277f1cfb9671498036a78853b149b, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6364442934503964104, guid: d55277f1cfb9671498036a78853b149b, type: 3}

@@ -7,6 +7,23 @@ public class Hero : Character
     private double leftcardValue = 0;
     private double rightcardValue = 0;
 
+    [field: Header("Equipment"), SerializeField] public HeroEquipmentSlot HeroEquipmentSlot { get; private set; }
+    [field: SerializeField] public GameObject Weapon { get; private set; }
+    [field: SerializeField] public GameObject Armor { get; private set; }
+
+    private void OnEnable()
+    {
+        HeroEquipmentSlot.WeaponSlot.OnItemChanged += HandleEquipmentChanged;
+        HeroEquipmentSlot.ArmorSlot.OnItemChanged += HandleEquipmentChanged;
+    }
+
+    private void OnDisable()
+    {
+        HeroEquipmentSlot.WeaponSlot.OnItemChanged -= HandleEquipmentChanged;
+        HeroEquipmentSlot.ArmorSlot.OnItemChanged -= HandleEquipmentChanged;
+    }
+
+
     public void Attack(double mul, CardData leftAtkValue, CardData rightAtkValue)
     {
         Debug.Log("hero attack is called");
@@ -52,5 +69,11 @@ public class Hero : Character
 
             GameController.current.Lose();
         }
+    }
+
+    void HandleEquipmentChanged()
+    {
+        Weapon = HeroEquipmentSlot.WeaponSlot.ItemInThisSlot;
+        Armor = HeroEquipmentSlot.ArmorSlot.ItemInThisSlot;
     }
 }

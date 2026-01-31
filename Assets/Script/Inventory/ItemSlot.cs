@@ -1,4 +1,5 @@
 using NUnit.Framework.Interfaces;
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -8,6 +9,7 @@ using static Utils;
 
 public class ItemSlot : MonoBehaviour
 {
+    public event Action OnItemChanged;
     [field: SerializeField] public ItemType AcceptableItemType { get; private set; }
     [field: SerializeField] public SlotType TypeOfSlot { get; private set; }
 
@@ -79,5 +81,7 @@ public class ItemSlot : MonoBehaviour
             ItemShortDescription.text = "";
             ItemInThisSlot =null;
         }
+
+        OnItemChanged?.Invoke();
     }
-}
+ }
