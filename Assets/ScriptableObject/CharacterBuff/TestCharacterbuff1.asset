@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TestCharacterbuff1
   m_EditorClassIdentifier: Assembly-CSharp::CharacterBuff
   <IsEffectInstant>k__BackingField: 0
-  <Value>k__BackingField: 10
+  <Value>k__BackingField: 500
   <BuffMethod>k__BackingField: 0
   <CharacterBuffTargetValue>k__BackingField: 0
   <Duration>k__BackingField: 98

@@ -28,7 +28,7 @@ public class CharacterBuff : ScriptableObject
                 return Value;
             case BuffMethod.MultiplyValue:
                 return value * (Value - 1);
-                //this function is called in Character.TakeBuffsEffect
+                //this function is called in Character.TakeHPBuffsEffect
                 //so it relay that on that part have use += to store value
                 //that why it has to be (Value - 1)
         }

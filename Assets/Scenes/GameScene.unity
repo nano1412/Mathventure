@@ -12302,7 +12302,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -1104955617905091999, guid: 923e9b02afcd8ac46af96c6a151f6805, type: 3}
       propertyPath: <BaseMaxHp>k__BackingField
-      value: 9999
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: -1104955617905091999, guid: 923e9b02afcd8ac46af96c6a151f6805, type: 3}
       propertyPath: <HeroEquipmentSlot>k__BackingField

@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using System.Collections.Generic;
+using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.UI;
 using static Utils;
@@ -11,7 +12,7 @@ public abstract class Character : MonoBehaviour
     [field: SerializeField] protected Slider HPbar;
 
     [field: Header("Hp and status"), SerializeField] public double BaseMaxHp { get; private set; }
-    [field: SerializeField] public double EffectiveMaxHp { get; private set; }
+    [field: SerializeField] public double EffectiveMaxHp { get; protected set; }
     [field: SerializeField] public double Hp { get; private set; }
     [field: SerializeField] public double Shield { get; private set; }
     [field: SerializeField] public bool IsStuned { get; private set; }
@@ -22,23 +23,27 @@ public abstract class Character : MonoBehaviour
     [field: SerializeField] public Vector2 FacingDirection { get; private set; }
     [field: SerializeField] protected List<GameObject> targets = new();
 
-    private void Start()
+    private void Awake()
     {
-        CharacterBuffs = new List<CharacterBuff>();
         EffectiveMaxHp = BaseMaxHp;
         Hp = EffectiveMaxHp;
-        BuffController.current.OnBuffTakeEffect += TakeBuffsEffect;
+    }
+
+    private void Start()
+    {
+        CharacterBuffs = new List<CharacterBuff>();  
+        BuffController.current.OnBuffTakeEffect += TakeHPBuffsEffect;
     }
 
     private void OnDestroy()
     {
-        BuffController.current.OnBuffTakeEffect -= TakeBuffsEffect;
+        BuffController.current.OnBuffTakeEffect -= TakeHPBuffsEffect;
     }
 
     void Update()
     {
         HPbar.value = (float)Hp;
-        HPbar.maxValue = (float)BaseMaxHp;
+        HPbar.maxValue = (float)EffectiveMaxHp;
     }
 
     public void TakeDamage(double damage, string attacker)
@@ -86,15 +91,33 @@ public abstract class Character : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public virtual void ResolveAttack()
+    public void ResolveAttack()
     {
         foreach (GameObject target in targets)
         {
             if (target.GetComponent<Character>())
             {
-                target.GetComponent<Character>().TakeDamage(DefaultMove.Value, transform.name);
+                target.GetComponent<Character>().TakeDamage(GetEffectiveAttackValue(), transform.name);
             }
         }
+    }
+
+    public virtual double GetEffectiveAttackValue()
+    {
+        double tempATK = DefaultMove.Value;
+        foreach (CharacterBuff characterBuff in CharacterBuffs)
+        {
+            switch (characterBuff.CharacterBuffTargetValue)
+            {
+                case CharacterBuffTargetValue.ATK:
+                    tempATK += characterBuff.BuffMethodCalculation(tempATK);
+                    break;
+                default:
+                    continue;
+            }
+        }
+
+        return tempATK;
     }
 
     public void SendHeal()
@@ -150,7 +173,7 @@ public abstract class Character : MonoBehaviour
 
     public void ResetHP()
     {
-        Hp = BaseMaxHp;
+        Hp = EffectiveMaxHp;
     }
 
     public void SelectedCharacter()
@@ -159,27 +182,45 @@ public abstract class Character : MonoBehaviour
         BuffController.current.SelectedCharacter = this.gameObject;
     }
 
-    void TakeBuffsEffect(int duration)
+    void TakeHPBuffsEffect(int duration)
     {
-        double tempMaxHp = BaseMaxHp;
-        Debug.Log(gameObject.name + " take buff!");
+        foreach (CharacterBuff characterBuff in CharacterBuffs)
+        {
+            Debug.Log(characterBuff.name);
+            switch (characterBuff.CharacterBuffTargetValue)
+            {
+                case CharacterBuffTargetValue.HP:
+                    Hp += characterBuff.BuffMethodCalculation(Hp);
+                    break;
+                default:
+                    continue;
+            }
+        }
+        UpdateEffectiveMaxHP();
+        ReduceBuffsDuration(duration);
+    }
+
+    protected void UpdateEffectiveMaxHP()
+    {
+        double tempMaxHp = IncreaseMaxHPViaEquipment(BaseMaxHp);
         foreach (CharacterBuff characterBuff in CharacterBuffs)
         {
             switch (characterBuff.CharacterBuffTargetValue)
             {
-                case CharacterBuffTargetValue.ATK:
-                    continue;
-                case CharacterBuffTargetValue.HP:
-                    Hp += characterBuff.BuffMethodCalculation(Hp);
-                    break;
                 case CharacterBuffTargetValue.MaxHP:
                     tempMaxHp += characterBuff.BuffMethodCalculation(tempMaxHp);
                     break;
+                default:
+                    continue;
             }
         }
-        EffectiveMaxHp = tempMaxHp;
 
-        ReduceBuffsDuration(duration);
+        EffectiveMaxHp = tempMaxHp;
+    }
+
+    protected virtual double IncreaseMaxHPViaEquipment(double tempMaxHp)
+    {
+        return tempMaxHp;
     }
 
     public void ReduceBuffsDuration(int duration)

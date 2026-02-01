@@ -109,8 +109,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   <UsableHero>k__BackingField: 0200000001000000
   <EquipmentType>k__BackingField: 0
-  <IncreaseMaxHP>k__BackingField: 0
-  <IncreaseATK>k__BackingField: 0
+  <IncreaseMaxHP>k__BackingField: 500
+  <IncreaseATK>k__BackingField: 20
   <CharacterBuffInflictOnAttack>k__BackingField: {fileID: 0}
 --- !u!114 &6262239340892872837
 MonoBehaviour:
