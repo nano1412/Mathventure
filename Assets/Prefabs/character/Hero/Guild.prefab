@@ -100,7 +100,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3447710258527519899}
   - component: {fileID: 4479055572798902710}
-  - component: {fileID: -3746205287628266338}
   m_Layer: 0
   m_Name: Guild
   m_TagString: Character
@@ -141,27 +140,15 @@ MonoBehaviour:
   animator: {fileID: 5491275845360244238}
   HPbar: {fileID: 3826477943335705446}
   <BaseMaxHp>k__BackingField: 20
+  <EffectiveMaxHp>k__BackingField: 0
   <Hp>k__BackingField: 0
   <Shield>k__BackingField: 0
   <IsStuned>k__BackingField: 0
-  <CharacterBuffs>k__BackingField: []
   <DefaultMove>k__BackingField: {fileID: 11400000, guid: 4c99e65115e82de4a82740bcd4ffd1b4, type: 2}
   <FacingDirection>k__BackingField: {x: 0, y: 0}
   targets: []
---- !u!114 &-3746205287628266338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1466289955758267998}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b18c1f9fbd2a544db5842902226c0a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EquipmentSlot
-  weapon: {fileID: 0}
-  armor: {fileID: 0}
+  <Weapon>k__BackingField: {fileID: 0}
+  <Armor>k__BackingField: {fileID: 0}
 --- !u!1 &2246979080626507038
 GameObject:
   m_ObjectHideFlags: 0
@@ -548,6 +535,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3563629160972014665, guid: d55277f1cfb9671498036a78853b149b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6006114932637347368, guid: d55277f1cfb9671498036a78853b149b, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6006114932637347368, guid: d55277f1cfb9671498036a78853b149b, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6364442934503964104, guid: d55277f1cfb9671498036a78853b149b, type: 3}

@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using System.Collections.Generic;
+using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.UI;
 using static Utils;
@@ -11,31 +12,38 @@ public abstract class Character : MonoBehaviour
     [field: SerializeField] protected Slider HPbar;
 
     [field: Header("Hp and status"), SerializeField] public double BaseMaxHp { get; private set; }
+    [field: SerializeField] public double EffectiveMaxHp { get; protected set; }
     [field: SerializeField] public double Hp { get; private set; }
     [field: SerializeField] public double Shield { get; private set; }
     [field: SerializeField] public bool IsStuned { get; private set; }
 
-    [field: SerializeField] public List<CharacterBuff> CharacterBuffs { get; private set; } = new List<CharacterBuff>();
+    [field: SerializeField] public List<CharacterBuff> CharacterBuffs { get; private set; }
 
     [field: Header("Attack data"), SerializeField] public Move DefaultMove { get; private set; }
     [field: SerializeField] public Vector2 FacingDirection { get; private set; }
     [field: SerializeField] protected List<GameObject> targets = new();
 
+    private void Awake()
+    {
+        EffectiveMaxHp = BaseMaxHp;
+        Hp = EffectiveMaxHp;
+    }
+
     private void Start()
     {
-        Hp = BaseMaxHp;
-        BuffController.current.OnReduceDurationEvent += ReduceBuffDuration;
+        CharacterBuffs = new List<CharacterBuff>();  
+        BuffController.current.OnBuffTakeEffect += TakeHPBuffsEffect;
     }
 
     private void OnDestroy()
     {
-        BuffController.current.OnReduceDurationEvent -= ReduceBuffDuration;
+        BuffController.current.OnBuffTakeEffect -= TakeHPBuffsEffect;
     }
 
     void Update()
     {
         HPbar.value = (float)Hp;
-        HPbar.maxValue = (float)BaseMaxHp;
+        HPbar.maxValue = (float)EffectiveMaxHp;
     }
 
     public void TakeDamage(double damage, string attacker)
@@ -83,15 +91,33 @@ public abstract class Character : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public virtual void ResolveAttack()
+    public void ResolveAttack()
     {
         foreach (GameObject target in targets)
         {
             if (target.GetComponent<Character>())
             {
-                target.GetComponent<Character>().TakeDamage(DefaultMove.Value, transform.name);
+                target.GetComponent<Character>().TakeDamage(GetEffectiveAttackValue(), transform.name);
             }
         }
+    }
+
+    public virtual double GetEffectiveAttackValue()
+    {
+        double tempATK = DefaultMove.Value;
+        foreach (CharacterBuff characterBuff in CharacterBuffs)
+        {
+            switch (characterBuff.CharacterBuffTargetValue)
+            {
+                case CharacterBuffTargetValue.ATK:
+                    tempATK += characterBuff.BuffMethodCalculation(tempATK);
+                    break;
+                default:
+                    continue;
+            }
+        }
+
+        return tempATK;
     }
 
     public void SendHeal()
@@ -147,7 +173,7 @@ public abstract class Character : MonoBehaviour
 
     public void ResetHP()
     {
-        Hp = BaseMaxHp;
+        Hp = EffectiveMaxHp;
     }
 
     public void SelectedCharacter()
@@ -156,24 +182,75 @@ public abstract class Character : MonoBehaviour
         BuffController.current.SelectedCharacter = this.gameObject;
     }
 
-    void ReduceBuffDuration(int i)
+    void TakeHPBuffsEffect(int duration)
     {
-        if(i == -1)
+        foreach (CharacterBuff characterBuff in CharacterBuffs)
+        {
+            Debug.Log(characterBuff.name);
+            switch (characterBuff.CharacterBuffTargetValue)
+            {
+                case CharacterBuffTargetValue.HP:
+                    Hp += characterBuff.BuffMethodCalculation(Hp);
+                    break;
+                default:
+                    continue;
+            }
+        }
+        UpdateEffectiveMaxHP();
+        ReduceBuffsDuration(duration);
+    }
+
+    protected void UpdateEffectiveMaxHP()
+    {
+        double tempMaxHp = IncreaseMaxHPViaEquipment(BaseMaxHp);
+        foreach (CharacterBuff characterBuff in CharacterBuffs)
+        {
+            switch (characterBuff.CharacterBuffTargetValue)
+            {
+                case CharacterBuffTargetValue.MaxHP:
+                    tempMaxHp += characterBuff.BuffMethodCalculation(tempMaxHp);
+                    break;
+                default:
+                    continue;
+            }
+        }
+
+        EffectiveMaxHp = tempMaxHp;
+    }
+
+    protected virtual double IncreaseMaxHPViaEquipment(double tempMaxHp)
+    {
+        return tempMaxHp;
+    }
+
+    public void ReduceBuffsDuration(int duration)
+    {
+        if (duration == -1)
         {
             CharacterBuffs.Clear();
             return;
         }
 
-        foreach(CharacterBuff characterBuff in CharacterBuffs)
+        foreach (CharacterBuff characterBuff in CharacterBuffs)
         {
-            characterBuff.ReduceDuration();
+            characterBuff.ReduceDuration(duration);
         }
         CharacterBuffs.RemoveAll(characterBuff => characterBuff.Duration <= 0);
     }
 
     public void AddCharacterBuffs(List<CharacterBuff> characterBuffs)
     {
-        CharacterBuffs.AddRange(characterBuffs);
+        foreach(CharacterBuff characterBuff in characterBuffs)
+        {
+            if (characterBuff.IsEffectInstant && characterBuff.CharacterBuffTargetValue == CharacterBuffTargetValue.HP)
+            {
+                Hp += characterBuff.BuffMethodCalculation(Hp);
+            }
+            else
+            {
+                CharacterBuffs.Add(characterBuff);
+            }
+        }
     }
 }
 
