@@ -189,7 +189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.3764706}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -651,7 +651,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_TargetDisplay: 0
 --- !u!114 &1937241893718735759
 MonoBehaviour:
@@ -1416,11 +1416,14 @@ MonoBehaviour:
   <Hp>k__BackingField: 0
   <Shield>k__BackingField: 0
   <IsStuned>k__BackingField: 0
+  <CharacterBuffs>k__BackingField: []
   <DefaultMove>k__BackingField: {fileID: 11400000, guid: cfccbbd814f09574989235ccde3ab89f, type: 2}
   <FacingDirection>k__BackingField: {x: 0, y: 0}
   targets: []
+  <HeroEquipmentSlot>k__BackingField: {fileID: 0}
   <Weapon>k__BackingField: {fileID: 0}
   <Armor>k__BackingField: {fileID: 0}
+  effectiveATK: 0
 --- !u!1 &6840795511862856087
 GameObject:
   m_ObjectHideFlags: 0

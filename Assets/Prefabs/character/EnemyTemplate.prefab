@@ -165,8 +165,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0172, y: 0.0515}
-  m_SizeDelta: {x: 2.3374, y: 2.9026}
+  m_AnchoredPosition: {x: 0.1069, y: 0.159}
+  m_SizeDelta: {x: 3.2628, y: 2.6724}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3965104640268707198
 CanvasRenderer:
@@ -250,7 +250,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: -1104955617905091999}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Hero, Assembly-CSharp
         m_MethodName: SelectedCharacter
         m_Mode: 1
@@ -823,12 +823,12 @@ Transform:
   m_GameObject: {fileID: 4676256282529668309}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.25, y: 1.137, z: 0}
+  m_LocalPosition: {x: 0.23, y: 1.46, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 7016351298714828236}
   - {fileID: 5483298794899874156}
+  - {fileID: 7016351298714828236}
   m_Father: {fileID: 953907951249399606}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7591867148556942136
@@ -878,9 +878,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1847856768, guid: e4c4c281e3bb62449832b81b8425a2a9, type: 3}
+  m_Sprite: {fileID: -1100349430, guid: 5764c71c8f16b3749b5ad7a051c8bf76, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1.4222223, y: 1.4222223}
@@ -899,7 +899,7 @@ Animator:
   m_GameObject: {fileID: 4676256282529668309}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 04b91b8cbd4c87f4799c933ebb4dff95, type: 2}
+  m_Controller: {fileID: 9100000, guid: 69a9bb86000e1794e800ad32f33e7705, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -923,7 +923,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16e093f35dae14c49b28f332f87dead2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterSpriteRelay
-  character: {fileID: -1104955617905091999}
+  character: {fileID: 6810909480844618489}
 --- !u!1 &4924489813505689261
 GameObject:
   m_ObjectHideFlags: 0
@@ -950,8 +950,8 @@ Transform:
   m_GameObject: {fileID: 4924489813505689261}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.26600003, y: -1.1079999, z: 0}
-  m_LocalScale: {x: 1, y: 0.25, z: 0.25}
+  m_LocalPosition: {x: -0.42, y: -1.39, z: 0}
+  m_LocalScale: {x: 1.3072, y: 0.31144574, z: 0.25}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 4510749128764394264}
@@ -1002,7 +1002,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 0.46666667}
   m_FlipX: 0
@@ -1371,9 +1371,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1263084055307201280}
-  - component: {fileID: -1104955617905091999}
+  - component: {fileID: 6810909480844618489}
   m_Layer: 0
-  m_Name: Guild
+  m_Name: EnemyTemplate
   m_TagString: Character
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1396,7 +1396,7 @@ Transform:
   - {fileID: 2816377671649442882}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-1104955617905091999
+--- !u!114 &6810909480844618489
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1405,10 +1405,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6687903444630188797}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe5b03e888085154aa9738e604fd9fe6, type: 3}
+  m_Script: {fileID: 11500000, guid: edb30923980eb194a8ee4b1a55618bfd, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Hero
-  <CharacterType>k__BackingField: 2
+  m_EditorClassIdentifier: Assembly-CSharp::Enemy
+  <CharacterType>k__BackingField: 7
   animator: {fileID: 5687510040163902897}
   HPbar: {fileID: 3939571990788280976}
   <BaseMaxHp>k__BackingField: 20
@@ -1417,13 +1417,10 @@ MonoBehaviour:
   <Shield>k__BackingField: 0
   <IsStuned>k__BackingField: 0
   <CharacterBuffs>k__BackingField: []
-  <DefaultMove>k__BackingField: {fileID: 11400000, guid: cfccbbd814f09574989235ccde3ab89f, type: 2}
+  <DefaultMove>k__BackingField: {fileID: 11400000, guid: f70889f11db39434280c83d3672444aa, type: 2}
   <FacingDirection>k__BackingField: {x: 0, y: 0}
   targets: []
-  <HeroEquipmentSlot>k__BackingField: {fileID: 0}
-  <Weapon>k__BackingField: {fileID: 0}
-  <Armor>k__BackingField: {fileID: 0}
-  effectiveATK: 0
+  <CoinOnKill>k__BackingField: 0
 --- !u!1 &6840795511862856087
 GameObject:
   m_ObjectHideFlags: 0
@@ -1545,7 +1542,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8024704830121395521
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1593,7 +1590,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1979867161, guid: 4158bf138daa4ac4b8ad3408a6dc9c5c, type: 3}
+  m_Sprite: {fileID: 276320926, guid: 4158bf138daa4ac4b8ad3408a6dc9c5c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
