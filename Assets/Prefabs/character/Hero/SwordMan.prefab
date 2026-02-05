@@ -878,7 +878,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 817352938, guid: 61ab9cbc23e7c694fa4e219030e37edc, type: 3}
+  m_Sprite: {fileID: -831012828, guid: 603b802679d808c45b9c6a9f0c406f0a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -899,7 +899,7 @@ Animator:
   m_GameObject: {fileID: 4676256282529668309}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ac75b687fb9a0c74ea8db86a73c98330, type: 2}
+  m_Controller: {fileID: 9100000, guid: 790f1e0abbc979b408ef9d90ba564888, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1373,7 +1373,7 @@ GameObject:
   - component: {fileID: 1263084055307201280}
   - component: {fileID: -1104955617905091999}
   m_Layer: 0
-  m_Name: Witch
+  m_Name: SwordMan
   m_TagString: Character
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1408,7 +1408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe5b03e888085154aa9738e604fd9fe6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Hero
-  <CharacterType>k__BackingField: 5
+  <CharacterType>k__BackingField: 1
   animator: {fileID: 5687510040163902897}
   HPbar: {fileID: 3939571990788280976}
   <BaseMaxHp>k__BackingField: 20
