@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Serialization;
@@ -96,12 +97,6 @@ public class Shop : MonoBehaviour
         }
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-
-    }
-
     public void ResetShop()
     {
         ShopSelectItem(null);
@@ -177,9 +172,9 @@ public class Shop : MonoBehaviour
 
         foreach (GameObject shopslot in ShopSlots)
         {
-            if (shopslot.transform.Find("itemSlot").childCount > 0)
+            if (shopslot.transform.Find("itemSlot").GetComponentInChildren<ItemData>() != null)
             {
-                Destroy(shopslot.transform.Find("itemSlot").GetChild(0).gameObject);
+                Destroy(shopslot.transform.Find("itemSlot").GetComponentInChildren<ItemData>().gameObject);
             }
 
             int r = rnd.Next(SpawnableItems.Count);

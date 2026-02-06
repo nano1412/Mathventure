@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdb6cacbd7914c64e95ff1248ca36965, type: 3}
   m_Name: TestCharacterbuff1
   m_EditorClassIdentifier: Assembly-CSharp::CharacterBuff
-  <Value>k__BackingField: 0
+  <IsEffectInstant>k__BackingField: 0
+  <Value>k__BackingField: 500
   <BuffMethod>k__BackingField: 0
   <CharacterBuffTargetValue>k__BackingField: 0
-  <CharacterBuffCondition>k__BackingField: 00000000
-  <Duration>k__BackingField: 96
+  <Duration>k__BackingField: 98

@@ -144,14 +144,11 @@ public class GameController : MonoBehaviour
 
     public void CleanupFornextRound()
     {
-        foreach (GameObject cardAlreadyPlayed in CardPlayGameController.current.PlayCardSlotList)
+        foreach (GameObject cardAlreadyPlayed in CardPlayGameController.current.PlayCardList)
         {
-            if (cardAlreadyPlayed.transform.childCount > 0)
-            {
-                Destroy(cardAlreadyPlayed.transform.GetChild(0).gameObject);
-            }
+            Destroy(cardAlreadyPlayed);
         }
-        BuffController.current.ReduceAllCurrentBuffDuration();
+        BuffController.current.AllCharactersTakeBuffsEffect();
 
         NextRoundStart();
     }
