@@ -1,8 +1,6 @@
 using UnityEngine;
-using UnityEngine.EventSystems;
-using static Utils;
 
-public class ItemData : MonoBehaviour, IPointerClickHandler
+public class ItemData : MonoBehaviour
 {
     [field: SerializeField] public int Price { get; private set; }
     [field: SerializeField] public int SellPrice { get; private set; }
@@ -10,24 +8,15 @@ public class ItemData : MonoBehaviour, IPointerClickHandler
     [field: SerializeField] public string Description { get; private set; }
     [field: SerializeField] public string ShortDescription { get; private set; }
 
-    public void OnPointerClick(PointerEventData eventData)
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
     {
-        Debug.Log("item clicked");
+        
+    }
 
-        ItemSlot itemSlot = transform.parent.GetComponent<ItemSlot>();
-        if(itemSlot == null)
-        {
-            return;
-        }
-
-        if (!(itemSlot.TypeOfSlot == SlotType.Shop || itemSlot.TypeOfSlot == SlotType.Display))
-        {
-            EquipmentInventory.current.SetInventorySelectItem(gameObject);
-
-            if (transform.GetComponentInChildren<ConsumableData>() != null)
-            {
-                BuffController.current.SelectedConsumable = gameObject;
-            }
-        }
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
 }

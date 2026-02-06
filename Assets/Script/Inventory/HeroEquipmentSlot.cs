@@ -16,9 +16,9 @@ public class HeroEquipmentSlot : MonoBehaviour
     [field: SerializeField]
     public Sprite HeroSprite { get; private set; }
     [field: SerializeField]
-    public ItemSlot WeaponSlot { get; private set; }
+    public GameObject WeaponSlot { get; private set; }
     [field: SerializeField]
-    public ItemSlot ArmorSlot { get; private set; }
+    public GameObject ArmorSlot { get; private set; }
     [field: SerializeField]
     public Button EquipBtn { get; private set; }
     [field: SerializeField]
@@ -56,21 +56,21 @@ public class HeroEquipmentSlot : MonoBehaviour
             return;
         }
 
-            switch (equipmentData.EquipmentType)
-            {
-                case EquipmentType.Weapon:
-                    EquipBtn.interactable = WeaponSlot.transform.GetComponentInChildren<EquipmentData>() == null;
-                    break;
+        switch (equipmentData.EquipmentType)
+        {
+            case EquipmentType.Weapon:
+                EquipBtn.interactable = WeaponSlot.transform.childCount <= 0;
+                break;
 
-                case EquipmentType.Armor:
-                    EquipBtn.interactable = ArmorSlot.transform.GetComponentInChildren<EquipmentData>() == null;
-                    break;
+            case EquipmentType.Armor:
+                EquipBtn.interactable = ArmorSlot.transform.childCount <= 0;
+                break;
 
-                default:
-                    EquipBtn.interactable = false;
-                    return;
+            default:
+                EquipBtn.interactable = false;
+                return;
 
-            }
+        }
 
     }
 
@@ -88,7 +88,7 @@ public class HeroEquipmentSlot : MonoBehaviour
 
         EquipmentData equipmentData = equipment.GetComponent<EquipmentData>();
 
-        ItemSlot equipmentSlot;
+        GameObject equipmentSlot;
 
         switch (equipmentData.EquipmentType)
         {
@@ -105,7 +105,7 @@ public class HeroEquipmentSlot : MonoBehaviour
 
         }
 
-        if (equipmentSlot.transform.GetComponentInChildren<EquipmentData>() != null)
+        if (equipmentSlot.transform.childCount >= 1)
         {
             Debug.Log(HeroTypeOwner + " already have equipment on " + equipmentSlot.name);
             return;

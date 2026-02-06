@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: E_2
   m_EditorClassIdentifier: Assembly-CSharp::WaveData
   Enemies:
-  - {fileID: 6687903444630188797, guid: 549bfa6f17609f848bd98e0091853ff8, type: 3}
-  - {fileID: 6687903444630188797, guid: 549bfa6f17609f848bd98e0091853ff8, type: 3}
+  - {fileID: 5658703222470054255, guid: 750d537e68df2d342aaf27bee30c4e62, type: 3}
+  - {fileID: 5658703222470054255, guid: 750d537e68df2d342aaf27bee30c4e62, type: 3}
   - {fileID: 0}
   - {fileID: 0}

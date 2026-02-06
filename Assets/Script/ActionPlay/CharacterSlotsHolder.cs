@@ -8,12 +8,11 @@ public class CharacterSlotsHolder : MonoBehaviour
 
     private void Start()
     {
-        //get characters from character in CharacterSlots
         foreach (Transform characterSlot in CharacterSlots)
         {
-            if(characterSlot.GetComponentInChildren<Character>()!= null)
+            if (characterSlot.childCount > 0)
             {
-                characters.Add(characterSlot.GetComponentInChildren<Character>().gameObject);
+                this.characters.Add(characterSlot.GetChild(0).gameObject);
             }
         }
     }

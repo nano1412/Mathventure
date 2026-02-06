@@ -4,8 +4,19 @@ using static Utils;
 
 public class ConsumableData : MonoBehaviour
 {
-    [field: SerializeField] public List<CharacterType> UsableOn { get; private set; } = new List<CharacterType>();
-    [field: SerializeField] public List<CharacterBuff> CharacterBuffOnUse { get; private set; } = new List<CharacterBuff>();
-    [field: SerializeField] public List<CardBuff> CardBuffOnUse { get; private set; } = new List<CardBuff>();
-    
+    [field: SerializeField] public List<CharacterType> UsableCharacter { get; private set; }
+    [field: SerializeField] public CharacterBuff CharacterBuffOnUse { get; private set; }
+    [field: SerializeField] public CardBuff CardBuffOnUse { get; private set; }
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
 }

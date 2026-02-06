@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 4559445385560280612}
   - component: {fileID: 6760778963731832783}
   - component: {fileID: 3952483571831082575}
-  - component: {fileID: 6262239340892872837}
   m_Layer: 5
   m_Name: templateEquipment
   m_TagString: Untagged
@@ -107,23 +106,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 633994baef9f1f140ad271cb54622e52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  <UsableHero>k__BackingField: 0200000001000000
+  <UsableHero>k__BackingField: 0000000001000000
   <EquipmentType>k__BackingField: 0
-  <IncreaseMaxHP>k__BackingField: 500
-  <IncreaseATK>k__BackingField: 20
-  <CharacterBuffInflictOnAttack>k__BackingField: {fileID: 0}
---- !u!114 &6262239340892872837
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 554392434839588208}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Outline
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 4, y: 4}
-  m_UseGraphicAlpha: 0

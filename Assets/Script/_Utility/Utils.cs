@@ -9,8 +9,7 @@ public static class Utils
         Plus,
         Minus,
         Multiply,
-        Divide,
-        Buff
+        Divide
     }
 
     public enum AttackTargetType
@@ -65,7 +64,7 @@ public static class Utils
 
     public enum SlotType { Weapon, Armor, Equipment, Consumable, Shop, Display }
 
-    //public enum CharacterType { Hero_Plus, Hero_Minus, Hero_Multiply, Hero_Divide, Hero_Buff, Enemy, Card }
+    public enum CharacterType { Hero_Plus, Hero_Minus, Hero_Multiply, Hero_Divide, Hero_Buff, Enemy, Card }
 
     public enum CardBuffCondition
     {
@@ -80,24 +79,20 @@ public static class Utils
         
     }
 
-    public enum CharacterType
+    public enum CharacterBuffCondition
     {
         Hero_All,
         Hero_Plus,
         Hero_Minus,
         Hero_Multiply,
         Hero_Divide,
-        Hero_Buff,
 
         Enemy_All,
-        Enemy,
         Enemy_Front,
         Enemy_Back,
         Enemy_FirstTwo,
 
-        Character_OnlySelected,
-
-        CardSlot
+        Character_OnlySelected
     }
 
     public enum BuffMethod
@@ -111,6 +106,22 @@ public static class Utils
         HP,
         MaxHP,
         ATK,
+    }
+
+    public class StatusEffect
+    {
+        public string name;
+        public EffectType effectType;
+        public double value;
+        public int duration;
+
+        public StatusEffect(string name, EffectType effectType, double value, int duration)
+        {
+            this.name = name;
+            this.effectType = effectType;
+            this.value = value;
+            this.duration = duration;
+        }
     }
 
     public enum ParenthesesMode

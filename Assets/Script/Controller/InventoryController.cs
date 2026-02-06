@@ -102,7 +102,7 @@ public class InventoryController : MonoBehaviour
     {
         foreach (GameObject slot in slotList)
         {
-            if (slot.transform.GetComponentInChildren<ItemData>() == null)
+            if (slot.transform.childCount <= 0)
             {
                 item.transform.SetParent(slot.transform, false);
                 return true;

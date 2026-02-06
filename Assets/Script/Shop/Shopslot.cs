@@ -13,21 +13,20 @@ public class Shopslot : MonoBehaviour, IPointerClickHandler
 
     public void UpdateText()
     {
-        if (itemslot.transform.GetComponentInChildren<ItemData>() != null)
+        if (itemslot.transform.childCount > 0)
         {
-            ItemData itemData = itemslot.transform.GetComponentInChildren<ItemData>();
-            price.text = itemData.Price.ToString();
-            shortDiscription.text = itemData.ShortDescription;
-            displayItemname.text = itemData.ItemName;
+            price.text = itemslot.transform.GetChild(0).GetComponent<ItemData>().Price.ToString();
+            shortDiscription.text = itemslot.transform.GetChild(0).GetComponent<ItemData>().ShortDescription;
+            displayItemname.text = itemslot.transform.GetChild(0).GetComponent<ItemData>().ItemName;
         }
 
     }
 
-    public ItemData GetItem()
+    public GameObject GetItem()
     {
-        if (itemslot.transform.GetComponentInChildren<ItemData>() != null)
+        if (itemslot.transform.childCount > 0)
         {
-            return itemslot.transform.GetComponentInChildren<ItemData>();
+            return itemslot.transform.GetChild(0).gameObject;
         }
 
         Debug.Log("no item on this shop slot");
@@ -37,8 +36,8 @@ public class Shopslot : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
         Debug.Log(this.displayItemname + " clicked");
-        ItemData item = GetItem();
+        GameObject item = GetItem();
         Debug.Log(item.GetComponent<ItemData>().ItemName);
-        Shop.current.ShopSelectItem(item.gameObject);
+        Shop.current.ShopSelectItem(item);
     }
 }
