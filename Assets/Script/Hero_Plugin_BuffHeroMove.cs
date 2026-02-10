@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Hero_Plugin_RandomBuff : MonoBehaviour
+public class Hero_Plugin_BuffHeroMove : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

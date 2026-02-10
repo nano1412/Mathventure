@@ -32,8 +32,6 @@ public class ActionGameController : MonoBehaviour
     [field: SerializeField]
     public GameObject BuffHeroSlot { get; private set; }
 
-
-    private Hero attackerHero;
     private Queue<HeroAttackData> heroAttackQueue = new();
     private HeroAttackData currentHeroAttack;
 

@@ -6,7 +6,7 @@ public class Enemy : Character
     [field:SerializeField]public int CoinOnKill { get; private set; }
     public void Attack()
     {
-        targets = GetTargetByMove();
+        targets = GetTargetByMove(CurrentMove);
 
         foreach (GameObject target in targets)
         {

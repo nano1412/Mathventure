@@ -15,7 +15,7 @@ public class Hero : Character
 
     private void OnEnable()
     {
-        effectiveATK = DefaultMove.Value;
+        effectiveATK = CurrentMove.Value;
         HeroEquipmentSlot.WeaponSlot.OnItemChanged += HandleEquipmentChanged;
         HeroEquipmentSlot.ArmorSlot.OnItemChanged += HandleEquipmentChanged;
     }
@@ -30,7 +30,13 @@ public class Hero : Character
     public void Attack(double mul, CardData leftAtkValue, CardData rightAtkValue)
     {
         Debug.Log("hero attack is called");
-        targets = GetTargetByMove();
+
+        if(transform.GetComponent<Character_Plugin_RandomMove>() != null)
+        {
+            CurrentMove = transform.GetComponent<Character_Plugin_RandomMove>().GetRandomMove();
+        }
+
+        targets = GetTargetByMove(CurrentMove);
 
         foreach (GameObject target in targets)
         {
@@ -84,7 +90,7 @@ public class Hero : Character
 
     void HandleEquipmentChanged()
     {
-        effectiveATK = DefaultMove.Value;
+        effectiveATK = CurrentMove.Value;
         Weapon = HeroEquipmentSlot.WeaponSlot.ItemInThisSlot;
         Armor = HeroEquipmentSlot.ArmorSlot.ItemInThisSlot;
 

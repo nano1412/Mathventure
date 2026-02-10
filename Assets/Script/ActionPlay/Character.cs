@@ -19,7 +19,7 @@ public abstract class Character : MonoBehaviour
 
     [field: SerializeField] public List<CharacterBuff> CharacterBuffs { get; private set; }
 
-    [field: Header("Attack data"), SerializeField] public Move DefaultMove { get; private set; }
+    [field: Header("Attack data"), SerializeField] public Move CurrentMove { get; protected set; }
     [field: SerializeField] public Vector2 FacingDirection { get; private set; }
     [field: SerializeField] protected List<GameObject> targets = new();
 
@@ -104,7 +104,7 @@ public abstract class Character : MonoBehaviour
 
     public virtual double GetEffectiveAttackValue()
     {
-        double tempATK = DefaultMove.Value;
+        double tempATK = CurrentMove.Value;
         foreach (CharacterBuff characterBuff in CharacterBuffs)
         {
             switch (characterBuff.CharacterBuffTargetValue)
@@ -126,14 +126,14 @@ public abstract class Character : MonoBehaviour
         {
             if (target.GetComponent<Character>())
             {
-                target.GetComponent<Character>().Heal(DefaultMove.Value, transform.name);
+                target.GetComponent<Character>().Heal(CurrentMove.Value, transform.name);
             }
         }
     }
 
 
 
-    protected List<GameObject> GetTargetByMove()
+    protected List<GameObject> GetTargetByMove(Move move)
     {
         CharacterSlotsHolder ally;
         CharacterSlotsHolder opponent;
@@ -149,7 +149,7 @@ public abstract class Character : MonoBehaviour
             opponent = ActionGameController.current.EnemySlotsHolder;
         }
 
-        switch (DefaultMove.TargetType)
+        switch (move.TargetType)
         {
             case AttackTargetType.front:
                 return opponent.GetFirstCharacterAsList();

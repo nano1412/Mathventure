@@ -272,6 +272,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -1104955617905091999, guid: 498285b45e0462140af465312fc5088f, type: 3}
+      propertyPath: <CurrentMove>k__BackingField
+      value: 
+      objectReference: {fileID: 11400000, guid: 4c99e65115e82de4a82740bcd4ffd1b4, type: 2}
+    - target: {fileID: -1104955617905091999, guid: 498285b45e0462140af465312fc5088f, type: 3}
       propertyPath: <HeroEquipmentSlot>k__BackingField
       value: 
       objectReference: {fileID: 2093115348}
@@ -9423,6 +9427,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1050907287}
     m_Modifications:
     - target: {fileID: -1104955617905091999, guid: 8dd51f835df57134a974f3ee8ab66e80, type: 3}
+      propertyPath: <CurrentMove>k__BackingField
+      value: 
+      objectReference: {fileID: 11400000, guid: 4c99e65115e82de4a82740bcd4ffd1b4, type: 2}
+    - target: {fileID: -1104955617905091999, guid: 8dd51f835df57134a974f3ee8ab66e80, type: 3}
       propertyPath: <HeroEquipmentSlot>k__BackingField
       value: 
       objectReference: {fileID: 1779148710}
@@ -12289,6 +12297,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 9005111994108687958}
     m_Modifications:
     - target: {fileID: -1104955617905091999, guid: 7649b4ff3cfbb40478f0e4af47cbe326, type: 3}
+      propertyPath: <CurrentMove>k__BackingField
+      value: 
+      objectReference: {fileID: 11400000, guid: 4c99e65115e82de4a82740bcd4ffd1b4, type: 2}
+    - target: {fileID: -1104955617905091999, guid: 7649b4ff3cfbb40478f0e4af47cbe326, type: 3}
       propertyPath: <HeroEquipmentSlot>k__BackingField
       value: 
       objectReference: {fileID: 5496351581225323755}
@@ -12887,6 +12899,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 183277906}
     m_Modifications:
     - target: {fileID: -1104955617905091999, guid: 247007bd9770e764d865669722b54631, type: 3}
+      propertyPath: <CurrentMove>k__BackingField
+      value: 
+      objectReference: {fileID: 11400000, guid: 4c99e65115e82de4a82740bcd4ffd1b4, type: 2}
+    - target: {fileID: -1104955617905091999, guid: 247007bd9770e764d865669722b54631, type: 3}
       propertyPath: <HeroEquipmentSlot>k__BackingField
       value: 
       objectReference: {fileID: 908960952}
@@ -12930,6 +12946,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1744595976071600736, guid: 247007bd9770e764d865669722b54631, type: 3}
+      propertyPath: <RandomMoves>k__BackingField.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1744595976071600736, guid: 247007bd9770e764d865669722b54631, type: 3}
+      propertyPath: '<RandomMoves>k__BackingField.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: c8343813d3592cd44a8779d69f00136a, type: 2}
+    - target: {fileID: 1744595976071600736, guid: 247007bd9770e764d865669722b54631, type: 3}
+      propertyPath: '<RandomMoves>k__BackingField.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: cfccbbd814f09574989235ccde3ab89f, type: 2}
+    - target: {fileID: 1744595976071600736, guid: 247007bd9770e764d865669722b54631, type: 3}
+      propertyPath: '<RandomMoves>k__BackingField.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: f70889f11db39434280c83d3672444aa, type: 2}
     - target: {fileID: 2571917788311770707, guid: 247007bd9770e764d865669722b54631, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -12940,7 +12972,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6687903444630188797, guid: 247007bd9770e764d865669722b54631, type: 3}
       propertyPath: m_Name
-      value: Thief
+      value: Hunter
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15988,6 +16020,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1619718260}
     m_Modifications:
+    - target: {fileID: -1104955617905091999, guid: 6a017ea3a70543a47af1daa4fc774e3b, type: 3}
+      propertyPath: <CurrentMove>k__BackingField
+      value: 
+      objectReference: {fileID: 11400000, guid: 4c99e65115e82de4a82740bcd4ffd1b4, type: 2}
     - target: {fileID: -1104955617905091999, guid: 6a017ea3a70543a47af1daa4fc774e3b, type: 3}
       propertyPath: <HeroEquipmentSlot>k__BackingField
       value: 
