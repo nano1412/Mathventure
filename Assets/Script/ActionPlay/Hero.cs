@@ -26,15 +26,29 @@ public class Hero : Character
         HeroEquipmentSlot.ArmorSlot.OnItemChanged -= HandleEquipmentChanged;
     }
 
+    public Move GetMove(OperationEnum operationEnum)
+    {
+        if (transform.GetComponent<Character_Plugin_RandomMove>() != null)
+        {
+            return transform.GetComponent<Character_Plugin_RandomMove>().GetRandomMove();
+        }
 
-    public void Attack(double mul, CardData leftAtkValue, CardData rightAtkValue)
+        if (transform.GetComponent<Hero_Plugin_BuffHeroMove>() != null)
+        {
+            return transform.GetComponent<Hero_Plugin_BuffHeroMove>().GetMoveByOperator(operationEnum);
+        }
+
+
+
+        return CurrentMove;
+    }
+
+
+    public void Attack(double mul, CardData leftAtkValue, CardData rightAtkValue, OperationEnum operationEnum)
     {
         Debug.Log("hero attack is called");
 
-        if(transform.GetComponent<Character_Plugin_RandomMove>() != null)
-        {
-            CurrentMove = transform.GetComponent<Character_Plugin_RandomMove>().GetRandomMove();
-        }
+        CurrentMove = GetMove(operationEnum);
 
         targets = GetTargetByMove(CurrentMove);
 

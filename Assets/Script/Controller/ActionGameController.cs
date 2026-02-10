@@ -103,6 +103,16 @@ public class ActionGameController : MonoBehaviour
                 left = leftCardData,
                 right = rightCardData
             });
+
+            //add check if buff hero is on the field later
+            heroAttackQueue.Enqueue(new HeroAttackData
+            {
+                hero = BuffHeroSlot.transform.GetChild(0).GetComponent<Hero>(),
+                multiplier = multiplier,
+                operationEnum = heroType,
+                left = leftCardData,
+                right = rightCardData
+            });
         }
 
         StartNextHeroAttack();
@@ -123,7 +133,8 @@ public class ActionGameController : MonoBehaviour
             currentHeroAttack.hero.Attack(
                 currentHeroAttack.multiplier,
                 currentHeroAttack.left,
-                currentHeroAttack.right
+                currentHeroAttack.right,
+                currentHeroAttack.operationEnum
             );
             return;
         }
@@ -253,6 +264,16 @@ public class ActionGameController : MonoBehaviour
                 left = leftValue,
                 right = rightValue
             });
+
+            //add check if buff hero is on the field later
+            heroAttackQueue.Enqueue(new HeroAttackData
+            {
+                hero = BuffHeroSlot.transform.GetChild(0).GetComponent<Hero>(),
+                multiplier = multiplier,
+                operationEnum = heroType,
+                left = leftValue,
+                right = rightValue
+            });
         }
 
         StartNextHeroAttack();
@@ -275,6 +296,7 @@ public class ActionGameController : MonoBehaviour
     {
         public Hero hero;
         public double multiplier;
+        public OperationEnum operationEnum;
         public CardData left;
         public CardData right;
     }
