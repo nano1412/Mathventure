@@ -80,6 +80,7 @@ public class GameController : MonoBehaviour
         IsEndless = LevelCreator.current.IsEndless;
         LevelDatas = LevelCreator.current.LevelDatas;
         EndlessWaveDatas = LevelCreator.current.EndlessWaveDatas;
+        HeroToggler.current.SetupEnableHeroViaPossibleOperator(PossibleOperators);
 
         GameStart();
     }
@@ -144,6 +145,10 @@ public class GameController : MonoBehaviour
 
     public void CleanupFornextRound()
     {
+        if(gameState == GameState.Lose)
+        {
+            return;
+        }
         foreach (GameObject cardAlreadyPlayed in CardPlayGameController.current.PlayCardList)
         {
             Destroy(cardAlreadyPlayed);

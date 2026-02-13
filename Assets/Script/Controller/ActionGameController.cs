@@ -104,15 +104,17 @@ public class ActionGameController : MonoBehaviour
                 right = rightCardData
             });
 
-            //add check if buff hero is on the field later
-            heroAttackQueue.Enqueue(new HeroAttackData
+            if (HeroToggler.current.IsBuffHeroOnThisLevel)
             {
-                hero = BuffHeroSlot.transform.GetChild(0).GetComponent<Hero>(),
-                multiplier = multiplier,
-                operationEnum = heroType,
-                left = leftCardData,
-                right = rightCardData
-            });
+                heroAttackQueue.Enqueue(new HeroAttackData
+                {
+                    hero = BuffHeroSlot.transform.GetChild(0).GetComponent<Hero>(),
+                    multiplier = multiplier,
+                    operationEnum = heroType,
+                    left = leftCardData,
+                    right = rightCardData
+                });
+            }
         }
 
         StartNextHeroAttack();
@@ -265,15 +267,17 @@ public class ActionGameController : MonoBehaviour
                 right = rightValue
             });
 
-            //add check if buff hero is on the field later
-            heroAttackQueue.Enqueue(new HeroAttackData
+            if (HeroToggler.current.IsBuffHeroOnThisLevel)
             {
-                hero = BuffHeroSlot.transform.GetChild(0).GetComponent<Hero>(),
-                multiplier = multiplier,
-                operationEnum = heroType,
-                left = leftValue,
-                right = rightValue
-            });
+                heroAttackQueue.Enqueue(new HeroAttackData
+                {
+                    hero = BuffHeroSlot.transform.GetChild(0).GetComponent<Hero>(),
+                    multiplier = multiplier,
+                    operationEnum = heroType,
+                    left = leftValue,
+                    right = rightValue
+                });
+            }
         }
 
         StartNextHeroAttack();

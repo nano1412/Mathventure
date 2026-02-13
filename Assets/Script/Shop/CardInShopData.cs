@@ -23,7 +23,7 @@ public class CardInShopData : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if (GameController.current.PossibleOperators.Contains(OperationEnum.Multiply) || GameController.current.PossibleOperators.Contains(OperationEnum.Divide))
+        if (HeroToggler.current.IsMultiplyHeroOnThisLevel || HeroToggler.current.IsDivideHeroOnThisLevel)
         {
             IsFaceNegativeSpawnable = true;
         }

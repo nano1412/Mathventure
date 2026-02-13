@@ -95,7 +95,7 @@ public class Hero : Character
     {
         if (Hp <= 0)
         {
-            Debug.Log(transform.name + "is dead");
+            Debug.Log(transform.name + " is dead");
             Dead();
 
             GameController.current.Lose();

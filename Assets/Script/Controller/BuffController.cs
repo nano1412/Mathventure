@@ -100,31 +100,31 @@ public class BuffController : MonoBehaviour
                     characterSlots.AddRange(heroCharacterSlotsHolder.GetAllCharactersAsList());
                     break;
                 case CharacterType.Hero_Plus:
-                    if (GameController.current.PossibleOperators.Contains(OperationEnum.Plus))
+                    if (HeroToggler.current.IsPlusHeroOnThisLevel)
                     {
                         characterSlots.Add(ActionGameController.current.PlusHeroSlot);
                     }
                     break;
                 case CharacterType.Hero_Minus:
-                    if (GameController.current.PossibleOperators.Contains(OperationEnum.Minus))
+                    if (HeroToggler.current.IsMinusHeroOnThisLevel)
                     {
                         characterSlots.Add(ActionGameController.current.MinusHeroSlot);
                     }
                     break;
                 case CharacterType.Hero_Multiply:
-                    if (GameController.current.PossibleOperators.Contains(OperationEnum.Multiply))
+                    if (HeroToggler.current.IsMultiplyHeroOnThisLevel)
                     {
                         characterSlots.Add(ActionGameController.current.MultiplyHeroSlot);
                     }
                     break;
                 case CharacterType.Hero_Divide:
-                    if (GameController.current.PossibleOperators.Contains(OperationEnum.Divide))
+                    if (HeroToggler.current.IsDivideHeroOnThisLevel)
                     {
                         characterSlots.Add(ActionGameController.current.DivideHeroSlot);
                     }
                     break;
                 case CharacterType.Hero_Buff:
-                    if (GameController.current.PossibleOperators.Contains(OperationEnum.Buff))
+                    if (HeroToggler.current.IsBuffHeroOnThisLevel)
                     {
                         characterSlots.Add(ActionGameController.current.BuffHeroSlot);
                     }
