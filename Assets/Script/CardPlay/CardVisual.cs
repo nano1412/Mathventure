@@ -11,6 +11,8 @@ using TMPro;
 public class CardVisual : MonoBehaviour
 {
     private bool initalize = false;
+    [field: Header("SFX"), SerializeField] private AudioSource cardSelectSFX;
+    private bool hasPlaySFX = false;
 
     [Header("CardEntity")]
     public CardEntity parentCard;
@@ -156,6 +158,7 @@ public class CardVisual : MonoBehaviour
 
     private void Select(CardEntity card, bool state)
     {
+
         //DOTween.Kill(2, true);
         //float dir = state ? 1 : 0;
         //shakeParent.DOPunchPosition(shakeParent.up * selectPunchAmount * dir, scaleTransition, 10, 1);
@@ -206,6 +209,7 @@ public class CardVisual : MonoBehaviour
 
     private void PointerUp(CardEntity card, bool longPress)
     {
+        hasPlaySFX = false;
         if (scaleAnimations)
             transform.DOScale(longPress ? scaleOnHover : scaleOnSelect, scaleTransition).SetEase(scaleEase);
         canvas.overrideSorting = false;
@@ -216,6 +220,12 @@ public class CardVisual : MonoBehaviour
 
     private void PointerDown(CardEntity card)
     {
+        if (!hasPlaySFX)
+        {
+            cardSelectSFX.Play();
+            hasPlaySFX = true;
+        }
+
         if (scaleAnimations)
             transform.DOScale(scaleOnSelect, scaleTransition).SetEase(scaleEase);
 

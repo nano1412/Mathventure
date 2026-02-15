@@ -6,6 +6,7 @@ using static Utils;
 
 public class CardData : MonoBehaviour
 {
+    
     [field: Header("CardInDeckData Properties"), SerializeField] public double FaceValue { get; private set; } //use to calculate equation
     private double effectiveValue;
     public double EffectiveValue

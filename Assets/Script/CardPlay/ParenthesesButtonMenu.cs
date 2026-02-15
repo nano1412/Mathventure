@@ -4,6 +4,8 @@ using static Utils;
 
 public class ParenthesesButtonMenu : MonoBehaviour
 {
+    [field: Header("SFX"), SerializeField] private AudioSource ParenthesesChangeSFX;
+
     [field: SerializeField] private bool IsFrontParentheses;
     [field: SerializeField] private bool IsMiddleParentheses;
     [field: SerializeField] private bool IsLastParentheses;
@@ -40,6 +42,7 @@ public class ParenthesesButtonMenu : MonoBehaviour
 
     private void CheckParentheses()
     {
+        ParenthesesChangeSFX.Play();
         if (IsMiddleParentheses)
         {
             CardPlayGameController.current.ParenthesesMode = ParenthesesMode.DoMiddleOperationFirst;

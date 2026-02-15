@@ -6,35 +6,33 @@ using static Utils;
 
 public class OperatorButton : MonoBehaviour
 {
+    [field: Header("SFX"), SerializeField] private AudioSource plusSFX;
+    [field: SerializeField] private AudioSource minusSFX;
+    [field: SerializeField] private AudioSource multiplySFX;
+    [field: SerializeField] private AudioSource divideSFX;
     [SerializeField] private GameObject operatorCardPrefab;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-    }
 
     public void AddPlus()
     {
+        plusSFX.Play();
         AddOperatorCard(OperationEnum.Plus);
     }
 
     public void AddMinus()
     {
+        minusSFX.Play();
         AddOperatorCard(OperationEnum.Minus);
     }
 
     public void AddMultiply()
     {
+        multiplySFX.Play();
         AddOperatorCard(OperationEnum.Multiply);
     }
 
     public void AddDivide()
     {
+        divideSFX.Play();
         AddOperatorCard(OperationEnum.Divide);
     }
 

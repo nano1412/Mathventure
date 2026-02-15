@@ -1795,6 +1795,7 @@ GameObject:
   m_Component:
   - component: {fileID: 843067076}
   - component: {fileID: 843067075}
+  - component: {fileID: 843067077}
   m_Layer: 0
   m_Name: LevelCreator
   m_TagString: Untagged
@@ -1848,6 +1849,100 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &843067077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843067074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a564de5855f97aa439fb948fc695605f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioManager
+  sounds:
+  - name: Menu
+    clip: {fileID: 8300000, guid: d740ca34094a9534398b44d0eaf1fc35, type: 3}
+    volume: 0.75
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.1
+    loop: 1
+    mixerGroup: {fileID: 1322744020886927658, guid: c3a23156656e92048baa32e27fac9241, type: 2}
+    source: {fileID: 0}
+  - name: Level1
+    clip: {fileID: 8300000, guid: c5647664d04c8b84e84527673828a768, type: 3}
+    volume: 0.75
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.1
+    loop: 1
+    mixerGroup: {fileID: 1322744020886927658, guid: c3a23156656e92048baa32e27fac9241, type: 2}
+    source: {fileID: 0}
+  - name: Level2
+    clip: {fileID: 8300000, guid: e4774d32efd29054e8740b6028f12031, type: 3}
+    volume: 0.75
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.1
+    loop: 1
+    mixerGroup: {fileID: 1322744020886927658, guid: c3a23156656e92048baa32e27fac9241, type: 2}
+    source: {fileID: 0}
+  - name: Level3
+    clip: {fileID: 8300000, guid: cb8be088ed19908499d4781911ba3610, type: 3}
+    volume: 0.75
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.1
+    loop: 1
+    mixerGroup: {fileID: 1322744020886927658, guid: c3a23156656e92048baa32e27fac9241, type: 2}
+    source: {fileID: 0}
+  - name: Level4
+    clip: {fileID: 8300000, guid: dc9514d0c2515544787eb80fe168fa07, type: 3}
+    volume: 0.75
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.1
+    loop: 1
+    mixerGroup: {fileID: 1322744020886927658, guid: c3a23156656e92048baa32e27fac9241, type: 2}
+    source: {fileID: 0}
+  - name: Level5
+    clip: {fileID: 8300000, guid: ccad37ec10f00e34bb583f5d6cd84224, type: 3}
+    volume: 0.75
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.1
+    loop: 1
+    mixerGroup: {fileID: 1322744020886927658, guid: c3a23156656e92048baa32e27fac9241, type: 2}
+    source: {fileID: 0}
+  - name: Shop
+    clip: {fileID: 8300000, guid: 1e87f3a661ca7494ab6751ebec51a2a5, type: 3}
+    volume: 0.75
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.1
+    loop: 1
+    mixerGroup: {fileID: 1322744020886927658, guid: c3a23156656e92048baa32e27fac9241, type: 2}
+    source: {fileID: 0}
+  - name: Lose
+    clip: {fileID: 8300000, guid: 82a76620a17c3384b81a2ad1fc7005d8, type: 3}
+    volume: 0.75
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.1
+    loop: 0
+    mixerGroup: {fileID: 1322744020886927658, guid: c3a23156656e92048baa32e27fac9241, type: 2}
+    source: {fileID: 0}
+  - name: Lose
+    clip: {fileID: 8300000, guid: 1e87f3a661ca7494ab6751ebec51a2a5, type: 3}
+    volume: 0.75
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.1
+    loop: 1
+    mixerGroup: {fileID: 1322744020886927658, guid: c3a23156656e92048baa32e27fac9241, type: 2}
+    source: {fileID: 0}
 --- !u!1 &869507796
 GameObject:
   m_ObjectHideFlags: 0

@@ -190,5 +190,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 215af24dd931e5549a6fc01a82d4f15a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  cardSelectSFX: {fileID: 0}
   <FaceValue>k__BackingField: 0
-  <CardType>k__BackingField: 0
+  <CardTypes>k__BackingField: 

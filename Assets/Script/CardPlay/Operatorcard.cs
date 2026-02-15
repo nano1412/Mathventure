@@ -8,7 +8,7 @@ using static Utils;
 
 public class Operatorcard : MonoBehaviour, IPointerUpHandler
 {
-
+    [field: Header("SFX"), SerializeField] private AudioSource removeOperatorSFX;
     public OperationEnum operation;
     [SerializeField] private Image image;
 
@@ -83,7 +83,7 @@ public class Operatorcard : MonoBehaviour, IPointerUpHandler
     {
         //if (eventData.button != PointerEventData.InputButton.Left)
         //    return;
-
+        removeOperatorSFX.Play();
         Destroy(gameObject);
     }
 
