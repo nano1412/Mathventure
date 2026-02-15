@@ -8,8 +8,6 @@ public class MenuNavigation : MonoBehaviour
     public static MenuNavigation current;
     [field:SerializeField] public GameObject LevelSelecterCanvas { get; private set; }
     [field: SerializeField] public GameObject SettingCanvas { get; private set; }
-    [field: SerializeField] public string GameSceneName { get; private set; }
-    [field: SerializeField] public string LeaderBoardSceneName { get; private set; }
 
     [field: Header("Level"), SerializeField] public int MaxLevelUnlock { get; private set; }
     [field: SerializeField] public LevelSelectButton Level1Btn { get; private set; }
@@ -49,17 +47,5 @@ public class MenuNavigation : MonoBehaviour
     {
         Debug.Log("close setting");
         SettingCanvas.SetActive(false);
-    }
-
-    public void GoToLeaderBoardBtn()
-    {
-        Debug.Log("to leaderboard");
-        SceneManager.LoadScene(LeaderBoardSceneName);
-    }
-
-    public void GoToGameSceneBtn()
-    {
-        Debug.Log("to gamescene");
-        SceneManager.LoadScene(GameSceneName);
     }
 }

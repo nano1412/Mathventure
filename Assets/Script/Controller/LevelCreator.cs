@@ -47,9 +47,27 @@ public class LevelCreator : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    public void GameSceneReady()
+    void OnEnable()
     {
-        OnGameStart?.Invoke(Level);
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        GameSceneReady(scene);
+    }
+
+    public void GameSceneReady(Scene scene)
+    {
+        if (scene.name == GameSceneName)   // <- Put your scene name here
+        {
+            OnGameStart?.Invoke(Level);
+        } 
     }
 
     public void SetLevelCreator(int level, bool isEndless, List<GameObject> spawnableItemInShop, List<OperationEnum> possibleOperators)
