@@ -13914,6 +13914,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameController
   startWithoutLevelCretor: 0
+  <BGRenderer>k__BackingField: {fileID: 814452344}
+  <BGSprite>k__BackingField: {fileID: 21300000, guid: 75ff15a3b161dd74593281f228f976e4, type: 3}
   <MaxCardInHand>k__BackingField: 6
   <IsEndless>k__BackingField: 0
   <Level>k__BackingField: 1

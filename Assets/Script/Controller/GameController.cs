@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
+using UnityEngine.UIElements;
 using static Utils;
 
 public class GameController : MonoBehaviour
@@ -10,6 +11,8 @@ public class GameController : MonoBehaviour
     public event Action<GameState> OnGameStateChange;
     [field: SerializeField]
     private bool startWithoutLevelCretor;
+
+    [field: SerializeField] public SpriteRenderer BGRenderer { get; private set; }
 
     [field: SerializeField]
     public int MaxCardInHand { get; private set; } = 6;
@@ -72,6 +75,7 @@ public class GameController : MonoBehaviour
 
     private void GameSetup(int i)
     {
+        BGRenderer.sprite = LevelCreator.current.BGSprite;
         GameState = GameState.PlayerInput;
         PossibleOperators = LevelCreator.current.PossibleOperators;
         TemplateDeck = LevelCreator.current.TemplateDeck;

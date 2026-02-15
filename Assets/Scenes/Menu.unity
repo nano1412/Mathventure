@@ -1816,7 +1816,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelCreator
   GameSceneName: GameScene
-  <PossibleOperators>k__BackingField: 00000000
+  <BGSprite>k__BackingField: {fileID: 0}
   <Level>k__BackingField: 1
   <IsEndless>k__BackingField: 1
   <TemplateDeck>k__BackingField: {fileID: 11400000, guid: 5009f4b849de2c44eaf0937517670067, type: 2}
@@ -2978,6 +2978,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e774c21698df8494f871919147d72c0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  <Level1BGSprite>k__BackingField: {fileID: 21300000, guid: 75ff15a3b161dd74593281f228f976e4, type: 3}
+  <Level2BGSprite>k__BackingField: {fileID: 21300000, guid: 0c4ef30b9f0095740afeb4e51d17679e, type: 3}
+  <Level3BGSprite>k__BackingField: {fileID: 21300000, guid: 3c74c5adba8e7df4fb7a694a50190a3f, type: 3}
+  <Level4BGSprite>k__BackingField: {fileID: 21300000, guid: 2874f1a77b4602d4fb01f01e70108b28, type: 3}
+  <LevelEndlessBGSprite>k__BackingField: {fileID: 21300000, guid: f895f8fc02c3d284ea62ad1d1fd0616d, type: 3}
   <Level1SpawnableItemsInShop>k__BackingField: []
   <Level2SpawnableItemsInShop>k__BackingField: []
   <Level3SpawnableItemsInShop>k__BackingField: []

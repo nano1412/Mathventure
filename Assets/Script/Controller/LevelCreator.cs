@@ -12,6 +12,7 @@ public class LevelCreator : MonoBehaviour
     [SerializeField] private string GameSceneName = "GameScene";
 
     [field: Header("Data to game scene"), SerializeField]
+    public Sprite BGSprite { get; private set; }
     public List<OperationEnum> PossibleOperators { get; private set; }
 
     [field: SerializeField]
@@ -70,8 +71,9 @@ public class LevelCreator : MonoBehaviour
         } 
     }
 
-    public void SetLevelCreator(int level, bool isEndless, List<GameObject> spawnableItemInShop, List<OperationEnum> possibleOperators)
+    public void SetLevelCreator(Sprite bgSprite,int level, bool isEndless, List<GameObject> spawnableItemInShop, List<OperationEnum> possibleOperators)
     {
+        BGSprite = bgSprite;
         Level = level;
         IsEndless = isEndless;
         SpawnableItems = spawnableItemInShop;
