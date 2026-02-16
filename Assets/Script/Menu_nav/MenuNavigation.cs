@@ -39,13 +39,11 @@ public class MenuNavigation : MonoBehaviour
 
     public void OpenSettingMenu()
     {
-        Debug.Log("open setting");
         SettingCanvas.SetActive(true);
     }
 
     public void CloseSettingMenu()
     {
-        Debug.Log("close setting");
         SettingCanvas.SetActive(false);
     }
 }

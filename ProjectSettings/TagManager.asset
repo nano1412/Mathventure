@@ -21,6 +21,7 @@ TagManager:
   - ConsumableSlot
   - WeaponSlot
   - ArmorSlot
+  - Button
   layers:
   - Default
   - TransparentFX

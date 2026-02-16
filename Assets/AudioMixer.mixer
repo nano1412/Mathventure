@@ -63,7 +63,7 @@ AudioMixerController:
   - guid: 6eb1ec8ecf1e9ed489ed90ecb3ce50cc
     name: BGM_Volume
   - guid: 64251d36e78fd3240bce958d8efd4b6d
-    name: CardSFX_Volume
+    name: UISFX_Volume
   - guid: ba252b7583d94b44bafa0b9d5e572db4
     name: Items_Volume
   - guid: 0085a8592cfa29e488cb3a5e0cbb02a5
@@ -203,7 +203,7 @@ AudioMixerGroupController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: CardSFX
+  m_Name: UISFX
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: c3970a1f5e15d014c8253fec436d0f1a
   m_Children: []

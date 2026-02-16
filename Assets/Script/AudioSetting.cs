@@ -11,7 +11,7 @@ public class AudioSetting : MonoBehaviour
     public Slider masterSlider;
     public Slider musicSlider;
     public Slider ActionSfxSlider;
-    public Slider CardSfxSlider;
+    public Slider UISfxSlider;
     public Slider ItemsSfxSlider;
 
 
@@ -26,13 +26,13 @@ public class AudioSetting : MonoBehaviour
         masterSlider.value = GetVolume("Master_Volume");
         musicSlider.value = GetVolume("BGM_Volume");
         ActionSfxSlider.value = GetVolume("ActionSFX_Volume");
-        CardSfxSlider.value = GetVolume("CardSFX_Volume");
+        UISfxSlider.value = GetVolume("UISFX_Volume");
         ItemsSfxSlider.value = GetVolume("Items_Volume");
 
         masterSlider.onValueChanged.AddListener(SetMasterVolume);
         musicSlider.onValueChanged.AddListener(SetMusicVolume);
         ActionSfxSlider.onValueChanged.AddListener(SetActionSFXVolume);
-        CardSfxSlider.onValueChanged.AddListener(SetCardSFXVolume);
+        UISfxSlider.onValueChanged.AddListener(SetCardSFXVolume);
         ItemsSfxSlider.onValueChanged.AddListener(SetItemsSFXVolume);
     }
 
@@ -53,7 +53,7 @@ public class AudioSetting : MonoBehaviour
 
     public void SetCardSFXVolume(float volume)
     {
-        audioMixer.SetFloat("CardSFX_Volume", Mathf.Log10(volume) * 20);
+        audioMixer.SetFloat("UISFX_Volume", Mathf.Log10(volume) * 20);
     }
 
     public void SetItemsSFXVolume(float volume)
