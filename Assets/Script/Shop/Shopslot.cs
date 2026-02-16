@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using static UnityEditor.Timeline.Actions.MenuPriority;
 
-public class Shopslot : MonoBehaviour, IPointerClickHandler
+public class Shopslot : MonoBehaviour
 {
     [SerializeField] GameObject itemslot;
     [SerializeField] TMP_Text price;
@@ -32,13 +32,5 @@ public class Shopslot : MonoBehaviour, IPointerClickHandler
 
         Debug.Log("no item on this shop slot");
         return null;
-    }
-
-    public void OnPointerClick(PointerEventData eventData)
-    {
-        Debug.Log(this.displayItemname + " clicked");
-        ItemData item = GetItem();
-        Debug.Log(item.GetComponent<ItemData>().ItemName);
-        Shop.current.ShopSelectItem(item.gameObject);
     }
 }

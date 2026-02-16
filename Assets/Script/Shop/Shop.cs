@@ -149,9 +149,10 @@ public class Shop : MonoBehaviour
         }
         else
         {
+            item.GetComponent<ItemData>().SelectSFX.Play();
             ShopSelectedItemData = item.GetComponent<ItemData>();
             ShopSelectedItemImagePreview.sprite = item.GetComponent<Image>().sprite;
-            DescriptionPreview.text = ShopSelectedItemData.Description;
+            DescriptionPreview.text = item.GetComponent<ItemData>().Description;
 
         }
 

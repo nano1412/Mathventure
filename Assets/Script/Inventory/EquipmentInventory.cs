@@ -62,6 +62,7 @@ public class EquipmentInventory : MonoBehaviour
 
         ItemData item = equipmentSelectedItem.GetComponent<ItemData>();
 
+        item.SelectSFX.Play();
         EquipmentSelectedItemNameText.text = item.ItemName;
         EquipmentSelectedItemNameShortdescriptionText.text = item.ShortDescription;
         EquipmentSelectedItemNamedescriptionText.text = item.Description;

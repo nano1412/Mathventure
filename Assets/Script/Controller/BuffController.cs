@@ -14,6 +14,7 @@ public class BuffController : MonoBehaviour
     public event Action<GameObject> OnSelectedConsumableUpdate;
 
     [field: SerializeField] public List<CardBuff> CurrentCardBuffs { get; private set; }
+    [field: SerializeField] public AudioSource useConsumableAudiosource { get; private set; }
 
     [field: SerializeField] private GameObject selectedCharacter;
     public GameObject SelectedCharacter

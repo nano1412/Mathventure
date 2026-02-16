@@ -1,9 +1,12 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using static UnityEditor.Progress;
 using static Utils;
 
 public class ItemData : MonoBehaviour, IPointerClickHandler
 {
+    [field: SerializeField] public AudioSource SelectSFX { get; private set; }
+    [field: SerializeField] public AudioSource UseSFX { get; private set; }
     [field: SerializeField] public int Price { get; private set; }
     [field: SerializeField] public int SellPrice { get; private set; }
     [field: SerializeField] public string ItemName { get; private set; }
@@ -18,6 +21,11 @@ public class ItemData : MonoBehaviour, IPointerClickHandler
         if(itemSlot == null)
         {
             return;
+        }
+
+        if (itemSlot.TypeOfSlot == SlotType.Shop)
+        {
+            Shop.current.ShopSelectItem(gameObject);
         }
 
         if (!(itemSlot.TypeOfSlot == SlotType.Shop || itemSlot.TypeOfSlot == SlotType.Display))

@@ -110,7 +110,7 @@ public class HeroEquipmentSlot : MonoBehaviour
             Debug.Log(HeroTypeOwner + " already have equipment on " + equipmentSlot.name);
             return;
         }
-
+        equipment.GetComponent<ItemData>().UseSFX.Play();
         equipment.transform.SetParent(equipmentSlot.transform, false);
         EquipmentInventory.current.EquipmentSelectedItem = null;
     }

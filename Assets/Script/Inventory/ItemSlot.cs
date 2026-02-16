@@ -1,7 +1,9 @@
 using NUnit.Framework.Interfaces;
 using System;
+using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using static UnityEditor.Timeline.Actions.MenuPriority;
@@ -62,10 +64,25 @@ public class ItemSlot : MonoBehaviour
     {
         if (BuffController.current.UseConsumable())
         {
-            Destroy(transform.GetComponentInChildren<ItemData>().gameObject);
-            BuffController.current.SelectedConsumable = null;
+            ItemData itemData = ItemInThisSlot.GetComponent<ItemData>();
+            AudioSource sfx = itemData.UseSFX;
+
+            sfx.Play();
+            StartCoroutine(DestroyWhenFinishedPlayUseConsumable(sfx, itemData.gameObject));
         }
         
+    }
+
+    IEnumerator DestroyWhenFinishedPlayUseConsumable(AudioSource audioSource, GameObject itemObject)
+    {
+        // Wait until it starts playing (optional safety)
+        yield return new WaitUntil(() => audioSource.isPlaying);
+
+        // Wait until it finishes
+        yield return new WaitWhile(() => audioSource.isPlaying);
+
+        Destroy(itemObject);
+        BuffController.current.SelectedConsumable = null;
     }
 
     private void OnTransformChildrenChanged()
