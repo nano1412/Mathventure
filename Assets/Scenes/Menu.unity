@@ -1785,164 +1785,6 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
---- !u!1 &843067074
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 843067076}
-  - component: {fileID: 843067075}
-  - component: {fileID: 843067077}
-  m_Layer: 0
-  m_Name: LevelCreator
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &843067075
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 843067074}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54a2958c57ac2dd44b4e3c09f1b808f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LevelCreator
-  GameSceneName: GameScene
-  <BGSprite>k__BackingField: {fileID: 0}
-  <Level>k__BackingField: 1
-  <IsEndless>k__BackingField: 1
-  <TemplateDeck>k__BackingField: {fileID: 11400000, guid: 5009f4b849de2c44eaf0937517670067, type: 2}
-  <LevelDatas>k__BackingField:
-  - {fileID: 11400000, guid: 39991ade54ad7f14696f29d4e362e91b, type: 2}
-  - {fileID: 11400000, guid: 7ae02e39141ca4146bab316cee91d0e9, type: 2}
-  - {fileID: 11400000, guid: e987b39c42057df45b6092b6ded0acaa, type: 2}
-  - {fileID: 11400000, guid: 04605d85bed90e44dadb4ee87b8b6797, type: 2}
-  <EndlessWaveDatas>k__BackingField:
-  - {fileID: 11400000, guid: aecd1dbb6ad30b64da6b84ad232f0cb4, type: 2}
-  - {fileID: 11400000, guid: 627e353b81822d94fa19477ccf582580, type: 2}
-  - {fileID: 11400000, guid: 2358410be6bcd97459e34ee55de8a6b8, type: 2}
-  - {fileID: 11400000, guid: 3c9ba0cfd2ee02848a83d2bb627c39f7, type: 2}
-  <SpawnableItems>k__BackingField:
-  - {fileID: 6482835790678363928, guid: 5f17cc246d9fdac42bd076018f13fbd9, type: 3}
-  - {fileID: 5486393584995862360, guid: 19fbde6027d691b42a215fa3942e41f6, type: 3}
-  - {fileID: 554392434839588208, guid: 9fd9224cfaf274b4c845bf90c473e617, type: 3}
---- !u!4 &843067076
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 843067074}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 547.77625, y: 569.1292, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &843067077
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 843067074}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a564de5855f97aa439fb948fc695605f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AudioManager
-  sounds:
-  - name: Menu
-    clip: {fileID: 8300000, guid: d740ca34094a9534398b44d0eaf1fc35, type: 3}
-    volume: 0.75
-    volumeVariance: 0.1
-    pitch: 1
-    pitchVariance: 0.1
-    loop: 1
-    mixerGroup: {fileID: 1322744020886927658, guid: c3a23156656e92048baa32e27fac9241, type: 2}
-    source: {fileID: 0}
-  - name: Level1
-    clip: {fileID: 8300000, guid: c5647664d04c8b84e84527673828a768, type: 3}
-    volume: 0.75
-    volumeVariance: 0.1
-    pitch: 1
-    pitchVariance: 0.1
-    loop: 1
-    mixerGroup: {fileID: 1322744020886927658, guid: c3a23156656e92048baa32e27fac9241, type: 2}
-    source: {fileID: 0}
-  - name: Level2
-    clip: {fileID: 8300000, guid: e4774d32efd29054e8740b6028f12031, type: 3}
-    volume: 0.75
-    volumeVariance: 0.1
-    pitch: 1
-    pitchVariance: 0.1
-    loop: 1
-    mixerGroup: {fileID: 1322744020886927658, guid: c3a23156656e92048baa32e27fac9241, type: 2}
-    source: {fileID: 0}
-  - name: Level3
-    clip: {fileID: 8300000, guid: cb8be088ed19908499d4781911ba3610, type: 3}
-    volume: 0.75
-    volumeVariance: 0.1
-    pitch: 1
-    pitchVariance: 0.1
-    loop: 1
-    mixerGroup: {fileID: 1322744020886927658, guid: c3a23156656e92048baa32e27fac9241, type: 2}
-    source: {fileID: 0}
-  - name: Level4
-    clip: {fileID: 8300000, guid: dc9514d0c2515544787eb80fe168fa07, type: 3}
-    volume: 0.75
-    volumeVariance: 0.1
-    pitch: 1
-    pitchVariance: 0.1
-    loop: 1
-    mixerGroup: {fileID: 1322744020886927658, guid: c3a23156656e92048baa32e27fac9241, type: 2}
-    source: {fileID: 0}
-  - name: Level5
-    clip: {fileID: 8300000, guid: ccad37ec10f00e34bb583f5d6cd84224, type: 3}
-    volume: 0.75
-    volumeVariance: 0.1
-    pitch: 1
-    pitchVariance: 0.1
-    loop: 1
-    mixerGroup: {fileID: 1322744020886927658, guid: c3a23156656e92048baa32e27fac9241, type: 2}
-    source: {fileID: 0}
-  - name: Shop
-    clip: {fileID: 8300000, guid: 1e87f3a661ca7494ab6751ebec51a2a5, type: 3}
-    volume: 0.75
-    volumeVariance: 0.1
-    pitch: 1
-    pitchVariance: 0.1
-    loop: 1
-    mixerGroup: {fileID: 1322744020886927658, guid: c3a23156656e92048baa32e27fac9241, type: 2}
-    source: {fileID: 0}
-  - name: Lose
-    clip: {fileID: 8300000, guid: 82a76620a17c3384b81a2ad1fc7005d8, type: 3}
-    volume: 0.75
-    volumeVariance: 0.1
-    pitch: 1
-    pitchVariance: 0.1
-    loop: 0
-    mixerGroup: {fileID: 1322744020886927658, guid: c3a23156656e92048baa32e27fac9241, type: 2}
-    source: {fileID: 0}
-  - name: Lose
-    clip: {fileID: 8300000, guid: 1e87f3a661ca7494ab6751ebec51a2a5, type: 3}
-    volume: 0.75
-    volumeVariance: 0.1
-    pitch: 1
-    pitchVariance: 0.1
-    loop: 1
-    mixerGroup: {fileID: 1322744020886927658, guid: c3a23156656e92048baa32e27fac9241, type: 2}
-    source: {fileID: 0}
 --- !u!1 &869507796
 GameObject:
   m_ObjectHideFlags: 0
@@ -4983,6 +4825,63 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3312069822440453005, guid: 99162f012f8978142b7c8b1263a167f9, type: 3}
   m_PrefabInstance: {fileID: 562733198554789680}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4366981851577998280
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 672486115611581908, guid: 6103e5c31d072e6428ceac4f67d437d0, type: 3}
+      propertyPath: m_Name
+      value: LevelCreator
+      objectReference: {fileID: 0}
+    - target: {fileID: 5516047354847936922, guid: 6103e5c31d072e6428ceac4f67d437d0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 547.77625
+      objectReference: {fileID: 0}
+    - target: {fileID: 5516047354847936922, guid: 6103e5c31d072e6428ceac4f67d437d0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 569.1292
+      objectReference: {fileID: 0}
+    - target: {fileID: 5516047354847936922, guid: 6103e5c31d072e6428ceac4f67d437d0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5516047354847936922, guid: 6103e5c31d072e6428ceac4f67d437d0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5516047354847936922, guid: 6103e5c31d072e6428ceac4f67d437d0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5516047354847936922, guid: 6103e5c31d072e6428ceac4f67d437d0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5516047354847936922, guid: 6103e5c31d072e6428ceac4f67d437d0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5516047354847936922, guid: 6103e5c31d072e6428ceac4f67d437d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5516047354847936922, guid: 6103e5c31d072e6428ceac4f67d437d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5516047354847936922, guid: 6103e5c31d072e6428ceac4f67d437d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6103e5c31d072e6428ceac4f67d437d0, type: 3}
 --- !u!1001 &5489515961597747038
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5222,4 +5121,4 @@ SceneRoots:
   - {fileID: 252022508}
   - {fileID: 1183039839}
   - {fileID: 1289577970}
-  - {fileID: 843067076}
+  - {fileID: 4366981851577998280}

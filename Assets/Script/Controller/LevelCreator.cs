@@ -13,7 +13,7 @@ public class LevelCreator : MonoBehaviour
 
     [field: Header("Data to game scene"), SerializeField]
     public Sprite BGSprite { get; private set; }
-    public List<OperationEnum> PossibleOperators { get; private set; }
+    [field: SerializeField] public List<OperationEnum> PossibleOperators { get; private set; }
 
     [field: SerializeField]
     public int Level { get; private set; }
@@ -78,5 +78,10 @@ public class LevelCreator : MonoBehaviour
         IsEndless = isEndless;
         SpawnableItems = spawnableItemInShop;
         PossibleOperators = possibleOperators;
+    }
+
+    public void Debug_ForceStartGameBtn()
+    {
+            OnGameStart?.Invoke(Level);
     }
 }
