@@ -1,4 +1,6 @@
 using NUnit.Framework;
+using NUnit.Framework.Interfaces;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Rendering;
 using UnityEngine;
@@ -7,6 +9,11 @@ using static Utils;
 
 public abstract class Character : MonoBehaviour
 {
+    [field: SerializeField] public AudioSource HealSFX { get; private set; }
+    [field: SerializeField] public AudioSource HurtSFX { get; private set; }
+    [field: SerializeField] public AudioSource DeadSFX { get; private set; }
+    [field: SerializeField] public AudioSource AttackSFX { get; private set; }
+
     [field: Header("Character"), SerializeField] public CharacterType CharacterType { get; private set; }
     [field: SerializeField] protected Animator animator;
     [field: SerializeField] protected Slider HPbar;
@@ -44,6 +51,7 @@ public abstract class Character : MonoBehaviour
     {
         HPbar.value = (float)Hp;
         HPbar.maxValue = (float)EffectiveMaxHp;
+        CheckDead();
     }
 
     public void TakeDamage(double damage, string attacker)
@@ -56,8 +64,8 @@ public abstract class Character : MonoBehaviour
 
         animator.SetTrigger("Damaged");
         Hp -= damage - Shield;
+        HurtSFX.Play();
         Debug.Log(transform.name + " take " + damage + " damages from " + attacker);
-        CheckDead();
     }
 
     public void Heal(double heal, string healer)
@@ -69,6 +77,7 @@ public abstract class Character : MonoBehaviour
         }
 
         Hp += heal;
+        HealSFX.Play();
         Debug.Log(transform.name + " gain " + heal + " Hp from " + healer);
     }
 
@@ -88,11 +97,28 @@ public abstract class Character : MonoBehaviour
             ActionGameController.current.EnemySlotsHolder.characters.Remove(gameObject);
             ActionGameController.current.EnemySlotsHolder.UpdateCharacters();
         }
+        DeadSFX.Play();
+        StartCoroutine(DestroyWhenFinishedPlayDeadSFX(DeadSFX));
         Destroy(gameObject);
     }
 
-    public void ResolveAttack()
+   
+
+    IEnumerator DestroyWhenFinishedPlayDeadSFX(AudioSource audioSource)
+{
+    // Wait until it starts playing (optional safety)
+    yield return new WaitUntil(() => audioSource.isPlaying);
+
+    // Wait until it finishes
+    yield return new WaitWhile(() => audioSource.isPlaying);
+
+    Destroy(gameObject);
+    BuffController.current.SelectedConsumable = null;
+}
+
+public void ResolveAttack()
     {
+        AttackSFX.Play();
         foreach (GameObject target in targets)
         {
             if (target.GetComponent<Character>())

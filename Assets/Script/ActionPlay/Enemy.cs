@@ -22,7 +22,7 @@ public class Enemy : Character
         if (Hp <= 0)
         {
             Debug.Log(transform.name + "is dead");
-            InventoryController.current.AddCoin(CoinOnKill);
+            InventoryController.current.AddCoin(CoinOnKill, false);
             Dead();
         }
     }

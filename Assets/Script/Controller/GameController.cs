@@ -143,8 +143,6 @@ public class GameController : MonoBehaviour
     void OnEquationSummitionSucess()
     {
         ActionGameController.current.AllCharecterAttack(CleanupFornextRound, RounndWin);
-
-
     }
 
     public void CleanupFornextRound()

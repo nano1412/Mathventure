@@ -6,9 +6,10 @@ public class CharacterSlotsHolder : MonoBehaviour
     [field: SerializeField] public List<Transform> CharacterSlots { get; private set; }
     [field: SerializeField] public List<GameObject> characters = new();
 
-    private void Start()
+    private void Update()
     {
         //get characters from character in CharacterSlots
+        characters.Clear();
         foreach (Transform characterSlot in CharacterSlots)
         {
             if(characterSlot.GetComponentInChildren<Character>()!= null)

@@ -7,6 +7,8 @@ using static UnityEditor.Timeline.Actions.MenuPriority;
 
 public class InventoryController : MonoBehaviour
 {
+    [field: SerializeField] public AudioSource CoinSpendSFX { get; private set; }
+    [field: SerializeField] public AudioSource CoinGetSFX { get; private set; }
     public static InventoryController current;
 
     [field: Header("Currency"), SerializeField]
@@ -30,11 +32,16 @@ public class InventoryController : MonoBehaviour
         if (current == this) current = null;
     }
 
-    public void AddCoin(int amount)
+    public void AddCoin(int amount, bool isPlaySfx)
     {
         if (amount <= 0)
         {
             Debug.LogWarning("amount is negative, use SpendCoin() instead");
+        }
+
+        if (isPlaySfx)
+        {
+            CoinGetSFX.Play();
         }
 
         Coin += amount;
@@ -42,7 +49,7 @@ public class InventoryController : MonoBehaviour
         OnCoinsChanged?.Invoke(Coin);
     }
 
-    public bool SpendCoin(int amount)
+    public bool SpendCoin(int amount, bool isPlaySfx)
     {
         if (amount < 0)
         {
@@ -53,6 +60,11 @@ public class InventoryController : MonoBehaviour
         {
             Debug.Log("BB no money");
             return false;
+        }
+
+        if (isPlaySfx)
+        {
+            CoinSpendSFX.Play();
         }
 
         Coin -= amount;

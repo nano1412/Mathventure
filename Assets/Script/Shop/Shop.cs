@@ -13,6 +13,8 @@ public class Shop : MonoBehaviour
 {
     public static Shop current;
 
+    [field: SerializeField] public AudioSource RerollSFX { get; private set; }
+
     [field: SerializeField]
     public List<GameObject> ShopSlots { get; private set; }
 
@@ -110,6 +112,7 @@ public class Shop : MonoBehaviour
     {
         if (SpawnItem(CurrentRerollPrice))
         {
+            RerollSFX.Play();
             Debug.Log("rerolled shop item");
 
             CurrentRerollPrice += RerollInflation;
@@ -125,7 +128,7 @@ public class Shop : MonoBehaviour
             return;
         }
 
-        if (!InventoryController.current.SpendCoin(ShopSelectedItemData.Price))
+        if (!InventoryController.current.SpendCoin(ShopSelectedItemData.Price, true))
         {
             Debug.Log("can't buy");
 
@@ -163,7 +166,7 @@ public class Shop : MonoBehaviour
     {
         SpawnableItems = LevelCreator.current.SpawnableItems;
 
-        if (!InventoryController.current.SpendCoin(CoinSpend))
+        if (!InventoryController.current.SpendCoin(CoinSpend, false))
         {
             Debug.Log("spawn item not sucessful");
             return false;

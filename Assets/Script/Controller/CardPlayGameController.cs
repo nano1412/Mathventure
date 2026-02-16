@@ -257,13 +257,14 @@ public class CardPlayGameController : MonoBehaviour
         ParenthesesMode = ParenthesesMode.NoParentheses;
         PlayerAnswer = (double)StepLog[StepLog.Count - 1][1];
 
-        GetMultiplierValue();
+        Multiplier = GetMultiplierValue();
 
         onComplete?.Invoke();
     }
 
-    private void GetMultiplierValue()
+    private double GetMultiplierValue()
     {
+        double tempMul = 0;
         if (GreenZoneRatio > 0)
         {
             GreenZoneValue = (GreenZoneRatio * TargetNumber) + TargetNumber;
@@ -277,19 +278,19 @@ public class CardPlayGameController : MonoBehaviour
         switch (PlayerAnswer)
         {
             case double i when i == TargetNumber:
-                Multiplier = BlueZoneMultiplier;
+                tempMul = BlueZoneMultiplier;
                 break;
             case double i when i <= GreenZoneValue && i >= -GreenZoneValue:
-                Multiplier = GreenZoneMultiplier;
+                tempMul = GreenZoneMultiplier;
                 break;
             case double i when i <= YellowZoneValue && i >= -YellowZoneValue:
-                Multiplier = YellowZoneMultiplier;
+                tempMul = YellowZoneMultiplier;
                 break;
             default:
-                Multiplier = RedZoneMultiplier;
+                tempMul = RedZoneMultiplier;
                 break;
         }
-
+        return tempMul;
     }
 
     public void GetAllPossibleEquation()
