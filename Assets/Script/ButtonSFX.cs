@@ -20,8 +20,6 @@ public class ButtonSFX : MonoBehaviour
                 
                 if (clickedUI != null)
                 {
-                    Debug.Log(clickedUI);
-                    Debug.Log(clickedUI.tag);
                     if (clickableTags.Contains(clickedUI.tag))
                     {
                         
