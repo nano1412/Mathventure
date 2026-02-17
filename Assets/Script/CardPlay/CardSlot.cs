@@ -16,4 +16,12 @@ public class CardSlot : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
+
+    public void DestroyCardInSlot()
+    {
+        if (transform.GetComponentInChildren<CardData>().gameObject != null)
+        {
+            Destroy(transform.GetComponentInChildren<CardData>().gameObject);
+        }
+    }
 }

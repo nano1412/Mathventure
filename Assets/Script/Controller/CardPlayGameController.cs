@@ -355,17 +355,10 @@ public class CardPlayGameController : MonoBehaviour
         Debug.Log("One of correct equation: " + correctEquation[UnityEngine.Random.Range(0, correctEquation.Count - 1)]);
     }
 
-    public void AddCardButton()
-    {
-        AddCardTohand(1);
-    }
-
-    public void AddCardTohand(int amount)
+    public void DrawNewHand(int amount)
     {
         for (int i = 0; i < amount; i++)
         {
-
-
             bool isHandHaveSpace = false;
             Transform currentCardSlot = null;
             foreach (Transform cardSlot in PlayerHand.transform)
@@ -380,15 +373,11 @@ public class CardPlayGameController : MonoBehaviour
 
             if (isHandHaveSpace)
             {
-
-
                 if (!RoundDeck.TryDrawCard(out CardInDeckData SelectedCarddata))
                 {
                     Debug.Log("Deck empty");
                     return;
                 }
-
-
                 GameObject newCard = Instantiate(CardPrefab, DeckObject.position, new Quaternion(), currentCardSlot);
                 CardEntity newCardScript = newCard.GetComponent<CardEntity>();
                 newCardScript.deckPosition = DeckObject.position;
@@ -475,6 +464,11 @@ public class CardPlayGameController : MonoBehaviour
             foreach (var card in PlayCardList)
             {
                 Destroy(card);
+            }
+
+            foreach (CardSlot cardLeftInHand in PlayerHand.transform.GetComponentsInChildren<CardSlot>())
+            {
+                cardLeftInHand.DestroyCardInSlot();
             }
             PlayCardList.Clear();
 

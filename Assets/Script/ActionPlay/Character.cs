@@ -116,7 +116,7 @@ public abstract class Character : MonoBehaviour
     BuffController.current.SelectedConsumable = null;
 }
 
-public void ResolveAttack()
+public virtual void ResolveAttack()
     {
         AttackSFX.Play();
         foreach (GameObject target in targets)

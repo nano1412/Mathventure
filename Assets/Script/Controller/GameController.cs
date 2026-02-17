@@ -127,9 +127,8 @@ public class GameController : MonoBehaviour
     public void NextRoundStart()
     {
 
-
         this.SetGamestate(GameState.PlayerInput);
-        CardPlayGameController.current.AddCardTohand(MaxCardInHand);
+        CardPlayGameController.current.DrawNewHand(MaxCardInHand);
 
         CardPlayGameController.current.GetAllPossibleEquation();
         CardPlayGameController.current.GetTargetNumber();
@@ -155,9 +154,10 @@ public class GameController : MonoBehaviour
         {
             Destroy(cardAlreadyPlayed);
         }
+
         BuffController.current.AllCharactersTakeBuffsEffect();
 
-        NextRoundStart();
+            NextRoundStart();
     }
 
     public void RounndWin()

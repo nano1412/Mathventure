@@ -72,6 +72,19 @@ public class Hero : Character
 
     }
 
+    public override void ResolveAttack()
+    {
+        AttackSFX.Play();
+        foreach (GameObject target in targets)
+        {
+            if (target.GetComponent<Character>())
+            {
+                double totalATK = (GetEffectiveAttackValue() + leftcardValue + rightcardValue) * multiplier;
+                target.GetComponent<Character>().TakeDamage(totalATK, transform.name);
+            }
+        }
+    }
+
     public override double GetEffectiveAttackValue()
     {
         double tempATK = effectiveATK;
