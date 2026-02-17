@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -3934054710655460307}
   - component: {fileID: 4323947111795842905}
   m_Layer: 0
-  m_Name: LevelCreator
+  m_Name: PresistanceGameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
