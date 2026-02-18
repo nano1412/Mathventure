@@ -7,6 +7,7 @@ public class cardMultiplierIndicater : MonoBehaviour
     [field: SerializeField] private Slider Slider;
     [field: SerializeField] private double ActualValue;
     [field: SerializeField] private float numberIncreasePerSecond = 20f;
+    [field: SerializeField] private float Speed = 3f;
 
     [field: SerializeField] private double sliderValue;
     [field: SerializeField] private double multiplierValueValue;
@@ -40,7 +41,7 @@ public class cardMultiplierIndicater : MonoBehaviour
         sliderValue = Mathf.MoveTowards(
     (float)sliderValue,
     (float)ActualValue,
-    numberIncreasePerSecond * Time.deltaTime
+    numberIncreasePerSecond * Time.deltaTime * Speed
 );
 
         minValue = CardPlayGameController.current.TargetNumber - CardPlayGameController.current.YellowZoneValue;

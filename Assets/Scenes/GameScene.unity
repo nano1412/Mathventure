@@ -2889,14 +2889,14 @@ MonoBehaviour:
   <Difficulty>k__BackingField: 0.5
   <MaxAnswerRange>k__BackingField: 100
   <IsPositiveOnly>k__BackingField: 0
-  <BlueZoneMultiplier>k__BackingField: 3
+  <BlueZoneMultiplier>k__BackingField: 2
   <GreenZoneValue>k__BackingField: 13
   <GreenZoneRatio>k__BackingField: 0
-  <GreenZoneMultiplier>k__BackingField: 2
+  <GreenZoneMultiplier>k__BackingField: 1
   <YellowZoneValue>k__BackingField: 25
   <YellowZoneRatio>k__BackingField: 0
-  <YellowZoneMultiplier>k__BackingField: 1
-  <RedZoneMultiplier>k__BackingField: 0.5
+  <YellowZoneMultiplier>k__BackingField: 0.5
+  <RedZoneMultiplier>k__BackingField: 0
 --- !u!4 &392799242
 Transform:
   m_ObjectHideFlags: 0
@@ -7207,7 +7207,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   <CurrentCardBuffs>k__BackingField:
   - {fileID: 11400000, guid: e38505e73a196e840972210efe617ff6, type: 2}
-  <useConsumableAudiosource>k__BackingField: {fileID: 0}
+  <UseConsumableAudiosource>k__BackingField: {fileID: 0}
   selectedCharacter: {fileID: 0}
   selectedConsumable: {fileID: 0}
 --- !u!82 &890097332
@@ -19973,6 +19973,7 @@ MonoBehaviour:
   Slider: {fileID: 5855393141716728338}
   ActualValue: 0
   numberIncreasePerSecond: 20
+  Speed: 3
   sliderValue: 0
   multiplierValueValue: 0
   minValue: 0
