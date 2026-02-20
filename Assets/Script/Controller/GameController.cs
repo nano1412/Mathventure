@@ -184,6 +184,7 @@ public class GameController : MonoBehaviour
 
         this.SetGamestate(GameState.Lose);
         //show lose screen
+        SetLeaderBoardData();
     }
 
     public void SetGamestate(GameState GS)
@@ -191,5 +192,12 @@ public class GameController : MonoBehaviour
         GameState = GS;
     }
 
-
+    private void SetLeaderBoardData()
+    {
+        if (IsEndless)
+        {
+            LevelCreator.current.SetPlayerFinalScore(Wave);
+            LevelCreator.current.SetIsScoreHasBeenSummit(false);
+        }
+    }
 }

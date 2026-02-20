@@ -33,6 +33,11 @@ public class LevelCreator : MonoBehaviour
     [field: Header("Shop Data"), SerializeField]
     public List<GameObject> SpawnableItems { get; private set; }
 
+    [field: Header("LeaderBoard score keeper"), SerializeField]
+    public int PlayerFinalScore { get; private set; } = 0;
+    [field: SerializeField]
+    public bool IsScoreHasBeenSummit { get; private set; } = true;
+
     private void Awake()
     {
         // Prevent duplicates
@@ -83,5 +88,15 @@ public class LevelCreator : MonoBehaviour
     public void Debug_ForceStartGameBtn()
     {
             OnGameStart?.Invoke(Level);
+    }
+
+    public void SetIsScoreHasBeenSummit(bool value)
+    {
+        IsScoreHasBeenSummit = value;
+    }
+
+    public void SetPlayerFinalScore(int value)
+    {
+        PlayerFinalScore = value;
     }
 }

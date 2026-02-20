@@ -67,6 +67,7 @@ MonoBehaviour:
   - {fileID: 6482835790678363928, guid: 5f17cc246d9fdac42bd076018f13fbd9, type: 3}
   - {fileID: 5486393584995862360, guid: 19fbde6027d691b42a215fa3942e41f6, type: 3}
   - {fileID: 554392434839588208, guid: 9fd9224cfaf274b4c845bf90c473e617, type: 3}
+  <PlayerFinalScore>k__BackingField: 0
 --- !u!114 &8877301205350275664
 MonoBehaviour:
   m_ObjectHideFlags: 0
