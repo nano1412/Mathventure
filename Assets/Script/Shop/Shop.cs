@@ -1,12 +1,7 @@
-using NUnit.Framework;
 using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
-using static UnityEditor.Timeline.Actions.MenuPriority;
 using static Utils;
 
 public class Shop : MonoBehaviour

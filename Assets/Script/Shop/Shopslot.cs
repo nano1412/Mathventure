@@ -1,8 +1,5 @@
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using static UnityEditor.Timeline.Actions.MenuPriority;
 
 public class Shopslot : MonoBehaviour
 {

@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using static UnityEditor.Timeline.Actions.MenuPriority;
+
 using static Utils;
 
 public class EquipmentInventory : MonoBehaviour

@@ -1,12 +1,8 @@
-using NUnit.Framework.Interfaces;
 using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Audio;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
-using static UnityEditor.Timeline.Actions.MenuPriority;
 using static Utils;
 
 public class ItemSlot : MonoBehaviour

@@ -1,6 +1,4 @@
 using UnityEditor;
-using UnityEditorInternal;
-using UnityEngine;
 
 [CustomEditor(typeof(CardInDeckData))]
 public class CardDataEditor : Editor

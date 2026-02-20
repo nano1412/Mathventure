@@ -1,10 +1,5 @@
 using System.Collections.Generic;
-using System.Linq;
-using Unity.Collections.LowLevel.Unsafe;
-using UnityEditor;
-using UnityEditorInternal;
 using UnityEngine;
-using static Utils;
 
 [CreateAssetMenu(fileName = "deck", menuName = "Scriptable Objects/CardEntity/deck")]
 public class Deck : ScriptableObject

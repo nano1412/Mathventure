@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
-using static UnityEditor.Progress;
 using static Utils;
 
 public class ItemData : MonoBehaviour, IPointerClickHandler
