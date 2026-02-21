@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 772033587355267301}
   - component: {fileID: -566888783370201015}
   m_Layer: 5
-  m_Name: "\u0E22\u0E32"
+  m_Name: "\u0E22\u0E32\u0E01\u0E23\u0E30\u0E08\u0E32\u0E22"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -94,12 +94,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   <SelectSFX>k__BackingField: {fileID: 772033587355267301}
   <UseSFX>k__BackingField: {fileID: -566888783370201015}
-  <Price>k__BackingField: 5
-  <SellPrice>k__BackingField: 2
-  <ItemName>k__BackingField: "\u0E22\u0E32"
-  <Description>k__BackingField: +50 Hp
+  <Price>k__BackingField: 40
+  <SellPrice>k__BackingField: 10
+  <ItemName>k__BackingField: "\u0E22\u0E32\u0E01\u0E23\u0E30\u0E08\u0E32\u0E22"
+  <Description>k__BackingField: +20 Hp to all hero
   <ShortDescription>k__BackingField: "\u0E40\u0E1E\u0E34\u0E48\u0E21 Hp \u0E17\u0E31\u0E19\u0E17\u0E35
-    50 \u0E01\u0E31\u0E1A\u0E2E\u0E35\u0E42\u0E23\u0E48\u0E17\u0E35\u0E48\u0E40\u0E25\u0E37\u0E2D\u0E01"
+    20 \u0E01\u0E31\u0E1A\u0E2E\u0E35\u0E42\u0E23\u0E48\u0E17\u0E38\u0E01\u0E04\u0E19"
 --- !u!114 &6343283267850031433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,9 +112,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc8e1c030c855bc42bc629c3bce546be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  <UsableOn>k__BackingField: 0b000000
+  <UsableOn>k__BackingField: 00000000
   <CharacterBuffOnUse>k__BackingField:
-  - {fileID: 11400000, guid: b033a08d1ce2a1c44a42acc490df87d9, type: 2}
+  - {fileID: 11400000, guid: 66f81ac16dc6c6141a50a92f21ec6d41, type: 2}
   <CardBuffOnUse>k__BackingField:
   - {fileID: 0}
 --- !u!114 &3490566777633372947
