@@ -100,13 +100,13 @@ TextureImporter:
       name: UI_Banner_0
       rect:
         serializedVersion: 2
-        x: 30
-        y: 104
+        x: 32
+        y: 108
         width: 422
         height: 108
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 49, y: 13, z: 47, w: 20}
+      border: {x: 49, y: 13, z: 47, w: 23}
       customData: 
       outline: []
       physicsShape: []
