@@ -8,7 +8,7 @@ public class CharacterBuff : ScriptableObject
 {
     [field: SerializeField] public bool IsEffectInstant { get; private set; }
     //IsEffectInstant only work if it target hp (for something like bomb or potion)
-    [field: SerializeField] public int Value { get; private set; }
+    [field: SerializeField] public double Value { get; private set; }
     //Value will work as percentile if BuffMethod select to be multiply
     [field: SerializeField] public BuffMethod BuffMethod { get; private set; }
     [field: SerializeField] public CharacterBuffTargetValue CharacterBuffTargetValue { get; private set; }
