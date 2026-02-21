@@ -833,6 +833,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7591867148556942136
 SpriteRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -878,6 +879,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_Sprite: {fileID: 675382182, guid: f3476b3d08af60347b4e200a7d1fbf0f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -887,7 +889,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &5687510040163902897
 Animator:
@@ -958,6 +959,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4402242311993683246
 SpriteRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1003,6 +1005,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 0.46666667}
   m_FlipX: 0
@@ -1012,7 +1015,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &5234356429069529426
 GameObject:
@@ -1425,7 +1427,7 @@ MonoBehaviour:
   <Shield>k__BackingField: 0
   <IsStuned>k__BackingField: 0
   <CharacterBuffs>k__BackingField: []
-  <CurrentMove>k__BackingField: {fileID: 0}
+  <CurrentMove>k__BackingField: {fileID: 11400000, guid: 46051704c63955c40a514bb616bed212, type: 2}
   <FacingDirection>k__BackingField: {x: 0, y: 0}
   targets: []
   <HeroEquipmentSlot>k__BackingField: {fileID: 0}
