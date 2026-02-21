@@ -394,6 +394,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1237306310}
     m_Modifications:
+    - target: {fileID: 2571917788311770707, guid: 923e9b02afcd8ac46af96c6a151f6805, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2571917788311770707, guid: 923e9b02afcd8ac46af96c6a151f6805, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -1104955617905091999, guid: 498285b45e0462140af465312fc5088f, type: 3}
       propertyPath: <CurrentMove>k__BackingField
       value: 
@@ -470,14 +478,6 @@ PrefabInstance:
       propertyPath: <MultiplyBuffMove>k__BackingField
       value: 
       objectReference: {fileID: 11400000, guid: 4c99e65115e82de4a82740bcd4ffd1b4, type: 2}
-    - target: {fileID: 2571917788311770707, guid: 923e9b02afcd8ac46af96c6a151f6805, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2571917788311770707, guid: 923e9b02afcd8ac46af96c6a151f6805, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
