@@ -1379,7 +1379,7 @@ GameObject:
   - component: {fileID: -7890640210699133704}
   - component: {fileID: 5521657271789890096}
   m_Layer: 0
-  m_Name: Goblin
+  m_Name: "\u0E1F\u0E32\u0E42\u0E23\u0E2B\u0E4C"
   m_TagString: Character
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1421,13 +1421,13 @@ MonoBehaviour:
   <CharacterType>k__BackingField: 7
   animator: {fileID: 5687510040163902897}
   HPbar: {fileID: 3939571990788280976}
-  <BaseMaxHp>k__BackingField: 100
+  <BaseMaxHp>k__BackingField: 200
   <EffectiveMaxHp>k__BackingField: 0
   <Hp>k__BackingField: 0
   <Shield>k__BackingField: 0
   <IsStuned>k__BackingField: 0
   <CharacterBuffs>k__BackingField: []
-  <CurrentMove>k__BackingField: {fileID: 11400000, guid: 4da7a722b6a7fa04183b5a913de00e48, type: 2}
+  <CurrentMove>k__BackingField: {fileID: 11400000, guid: f86cf5fe5336cde4999be8bd12ab12c0, type: 2}
   <FacingDirection>k__BackingField: {x: 0, y: 0}
   targets: []
   <CoinOnKill>k__BackingField: 0
@@ -1733,7 +1733,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 964042412448839851, guid: c3a23156656e92048baa32e27fac9241, type: 2}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 8822c95221f317348b7ba44aaafbe287, type: 3}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
