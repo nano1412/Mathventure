@@ -89,9 +89,7 @@ AudioMixerGroupController:
   m_GroupID: 589c21aa21db6ed4fad05f38c2b62218
   m_Children:
   - {fileID: 964042412448839851}
-  - {fileID: 6647496287806546052}
   - {fileID: 1322744020886927658}
-  - {fileID: 793303487978194780}
   m_Volume: 0085a8592cfa29e488cb3a5e0cbb02a5
   m_Pitch: ec5ad7f3ec4d83d42bc3a0b8f4a6b1de
   m_Send: 00000000000000000000000000000000
@@ -154,7 +152,9 @@ AudioMixerGroupController:
   m_Name: ActionSFX
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 322177ffe3028a3438f697bcc23ed74e
-  m_Children: []
+  m_Children:
+  - {fileID: 793303487978194780}
+  - {fileID: 6647496287806546052}
   m_Volume: cb39c8e5454efda41a102e1d64524891
   m_Pitch: e4d4ed20409cdd44c8ddc7321bb14e15
   m_Send: 00000000000000000000000000000000
