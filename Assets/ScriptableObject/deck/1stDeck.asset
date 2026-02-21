@@ -13,46 +13,88 @@ MonoBehaviour:
   m_Name: 1stDeck
   m_EditorClassIdentifier: 
   cardDatas:
-  - FaceValue: 1
-    EffectValue: 15
-    Effect: 0
-  - FaceValue: 3
-    EffectValue: 13
-    Effect: 0
-  - FaceValue: 4
-    EffectValue: 12
-    Effect: 0
   - FaceValue: 10
-    EffectValue: 6
-    Effect: 0
-  - FaceValue: 11
-    EffectValue: 5
-    Effect: 0
-  - FaceValue: 12
-    EffectValue: 4
-    Effect: 0
-  - FaceValue: 14
-    EffectValue: 1
-    Effect: 0
-  - FaceValue: 15
-    EffectValue: 2
-    Effect: 0
-  - FaceValue: 15
-    EffectValue: 2
-    Effect: 0
+    EffectValue: 8
   - FaceValue: 10
-    EffectValue: 2
-    Effect: 0
+    EffectValue: 8
   - FaceValue: 9
-    EffectValue: 2
-    Effect: 0
+    EffectValue: 10
+  - FaceValue: 9
+    EffectValue: 10
   - FaceValue: 8
-    EffectValue: 2
-    Effect: 0
+    EffectValue: 7
   - FaceValue: 8
+    EffectValue: 7
+  - FaceValue: 7
+    EffectValue: 8
+  - FaceValue: 7
+    EffectValue: 8
+  - FaceValue: 6
+    EffectValue: 5
+  - FaceValue: 6
+    EffectValue: 5
+  - FaceValue: 5
     EffectValue: 2
-    Effect: 0
-  - FaceValue: 8
+  - FaceValue: 5
     EffectValue: 2
-    Effect: 0
+  - FaceValue: 4
+    EffectValue: 6
+  - FaceValue: 4
+    EffectValue: 6
+  - FaceValue: 3
+    EffectValue: 2
+  - FaceValue: 3
+    EffectValue: 2
+  - FaceValue: 2
+    EffectValue: 2
+  - FaceValue: 2
+    EffectValue: 2
+  - FaceValue: 1
+    EffectValue: 1
+  - FaceValue: 1
+    EffectValue: 1
+  - FaceValue: 0
+    EffectValue: 0
+  - FaceValue: 0
+    EffectValue: 0
+  - FaceValue: -1
+    EffectValue: 0
+  - FaceValue: -1
+    EffectValue: 0
+  - FaceValue: -2
+    EffectValue: 2
+  - FaceValue: -2
+    EffectValue: 2
+  - FaceValue: -3
+    EffectValue: 2
+  - FaceValue: -3
+    EffectValue: 2
+  - FaceValue: -4
+    EffectValue: 6
+  - FaceValue: -4
+    EffectValue: 6
+  - FaceValue: -5
+    EffectValue: 2
+  - FaceValue: -5
+    EffectValue: 2
+  - FaceValue: -6
+    EffectValue: 5
+  - FaceValue: -6
+    EffectValue: 5
+  - FaceValue: -7
+    EffectValue: 8
+  - FaceValue: -7
+    EffectValue: 8
+  - FaceValue: -8
+    EffectValue: 7
+  - FaceValue: -8
+    EffectValue: 7
+  - FaceValue: -9
+    EffectValue: 10
+  - FaceValue: -9
+    EffectValue: 10
+  - FaceValue: -10
+    EffectValue: 8
+  - FaceValue: -10
+    EffectValue: 8
   backCard: {fileID: 0}
