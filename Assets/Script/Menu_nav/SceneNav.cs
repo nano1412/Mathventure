@@ -22,6 +22,10 @@ public class SceneNav : MonoBehaviour
 
     public void GoToGameSceneBtn()
     {
+        if(LevelCreator.current.Level <1 && LevelCreator.current.Level > 5)
+        {
+            return;
+        }
         Debug.Log("to gamescene");
         SceneManager.LoadScene(GameSceneName);
     }

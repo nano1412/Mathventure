@@ -49,8 +49,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LevelCreator
   GameSceneName: GameScene
   <BGSprite>k__BackingField: {fileID: 21300000, guid: 75ff15a3b161dd74593281f228f976e4, type: 3}
-  <PossibleOperators>k__BackingField: 0000000001000000020000000300000004000000
-  <Level>k__BackingField: 1
+  <PossibleOperators>k__BackingField: 
+  <Level>k__BackingField: 0
   <IsEndless>k__BackingField: 1
   <TemplateDeck>k__BackingField: {fileID: 11400000, guid: 5009f4b849de2c44eaf0937517670067, type: 2}
   <LevelDatas>k__BackingField:
@@ -68,6 +68,7 @@ MonoBehaviour:
   - {fileID: 5486393584995862360, guid: 19fbde6027d691b42a215fa3942e41f6, type: 3}
   - {fileID: 554392434839588208, guid: 9fd9224cfaf274b4c845bf90c473e617, type: 3}
   <PlayerFinalScore>k__BackingField: 0
+  <IsScoreHasBeenSummit>k__BackingField: 1
 --- !u!114 &8877301205350275664
 MonoBehaviour:
   m_ObjectHideFlags: 0

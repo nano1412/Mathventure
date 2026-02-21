@@ -1,9 +1,9 @@
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-
+using UnityEngine.UI;
 using static Utils;
 
 public class EquipmentInventory : MonoBehaviour
@@ -31,6 +31,8 @@ public class EquipmentInventory : MonoBehaviour
     [field: SerializeField] public TMP_Text EquipmentSelectedItemNameText { get; private set; }
     [field: SerializeField] public TMP_Text EquipmentSelectedItemNameShortdescriptionText { get; private set; }
     [field: SerializeField] public TMP_Text EquipmentSelectedItemNamedescriptionText { get; private set; }
+    [field: SerializeField] public Button SellBtn { get; private set; }
+    [field: SerializeField] public TMP_Text SellBtnText { get; private set; }
 
     void Awake()
     {
@@ -66,6 +68,17 @@ public class EquipmentInventory : MonoBehaviour
         EquipmentSelectedItemNameText.text = item.ItemName;
         EquipmentSelectedItemNameShortdescriptionText.text = item.ShortDescription;
         EquipmentSelectedItemNamedescriptionText.text = item.Description;
+
+        if (equipmentSelectedItem != null)
+        {
+            SellBtn.interactable = true;
+            SellBtnText.text = "ขาย(" + equipmentSelectedItem.GetComponent<ItemData>().SellPrice + "G)";
+        }
+        else
+        {
+            SellBtn.interactable = false;
+            SellBtnText.text = "ขาย";
+        }
     }
 
     public void SetInventorySelectItem(GameObject item)
@@ -90,5 +103,19 @@ public class EquipmentInventory : MonoBehaviour
         }
         gameObject.SetActive(isActive);
         HeroEquipmentMenu.SetActive(isActive);
+    }
+
+    public void SellSelectItem()
+    {
+        if(equipmentSelectedItem != null)
+        {
+            ItemData itemData = equipmentSelectedItem.GetComponent<ItemData>();
+            if(itemData != null)
+            {
+                InventoryController.current.AddCoin(itemData.SellPrice, true);
+                Destroy(equipmentSelectedItem);
+                equipmentSelectedItem = null;
+            }
+        }
     }
 }
