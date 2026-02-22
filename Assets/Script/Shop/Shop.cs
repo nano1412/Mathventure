@@ -188,11 +188,11 @@ public class Shop : MonoBehaviour
         if (ShopSelectedItemData != null)
         {
             int itemprice = ShopSelectedItemData.GetComponent<ItemData>().Price;
-            BuyPriceText.text = "buy (" + itemprice + "G)";
+            BuyPriceText.text = itemprice + "G";
             BuyBtn.interactable = itemprice <= coin;
         }
 
-        RerollPriceText.text = "Reroll (" + CurrentRerollPrice + "G)";
+        RerollPriceText.text = "(" + CurrentRerollPrice + "G)";
         RerollBtn.interactable = CurrentRerollPrice <= coin;
     }
 
