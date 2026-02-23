@@ -72,8 +72,8 @@ public class ActionGameController : MonoBehaviour
         List<int> operatorOrders = CardPlayGameController.current.OperatorOrders;
 
         heroAttackQueue.Clear();
-
-        for (int i = 0; i < 3; i++)
+        Debug.Log(operatorOrders.Count);
+        for (int i = 0; i < operatorOrders.Count - 1; i++)
         {
             OperationEnum heroType =
                 CardPlayGameController.current

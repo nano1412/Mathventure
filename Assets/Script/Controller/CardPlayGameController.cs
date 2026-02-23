@@ -230,7 +230,7 @@ public class CardPlayGameController : MonoBehaviour
 
     public void SummitEquation(Action onComplete)
     {
-        if (IsHandReady < 4)
+        if (IsHandReady < 2)
         {
             Debug.Log("invalid hand");
             return;
