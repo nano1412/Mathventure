@@ -40,10 +40,10 @@ public class EquipmentInventory : MonoBehaviour
         GameController.current.OnGameStateChange += HandleGameStateChange;
     }
 
-    private void Start()
-    {
-        isActive = gameObject.activeSelf;
-    }
+    //private void Start()
+    //{
+    //    isActive = gameObject.activeSelf;
+    //}
 
     private void HandleGameStateChange(GameState gameState)
     {
