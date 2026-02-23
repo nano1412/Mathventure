@@ -97,9 +97,9 @@ MonoBehaviour:
   <Price>k__BackingField: 30
   <SellPrice>k__BackingField: 15
   <ItemName>k__BackingField: "\u0E18\u0E19\u0E39 T3"
-  <Description>k__BackingField: "\u0E42\u0E08\u0E21\u0E15\u0E35\u0E44\u0E01\u0E25\u0E41\u0E23\u0E07"
-  <ShortDescription>k__BackingField: "\u0E18\u0E19\u0E39\u0E23\u0E32\u0E0A\u0E31\u0E19\u0E22\u0E34\u0E07\u0E44\u0E01\u0E25
+  <Description>k__BackingField: "\u0E18\u0E19\u0E39\u0E23\u0E32\u0E0A\u0E31\u0E19\u0E22\u0E34\u0E07\u0E44\u0E01\u0E25
     \u0E43\u0E0A\u0E49\u0E44\u0E14\u0E49\u0E40\u0E09\u0E1E\u0E32\u0E30\u0E19\u0E31\u0E01\u0E18\u0E19\u0E39"
+  <ShortDescription>k__BackingField: +33 ATK on archer
 --- !u!114 &3952483571831082575
 MonoBehaviour:
   m_ObjectHideFlags: 0
