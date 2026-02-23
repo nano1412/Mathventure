@@ -1414,6 +1414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edb30923980eb194a8ee4b1a55618bfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
+  <HitFX>k__BackingField: {fileID: 6991801482143184211, guid: 5df23a799970b66418a2ae1c03cb536b, type: 3}
   <HealSFX>k__BackingField: {fileID: 4265046769025348497}
   <HurtSFX>k__BackingField: {fileID: 3933682895883299190}
   <DeadSFX>k__BackingField: {fileID: -7890640210699133704}
@@ -1430,9 +1431,7 @@ MonoBehaviour:
   <CurrentMove>k__BackingField: {fileID: 11400000, guid: 8f4983a909abfbb47a32c30603460100, type: 2}
   <FacingDirection>k__BackingField: {x: 0, y: 0}
   targets: []
-  <CoinOnKill>k__BackingField: 0
-  <EndlessSpawnableOnWaveMoreThan>k__BackingField: 5
-  <EndlessValue>k__BackingField: 3
+  <CoinOnKill>k__BackingField: 20
 --- !u!82 &4265046769025348497
 AudioSource:
   m_ObjectHideFlags: 0

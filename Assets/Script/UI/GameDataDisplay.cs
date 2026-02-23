@@ -1,4 +1,4 @@
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 
 public class GameDataDisplay : MonoBehaviour
@@ -10,9 +10,9 @@ public class GameDataDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        coinsText.text = "Coins: " + InventoryController.current.Coin.ToString();
-        levelText.text = "Level: " + GameController.current.Level.ToString();
-        waveText.text = "Wave: " + GameController.current.Wave.ToString();
+        coinsText.text = "เหรียญ: " + InventoryController.current.Coin.ToString();
+        levelText.text = "ด่าน: " + GameController.current.Level.ToString();
+        waveText.text = "รอบที่: " + GameController.current.Wave.ToString();
         isEndlessText.gameObject.SetActive(GameController.current.IsEndless);
     }
 }

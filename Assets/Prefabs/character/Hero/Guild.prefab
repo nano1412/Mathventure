@@ -1414,6 +1414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe5b03e888085154aa9738e604fd9fe6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Hero
+  <HitFX>k__BackingField: {fileID: 6991801482143184211, guid: 5df23a799970b66418a2ae1c03cb536b, type: 3}
   <HealSFX>k__BackingField: {fileID: 2356083776441057593}
   <HurtSFX>k__BackingField: {fileID: -2544456653231648542}
   <DeadSFX>k__BackingField: {fileID: -8874531394195318222}

@@ -6,7 +6,8 @@ using static Utils;
 
 public abstract class Character : MonoBehaviour
 {
-    [field: SerializeField] public AudioSource HealSFX { get; private set; }
+    [field: Header("FX"), SerializeField] public GameObject HitFX { get; private set; }
+    [field:Header("SFX"), SerializeField] public AudioSource HealSFX { get; private set; }
     [field: SerializeField] public AudioSource HurtSFX { get; private set; }
     [field: SerializeField] public AudioSource DeadSFX { get; private set; }
     [field: SerializeField] public AudioSource AttackSFX { get; private set; }
@@ -57,6 +58,12 @@ public abstract class Character : MonoBehaviour
         {
             Debug.LogWarning("TakeDamage received a negative value. Use Heal() instead.");
             return;
+        }
+
+        if (HitFX != null)
+        {
+            GameObject fx = Instantiate(HitFX,transform);
+            Destroy(fx,1);
         }
 
         animator.SetTrigger("Damaged");
