@@ -201,7 +201,7 @@ AnimationClip:
   m_Events:
   - time: 0.53333336
     functionName: HandleAnimationEvent
-    data: Hit
+    data: Heal
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0

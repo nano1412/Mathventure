@@ -17,6 +17,8 @@ public class BuffController : MonoBehaviour
     [field: SerializeField] public AudioSource UseConsumableAudiosource { get; private set; }
 
     [field: SerializeField] private GameObject selectedCharacter;
+    [field: SerializeField] private GameObject SelectVisual;
+
     public GameObject SelectedCharacter
     {
         get
@@ -28,6 +30,8 @@ public class BuffController : MonoBehaviour
             if (SelectedConsumable != null && value.GetComponent<Character>() != null)
             {
                 selectedCharacter = value;
+
+                SelectVisual.transform.SetParent(SelectedCharacter.transform,false);
                 OnSelectedCharacterUpdate?.Invoke(selectedCharacter);
             }
         }
@@ -161,6 +165,7 @@ public class BuffController : MonoBehaviour
         }
 
         characters = characters.Distinct().ToList();
+        SelectVisual.transform.SetParent(transform, false);
 
         return SendBuffToCharacters(consumableData.CharacterBuffOnUse, characters);
     }

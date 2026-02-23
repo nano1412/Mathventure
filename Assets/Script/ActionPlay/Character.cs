@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
 using static Utils;
@@ -59,6 +60,7 @@ public abstract class Character : MonoBehaviour
         if (damage < 0)
         {
             Debug.LogWarning("TakeDamage received a negative value. Use Heal() instead.");
+            Heal(math.abs(damage), "Server");
             return;
         }
 

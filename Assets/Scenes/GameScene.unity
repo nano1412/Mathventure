@@ -634,12 +634,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 79630232}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.27, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 9005111994108687958}
+  m_Father: {fileID: 890097330}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &79630234
 Animator:
@@ -9986,10 +9986,11 @@ Transform:
   m_GameObject: {fileID: 890097329}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -200}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 79630233}
   m_Father: {fileID: 1986135735}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &890097331
@@ -10008,6 +10009,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e38505e73a196e840972210efe617ff6, type: 2}
   <UseConsumableAudiosource>k__BackingField: {fileID: 0}
   selectedCharacter: {fileID: 0}
+  SelectVisual: {fileID: 79630232}
   selectedConsumable: {fileID: 0}
 --- !u!82 &890097332
 AudioSource:
@@ -29067,9 +29069,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4992115038839557966, guid: 1462b2ebaacf5b2408a1ee217f35a1f9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1699622772}
-    - targetCorrespondingSourceObject: {fileID: 4992115038839557966, guid: 1462b2ebaacf5b2408a1ee217f35a1f9, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 79630233}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1462b2ebaacf5b2408a1ee217f35a1f9, type: 3}
 --- !u!4 &9005111994108687958 stripped
