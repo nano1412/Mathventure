@@ -9,9 +9,9 @@ public static class DataFetcher
     private static string baseUrl = "https://app.nocodb.com/api/v2/tables/m3k88oqabf3fdrn/records";
     private static string apiKey = "7T5QdvOgxkFiEtVAIYQg5PiWtw9F0O3myzY5fCJZ";
 
-    public static IEnumerator GetTop8(System.Action<string> callback)
+    public static IEnumerator GetTopPlayers(System.Action<string> callback, int playercount)
     {
-        string url = baseUrl + "?sort=-score&limit=8";
+        string url = baseUrl + "?sort=-score&limit=" + playercount;
 
         UnityWebRequest request = UnityWebRequest.Get(url);
         request.SetRequestHeader("xc-token", apiKey);

@@ -17,27 +17,27 @@ public class ScreenController : MonoBehaviour
         GameController.current.OnGameStateChange -= FullScreenPopUp;
     }
 
-    public void TogglePauseSceene()
-    {
-        PauseScreen.SetActive(!PauseScreen.active);
-        PauseScreen.GetComponent<Animator>().SetBool("IsOpen", PauseScreen.active);
-    }
+    //public void TogglePauseSceene()
+    //{
+    //    PauseScreen.SetActive(!PauseScreen.active);
+    //    PauseScreen.GetComponent<Animator>().SetBool("IsOpen", PauseScreen.active);
+    //}
 
-    public void OpenPauseScreen()
-    {
-        PauseScreen.SetActive(true);
-    }
+    //public void OpenPauseScreen()
+    //{
+    //    PauseScreen.SetActive(true);
+    //}
 
-    public void ClosePauseScreen()
-    {
-        PauseScreen.SetActive(false);
-    }
+    //public void ClosePauseScreen()
+    //{
+    //    PauseScreen.SetActive(false);
+    //}
 
     public void FullScreenPopUp(GameState gameState)
     {
         WinScreen.SetActive(false);
         LoseScreen.SetActive(false);
-        PauseScreen.SetActive(false);
+        //PauseScreen.SetActive(false);
 
         switch (gameState)
         {

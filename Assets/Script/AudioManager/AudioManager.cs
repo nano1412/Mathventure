@@ -84,7 +84,10 @@ public class AudioManager : MonoBehaviour
 
         } else
 		{
-            GameController.current.OnGameStateChange -= UpdateBGMOnGameStateChange;
+            if (GameController.current != null)
+            {
+                GameController.current.OnGameStateChange -= UpdateBGMOnGameStateChange;
+            }
         }
     }
 

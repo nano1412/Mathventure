@@ -11,6 +11,7 @@ public class LeaderBoardManager : MonoBehaviour
     public TMP_InputField usernameInput;
     public TMP_Text playerScore; 
     public Button submitButton;
+    public int playerOnLeaderboardCount;
 
     private void Start()
     {
@@ -18,7 +19,7 @@ public class LeaderBoardManager : MonoBehaviour
 
         playerScore.text = "Score:" + LevelCreator.current.PlayerFinalScore;
 
-        StartCoroutine(DataFetcher.GetTop8(OnDataReceived));
+        StartCoroutine(DataFetcher.GetTopPlayers(OnDataReceived, playerOnLeaderboardCount));
     }
 
     public void OnSubmitClicked()
@@ -32,7 +33,7 @@ public class LeaderBoardManager : MonoBehaviour
         {
             if (success)
             {
-                StartCoroutine(DataFetcher.GetTop8(OnDataReceived));
+                StartCoroutine(DataFetcher.GetTopPlayers(OnDataReceived, playerOnLeaderboardCount));
                 LevelCreator.current.SetIsScoreHasBeenSummit(true);
             }
         }));

@@ -13,6 +13,6 @@ public class GameDataDisplay : MonoBehaviour
         coinsText.text = "Coins: " + InventoryController.current.Coin.ToString();
         levelText.text = "Level: " + GameController.current.Level.ToString();
         waveText.text = "Wave: " + GameController.current.Wave.ToString();
-        isEndlessText.text = GameController.current.IsEndless ? "Endless mode" : "";
+        isEndlessText.gameObject.SetActive(GameController.current.IsEndless);
     }
 }

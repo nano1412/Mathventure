@@ -1,13 +1,15 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem.XR;
 using UnityEngine.UI;
 using static Utils;
 
 public class Shop : MonoBehaviour
 {
     public static Shop current;
-
+    public MainGameUIController uIController;
+    public GameObject infoPanel;
     [field: SerializeField] public AudioSource RerollSFX { get; private set; }
 
     [field: SerializeField]
@@ -86,11 +88,13 @@ public class Shop : MonoBehaviour
     {
         if (gameState != GameState.Shop)
         {
-            gameObject.SetActive(false);
+            uIController.Close(gameObject);
+            uIController.Close(infoPanel);
         }
         else
         {
-            gameObject.SetActive(true);
+            uIController.Open(gameObject);
+            uIController.Open(infoPanel);
         }
     }
 
@@ -188,11 +192,11 @@ public class Shop : MonoBehaviour
         if (ShopSelectedItemData != null)
         {
             int itemprice = ShopSelectedItemData.GetComponent<ItemData>().Price;
-            BuyPriceText.text = "buy (" + itemprice + "G)";
+            BuyPriceText.text = itemprice + "G";
             BuyBtn.interactable = itemprice <= coin;
         }
 
-        RerollPriceText.text = "Reroll (" + CurrentRerollPrice + "G)";
+        RerollPriceText.text = "(" + CurrentRerollPrice + "G)";
         RerollBtn.interactable = CurrentRerollPrice <= coin;
     }
 

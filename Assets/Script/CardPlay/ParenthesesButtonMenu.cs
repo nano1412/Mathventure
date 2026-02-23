@@ -1,4 +1,4 @@
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 using static Utils;
 
@@ -73,8 +73,9 @@ public class ParenthesesButtonMenu : MonoBehaviour
 
     private void UpdateButtonText()
     {
-        string addText = "add Parentheses";
-        string removeText = "remove Parentheses";
+        string addText = "เติม()";
+        string removeText = "ลบ()";
+
 
         if (IsFrontParentheses)
         {

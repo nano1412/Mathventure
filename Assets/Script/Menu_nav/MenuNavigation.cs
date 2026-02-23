@@ -1,5 +1,7 @@
+using DG.Tweening;
 using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -15,6 +17,8 @@ public class MenuNavigation : MonoBehaviour
     [field: SerializeField] public LevelSelectButton Level3Btn { get; private set; }
     [field: SerializeField] public LevelSelectButton Level4Btn { get; private set; }
     [field: SerializeField] public LevelSelectButton LevelEndlessBtn { get; private set; }
+    
+    [SerializeField] private Ease scaleEase = Ease.OutBack;
 
     private void Awake()
     {
@@ -29,21 +33,39 @@ public class MenuNavigation : MonoBehaviour
 
     public void OpenLevelSelecterMenu()
     {
-        LevelSelecterCanvas.SetActive(true);
+        Open(LevelSelecterCanvas);
     }
 
     public void CloseLevelSelecterMenu()
     {
-        LevelSelecterCanvas.SetActive(false);
+        Close(LevelSelecterCanvas);
     }
 
-    public void OpenSettingMenu()
+
+    void Open(GameObject ui)
     {
-        SettingCanvas.SetActive(true);
+        ui.SetActive(true);
+        ui.transform.DOScale(1, 0.15f).SetEase(scaleEase);
     }
 
-    public void CloseSettingMenu()
+     async void Close(GameObject ui)
     {
-        SettingCanvas.SetActive(false);
+        await ui.transform.DOScale(0, 0.15f).SetEase(Ease.OutQuad).AsyncWaitForCompletion();
+        ui.SetActive(false);
     }
+
+    public void ToggleSettingMenu()
+    {
+        if (SettingCanvas.active == true)
+        {
+            Close(SettingCanvas);
+        }
+        else
+        {
+            Open(SettingCanvas);
+        }
+    }
+
+
+   
 }

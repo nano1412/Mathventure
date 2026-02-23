@@ -92,7 +92,7 @@ public class cardMultiplierIndicater : MonoBehaviour
     void UpdateSlider()
     {
         Slider.minValue = (float)minValue;
-        Slider.maxValue = (float)maxValue;
+        Slider.maxValue = (float)targetValue;
         Slider.value = (float)sliderValue;
     }
 }
