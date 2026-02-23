@@ -97,10 +97,11 @@ MonoBehaviour:
   <Price>k__BackingField: 30
   <SellPrice>k__BackingField: 15
   <ItemName>k__BackingField: "\u0E40\u0E01\u0E23\u0E32\u0E30 T3"
-  <Description>k__BackingField: "\u0E1E\u0E25\u0E31\u0E07\u0E0A\u0E35\u0E27\u0E34\u0E15\u0E2A\u0E39\u0E07"
-  <ShortDescription>k__BackingField: "\u0E40\u0E01\u0E23\u0E32\u0E30\u0E23\u0E32\u0E0A\u0E27\u0E07\u0E28\u0E4C\u0E28\u0E31\u0E01\u0E14\u0E34\u0E4C\u0E2A\u0E34\u0E17\u0E18\u0E34\u0E4C
+  <Description>k__BackingField: "\u0E40\u0E01\u0E23\u0E32\u0E30\u0E23\u0E32\u0E0A\u0E27\u0E07\u0E28\u0E4C\u0E28\u0E31\u0E01\u0E14\u0E34\u0E4C\u0E2A\u0E34\u0E17\u0E18\u0E34\u0E4C
     \u0E17\u0E38\u0E01\u0E2E\u0E35\u0E42\u0E23\u0E48\u0E2A\u0E27\u0E21\u0E43\u0E2A\u0E48\u0E44\u0E14\u0E49
     \u0E44\u0E14\u0E49\u0E23\u0E30\u0E14\u0E31\u0E1A\u0E19\u0E36\u0E48\u0E07 \u0E08\u0E07\u0E43\u0E0A\u0E49\u0E2A\u0E39\u0E49\u0E15\u0E48\u0E2D\u0E44\u0E1B"
+  <ShortDescription>k__BackingField: "\u0E40\u0E1E\u0E34\u0E48\u0E21\u0E1E\u0E25\u0E31\u0E07\u0E0A\u0E35\u0E27\u0E34\u0E15
+    90"
 --- !u!114 &3952483571831082575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,7 +116,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   <UsableHero>k__BackingField: 0200000001000000030000000400000005000000
   <EquipmentType>k__BackingField: 1
-  <IncreaseMaxHP>k__BackingField: 120
+  <IncreaseMaxHP>k__BackingField: 90
   <IncreaseATK>k__BackingField: 0
   <CharacterBuffInflictOnAttack>k__BackingField: {fileID: 0}
 --- !u!114 &6262239340892872837

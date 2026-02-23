@@ -7725,7 +7725,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   <CoinSpendSFX>k__BackingField: {fileID: 668068791}
   <CoinGetSFX>k__BackingField: {fileID: 668068790}
-  <Coin>k__BackingField: 20
+  <Coin>k__BackingField: 0
   <EquipmentInventorySlots>k__BackingField:
   - {fileID: 1367518486}
   - {fileID: 6418940523400070879}
@@ -11192,7 +11192,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 246}
-  m_SizeDelta: {x: 200, y: 100}
+  m_SizeDelta: {x: 250, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1010582076
 MonoBehaviour:
@@ -11214,7 +11214,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '67
+  m_text: '0
 
 '
   m_isRightToLeft: 0
@@ -17099,7 +17099,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 60, y: -118}
-  m_SizeDelta: {x: 100, y: 50}
+  m_SizeDelta: {x: 250, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1543759185
 MonoBehaviour:
@@ -21710,8 +21710,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.19598389}
-  m_SizeDelta: {x: 0, y: 0.39198303}
+  m_AnchoredPosition: {x: 9.665501, y: 0.19598389}
+  m_SizeDelta: {x: 158.6691, y: 0.392}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2035833714
 MonoBehaviour:
