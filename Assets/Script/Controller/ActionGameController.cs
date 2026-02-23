@@ -230,11 +230,19 @@ public class ActionGameController : MonoBehaviour
 
     public void ResetHerosHP()
     {
-        PlusHeroSlot.transform.GetChild(0).GetComponent<Hero>().ResetHP();
-        MinusHeroSlot.transform.GetChild(0).GetComponent<Hero>().ResetHP();
-        MultiplyHeroSlot.transform.GetChild(0).GetComponent<Hero>().ResetHP();
-        DivideHeroSlot.transform.GetChild(0).GetComponent<Hero>().ResetHP();
-        BuffHeroSlot.transform.GetChild(0).GetComponent<Hero>().ResetHP();
+        ResetHeroHP(PlusHeroSlot);
+        ResetHeroHP(MinusHeroSlot);
+        ResetHeroHP(MultiplyHeroSlot);
+        ResetHeroHP(DivideHeroSlot);
+        ResetHeroHP(BuffHeroSlot);
+    }
+
+    void ResetHeroHP(GameObject slot)
+    {
+        if (slot != null)
+        {
+            slot.transform.GetChild(0).GetComponent<Hero>().ResetHP();
+        }
     }
 
     public void Debug_ForceAttack()
