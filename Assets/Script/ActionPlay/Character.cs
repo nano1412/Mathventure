@@ -7,6 +7,8 @@ using static Utils;
 public abstract class Character : MonoBehaviour
 {
     [field: Header("FX"), SerializeField] public GameObject HitFX { get; private set; }
+    [field: SerializeField] public GameObject HealFX { get; private set; }
+
     [field:Header("SFX"), SerializeField] public AudioSource HealSFX { get; private set; }
     [field: SerializeField] public AudioSource HurtSFX { get; private set; }
     [field: SerializeField] public AudioSource DeadSFX { get; private set; }
@@ -78,6 +80,12 @@ public abstract class Character : MonoBehaviour
         {
             Debug.LogWarning("Heal received a negative value. Use TakeDamage() instead.");
             return;
+        }
+
+        if (HealFX != null)
+        {
+            GameObject fx = Instantiate(HealFX, transform);
+            Destroy(fx, 1);
         }
 
         Hp += heal;
