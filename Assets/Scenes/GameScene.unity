@@ -7725,7 +7725,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   <CoinSpendSFX>k__BackingField: {fileID: 668068791}
   <CoinGetSFX>k__BackingField: {fileID: 668068790}
-  <Coin>k__BackingField: 50
+  <Coin>k__BackingField: 20
   <EquipmentInventorySlots>k__BackingField:
   - {fileID: 1367518486}
   - {fileID: 6418940523400070879}
@@ -16248,7 +16248,7 @@ MonoBehaviour:
   Slider: {fileID: 1418666289}
   ActualValue: 0
   numberIncreasePerSecond: 20
-  Speed: 3
+  Speed: 10
   sliderValue: 0
   multiplierValueValue: 0
   minValue: 0

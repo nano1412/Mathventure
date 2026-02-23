@@ -7,7 +7,7 @@ public class cardMultiplierIndicater : MonoBehaviour
     [field: SerializeField] private Slider Slider;
     [field: SerializeField] private double ActualValue;
     [field: SerializeField] private float numberIncreasePerSecond = 20f;
-    [field: SerializeField] private float Speed = 3f;
+    [field: SerializeField] private float Speed = 10f;
 
     [field: SerializeField] private double sliderValue;
     [field: SerializeField] private double multiplierValueValue;

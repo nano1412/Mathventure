@@ -87,6 +87,7 @@ public class CardPlayGameController : MonoBehaviour
         {
             if (value == parenthesesMode) return;
             parenthesesMode = value;
+            //Debug.Log("Set parenthesesMode: " + value);
             UpdateParenthesesGameobjectPosition();
         }
     }
@@ -212,14 +213,16 @@ public class CardPlayGameController : MonoBehaviour
         }
 
         IsHandReady = ValidationHand(PlayCardList);
-        if (CardPlayGameController.current.IsHandReady > 0 && CardPlayGameController.current.IsHandReady < 4)
+        Debug.Log(CardPlayGameController.current.IsHandReady);
+        if ((CardPlayGameController.current.IsHandReady > 0 && CardPlayGameController.current.IsHandReady < 3) || (ParenthesesMode == ParenthesesMode.DoMiddleOperationLast && CardPlayGameController.current.IsHandReady < 4))
         {
             PreviewScore(ParenthesesMode.NoParentheses);
         }
-        else if (CardPlayGameController.current.IsHandReady >= 4)
+        else if (CardPlayGameController.current.IsHandReady >= 3)
         {
             PreviewScore(ParenthesesMode);
         }
+        //PreviewScore(ParenthesesMode);
 
     }
 
@@ -267,13 +270,14 @@ public class CardPlayGameController : MonoBehaviour
             OperatorOrders.Add(Convert.ToInt32(StepLog[i][1]));
         }
 
-        PreviewPlayerAnswer = 0; //reset PreviewPlayerAnswer for next round
-        ParenthesesMode = ParenthesesMode.NoParentheses;
+       
         PlayerAnswer = (double)StepLog[StepLog.Count - 1][1];
 
         Multiplier = GetMultiplierValue();
 
         onComplete?.Invoke();
+        PreviewPlayerAnswer = 0; //reset PreviewPlayerAnswer for next round
+        ParenthesesMode = ParenthesesMode.NoParentheses;
     }
 
     private double GetMultiplierValue()
