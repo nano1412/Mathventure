@@ -154,7 +154,7 @@ public class GameController : MonoBehaviour
         {
             Destroy(cardAlreadyPlayed);
         }
-
+        CardPlayGameController.current.PreviewPlayerAnswer = 0;
         BuffController.current.AllCharactersTakeBuffsEffect();
 
             NextRoundStart();
