@@ -20,6 +20,9 @@ public class Shop : MonoBehaviour
     public TMP_Text DescriptionPreview { get; private set; }
 
     [field: SerializeField]
+    public TMP_Text ItemNamePreview { get; private set; }
+
+    [field: SerializeField]
     public ItemData ShopSelectedItemData { get; private set; }
 
     [field: SerializeField]
@@ -148,6 +151,7 @@ public class Shop : MonoBehaviour
             ShopSelectedItemData = null;
             ShopSelectedItemImagePreview.sprite = DefaultShopImgPreview;
             DescriptionPreview.text = "";
+            ItemNamePreview.text = "";
         }
         else
         {
@@ -155,6 +159,7 @@ public class Shop : MonoBehaviour
             ShopSelectedItemData = item.GetComponent<ItemData>();
             ShopSelectedItemImagePreview.sprite = item.GetComponent<Image>().sprite;
             DescriptionPreview.text = item.GetComponent<ItemData>().Description;
+            ItemNamePreview.text = item.GetComponent<ItemData>().ItemName;
 
         }
 
