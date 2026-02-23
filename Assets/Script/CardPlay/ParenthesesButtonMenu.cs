@@ -14,6 +14,28 @@ public class ParenthesesButtonMenu : MonoBehaviour
     [field: SerializeField] public TMP_Text MiddleParenthesesBtnText { get; private set; }
     [field: SerializeField] public TMP_Text LastParenthesesBtnText { get; private set; }
 
+    private void Awake()
+    {
+        GameController.current.OnGameStateChange += ResetParentheses;
+    }
+
+    private void OnDisable()
+    {
+        GameController.current.OnGameStateChange -= ResetParentheses;
+    }
+
+    public void ResetParentheses(GameState gamestate)
+    {
+        if(gamestate == GameState.Shop)
+        {
+        IsFrontParentheses = false;
+        IsMiddleParentheses = false;
+        IsLastParentheses= false;
+        CheckParentheses();
+        UpdateButtonText();
+        }
+    }
+
 
     public void ToggleIsFrontParentheses()
     {

@@ -50,7 +50,7 @@ public class CardPlayGameController : MonoBehaviour
     public double PlayerAnswer { get; private set; }
 
     [field: SerializeField]
-    public double PreviewPlayerAnswer { get; private set; }
+    public double PreviewPlayerAnswer;
 
     [field: SerializeField]
     public double Multiplier { get; private set; }

@@ -15102,6 +15102,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3061fe03702e05d48a4609be9406c627, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ActionGameController
+  <UseEndlessGenerator>k__BackingField: 1
+  <Enemys>k__BackingField:
+  - {fileID: 6687903444630188797, guid: 549bfa6f17609f848bd98e0091853ff8, type: 3}
+  - {fileID: 6687903444630188797, guid: d51dbaedd5eb31f4b84a1f0b2229aad5, type: 3}
+  - {fileID: 6687903444630188797, guid: bb5885f9caeadea43b17df6dcda59f03, type: 3}
+  - {fileID: 6687903444630188797, guid: 3b920a72bbde2b54388c6856a15bebf7, type: 3}
+  - {fileID: 6687903444630188797, guid: ed911c63dc3a04445b349bdb7752a17e, type: 3}
+  - {fileID: 6687903444630188797, guid: 5b7258fa01128824bb358cbe00f792b5, type: 3}
   <HeroSlotsHolder>k__BackingField: {fileID: 1117776344}
   <EnemySlotsHolder>k__BackingField: {fileID: 1273160278}
   <PlusHeroSlot>k__BackingField: {fileID: 803314327}
@@ -28484,7 +28492,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7369713471833749870, guid: 6103e5c31d072e6428ceac4f67d437d0, type: 3}
       propertyPath: <IsEndless>k__BackingField
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7369713471833749870, guid: 6103e5c31d072e6428ceac4f67d437d0, type: 3}
       propertyPath: <SpawnableItems>k__BackingField.Array.size

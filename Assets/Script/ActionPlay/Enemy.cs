@@ -4,6 +4,9 @@ using UnityEngine;
 public class Enemy : Character
 {
     [field:SerializeField]public int CoinOnKill { get; private set; }
+
+    [field:Header("Endless Data"), SerializeField] public int EndlessSpawnableOnWaveMoreThan{ get; private set; }
+    [field:SerializeField] public int EndlessValue { get; private set; }
     public void Attack()
     {
         targets = GetTargetByMove(CurrentMove);
