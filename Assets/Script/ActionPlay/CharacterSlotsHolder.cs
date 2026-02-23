@@ -12,7 +12,7 @@ public class CharacterSlotsHolder : MonoBehaviour
         characters.Clear();
         foreach (Transform characterSlot in CharacterSlots)
         {
-            if(characterSlot.GetComponentInChildren<Character>()!= null)
+            if(characterSlot != null && characterSlot.GetComponentInChildren<Character>()!= null)
             {
                 characters.Add(characterSlot.GetComponentInChildren<Character>().gameObject);
             }

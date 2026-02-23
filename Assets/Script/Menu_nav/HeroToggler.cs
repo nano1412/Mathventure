@@ -39,40 +39,54 @@ public class HeroToggler : MonoBehaviour
     {
         if (!possibleOperators.Contains(OperationEnum.Plus)){
             IsPlusHeroOnThisLevel = false;
-            PlusHeroSlot.SetActive(false);
-            PlusHeroInventory.SetActive(false);
-            PlusOperatorBtn.SetActive(false);
+            Destroy(PlusHeroSlot);
+            Destroy(PlusHeroInventory);
+            Destroy(PlusOperatorBtn);
+            //PlusHeroSlot.SetActive(false);
+            //PlusHeroInventory.SetActive(false);
+            //PlusOperatorBtn.SetActive(false);
         }
 
         if (!possibleOperators.Contains(OperationEnum.Minus))
         {
             IsMinusHeroOnThisLevel = false;
-            MinusHeroSlot.SetActive(false);
-            MinusHeroInventory.SetActive(false);
-            MinusOperatorBtn.SetActive(false);
+            Destroy(MinusHeroSlot);
+            Destroy(MinusHeroInventory);
+            Destroy(MinusOperatorBtn);
+            //MinusHeroSlot.SetActive(false);
+            //MinusHeroInventory.SetActive(false);
+            //MinusOperatorBtn.SetActive(false);
         }
 
         if (!possibleOperators.Contains(OperationEnum.Multiply))
         {
             IsMultiplyHeroOnThisLevel = false;
-            MultiplyHeroSlot.SetActive(false);
-            MultiplyHeroInventory.SetActive(false);
-            MultiplyOperatorBtn.SetActive(false);
+            Destroy(MultiplyHeroSlot);
+            Destroy(MultiplyHeroInventory);
+            Destroy(MultiplyOperatorBtn);
+            //MultiplyHeroSlot.SetActive(false);
+            //MultiplyHeroInventory.SetActive(false);
+            //MultiplyOperatorBtn.SetActive(false);
         }
 
         if (!possibleOperators.Contains(OperationEnum.Divide))
         {
             IsDivideHeroOnThisLevel = false;
-            DivideHeroSlot.SetActive(false);
-            DivideHeroInventory.SetActive(false);
-            DivideOperatorBtn.SetActive(false);
+            Destroy(DivideHeroSlot);
+            Destroy(DivideHeroInventory);
+            Destroy(DivideOperatorBtn);
+            //DivideHeroSlot.SetActive(false);
+            //DivideHeroInventory.SetActive(false);
+            //DivideOperatorBtn.SetActive(false);
         }
 
         if (!possibleOperators.Contains(OperationEnum.Buff))
         {
             IsBuffHeroOnThisLevel = false;
-            BuffHeroSlot.SetActive(false);
-            BuffHeroInventory.SetActive(false);
+            Destroy(BuffHeroSlot);
+            Destroy(BuffHeroInventory);
+            //BuffHeroSlot.SetActive(false);
+            //BuffHeroInventory.SetActive(false);
         }
     }
 }
