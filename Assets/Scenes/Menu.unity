@@ -2851,7 +2851,6 @@ MonoBehaviour:
   - {fileID: 5486393584995862360, guid: 81de21e90f549974393067c370397b49, type: 3}
   - {fileID: 5486393584995862360, guid: c3af73e35cf81114096aed1d94a8f01f, type: 3}
   - {fileID: 5486393584995862360, guid: c3db9778478820c4194b60ae749fe397, type: 3}
-  - {fileID: 6482835790678363928, guid: 5f17cc246d9fdac42bd076018f13fbd9, type: 3}
   - {fileID: 554392434839588208, guid: 70b58373b5f09df4395ae6a6a88d5fa2, type: 3}
   - {fileID: 554392434839588208, guid: b9b8ffaeeb7120f4e8df5f196fcc37c6, type: 3}
   <Level2SpawnableItemsInShop>k__BackingField:
@@ -2859,7 +2858,6 @@ MonoBehaviour:
   - {fileID: 5486393584995862360, guid: 81de21e90f549974393067c370397b49, type: 3}
   - {fileID: 5486393584995862360, guid: c3af73e35cf81114096aed1d94a8f01f, type: 3}
   - {fileID: 5486393584995862360, guid: c3db9778478820c4194b60ae749fe397, type: 3}
-  - {fileID: 6482835790678363928, guid: 5f17cc246d9fdac42bd076018f13fbd9, type: 3}
   - {fileID: 554392434839588208, guid: 70b58373b5f09df4395ae6a6a88d5fa2, type: 3}
   - {fileID: 554392434839588208, guid: 8bad5d7ef3dc3ac49a3ba368002dfa97, type: 3}
   - {fileID: 554392434839588208, guid: b9b8ffaeeb7120f4e8df5f196fcc37c6, type: 3}
@@ -2871,7 +2869,6 @@ MonoBehaviour:
   - {fileID: 5486393584995862360, guid: 81de21e90f549974393067c370397b49, type: 3}
   - {fileID: 5486393584995862360, guid: c3af73e35cf81114096aed1d94a8f01f, type: 3}
   - {fileID: 5486393584995862360, guid: c3db9778478820c4194b60ae749fe397, type: 3}
-  - {fileID: 6482835790678363928, guid: 5f17cc246d9fdac42bd076018f13fbd9, type: 3}
   - {fileID: 554392434839588208, guid: 70b58373b5f09df4395ae6a6a88d5fa2, type: 3}
   - {fileID: 554392434839588208, guid: 8bad5d7ef3dc3ac49a3ba368002dfa97, type: 3}
   - {fileID: 554392434839588208, guid: 941df94fdcebe4d479964fcf7e8b03e5, type: 3}
@@ -2889,7 +2886,6 @@ MonoBehaviour:
   - {fileID: 5486393584995862360, guid: 81de21e90f549974393067c370397b49, type: 3}
   - {fileID: 5486393584995862360, guid: c3af73e35cf81114096aed1d94a8f01f, type: 3}
   - {fileID: 5486393584995862360, guid: c3db9778478820c4194b60ae749fe397, type: 3}
-  - {fileID: 6482835790678363928, guid: 5f17cc246d9fdac42bd076018f13fbd9, type: 3}
   - {fileID: 554392434839588208, guid: 70b58373b5f09df4395ae6a6a88d5fa2, type: 3}
   - {fileID: 554392434839588208, guid: 8bad5d7ef3dc3ac49a3ba368002dfa97, type: 3}
   - {fileID: 554392434839588208, guid: 941df94fdcebe4d479964fcf7e8b03e5, type: 3}
@@ -2916,7 +2912,6 @@ MonoBehaviour:
   - {fileID: 5486393584995862360, guid: c3af73e35cf81114096aed1d94a8f01f, type: 3}
   - {fileID: 5486393584995862360, guid: c3db9778478820c4194b60ae749fe397, type: 3}
   - {fileID: 5486393584995862360, guid: f1d078bd8b9225746ba0212719d63960, type: 3}
-  - {fileID: 6482835790678363928, guid: 5f17cc246d9fdac42bd076018f13fbd9, type: 3}
   - {fileID: 554392434839588208, guid: 70b58373b5f09df4395ae6a6a88d5fa2, type: 3}
   - {fileID: 554392434839588208, guid: 8bad5d7ef3dc3ac49a3ba368002dfa97, type: 3}
   - {fileID: 554392434839588208, guid: 941df94fdcebe4d479964fcf7e8b03e5, type: 3}
@@ -6575,6 +6570,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5516047354847936922, guid: 6103e5c31d072e6428ceac4f67d437d0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7369713471833749870, guid: 6103e5c31d072e6428ceac4f67d437d0, type: 3}
+      propertyPath: <SpawnableItems>k__BackingField.Array.size
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

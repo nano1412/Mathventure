@@ -1,9 +1,8 @@
 using DG.Tweening;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class HoverSize : MonoBehaviour ,IPointerEnterHandler, IPointerExitHandler, IPointerUpHandler, IPointerDownHandler
+public class HoverSize : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerUpHandler, IPointerDownHandler
 {
 
     [SerializeField] float scaleOnHover = 1.10f;
@@ -45,6 +44,6 @@ public class HoverSize : MonoBehaviour ,IPointerEnterHandler, IPointerExitHandle
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

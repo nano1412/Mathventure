@@ -3,12 +3,15 @@ using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem.XR;
 using UnityEngine.UI;
 using static Utils;
 
 public class EquipmentInventory : MonoBehaviour
 {
     public static EquipmentInventory current;
+    public MainGameUIController uIController;
+
     public event Action<GameObject> OnEquipmentSelectedItemChange;
     [field: SerializeField] public List<GameObject> SelectedTargets { get; private set; }
     [field: SerializeField]
@@ -94,15 +97,28 @@ public class EquipmentInventory : MonoBehaviour
     public void ToggleEquipmentMenuPopup()
     {
         isActive = !isActive;
+        if (uIController == null)
+        {
+            return;
+        }
 
         if (GameController.current.GameState == Utils.GameState.Shop)
         {
-            gameObject.SetActive(true);
-            HeroEquipmentMenu.SetActive(false);
+            uIController.OpenUI("inventory");
+            uIController.CloseUI("heroEquipment");
             return;
         }
-        gameObject.SetActive(isActive);
-        HeroEquipmentMenu.SetActive(isActive);
+        if (isActive)
+        {
+            uIController.OpenUI("inventory");
+            uIController.OpenUI("heroEquipment");
+
+        }
+        else
+        {
+            uIController.CloseUI("inventory");
+            uIController.CloseUI("heroEquipment");
+        }
     }
 
     public void SellSelectItem()

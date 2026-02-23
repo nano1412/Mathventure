@@ -290,6 +290,9 @@ public class CardPlayGameController : MonoBehaviour
                 tempMul = RedZoneMultiplier;
                 break;
         }
+
+        Debug.Log(TargetNumber + " " +  tempMul);
+
         return tempMul;
     }
 
