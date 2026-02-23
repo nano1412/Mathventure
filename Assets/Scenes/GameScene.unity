@@ -635,7 +635,7 @@ Transform:
   m_GameObject: {fileID: 79630232}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13050,7 +13050,7 @@ PrefabInstance:
     - target: {fileID: -1104955617905091999, guid: 8dd51f835df57134a974f3ee8ab66e80, type: 3}
       propertyPath: <CurrentMove>k__BackingField
       value: 
-      objectReference: {fileID: 11400000, guid: 4c99e65115e82de4a82740bcd4ffd1b4, type: 2}
+      objectReference: {fileID: 11400000, guid: 46051704c63955c40a514bb616bed212, type: 2}
     - target: {fileID: -1104955617905091999, guid: 8dd51f835df57134a974f3ee8ab66e80, type: 3}
       propertyPath: <HeroEquipmentSlot>k__BackingField
       value: 
@@ -18806,7 +18806,7 @@ PrefabInstance:
     - target: {fileID: -1104955617905091999, guid: 7649b4ff3cfbb40478f0e4af47cbe326, type: 3}
       propertyPath: <CurrentMove>k__BackingField
       value: 
-      objectReference: {fileID: 11400000, guid: 4c99e65115e82de4a82740bcd4ffd1b4, type: 2}
+      objectReference: {fileID: 11400000, guid: 30e7a6f3251e2f1489df2f4a7b0baa58, type: 2}
     - target: {fileID: -1104955617905091999, guid: 7649b4ff3cfbb40478f0e4af47cbe326, type: 3}
       propertyPath: <HeroEquipmentSlot>k__BackingField
       value: 
@@ -23494,10 +23494,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1619718260}
     m_Modifications:
-    - target: {fileID: -1104955617905091999, guid: 6a017ea3a70543a47af1daa4fc774e3b, type: 3}
-      propertyPath: <CurrentMove>k__BackingField
-      value: 
-      objectReference: {fileID: 11400000, guid: 4c99e65115e82de4a82740bcd4ffd1b4, type: 2}
     - target: {fileID: -1104955617905091999, guid: 6a017ea3a70543a47af1daa4fc774e3b, type: 3}
       propertyPath: <HeroEquipmentSlot>k__BackingField
       value: 

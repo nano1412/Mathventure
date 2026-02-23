@@ -900,7 +900,7 @@ Animator:
   m_GameObject: {fileID: 4676256282529668309}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 69a9bb86000e1794e800ad32f33e7705, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1414,6 +1414,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edb30923980eb194a8ee4b1a55618bfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
+  <HitFX>k__BackingField: {fileID: 6991801482143184211, guid: 5df23a799970b66418a2ae1c03cb536b, type: 3}
+  <HealFX>k__BackingField: {fileID: 6991801482143184211, guid: fec681b6892126a42b5a0041fb237326, type: 3}
   <HealSFX>k__BackingField: {fileID: 4265046769025348497}
   <HurtSFX>k__BackingField: {fileID: 3933682895883299190}
   <DeadSFX>k__BackingField: {fileID: -7890640210699133704}
@@ -1430,7 +1432,7 @@ MonoBehaviour:
   <CurrentMove>k__BackingField: {fileID: 11400000, guid: b2b503926b5b1424b8d97094648c89d8, type: 2}
   <FacingDirection>k__BackingField: {x: 0, y: 0}
   targets: []
-  <CoinOnKill>k__BackingField: 0
+  <CoinOnKill>k__BackingField: 100
   <EndlessSpawnableOnWaveMoreThan>k__BackingField: 15
   <EndlessValue>k__BackingField: 10
 --- !u!82 &4265046769025348497

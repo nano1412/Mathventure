@@ -91,6 +91,10 @@ public abstract class Character : MonoBehaviour
         }
 
         Hp += heal;
+        if (Hp > EffectiveMaxHp)
+        {
+            Hp = EffectiveMaxHp;
+        }
         HealSFX.Play();
         Debug.Log(transform.name + " gain " + heal + " Hp from " + healer);
     }
@@ -148,6 +152,11 @@ public virtual void ResolveAttack()
         {
             if (target != null && target.GetComponent<Character>())
             {
+                if(CurrentMove.ApplyStatusViaAttack != null)
+                {
+                    target.GetComponent<Character>().AddCharacterBuffs(CurrentMove.ApplyStatusViaAttack);
+
+                }
                 target.GetComponent<Character>().TakeDamage(GetEffectiveAttackValue(), transform.name);
             }
         }
@@ -177,6 +186,11 @@ public virtual void ResolveAttack()
         {
             if (target.GetComponent<Character>())
             {
+                if (CurrentMove.ApplyStatusViaAttack != null)
+                {
+                    target.GetComponent<Character>().AddCharacterBuffs(CurrentMove.ApplyStatusViaAttack);
+
+                }
                 target.GetComponent<Character>().Heal(CurrentMove.Value, transform.name);
             }
         }
@@ -188,6 +202,8 @@ public virtual void ResolveAttack()
     {
         CharacterSlotsHolder ally;
         CharacterSlotsHolder opponent;
+
+        Debug.Log(CharacterType + " " + move.TargetType);
 
         if (CharacterType == CharacterType.Enemy)
         {
