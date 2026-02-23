@@ -1776,6 +1776,7 @@ MonoBehaviour:
   usernameInput: {fileID: 2081127815}
   playerScore: {fileID: 1706060283}
   submitButton: {fileID: 975766185}
+  playerOnLeaderboardCount: 6
 --- !u!4 &1133043171
 Transform:
   m_ObjectHideFlags: 0
