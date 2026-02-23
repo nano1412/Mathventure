@@ -2844,7 +2844,7 @@ MonoBehaviour:
   <Level1BGSprite>k__BackingField: {fileID: 21300000, guid: 75ff15a3b161dd74593281f228f976e4, type: 3}
   <Level2BGSprite>k__BackingField: {fileID: 21300000, guid: 0c4ef30b9f0095740afeb4e51d17679e, type: 3}
   <Level3BGSprite>k__BackingField: {fileID: 21300000, guid: 3c74c5adba8e7df4fb7a694a50190a3f, type: 3}
-  <Level4BGSprite>k__BackingField: {fileID: 21300000, guid: 2874f1a77b4602d4fb01f01e70108b28, type: 3}
+  <Level4BGSprite>k__BackingField: {fileID: 21300000, guid: c9b196bb6cf23c94d93c3c640da1622b, type: 3}
   <LevelEndlessBGSprite>k__BackingField: {fileID: 21300000, guid: f895f8fc02c3d284ea62ad1d1fd0616d, type: 3}
   <Level1SpawnableItemsInShop>k__BackingField:
   - {fileID: 5486393584995862360, guid: a1e143f5e2e486b48a92be1f6d9a933e, type: 3}
