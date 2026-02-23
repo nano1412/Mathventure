@@ -133,7 +133,7 @@ public class Shop : MonoBehaviour
         if (!InventoryController.current.SpendCoin(ShopSelectedItemData.Price, true))
         {
             Debug.Log("can't buy");
-
+            return;
         }
 
 
