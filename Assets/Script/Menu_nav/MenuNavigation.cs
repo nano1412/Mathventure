@@ -33,13 +33,15 @@ public class MenuNavigation : MonoBehaviour
 
     public void OpenLevelSelecterMenu()
     {
-        LevelSelecterCanvas.SetActive(true);
+        Open(LevelSelecterCanvas);
     }
 
     public void CloseLevelSelecterMenu()
     {
-        LevelSelecterCanvas.SetActive(false);
+        Close(LevelSelecterCanvas);
     }
+
+
     void Open(GameObject ui)
     {
         ui.SetActive(true);
@@ -64,8 +66,6 @@ public class MenuNavigation : MonoBehaviour
         }
     }
 
-    public void CloseSettingMenu()
-    {
-        SettingCanvas.SetActive(false);
-    }
+
+   
 }

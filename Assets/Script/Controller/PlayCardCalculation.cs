@@ -321,6 +321,7 @@ public static class PlayCardCalculation
 
         // Determine target index from percentile
         int index = (int)Math.Round(difficulty * (filtered.Count - 1));
+        Debug.Log("index of target answer: " + index);
         int targetCount = filtered[index].Value.Count();
 
         // Get all entries with the same count as target

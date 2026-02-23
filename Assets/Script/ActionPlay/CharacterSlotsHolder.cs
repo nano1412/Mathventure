@@ -38,6 +38,9 @@ public class CharacterSlotsHolder : MonoBehaviour
             if (prefabs[i] == null) continue;
 
             GameObject instance = Instantiate(prefabs[i], slot, false);
+            
+            instance.GetComponent<Enemy>().BuffByWave();
+
             characters.Add(instance);
         }
 

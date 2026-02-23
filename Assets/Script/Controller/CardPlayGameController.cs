@@ -171,6 +171,7 @@ public class CardPlayGameController : MonoBehaviour
     public void SetupCardContoller()
     {
         PersistentDeck = GameController.current.TemplateDeck.CloneDeck();
+        removeNegativeCardFromDeck();
         RoundDeck = PersistentDeck.CloneDeck();
         PossibleOperators = GameController.current.PossibleOperators;
         IsPositiveOnly = GameController.current.Level < 2;
@@ -182,6 +183,19 @@ public class CardPlayGameController : MonoBehaviour
         PlayCardSlotList.Add(PlayNumberSlot3);
         PlayCardSlotList.Add(PlayOperatorSlot3);
         PlayCardSlotList.Add(PlayNumberSlot4);
+    }
+
+    void removeNegativeCardFromDeck()
+    {
+        if(GameController.current.PossibleOperators.Contains(OperationEnum.Divide) || GameController.current.PossibleOperators.Contains(OperationEnum.Multiply))
+        {
+            return;
+        }
+
+        PersistentDeck.cardDatas = PersistentDeck.cardDatas
+    .Where(card => card.FaceValue >= 0)
+    .ToList();
+
     }
 
     // Update is called once per frame
@@ -360,6 +374,12 @@ public class CardPlayGameController : MonoBehaviour
 
     public void DrawNewHand(int amount)
     {
+        if (RoundDeck.cardDatas.Count < amount)
+        {
+            Debug.Log("refill deck");
+            RoundDeck = PersistentDeck.CloneDeck();
+        }
+
         for (int i = 0; i < amount; i++)
         {
             bool isHandHaveSpace = false;
@@ -376,6 +396,7 @@ public class CardPlayGameController : MonoBehaviour
 
             if (isHandHaveSpace)
             {
+                
                 if (!RoundDeck.TryDrawCard(out CardInDeckData SelectedCarddata))
                 {
                     Debug.Log("Deck empty");

@@ -78,6 +78,17 @@ public abstract class Character : MonoBehaviour
         Debug.Log(transform.name + " gain " + heal + " Hp from " + healer);
     }
 
+    public void BuffByWave()
+    {
+        if (!LevelCreator.current.IsEndless)
+        {
+            return;
+        }
+
+        BaseMaxHp *=  1 + (0.05f * GameController.current.Wave);
+        Hp = BaseMaxHp;
+    }
+
     public virtual void CheckDead()
     {
         if (Hp <= 0)
