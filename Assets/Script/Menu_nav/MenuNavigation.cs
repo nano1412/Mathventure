@@ -10,6 +10,7 @@ public class MenuNavigation : MonoBehaviour
     public static MenuNavigation current;
     [field:SerializeField] public GameObject LevelSelecterCanvas { get; private set; }
     [field: SerializeField] public GameObject SettingCanvas { get; private set; }
+    [field: SerializeField] public GameObject HomeUI { get; private set; }
 
     [field: Header("Level"), SerializeField] public int MaxLevelUnlock { get; private set; }
     [field: SerializeField] public LevelSelectButton Level1Btn { get; private set; }
@@ -34,11 +35,13 @@ public class MenuNavigation : MonoBehaviour
     public void OpenLevelSelecterMenu()
     {
         Open(LevelSelecterCanvas);
+        Close(HomeUI);
     }
 
     public void CloseLevelSelecterMenu()
     {
         Close(LevelSelecterCanvas);
+        Open(HomeUI);
     }
 
 

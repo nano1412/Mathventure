@@ -129,7 +129,7 @@ public virtual void ResolveAttack()
         AttackSFX.Play();
         foreach (GameObject target in targets)
         {
-            if (target.GetComponent<Character>())
+            if (target != null && target.GetComponent<Character>())
             {
                 target.GetComponent<Character>().TakeDamage(GetEffectiveAttackValue(), transform.name);
             }
