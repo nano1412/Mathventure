@@ -13194,7 +13194,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 51.95
+  m_fontSize: 52.9
   m_fontSizeBase: 32
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -15102,6 +15102,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3061fe03702e05d48a4609be9406c627, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ActionGameController
+  <UseEndlessGenerator>k__BackingField: 0
+  <Enemys>k__BackingField:
+  - {fileID: 6687903444630188797, guid: 549bfa6f17609f848bd98e0091853ff8, type: 3}
+  - {fileID: 6687903444630188797, guid: d51dbaedd5eb31f4b84a1f0b2229aad5, type: 3}
+  - {fileID: 6687903444630188797, guid: bb5885f9caeadea43b17df6dcda59f03, type: 3}
+  - {fileID: 6687903444630188797, guid: 3b920a72bbde2b54388c6856a15bebf7, type: 3}
+  - {fileID: 6687903444630188797, guid: ed911c63dc3a04445b349bdb7752a17e, type: 3}
+  - {fileID: 6687903444630188797, guid: 5b7258fa01128824bb358cbe00f792b5, type: 3}
   <HeroSlotsHolder>k__BackingField: {fileID: 1117776344}
   <EnemySlotsHolder>k__BackingField: {fileID: 1273160278}
   <PlusHeroSlot>k__BackingField: {fileID: 803314327}
@@ -24193,7 +24201,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 48.8
+  m_fontSize: 49.7
   m_fontSizeBase: 0
   m_fontWeight: 400
   m_enableAutoSizing: 1

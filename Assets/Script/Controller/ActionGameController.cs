@@ -11,6 +11,10 @@ public class ActionGameController : MonoBehaviour
 {
     public static ActionGameController current;
 
+    [field:SerializeField] public bool UseEndlessGenerator { get; private set; }
+
+    [field: SerializeField] public List<GameObject> Enemys { get; private set; }
+
     [field: SerializeField]
     public CharacterSlotsHolder HeroSlotsHolder { get; private set; }
 
@@ -210,7 +214,13 @@ public class ActionGameController : MonoBehaviour
         }
         else if (GameController.current.IsEndless)
         {
-            EnemySlotsHolder.SpawnCharacters(GameController.current.EndlessWaveDatas[Random.Range(0, GameController.current.EndlessWaveDatas.Count())].Enemies.ToList());
+            if (UseEndlessGenerator)
+            {
+                EnemySlotsHolder.SpawnCharacters(EndlessWaveGenerator.GenerateNewEndlessWave());
+            } else
+            {
+                EnemySlotsHolder.SpawnCharacters(GameController.current.EndlessWaveDatas[Random.Range(0, GameController.current.EndlessWaveDatas.Count())].Enemies.ToList());
+            }
         }
         else
         {
