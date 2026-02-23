@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
 using static Utils;
@@ -7,6 +8,8 @@ using static Utils;
 public abstract class Character : MonoBehaviour
 {
     [field: Header("FX"), SerializeField] public GameObject HitFX { get; private set; }
+    [field: SerializeField] public GameObject HealFX { get; private set; }
+
     [field:Header("SFX"), SerializeField] public AudioSource HealSFX { get; private set; }
     [field: SerializeField] public AudioSource HurtSFX { get; private set; }
     [field: SerializeField] public AudioSource DeadSFX { get; private set; }
@@ -57,6 +60,7 @@ public abstract class Character : MonoBehaviour
         if (damage < 0)
         {
             Debug.LogWarning("TakeDamage received a negative value. Use Heal() instead.");
+            Heal(math.abs(damage), "Server");
             return;
         }
 
@@ -80,7 +84,17 @@ public abstract class Character : MonoBehaviour
             return;
         }
 
+        if (HealFX != null)
+        {
+            GameObject fx = Instantiate(HealFX, transform);
+            Destroy(fx, 1);
+        }
+
         Hp += heal;
+        if (Hp > EffectiveMaxHp)
+        {
+            Hp = EffectiveMaxHp;
+        }
         HealSFX.Play();
         Debug.Log(transform.name + " gain " + heal + " Hp from " + healer);
     }
@@ -138,6 +152,11 @@ public virtual void ResolveAttack()
         {
             if (target != null && target.GetComponent<Character>())
             {
+                if(CurrentMove.ApplyStatusViaAttack != null)
+                {
+                    target.GetComponent<Character>().AddCharacterBuffs(CurrentMove.ApplyStatusViaAttack);
+
+                }
                 target.GetComponent<Character>().TakeDamage(GetEffectiveAttackValue(), transform.name);
             }
         }
@@ -167,6 +186,11 @@ public virtual void ResolveAttack()
         {
             if (target.GetComponent<Character>())
             {
+                if (CurrentMove.ApplyStatusViaAttack != null)
+                {
+                    target.GetComponent<Character>().AddCharacterBuffs(CurrentMove.ApplyStatusViaAttack);
+
+                }
                 target.GetComponent<Character>().Heal(CurrentMove.Value, transform.name);
             }
         }
@@ -178,6 +202,8 @@ public virtual void ResolveAttack()
     {
         CharacterSlotsHolder ally;
         CharacterSlotsHolder opponent;
+
+        Debug.Log(CharacterType + " " + move.TargetType);
 
         if (CharacterType == CharacterType.Enemy)
         {
