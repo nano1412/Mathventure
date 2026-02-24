@@ -94,10 +94,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   <SelectSFX>k__BackingField: {fileID: 772033587355267301}
   <UseSFX>k__BackingField: {fileID: -566888783370201015}
-  <Price>k__BackingField: 10
+  <Price>k__BackingField: 15
   <SellPrice>k__BackingField: 5
   <ItemName>k__BackingField: "\u0E22\u0E32\u0E41\u0E23\u0E07"
-  <Description>k__BackingField: "\u0E40\u0E1E\u0E34\u0E48\u0E21 Hp \u0E17\u0E31\u0E19\u0E17\u0E35
+  <Description>k__BackingField: "\u0E1F\u0E37\u0E49\u0E19\u0E1F\u0E39 Hp \u0E17\u0E31\u0E19\u0E17\u0E35
     100 \u0E41\u0E15\u0E48\u0E1E\u0E25\u0E31\u0E07\u0E02\u0E2D\u0E07\u0E2E\u0E35\u0E42\u0E23\u0E48\u0E04\u0E19\u0E19\u0E31\u0E49\u0E19
     x0.8 2 \u0E15\u0E32"
   <ShortDescription>k__BackingField: "\u0E2E\u0E35\u0E25 100 \u0E41\u0E15\u0E48\u0E08\u0E30\u0E25\u0E14\u0E14\u0E32\u0E40\u0E21\u0E08\u0E25\u0E07

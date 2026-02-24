@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: instant heal
   m_EditorClassIdentifier: Assembly-CSharp::CharacterBuff
   <IsEffectInstant>k__BackingField: 1
-  <Value>k__BackingField: 50
+  <Value>k__BackingField: 30
   <BuffMethod>k__BackingField: 0
   <CharacterBuffTargetValue>k__BackingField: 0
   <Duration>k__BackingField: 1

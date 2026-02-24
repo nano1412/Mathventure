@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -31,21 +31,26 @@ public class HeroEquipmentSlot : MonoBehaviour
 
     void CheckIsSelectedEquipmentWearable(GameObject equipment)
     {
+        if (this == null)
+        {
+            return;
+        }
         if (equipment == null || equipment.GetComponent<EquipmentData>() == null)
         {
             EquipBtn.interactable = false;
             return;
         }
 
-        if (equipment.transform.IsChildOf(this.transform))
+        //Debug.Log(equipment );
+        if (equipment.transform.IsChildOf(transform))
         {
-            SetButton(UnequipItem, "Unequip");
+            SetButton(UnequipItem, "ถอด");
             EquipBtn.interactable = true;
             return;
         }
         else
         {
-            SetButton(EquipItem, "Equip");
+            SetButton(EquipItem, "ส่วมใส่");
         }
 
         EquipmentData equipmentData = equipment.GetComponent<EquipmentData>();

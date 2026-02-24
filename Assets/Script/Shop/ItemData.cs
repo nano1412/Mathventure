@@ -29,6 +29,7 @@ public class ItemData : MonoBehaviour, IPointerClickHandler
 
         if (!(itemSlot.TypeOfSlot == SlotType.Shop || itemSlot.TypeOfSlot == SlotType.Display))
         {
+            Debug.Log(gameObject);
             EquipmentInventory.current.SetInventorySelectItem(gameObject);
 
             if (transform.GetComponentInChildren<ConsumableData>() != null)
@@ -36,5 +37,7 @@ public class ItemData : MonoBehaviour, IPointerClickHandler
                 BuffController.current.SelectedConsumable = gameObject;
             }
         }
+
+       
     }
 }
