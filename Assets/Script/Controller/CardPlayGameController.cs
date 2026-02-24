@@ -94,6 +94,7 @@ public class CardPlayGameController : MonoBehaviour
 
     [field: SerializeField]
     public int IsHandReady { get; private set; }
+    public bool Attacking { get; set; }
 
     [field: SerializeField]
     public bool IsHandValiid { get; private set; }
@@ -247,6 +248,11 @@ public class CardPlayGameController : MonoBehaviour
 
     public void SummitEquation(Action onComplete)
     {
+        if (Attacking == true)
+        {
+            return;
+        }
+
         if (IsHandReady < 2)
         {
             Debug.Log("invalid hand");
@@ -254,10 +260,8 @@ public class CardPlayGameController : MonoBehaviour
         }
         Debug.Log("valid hand go to calculation");
 
-
-
         //Debug.Log(CardInhandGameObject.Count);
-
+        Attacking = true;
         OperatorOrders = new List<int>();
         StepLog = PlayCardCalculation.EvaluateEquation(PlayCardList, ParenthesesMode);
         foreach (var step in StepLog)

@@ -3375,7 +3375,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &308180039
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6268,7 +6268,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &527293766
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7706,7 +7706,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   <CoinSpendSFX>k__BackingField: {fileID: 668068791}
   <CoinGetSFX>k__BackingField: {fileID: 668068790}
-  <Coin>k__BackingField: 50
+  <Coin>k__BackingField: 10
   <EquipmentInventorySlots>k__BackingField:
   - {fileID: 1367518486}
   - {fileID: 6418940523400070879}
@@ -9462,7 +9462,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &840956522
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16740,7 +16740,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1525022152
 RectTransform:
   m_ObjectHideFlags: 0

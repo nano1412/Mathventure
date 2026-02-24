@@ -203,6 +203,7 @@ public class ActionGameController : MonoBehaviour
 
     private void OnAllEnemiesFinished()
     {
+        CardPlayGameController.current.Attacking = false;
         onCompleteAttackCallback?.Invoke();
     }
 
