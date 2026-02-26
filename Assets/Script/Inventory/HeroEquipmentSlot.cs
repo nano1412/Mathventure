@@ -50,7 +50,7 @@ public class HeroEquipmentSlot : MonoBehaviour
         }
         else
         {
-            SetButton(EquipItem, "ส่วมใส่");
+            SetButton(EquipItem, "สวมใส่");
         }
 
         EquipmentData equipmentData = equipment.GetComponent<EquipmentData>();
@@ -129,7 +129,7 @@ public class HeroEquipmentSlot : MonoBehaviour
 
         InventoryController.current.AddItem(EquipmentInventory.current.EquipmentSelectedItem);
         EquipmentInventory.current.EquipmentSelectedItem = null;
-        SetButton(EquipItem, "Equip");
+        SetButton(EquipItem, "สวมใส่");
     }
 
     void SetButton(Action action, string text)

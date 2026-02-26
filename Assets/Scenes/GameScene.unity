@@ -16008,6 +16008,14 @@ PrefabInstance:
       propertyPath: <HeroTypeOwner>k__BackingField
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6698490301344927630, guid: 79f81053aa6c63944a8d8a64b3341b41, type: 3}
+      propertyPath: m_text
+      value: "\u0E2A\u0E27\u0E21\u0E43\u0E2A\u0E48"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6698490301344927630, guid: 79f81053aa6c63944a8d8a64b3341b41, type: 3}
+      propertyPath: m_fontSize
+      value: 33.3
+      objectReference: {fileID: 0}
     - target: {fileID: 7712803166418028719, guid: 79f81053aa6c63944a8d8a64b3341b41, type: 3}
       propertyPath: <TypeOfSlot>k__BackingField
       value: 1
@@ -19901,6 +19909,14 @@ PrefabInstance:
       propertyPath: <HeroTypeOwner>k__BackingField
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 6698490301344927630, guid: 79f81053aa6c63944a8d8a64b3341b41, type: 3}
+      propertyPath: m_text
+      value: "\u0E2A\u0E27\u0E21\u0E43\u0E2A\u0E48"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6698490301344927630, guid: 79f81053aa6c63944a8d8a64b3341b41, type: 3}
+      propertyPath: m_fontSize
+      value: 33.3
+      objectReference: {fileID: 0}
     - target: {fileID: 7712803166418028719, guid: 79f81053aa6c63944a8d8a64b3341b41, type: 3}
       propertyPath: <TypeOfSlot>k__BackingField
       value: 1
@@ -22797,6 +22813,14 @@ PrefabInstance:
     - target: {fileID: 6210795693581246310, guid: 79f81053aa6c63944a8d8a64b3341b41, type: 3}
       propertyPath: <HeroTypeOwner>k__BackingField
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6698490301344927630, guid: 79f81053aa6c63944a8d8a64b3341b41, type: 3}
+      propertyPath: m_text
+      value: "\u0E2A\u0E27\u0E21\u0E43\u0E2A\u0E48"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6698490301344927630, guid: 79f81053aa6c63944a8d8a64b3341b41, type: 3}
+      propertyPath: m_fontSize
+      value: 33.3
       objectReference: {fileID: 0}
     - target: {fileID: 7712803166418028719, guid: 79f81053aa6c63944a8d8a64b3341b41, type: 3}
       propertyPath: <TypeOfSlot>k__BackingField
@@ -26171,6 +26195,14 @@ PrefabInstance:
     - target: {fileID: 6210795693581246310, guid: 79f81053aa6c63944a8d8a64b3341b41, type: 3}
       propertyPath: <HeroTypeOwner>k__BackingField
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6698490301344927630, guid: 79f81053aa6c63944a8d8a64b3341b41, type: 3}
+      propertyPath: m_text
+      value: "\u0E2A\u0E27\u0E21\u0E43\u0E2A\u0E48"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6698490301344927630, guid: 79f81053aa6c63944a8d8a64b3341b41, type: 3}
+      propertyPath: m_fontSize
+      value: 33.3
       objectReference: {fileID: 0}
     - target: {fileID: 7712803166418028719, guid: 79f81053aa6c63944a8d8a64b3341b41, type: 3}
       propertyPath: <TypeOfSlot>k__BackingField

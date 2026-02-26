@@ -214,7 +214,7 @@ public class CardPlayGameController : MonoBehaviour
         }
 
         IsHandReady = ValidationHand(PlayCardList);
-        Debug.Log(CardPlayGameController.current.IsHandReady);
+        //Debug.Log(CardPlayGameController.current.IsHandReady);
         if ((CardPlayGameController.current.IsHandReady > 0 && CardPlayGameController.current.IsHandReady < 3) || (ParenthesesMode == ParenthesesMode.DoMiddleOperationLast && CardPlayGameController.current.IsHandReady < 4))
         {
             PreviewScore(ParenthesesMode.NoParentheses);

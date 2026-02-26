@@ -144,34 +144,34 @@ public static class PlayCardCalculation
 
     private static void ApplyParenthesesMode(List<SimplifiedCard> cards, ParenthesesMode mode)
     {
-        Debug.Log("Parentheses Mode " + mode);
+        //Debug.Log("Parentheses Mode " + mode);
         switch (mode)
         {
             case ParenthesesMode.DoFrontOperationFirst:
-                if (cards[1] != null)
+                if (cards.Count > 1 && cards[1] != null)
                 {
                     cards[1].priority = 3;
                 }
                 break;
             case ParenthesesMode.DoMiddleOperationFirst:
-                if (cards[3] != null)
+                if (cards.Count > 3 && cards[3] != null)
                 {
                     cards[3].priority = 3;
                 }
                 break;
             case ParenthesesMode.DoLastOperationFirst:
-                if (cards[5] != null)
+                if (cards.Count > 5 && cards[5] != null)
                 {
                     cards[5].priority = 3;
                 }
                 break;
             case ParenthesesMode.DoMiddleOperationLast:
-                if (cards[1] != null)
+                if (cards.Count > 1 && cards[1] != null)
                 {
                     cards[1].priority = 3;
                 }
 
-                if (cards[5] != null)
+                if (cards.Count > 5 && cards[5] != null)
                 {
                     cards[5].priority = 3;
                 }
