@@ -1416,6 +1416,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   <HitFX>k__BackingField: {fileID: 6991801482143184211, guid: 5df23a799970b66418a2ae1c03cb536b, type: 3}
   <HealFX>k__BackingField: {fileID: 6991801482143184211, guid: fec681b6892126a42b5a0041fb237326, type: 3}
+  <Damage_Visual>k__BackingField: {fileID: 7298720110452441170, guid: 9a6b92af801ae474daefb717326804c4, type: 3}
   <HealSFX>k__BackingField: {fileID: 4265046769025348497}
   <HurtSFX>k__BackingField: {fileID: 3933682895883299190}
   <DeadSFX>k__BackingField: {fileID: -7890640210699133704}
@@ -1432,7 +1433,7 @@ MonoBehaviour:
   <CurrentMove>k__BackingField: {fileID: 11400000, guid: f86cf5fe5336cde4999be8bd12ab12c0, type: 2}
   <FacingDirection>k__BackingField: {x: 0, y: 0}
   targets: []
-  <CoinOnKill>k__BackingField: 20
+  <CoinOnKill>k__BackingField: 25
   <EndlessSpawnableOnWaveMoreThan>k__BackingField: 5
   <EndlessValue>k__BackingField: 3
 --- !u!82 &4265046769025348497

@@ -98,7 +98,7 @@ MonoBehaviour:
   <SellPrice>k__BackingField: 10
   <ItemName>k__BackingField: "\u0E23\u0E30\u0E40\u0E1A\u0E34\u0E14"
   <Description>k__BackingField: "\u0E17\u0E33\u0E14\u0E32\u0E40\u0E21\u0E08 200 \u0E01\u0E31\u0E1A\u0E28\u0E31\u0E15\u0E23\u0E39\u0E17\u0E31\u0E49\u0E07\u0E2B\u0E21\u0E14"
-  <ShortDescription>k__BackingField: 200 Dmg on all enemy
+  <ShortDescription>k__BackingField: "\u0E14\u0E32\u0E40\u0E21\u0E08 200 \u0E43\u0E2A\u0E48\u0E28\u0E31\u0E15\u0E23\u0E39\u0E17\u0E31\u0E31\u0E49\u0E07\u0E2B\u0E21\u0E14"
 --- !u!114 &6343283267850031433
 MonoBehaviour:
   m_ObjectHideFlags: 0

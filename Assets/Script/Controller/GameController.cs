@@ -117,6 +117,7 @@ public class GameController : MonoBehaviour
 
     public void OnNextWaveStart()
     {
+        CardPlayGameController.current.Attacking = false;
         ActionGameController.current.SpawnNextWave();
         ActionGameController.current.ResetHerosHP();
         CardPlayGameController.current.ResetRoundDeck();

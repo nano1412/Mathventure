@@ -123,14 +123,15 @@ public class EquipmentInventory : MonoBehaviour
 
     public void SellSelectItem()
     {
-        if(equipmentSelectedItem != null)
+        Debug.Log(current.equipmentSelectedItem);
+        if(current.equipmentSelectedItem != null)
         {
-            ItemData itemData = equipmentSelectedItem.GetComponent<ItemData>();
+            ItemData itemData = current.equipmentSelectedItem.GetComponent<ItemData>();
             if(itemData != null)
             {
                 InventoryController.current.AddCoin(itemData.SellPrice, true);
-                Destroy(equipmentSelectedItem);
-                equipmentSelectedItem = null;
+                Destroy(current.equipmentSelectedItem);
+                current.equipmentSelectedItem = null;
             }
         }
     }

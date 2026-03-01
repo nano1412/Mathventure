@@ -70,7 +70,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -9130512155142532714, guid: 0897ec888069c03449fd55a8155a2d13, type: 3}
+  m_Sprite: {fileID: 2068657840, guid: d47b304189d5ef947b634b64a9928f41, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -97,10 +97,10 @@ MonoBehaviour:
   <Price>k__BackingField: 20
   <SellPrice>k__BackingField: 10
   <ItemName>k__BackingField: "\u0E22\u0E32\u0E1A\u0E31\u0E1E"
-  <Description>k__BackingField: "\u0E40\u0E1E\u0E34\u0E48\u0E21\u0E1E\u0E25\u0E31\u0E07
-    1.5 \u0E40\u0E17\u0E48\u0E32\u0E01\u0E31\u0E1A\u0E01\u0E32\u0E23\u0E4C\u0E14\u0E17\u0E35\u0E48\u0E40\u0E1B\u0E47\u0E19\u0E08\u0E33\u0E19\u0E27\u0E19\u0E40\u0E09\u0E1E\u0E32\u0E30
-    \u0E43\u0E19\u0E15\u0E32\u0E19\u0E35\u0E49"
-  <ShortDescription>k__BackingField: x1.2 power on select hero
+  <Description>k__BackingField: "\u0E40\u0E1E\u0E34\u0E48\u0E21\u0E14\u0E32\u0E40\u0E21\u0E08
+    20% \u0E43\u0E2B\u0E49\u0E01\u0E31\u0E1A\u0E2E\u0E35\u0E42\u0E23\u0E48\u0E40\u0E1B\u0E47\u0E19\u0E40\u0E27\u0E25\u0E32
+    2 \u0E40\u0E17\u0E34\u0E23\u0E4C\u0E19"
+  <ShortDescription>k__BackingField: "+20% \u0E14\u0E32\u0E40\u0E21\u0E08 2 \u0E40\u0E17\u0E34\u0E23\u0E4C\u0E19"
 --- !u!114 &6343283267850031433
 MonoBehaviour:
   m_ObjectHideFlags: 0

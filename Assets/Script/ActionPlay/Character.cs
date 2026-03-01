@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,6 +10,7 @@ public abstract class Character : MonoBehaviour
 {
     [field: Header("FX"), SerializeField] public GameObject HitFX { get; private set; }
     [field: SerializeField] public GameObject HealFX { get; private set; }
+    [field: SerializeField] public GameObject Damage_Visual { get; private set; }
 
     [field:Header("SFX"), SerializeField] public AudioSource HealSFX { get; private set; }
     [field: SerializeField] public AudioSource HurtSFX { get; private set; }
@@ -69,6 +71,14 @@ public abstract class Character : MonoBehaviour
             GameObject fx = Instantiate(HitFX,transform);
             Destroy(fx,1);
         }
+
+        if (Damage_Visual != null)
+        {
+            GameObject fx = Instantiate(Damage_Visual, transform);
+            fx.transform.Find("DMG_Text").gameObject.GetComponent<TextMeshProUGUI>().text = damage.ToString();
+            Destroy(fx, 2);
+        }
+        
 
         animator.SetTrigger("Damaged");
         Hp -= damage - Shield;

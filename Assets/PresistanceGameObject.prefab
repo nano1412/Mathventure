@@ -63,10 +63,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 627e353b81822d94fa19477ccf582580, type: 2}
   - {fileID: 11400000, guid: 2358410be6bcd97459e34ee55de8a6b8, type: 2}
   - {fileID: 11400000, guid: 3c9ba0cfd2ee02848a83d2bb627c39f7, type: 2}
-  <SpawnableItems>k__BackingField:
-  - {fileID: 6482835790678363928, guid: 5f17cc246d9fdac42bd076018f13fbd9, type: 3}
-  - {fileID: 5486393584995862360, guid: 19fbde6027d691b42a215fa3942e41f6, type: 3}
-  - {fileID: 554392434839588208, guid: 9fd9224cfaf274b4c845bf90c473e617, type: 3}
+  <SpawnableItems>k__BackingField: []
   <PlayerFinalScore>k__BackingField: 0
   <IsScoreHasBeenSummit>k__BackingField: 1
 --- !u!114 &8877301205350275664
