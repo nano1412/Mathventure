@@ -143,6 +143,21 @@ public static class Utils
 
     }
 
+    public static string GetStringFromOperatorEnum(OperationEnum operationEnum)
+    {
+        switch (operationEnum) {
+            case OperationEnum.Plus:
+                return "+";
+            case OperationEnum.Minus:
+                return "-";
+            case OperationEnum.Multiply:
+                return "*";
+            case OperationEnum.Divide:
+                return "/";
+        }
+        return null;
+    }
+
 
     public static double RoundUpToDecimalPlaces(double value, int decimalPlaces)
     {

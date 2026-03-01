@@ -4,11 +4,135 @@ using System.Data;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using static UnityEngine.Rendering.DebugUI;
 using static UnityEngine.Rendering.GPUSort;
 using static Utils;
 using Random = System.Random;
 
 #region calculate card in hand
+
+public class EquationObject
+{
+    public List<double> numbers;
+    public List<OperationEnum> operationEnums;
+    public ParenthesesMode parenthesesMode;
+    public EquationObject(List<double> numbers, List<OperationEnum> operationEnums, ParenthesesMode parenthesesMode)
+    {
+        this.numbers = numbers;
+        this.operationEnums = operationEnums;
+        this.parenthesesMode = parenthesesMode;
+    }
+
+    public double GetAnswer()
+    {
+        List<double> tempNumbers = new List<double>(numbers);
+        List<OperationEnum> tempOperations = new List<OperationEnum>(operationEnums);
+        List<double> operatorsPriority = new List<double>() { 1, 1, 1 };
+
+        for(int i = 0;i< operationEnums.Count;i++)
+        {
+            if (operationEnums[i] == OperationEnum.Multiply || operationEnums[i] == OperationEnum.Divide)
+            {
+                operatorsPriority[i] = 2;
+            }
+        }
+
+        switch (parenthesesMode)
+        {
+            
+            case ParenthesesMode.DoFrontOperationFirst:
+                operatorsPriority[0] = 3;
+                break;
+            case ParenthesesMode.DoMiddleOperationFirst:
+                operatorsPriority[1] = 3;
+                break;
+            case ParenthesesMode.DoLastOperationFirst:
+                operatorsPriority[2] = 3;
+                break;
+            case ParenthesesMode.DoMiddleOperationLast:
+                operatorsPriority[1] = 0;
+                break;
+            default:
+                //ParenthesesMode.NoParentheses
+                break;
+        }
+
+        List<int> operatorOrder = operatorsPriority
+        .Select((value, index) => new { value, index })
+        .OrderByDescending(x => x.value)
+        .Select(x => x.index)
+        .ToList();
+
+        foreach (int originalIndex in operatorOrder)
+        {
+            if (originalIndex >= tempOperations.Count)
+                continue;
+
+            double result = Operate(
+                tempNumbers[originalIndex],
+                tempNumbers[originalIndex + 1],
+                tempOperations[originalIndex]);
+
+            tempNumbers[originalIndex] = result;
+            tempNumbers.RemoveAt(originalIndex + 1);
+            tempOperations.RemoveAt(originalIndex);
+        }
+        
+        return Math.Round(tempNumbers[0], 2);
+    }
+
+    public double Operate(double a, double b, OperationEnum operation)
+    {
+        switch (operation)
+        {
+            case OperationEnum.Plus:
+                return a + b;
+            case OperationEnum.Minus:
+                return a - b;
+            case OperationEnum.Multiply:
+                return a * b;
+            case OperationEnum.Divide:
+                return a / b;
+        }
+
+        return double.NegativeInfinity;
+    }
+
+    public string GetEquation()
+    {
+        switch (parenthesesMode)
+        {
+            case ParenthesesMode.DoFrontOperationFirst:
+                return "(" + numbers[0] + GetStringFromOperatorEnum(operationEnums[0]) +
+                    numbers[1] + ")" + GetStringFromOperatorEnum(operationEnums[1]) +
+                    numbers[2] + GetStringFromOperatorEnum(operationEnums[2]) +
+                    numbers[3];
+            case ParenthesesMode.DoMiddleOperationFirst:
+                return numbers[0] + GetStringFromOperatorEnum(operationEnums[0]) +
+                    "(" + numbers[1] + GetStringFromOperatorEnum(operationEnums[1]) +
+                    numbers[2] + ")" + GetStringFromOperatorEnum(operationEnums[2]) +
+                    numbers[3];
+            case ParenthesesMode.DoLastOperationFirst:
+                return numbers[0] + GetStringFromOperatorEnum(operationEnums[0]) +
+                    numbers[1] + GetStringFromOperatorEnum(operationEnums[1]) +
+                    "(" + numbers[2] + GetStringFromOperatorEnum(operationEnums[2]) +
+                    numbers[3] + ")";
+            case ParenthesesMode.DoMiddleOperationLast:
+                return "(" + numbers[0] + GetStringFromOperatorEnum(operationEnums[0]) +
+                    numbers[1] + ")" + GetStringFromOperatorEnum(operationEnums[1]) +
+                    "(" + numbers[2] + GetStringFromOperatorEnum(operationEnums[2]) +
+                    numbers[3] + ")";
+            default:
+                //ParenthesesMode.NoParentheses
+                return numbers[0] + GetStringFromOperatorEnum(operationEnums[0]) +
+                    numbers[1] + GetStringFromOperatorEnum(operationEnums[1]) +
+                    numbers[2] + GetStringFromOperatorEnum(operationEnums[2]) +
+                    numbers[3];
+        }
+    }
+}
+
+
 public class SimplifiedCard
 {
     public CardType type;
@@ -191,7 +315,7 @@ public static class PlayCardCalculation
 
     public static List<SimplifiedCard> simplified { get; private set; }
 
-    public static Dictionary<double, List<string>> GetMostFrequentResults(List<double> numbers, List<OperationEnum> posibleOperators)
+    public static Dictionary<double, List<EquationObject>> GetMostFrequentResults(List<double> numbers, List<OperationEnum> posibleOperators)
     {
         stringPosibleOperator = new List<string>();
         if (posibleOperators.Contains(OperationEnum.Plus)) { stringPosibleOperator.Add("+"); }
@@ -199,81 +323,69 @@ public static class PlayCardCalculation
         if (posibleOperators.Contains(OperationEnum.Multiply)) { stringPosibleOperator.Add("*"); }
         if (posibleOperators.Contains(OperationEnum.Divide)) { stringPosibleOperator.Add("/"); }
 
-        List<string> resultCount = new List<string>();
+        var resultCounts = new Dictionary<double, List<EquationObject>>();
 
-        var resultCounts = new Dictionary<double, List<string>>();
+        //optimize: preselect number
+        List<double> randomFour = numbers
+            .OrderBy(x => UnityEngine.Random.value)
+            .Take(4)
+            .ToList();
 
-        // Step 1: Get all 4-number combinations
-        var combinations = GetCombinations(numbers, 4);
+        List<List<double>> numberCombinations = GetCombinations(numbers, 4);
+        List<List<OperationEnum>> operatorCombinations = GetOperatorCombinations(posibleOperators);
+        List<ParenthesesMode> parentheses = new List<ParenthesesMode>() { 
+            ParenthesesMode.NoParentheses, 
+            ParenthesesMode.DoFrontOperationFirst, 
+            ParenthesesMode.DoMiddleOperationFirst, 
+            ParenthesesMode.DoLastOperationFirst, 
+            ParenthesesMode.DoMiddleOperationLast
+        };
 
-        foreach (var combo in combinations)
+        foreach(List<double> numberCombination in numberCombinations)
         {
-            // Step 2: Get all permutations of 4 numbers
-            foreach (var nums in GetPermutations(combo, 4))
+            foreach(List<OperationEnum> operatorCombination in operatorCombinations)
             {
-                // Step 3: All operator combinations
-                foreach (var ops in GetOperatorCombinations())
+                foreach (ParenthesesMode parenthese in parentheses)
                 {
-                    // Step 4: Apply all parenthesis placements
-                    var expressions = GetParenthesizedExpressions(nums, ops);
-                    foreach (var expr in expressions)
-                    {
-                        try
-                        {
-                            var value = Evaluate(expr);
-                            if (!double.IsNaN(value) && !double.IsInfinity(value))
-                            {
-                                double rounded = Math.Round(value, 2);
+                    EquationObject equationObject = new EquationObject(numberCombination, operatorCombination, parenthese);
+                    double equationAns = equationObject.GetAnswer();
 
-                                if (!resultCounts.ContainsKey(rounded))
-                                {
-                                    resultCounts[rounded] = new List<string>();
-                                }
-                                resultCounts[rounded].Add(expr);
-                            }
+                    if (!double.IsNaN(equationAns) && !double.IsInfinity(equationAns))
+                    {
+
+                        if (!resultCounts.ContainsKey(equationAns))
+                        {
+                            resultCounts[equationAns] = new List<EquationObject>();
                         }
-                        catch { /* Invalid expressions, e.g., divide by zero */ }
+                        resultCounts[equationAns].Add(equationObject);
                     }
+
                 }
             }
         }
-
         return resultCounts;
     }
 
-    static double Evaluate(string expression)
+    static List<List<OperationEnum>> GetOperatorCombinations(List<OperationEnum> posibleOperators)
     {
-        var table = new DataTable();
-        object result = table.Compute(expression, "");
-        return Convert.ToDouble(result);
-    }
-
-    static List<string> GetParenthesizedExpressions(double[] nums, string[] ops)
-    {
-        string a = nums[0].ToString("0.##");
-        string b = nums[1].ToString("0.##");
-        string c = nums[2].ToString("0.##");
-        string d = nums[3].ToString("0.##");
-
-        string op1 = ops[0];
-        string op2 = ops[1];
-        string op3 = ops[2];
-
-        return new List<string>
+        List<OperationEnum> posibleOperators_Nobuff = posibleOperators;
+        posibleOperators_Nobuff.Remove(OperationEnum.Buff);
+        List < List < OperationEnum >> tempOperatorCom = new List<List<OperationEnum>> ();
+        foreach (OperationEnum op1 in posibleOperators_Nobuff)
         {
-            $"{a}{op1}{b}{op2}{c}{op3}{d}",
-            $"({a}{op1}{b}){op2}{c}{op3}{d}",
-            $"{a}{op1}({b}{op2}{c}){op3}{d}",
-            $"{a}{op1}{b}{op2}({c}{op3}{d})",
-            $"({a}{op1}{b}){op2}({c}{op3}{d})"
-        };
-    }
-    static IEnumerable<string[]> GetOperatorCombinations()
-    {
-        foreach (var op1 in stringPosibleOperator)
-            foreach (var op2 in stringPosibleOperator)
-                foreach (var op3 in stringPosibleOperator)
-                    yield return new[] { op1, op2, op3 };
+            foreach (OperationEnum op2 in posibleOperators_Nobuff)
+            {
+                foreach (OperationEnum op3 in posibleOperators_Nobuff)
+                {
+                    tempOperatorCom.Add(new List<OperationEnum> { op1, op2,op3 });
+
+                    Debug.Log(op1.ToString() + " " + op2.ToString() + " " + op3.ToString());
+                }
+
+            }
+
+        }
+        return tempOperatorCom;
     }
 
     static IEnumerable<T[]> GetPermutations<T>(IList<T> list, int length)
@@ -286,14 +398,14 @@ public static class PlayCardCalculation
                         (t1, t2) => t1.Concat(new T[] { t2 }).ToArray());
     }
 
-    static List<List<T>> GetCombinations<T>(List<T> list, int length)
+    static List<List<OperationEnum>> GetCombinations<OperationEnum>(List<OperationEnum> list, int length)
     {
-        var result = new List<List<T>>();
-        void Recurse(int start, List<T> current)
+        var result = new List<List<OperationEnum>>();
+        void Recurse(int start, List<OperationEnum> current)
         {
             if (current.Count == length)
             {
-                result.Add(new List<T>(current));
+                result.Add(new List<OperationEnum>(current));
                 return;
             }
 
@@ -304,14 +416,14 @@ public static class PlayCardCalculation
                 current.RemoveAt(current.Count - 1);
             }
         }
-        Recurse(0, new List<T>());
+        Recurse(0, new List<OperationEnum>());
         return result;
     }
     #endregion
 
 
     #region get target number base on GetMostFrequentResults() with 
-    public static Dictionary<double, List<string>> GetAnswerByDifficulty(Dictionary<double, List<string>> resultCounts, double difficulty, double maxAnswerRange, bool isPositiveOnly)
+    public static Dictionary<double, List<EquationObject>> GetAnswerByDifficulty(Dictionary<double, List<EquationObject>> resultCounts, double difficulty, double maxAnswerRange, bool isPositiveOnly)
     {
         if (resultCounts == null || resultCounts.Count == 0)
             throw new ArgumentException("Result counts are empty.");
@@ -338,7 +450,7 @@ public static class PlayCardCalculation
 
         // Determine target index from percentile
         int index = (int)Math.Round(difficulty * (filtered.Count - 1));
-        Debug.Log("index of target answer: " + index);
+        //Debug.Log("index of target answer: " + index);
         int targetCount = filtered[index].Value.Count();
 
         // Get all entries with the same count as target
@@ -352,9 +464,9 @@ public static class PlayCardCalculation
         int randIndex = rng.Next(sameCountKeys.Count);
 
         double key = sameCountKeys[randIndex];
-        List<string> value = resultCounts[key];
+        List<EquationObject> value = resultCounts[key];
 
-        return new Dictionary<double, List<string>>() { { key, value } };
+        return new Dictionary<double, List<EquationObject>>() { { key, value } };
     }
 
 

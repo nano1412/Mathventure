@@ -27,7 +27,6 @@ public class MainGameUIController : MonoBehaviour
 
     public void Open(GameObject ui)
     {
-        Debug.Log(openScale);
         ui.SetActive(true);
         if (scaleAnimations)
             ui.transform.DOScale(openScale, 0.15f).SetEase(scaleEase);
@@ -41,7 +40,6 @@ public class MainGameUIController : MonoBehaviour
     }
     public void OpenUI(string ui)
     {
-        Debug.Log(ui);
         switch (ui)
         {
             case "shop":
@@ -78,7 +76,6 @@ public class MainGameUIController : MonoBehaviour
     }
     public async void CloseUI(string ui)
     {
-        Debug.Log(ui);
         switch (ui)
         {
             case "shop":

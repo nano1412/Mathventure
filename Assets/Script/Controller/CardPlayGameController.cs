@@ -118,7 +118,7 @@ public class CardPlayGameController : MonoBehaviour
     [field: SerializeField]
     public bool IsPositiveOnly { get; private set; }
 
-    private Dictionary<double, List<string>> allPossibleEquationAnswers;
+    private Dictionary<double, List<EquationObject>> allPossibleEquationAnswers;
 
 
     [field: Header("Multiplier Finder"), SerializeField]
@@ -237,7 +237,7 @@ public class CardPlayGameController : MonoBehaviour
         //Debug.Log("valid hand go to calculation");
 
         List<object[]> previewSteplog = new List<object[]>();
-        previewSteplog = PlayCardCalculation.EvaluateEquation(PlayCardList, parentheses);
+        previewSteplog = EvaluateEquation(PlayCardList, parentheses);
         //foreach (var step in StepLog)
         //{
         //    Debug.Log($"{step[0]}, Pos: {step[1]}");
@@ -348,7 +348,7 @@ public class CardPlayGameController : MonoBehaviour
         // as for now we will just set that player can play all 4 operators
 
 
-        Dictionary<double, List<string>> resultsDict = PlayCardCalculation.GetMostFrequentResults(numbers, PossibleOperators);
+        Dictionary<double, List<EquationObject>> resultsDict = PlayCardCalculation.GetMostFrequentResults(numbers, PossibleOperators);
 
         if (resultsDict.Count <= 0)
         {
@@ -373,12 +373,12 @@ public class CardPlayGameController : MonoBehaviour
             Debug.Log("there is no equation in the dic, maybe the threshold is too high");
             return;
         }
-        Dictionary<double, List<string>> targetNumberWithItsEquation = PlayCardCalculation.GetAnswerByDifficulty(allPossibleEquationAnswers, Difficulty, MaxAnswerRange, IsPositiveOnly);
+        Dictionary<double, List<EquationObject>> targetNumberWithItsEquation = PlayCardCalculation.GetAnswerByDifficulty(allPossibleEquationAnswers, Difficulty, MaxAnswerRange, IsPositiveOnly);
         TargetNumber = targetNumberWithItsEquation.Keys.First();
-        List<string> correctEquation = targetNumberWithItsEquation.Values.First();
+        List<EquationObject> correctEquation = targetNumberWithItsEquation.Values.First();
         Debug.Log("target number: " + TargetNumber);
         Debug.Log("number of possible equation " + correctEquation.Count);
-        Debug.Log("One of correct equation: " + correctEquation[UnityEngine.Random.Range(0, correctEquation.Count - 1)]);
+        Debug.Log("One of correct equation: " + correctEquation[UnityEngine.Random.Range(0, correctEquation.Count - 1)].GetEquation());
     }
 
     public void DrawNewHand(int amount)

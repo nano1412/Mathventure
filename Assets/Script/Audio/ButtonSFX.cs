@@ -47,7 +47,7 @@ public class ButtonSFX : MonoBehaviour
 
     void PlayClickSound()
     {
-        Debug.Log("play button sound");
+        //Debug.Log("play button sound");
         uiAudioSource.PlayOneShot(clickSound);
     }
 }

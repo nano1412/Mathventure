@@ -42,7 +42,7 @@ public class InventoryController : MonoBehaviour
         }
 
         Coin += amount;
-        Debug.Log("Money Added: " + amount + " G. Current Coin:" + Coin + "G");
+        //Debug.Log("Money Added: " + amount + " G. Current Coin:" + Coin + "G");
         OnCoinsChanged?.Invoke(Coin);
     }
 
@@ -65,7 +65,7 @@ public class InventoryController : MonoBehaviour
         }
 
         Coin -= amount;
-        Debug.Log("Money spended: " + amount + " G. Coin left:" + Coin + "G");
+        //Debug.Log("Money spended: " + amount + " G. Coin left:" + Coin + "G");
         OnCoinsChanged?.Invoke(Coin);
         return true;
     }
