@@ -52,18 +52,6 @@ public class Hero : Character
 
         targets = GetTargetByMove(CurrentMove);
 
-        foreach (GameObject target in targets)
-        {
-            if (target != null)
-            {
-                Debug.Log(transform.name + " is attacking " + target.name + 
-                    " with Lcard:Base(" + leftAtkValue.EffectiveValue + ") w/Buff(" + leftAtkValue.GetEffectiveValueWithBuff() +
-                    ") Rcard:Base(" + rightAtkValue.EffectiveValue + ") w/Buff(" + rightAtkValue.GetEffectiveValueWithBuff() +
-                    ") multiplier:" + mul);
-
-            }
-        }
-
         multiplier = mul;
         leftcardValue = leftAtkValue.GetEffectiveValueWithBuff();
         rightcardValue = rightAtkValue.GetEffectiveValueWithBuff();

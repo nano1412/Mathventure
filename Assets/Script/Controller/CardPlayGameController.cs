@@ -237,7 +237,7 @@ public class CardPlayGameController : MonoBehaviour
         //Debug.Log("valid hand go to calculation");
 
         List<object[]> previewSteplog = new List<object[]>();
-        previewSteplog = EvaluateEquation(PlayCardList, parentheses);
+        previewSteplog = PlayCardCalculation.EvaluateEquation(PlayCardList, parentheses);
         //foreach (var step in StepLog)
         //{
         //    Debug.Log($"{step[0]}, Pos: {step[1]}");
@@ -264,10 +264,6 @@ public class CardPlayGameController : MonoBehaviour
         Attacking = true;
         OperatorOrders = new List<int>();
         StepLog = PlayCardCalculation.EvaluateEquation(PlayCardList, ParenthesesMode);
-        foreach (var step in StepLog)
-        {
-            Debug.Log($"{step[0]}, Pos: {step[1]}");
-        }
 
         for (int i = 0; i < StepLog.Count; i++)
         {

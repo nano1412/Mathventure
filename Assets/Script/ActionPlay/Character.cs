@@ -83,7 +83,7 @@ public abstract class Character : MonoBehaviour
         animator.SetTrigger("Damaged");
         Hp -= damage - Shield;
         HurtSFX.Play();
-        Debug.Log(transform.name + " take " + damage + " damages from " + attacker);
+        //Debug.Log(transform.name + " take " + damage + " damages from " + attacker);
     }
 
     public void Heal(double heal, string healer)
@@ -106,7 +106,7 @@ public abstract class Character : MonoBehaviour
             Hp = EffectiveMaxHp;
         }
         HealSFX.Play();
-        Debug.Log(transform.name + " gain " + heal + " Hp from " + healer);
+        //Debug.Log(transform.name + " gain " + heal + " Hp from " + healer);
     }
 
     public void BuffByWave()
@@ -213,7 +213,6 @@ public virtual void ResolveAttack()
         CharacterSlotsHolder ally;
         CharacterSlotsHolder opponent;
 
-        Debug.Log(CharacterType + " " + move.TargetType);
 
         if (CharacterType == CharacterType.Enemy)
         {

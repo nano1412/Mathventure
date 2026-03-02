@@ -378,8 +378,6 @@ public static class PlayCardCalculation
                 foreach (OperationEnum op3 in posibleOperators_Nobuff)
                 {
                     tempOperatorCom.Add(new List<OperationEnum> { op1, op2,op3 });
-
-                    Debug.Log(op1.ToString() + " " + op2.ToString() + " " + op3.ToString());
                 }
 
             }

@@ -78,7 +78,8 @@ public class AudioManager : MonoBehaviour
 
 		if(scene.name == SceneNav.current.GameSceneName)
 		{
-			GameController.current.OnGameStateChange += UpdateBGMOnGameStateChange;
+            GameController.current.OnGameStateChange -= UpdateBGMOnGameStateChange;
+            GameController.current.OnGameStateChange += UpdateBGMOnGameStateChange;
 
             OverrideBGM("Level" + GameController.current.Level);
 
