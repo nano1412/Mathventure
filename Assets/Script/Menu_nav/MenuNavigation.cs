@@ -1,14 +1,10 @@
 using DG.Tweening;
-using System;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class MenuNavigation : MonoBehaviour
 {
     public static MenuNavigation current;
-    [field:SerializeField] public GameObject LevelSelecterCanvas { get; private set; }
+    [field: SerializeField] public GameObject LevelSelecterCanvas { get; private set; }
     [field: SerializeField] public GameObject SettingCanvas { get; private set; }
     [field: SerializeField] public GameObject HomeUI { get; private set; }
 
@@ -18,7 +14,7 @@ public class MenuNavigation : MonoBehaviour
     [field: SerializeField] public LevelSelectButton Level3Btn { get; private set; }
     [field: SerializeField] public LevelSelectButton Level4Btn { get; private set; }
     [field: SerializeField] public LevelSelectButton LevelEndlessBtn { get; private set; }
-    
+
     [SerializeField] private Ease scaleEase = Ease.OutBack;
 
     private void Awake()
@@ -45,13 +41,13 @@ public class MenuNavigation : MonoBehaviour
     }
 
 
-    void Open(GameObject ui)
+    public void Open(GameObject ui)
     {
         ui.SetActive(true);
         ui.transform.DOScale(1, 0.15f).SetEase(scaleEase);
     }
 
-     async void Close(GameObject ui)
+    public async void Close(GameObject ui)
     {
         await ui.transform.DOScale(0, 0.15f).SetEase(Ease.OutQuad).AsyncWaitForCompletion();
         ui.SetActive(false);
@@ -70,5 +66,5 @@ public class MenuNavigation : MonoBehaviour
     }
 
 
-   
+
 }

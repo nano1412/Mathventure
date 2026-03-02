@@ -1,4 +1,4 @@
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -86,7 +86,7 @@ public class cardMultiplierIndicater : MonoBehaviour
         sliderValueText.text = sliderValue.ToString("F2");
         minText.text = minValue.ToString();
         maxText.text = maxValue.ToString();
-        targetText.text = targetValue.ToString();
+        targetText.text = "จงหาค่า " + targetValue.ToString();
     }
 
     void UpdateSlider()
