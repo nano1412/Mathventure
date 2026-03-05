@@ -8,6 +8,7 @@ public class SceneNav : MonoBehaviour
     [field: SerializeField] public string GameSceneName { get; private set; } = "GameScene";
     [field: SerializeField] public string LeaderBoardSceneName { get; private set; } = "LeaderBoard";
     [field: SerializeField] public string MenuSceneName { get; private set; } = "Menu";
+    [SerializeField] private TutorialManager tutorialManager;
 
     private void Awake()
     {
@@ -26,8 +27,10 @@ public class SceneNav : MonoBehaviour
         {
             return;
         }
-        Debug.Log("to gamescene");
-        SceneManager.LoadScene(GameSceneName);
+        Debug.Log("to gamescene " + LevelCreator.current.Level);
+
+        tutorialManager.LoadTutorial(LevelCreator.current.Level);
+        //SceneManager.LoadScene(GameSceneName);
     }
 
     public void GoToMainMenuBtn()
