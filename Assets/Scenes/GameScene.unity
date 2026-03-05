@@ -730,14 +730,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1237306310}
     m_Modifications:
-    - target: {fileID: 2571917788311770707, guid: 923e9b02afcd8ac46af96c6a151f6805, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2571917788311770707, guid: 923e9b02afcd8ac46af96c6a151f6805, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: -1104955617905091999, guid: 498285b45e0462140af465312fc5088f, type: 3}
       propertyPath: <CurrentMove>k__BackingField
       value: 
@@ -814,6 +806,14 @@ PrefabInstance:
       propertyPath: <MultiplyBuffMove>k__BackingField
       value: 
       objectReference: {fileID: 11400000, guid: 4c99e65115e82de4a82740bcd4ffd1b4, type: 2}
+    - target: {fileID: 2571917788311770707, guid: 923e9b02afcd8ac46af96c6a151f6805, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2571917788311770707, guid: 923e9b02afcd8ac46af96c6a151f6805, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3991,8 +3991,8 @@ RectTransform:
   - {fileID: 973966243}
   - {fileID: 8327247544377824854}
   - {fileID: 490442978208148577}
-  - {fileID: 1808808053}
   - {fileID: 2979456465454753426}
+  - {fileID: 1808808053}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -4208,19 +4208,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58ce88f500ca1e74a83e08c80862ae59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayStateText: {fileID: 6529509703589178119}
-  actualAnswerText: {fileID: 1070316459}
-  previewAnswerText: {fileID: 1324564597}
-  targetNumberText: {fileID: 692659588}
-  previewDataText: {fileID: 1555942971}
-  blueZoneMultiplierText: {fileID: 1720236214}
-  minGreenZoneValueText: {fileID: 1148664233}
-  maxGreenZoneValueText: {fileID: 247999478}
-  greenZoneMultiplierText: {fileID: 470722193}
-  minYellowZoneValueText: {fileID: 2084708146}
-  maxYellowZoneValueText: {fileID: 428267039}
-  yellowZoneMultiplierText: {fileID: 2023302934}
-  redZoneMultiplierText: {fileID: 208867907}
 --- !u!1 &403302488
 GameObject:
   m_ObjectHideFlags: 0
