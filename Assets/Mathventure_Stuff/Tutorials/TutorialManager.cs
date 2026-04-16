@@ -82,6 +82,8 @@ public class TutorialManager : MonoBehaviour
         if (_currentPage < 0)
         {
             _currentPage = 0;
+            menuNavigation.Close(_tutorialUI);
+            menuNavigation.OpenLevelSelecterMenu();
         }
         UpdatePage();
     }

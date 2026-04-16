@@ -1,5 +1,6 @@
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.InputSystem.XR;
 
 
 public class MainGameUIController : MonoBehaviour
@@ -12,7 +13,7 @@ public class MainGameUIController : MonoBehaviour
     [SerializeField] private GameObject gameDataDisplay;
     [SerializeField] private GameObject inventory;
     [SerializeField] private GameObject heroEquipment;
-
+    [SerializeField] private GameObject UnderUI;
 
     [Header("GameScreen")]
     [SerializeField] private GameObject victoeyUI;
@@ -24,6 +25,19 @@ public class MainGameUIController : MonoBehaviour
     [SerializeField] float closeScale = 0f;
     [SerializeField] private Ease scaleEase = Ease.OutBack;
     [SerializeField] private bool scaleAnimations = true;
+
+
+    public void OpenMainInterface()
+    {
+        sideBarUI.GetComponent<RectTransform>().DOAnchorPosX(-15, 0.3f).SetEase(Ease.OutBack);
+        UnderUI.GetComponent<RectTransform>().DOAnchorPosY(0, 0.3f).SetEase(Ease.OutBack);
+    }
+
+    public void CloseMainInterface()
+    {
+        sideBarUI.GetComponent<RectTransform>().DOAnchorPosX(220, 0.3f).SetEase(Ease.OutBack);
+        UnderUI.GetComponent<RectTransform>().DOAnchorPosY(-350, 0.3f).SetEase(Ease.OutBack);
+    }
 
     public void Open(GameObject ui)
     {
@@ -56,6 +70,7 @@ public class MainGameUIController : MonoBehaviour
                 break;
             case "pause":
                 Open(pauseUI);
+                CloseMainInterface();
                 break;
             case "sidebar":
                 Open(sideBarUI);
@@ -92,6 +107,7 @@ public class MainGameUIController : MonoBehaviour
                 break;
             case "pause":
                 Close(pauseUI);
+                OpenMainInterface();
                 break;
             case "sidebar":
                 Close(sideBarUI);

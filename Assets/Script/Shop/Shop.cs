@@ -1,7 +1,7 @@
+using DG.Tweening;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.InputSystem.XR;
 using UnityEngine.UI;
 using static Utils;
 
@@ -54,6 +54,10 @@ public class Shop : MonoBehaviour
     [field: SerializeField]
     public int RerollInflation { get; private set; }
 
+    
+    [field: SerializeField]
+    public GameObject PauseUI { get; private set; }
+
 
     [field: SerializeField]
     public List<GameObject> SpawnableItems { get; private set; }
@@ -93,11 +97,16 @@ public class Shop : MonoBehaviour
         {
             uIController.Close(gameObject);
             uIController.Close(infoPanel);
+            uIController.OpenMainInterface();
+            PauseUI.SetActive(true);
         }
         else
         {
             uIController.Open(gameObject);
             uIController.Open(infoPanel);
+            uIController.CloseMainInterface();
+
+            PauseUI.SetActive(false);
         }
     }
 
