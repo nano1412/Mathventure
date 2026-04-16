@@ -58,9 +58,11 @@ public class MenuNavigation : MonoBehaviour
         if (SettingCanvas.active == true)
         {
             Close(SettingCanvas);
+            Open(HomeUI);
         }
         else
         {
+            Close(HomeUI);
             Open(SettingCanvas);
         }
     }
